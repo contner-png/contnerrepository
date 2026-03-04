@@ -44,26 +44,45 @@
                 letter-spacing: -0.02em;
             }
         }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
         .gradient-text {
             background: linear-gradient(to right, #0047AB, #22C55E);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .nav-link:hover {
-            color: #0047AB;
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
         }
-        .dropdown:hover .dropdown-menu {
-            display: block;
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #0047AB;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
         }
         .bento-card {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
         }
         .bento-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgba(0, 71, 171, 0.1), 0 10px 10px -5px rgba(0, 71, 171, 0.04);
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 30px 60px -12px rgba(0, 71, 171, 0.15), 0 18px 36px -18px rgba(0, 71, 171, 0.1);
         }
         .swiper-pagination-bullet-active {
             background: #0047AB !important;
+            width: 24px !important;
+            border-radius: 4px !important;
         }
     </style>
     <!-- Schema Markup -->
@@ -294,60 +313,70 @@
                     <p class="text-lg text-gray-600 leading-relaxed">We utilize evidence-based strategies to target specific physiological roadblocks and structural deficits.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12">
                     <!-- High Impact: Applied Regenerative Physics -->
-                    <div class="md:col-span-8 bento-card bg-white p-8 lg:p-12 rounded-[2rem] shadow-lg md:shadow-sm border border-gray-100 md:border-transparent hover:border-clinical-blue/10 relative overflow-hidden group">
+                    <div class="md:col-span-8 bento-card bg-white p-8 lg:p-16 rounded-[3rem] shadow-xl border border-gray-100 relative overflow-hidden group">
                         <div class="relative z-10">
-                            <span class="text-xs font-bold text-clinical-green uppercase tracking-widest mb-4 block">The Recovery Catalyst</span>
-                            <h4 class="text-3xl font-display font-bold mb-6">Applied Regenerative <span class="text-clinical-blue italic">Physics</span></h4>
-                            <p class="text-gray-600 text-lg leading-relaxed max-w-xl mb-8">
+                            <div class="inline-flex items-center px-3 py-1 rounded-full bg-clinical-green/10 text-clinical-green text-xs font-bold tracking-widest uppercase mb-8">
+                                High-Tech Regeneration
+                            </div>
+                            <h4 class="text-4xl lg:text-5xl font-display font-bold mb-8 leading-tight">Applied Regenerative <span class="text-clinical-blue italic underline decoration-clinical-green/30">Physics</span></h4>
+                            <p class="text-gray-600 text-xl leading-relaxed max-w-2xl mb-10">
                                 Rather than relying on pharmaceutical interventions, we utilize advanced medical technology—targeted light (Class IV Laser), acoustic waves (Shockwave), and electromagnetism (PEMF)—to physically force tissue regeneration and reset cellular voltage.
                             </p>
-                            <a href="/treatments/adjunct-therapies-diagnostics.html" class="inline-flex items-center font-bold text-clinical-blue hover:text-blue-700">
-                                View Technologies <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            <a href="/treatments/adjunct-therapies-diagnostics.html" class="inline-flex items-center px-8 py-4 bg-clinical-charcoal text-white rounded-full font-bold hover:bg-clinical-blue transition-all shadow-xl group">
+                                Explore Technologies 
+                                <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                             </a>
                         </div>
-                        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-clinical-green/5 rounded-full blur-3xl group-hover:bg-clinical-green/10 transition-colors"></div>
+                        <!-- Decorative element -->
+                        <div class="absolute -right-20 top-0 w-64 h-64 bg-clinical-blue/5 rounded-full blur-3xl"></div>
                     </div>
 
                     <!-- Neurological Resilience -->
-                    <div class="md:col-span-4 bento-card bg-clinical-blue p-8 rounded-[2rem] shadow-xl md:shadow-lg text-white flex flex-col justify-between group border border-white/10">
-                        <div>
-                            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                    <div class="md:col-span-4 bento-card bg-clinical-blue p-8 lg:p-12 rounded-[3rem] shadow-2xl text-white flex flex-col justify-between group relative overflow-hidden">
+                        <div class="relative z-10">
+                            <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-10 backdrop-blur-sm border border-white/20">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
                             </div>
-                            <h4 class="text-2xl font-display font-bold mb-4 italic">Neurological Resilience</h4>
-                            <p class="text-blue-100 text-sm leading-relaxed">
+                            <h4 class="text-3xl font-display font-bold mb-6 italic">Neurological Resilience</h4>
+                            <p class="text-blue-100 text-lg leading-relaxed">
                                 Shifting from chronic "fight or flight" to parasympathetic rest. Optimizing deep sleep architecture for cognitive preservation.
                             </p>
                         </div>
-                        <a href="/programs/brain-health-sleep-optimization.html" class="mt-8 inline-flex items-center font-bold text-white hover:translate-x-1 transition-transform">
-                            The Operating System &rarr;
+                        <a href="/programs/brain-health-sleep-optimization.html" class="relative z-10 mt-12 inline-flex items-center font-bold text-white group">
+                            The Neural OS <span class="ml-2 group-hover:translate-x-2 transition-transform">&rarr;</span>
                         </a>
+                        <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-white/5 rounded-full blur-2xl"></div>
                     </div>
 
                     <!-- Structural Durability -->
-                    <div class="md:col-span-4 bento-card bg-white p-8 rounded-[2rem] shadow-lg md:shadow-sm border border-gray-100 md:border-transparent hover:border-clinical-blue/10 group">
-                        <div class="w-12 h-12 bg-clinical-gray rounded-xl flex items-center justify-center mb-6 group-hover:bg-clinical-blue transition-colors">
-                            <svg class="w-6 h-6 text-clinical-blue group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    <div class="md:col-span-5 bento-card bg-white p-8 lg:p-12 rounded-[3rem] shadow-lg border border-gray-100 flex flex-col justify-between group">
+                        <div>
+                            <div class="w-14 h-14 bg-clinical-gray rounded-2xl flex items-center justify-center mb-8 group-hover:bg-clinical-blue transition-colors duration-500">
+                                <svg class="w-7 h-7 text-clinical-blue group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                            </div>
+                            <h4 class="text-2xl font-display font-bold mb-4 italic text-clinical-blue underline decoration-clinical-green/20 underline-offset-4">The Physical Chassis</h4>
+                            <p class="text-gray-500 text-lg leading-relaxed mb-8">Building frames capable of high performance for decades. Preserving fast-twitch fibers and increasing systemic bone mineral density.</p>
                         </div>
-                        <h4 class="text-xl font-display font-bold mb-2 italic text-clinical-blue">The Physical Chassis</h4>
-                        <p class="text-gray-500 text-sm mb-6">Building frames capable of high performance for decades. Preserving fast-twitch fibers and bone density.</p>
-                        <a href="/programs/muscle-bone-building.html" class="text-clinical-blue font-bold text-sm">Structural Durability &rarr;</a>
+                        <a href="/programs/muscle-bone-building.html" class="text-clinical-blue font-bold text-lg flex items-center group">
+                            Structural Durability <span class="ml-2 group-hover:translate-x-2 transition-transform">&rarr;</span>
+                        </a>
                     </div>
 
                     <!-- Precision Chiro & Physio -->
-                    <div class="md:col-span-8 bento-card bg-white p-8 lg:p-12 rounded-[2rem] shadow-lg md:shadow-sm border border-gray-100 md:border-transparent hover:border-clinical-blue/10 flex flex-col md:flex-row gap-8 items-center">
-                        <div class="md:w-1/2 space-y-4">
-                            <h4 class="text-2xl font-display font-bold leading-tight text-clinical-blue italic">Precision Biomechanics</h4>
-                            <p class="text-gray-600">Restoring joint kinematics through pro-level protocols trusted by elite athletes.</p>
+                    <div class="md:col-span-7 bento-card bg-clinical-gray p-8 lg:p-12 rounded-[3rem] border border-white shadow-inner flex flex-col md:flex-row gap-12 items-center">
+                        <div class="md:w-1/2 space-y-6">
+                            <h4 class="text-3xl font-display font-bold leading-tight text-clinical-blue">Precision <span class="italic text-clinical-charcoal">Biomechanics</span></h4>
+                            <p class="text-gray-600 text-lg">Restoring joint kinematics through pro-level protocols trusted by the Bengals and Cyclones.</p>
                             <div class="flex gap-4">
-                                <a href="/programs/cincinnati-chiropractic-care.html" class="px-4 py-2 bg-clinical-gray rounded-full text-xs font-bold hover:bg-gray-200 transition-colors border border-gray-100">Chiropractic</a>
-                                <a href="/programs/integrative-physiotherapy.html" class="px-4 py-2 bg-clinical-gray rounded-full text-xs font-bold hover:bg-gray-200 transition-colors border border-gray-100">Physiotherapy</a>
+                                <a href="/programs/cincinnati-chiropractic-care.html" class="px-6 py-2 bg-white rounded-full text-xs font-bold hover:shadow-md transition-all border border-gray-100 text-clinical-blue">Chiropractic</a>
+                                <a href="/programs/integrative-physiotherapy.html" class="px-6 py-2 bg-white rounded-full text-xs font-bold hover:shadow-md transition-all border border-gray-100 text-clinical-blue">Physiotherapy</a>
                             </div>
                         </div>
-                        <div class="md:w-1/2 h-full min-h-[160px] rounded-2xl bg-clinical-gray overflow-hidden">
+                        <div class="md:w-1/2 h-full min-h-[240px] rounded-[2.5rem] bg-white overflow-hidden shadow-2xl relative">
                             <img src="images/biomechanics-preview.png" alt="Clinical Biomechanics" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-clinical-blue/10 to-transparent"></div>
                         </div>
                     </div>
                 </div>
