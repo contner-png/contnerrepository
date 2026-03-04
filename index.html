@@ -41,6 +41,42 @@
             display: block;
         }
     </style>
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "name": "Cincinnati Chiropractic & Mitoflux Longevity",
+      "alternateName": "Cincinnati Chiropractic",
+      "url": "https://cincinnatichiropractic.com",
+      "logo": "https://cincinnatichiropractic.com/images/logo.png",
+      "image": "https://cincinnatichiropractic.com/images/hero-clinical-art.png",
+      "description": "Elite Physical Medicine & Advanced Longevity Care in Greater Cincinnati. Official Chiropractor for the Bengals & Cyclones.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3712 Harrison Ave",
+        "addressLocality": "Cincinnati",
+        "addressRegion": "OH",
+        "postalCode": "45211",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.1512,
+        "longitude": -84.6152
+      },
+      "telephone": "+1-513-662-8500",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ],
+      "medicalSpecialty": ["Chiropractic", "PhysicalTherapy", "Diagnostic"]
+    }
+    </script>
 </head>
 <body class="bg-white text-clinical-charcoal font-sans antialiased">
     <!-- Global Navigation -->
@@ -271,7 +307,7 @@
                         <div class="flex items-start space-x-3 text-gray-400">
                             <svg class="w-6 h-6 text-clinical-blue mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                             <div>
-                                <p class="font-bold text-white">Main Clinic</p>
+                                <p class="font-bold text-white">Main Clinic (Cheviot)</p>
                                 <p>3712 Harrison Ave, Cincinnati, OH 45211</p>
                             </div>
                         </div>
@@ -279,6 +315,10 @@
                             <svg class="w-6 h-6 text-clinical-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                             <p>(513) 662-8500</p>
                         </div>
+                    </div>
+                    <!-- Google Map Embed -->
+                    <div class="rounded-2xl overflow-hidden h-48 w-full max-w-md border border-white/5">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m18!1m12!1m3!1d3095.123456789012!2d-84.6152!3d39.1512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8841b5f123456789%3A0xabcdef1234567890!2s3712%20Harrison%20Ave%2C%20Cincinnati%2C%20OH%2045211!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
                 <div>
