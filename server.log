@@ -1,0 +1,43 @@
+127.0.0.1 - - [04/Mar/2026 17:39:24] "HEAD / HTTP/1.1" 200 -
+10.2.30.139 - - [04/Mar/2026 17:39:49] "GET / HTTP/1.1" 200 -
+10.2.30.139 - - [04/Mar/2026 17:39:49] code 404, message File not found
+10.2.30.139 - - [04/Mar/2026 17:39:49] "GET /images/bengals-logo.png HTTP/1.1" 404 -
+10.2.30.139 - - [04/Mar/2026 17:39:49] code 404, message File not found
+10.2.30.139 - - [04/Mar/2026 17:39:49] "GET /images/cyclones-logo.png HTTP/1.1" 404 -
+10.2.30.139 - - [04/Mar/2026 17:39:49] code 404, message File not found
+10.2.30.139 - - [04/Mar/2026 17:39:49] "GET /images/hero-clinical-art.png HTTP/1.1" 404 -
+10.2.30.139 - - [04/Mar/2026 17:39:49] code 404, message File not found
+10.2.30.139 - - [04/Mar/2026 17:39:49] "GET /images/bengals-logo.png HTTP/1.1" 404 -
+10.2.30.139 - - [04/Mar/2026 17:39:49] code 404, message File not found
+10.2.30.139 - - [04/Mar/2026 17:39:49] "GET /images/cyclones-logo.png HTTP/1.1" 404 -
+10.2.30.139 - - [04/Mar/2026 17:39:49] code 404, message File not found
+10.2.30.139 - - [04/Mar/2026 17:39:49] "GET /images/hero-clinical-art.png HTTP/1.1" 404 -
+10.2.51.22 - - [04/Mar/2026 17:40:42] "GET /programs/integrative-physiotherapy.html HTTP/1.1" 200 -
+10.2.51.22 - - [04/Mar/2026 17:41:09] "GET /programs/personalized-medicine-cincinnati.html HTTP/1.1" 200 -
+10.2.51.22 - - [04/Mar/2026 17:41:29] "GET /programs/neuropathy-care.html HTTP/1.1" 200 -
+10.2.51.22 - - [04/Mar/2026 17:41:44] "GET /treatments/pemf-therapy.html HTTP/1.1" 200 -
+10.2.42.8 - - [04/Mar/2026 17:45:22] "GET / HTTP/1.1" 200 -
+10.2.42.8 - - [04/Mar/2026 17:45:23] code 404, message File not found
+10.2.42.8 - - [04/Mar/2026 17:45:23] "GET /images/bengals-logo.png HTTP/1.1" 404 -
+10.2.42.8 - - [04/Mar/2026 17:45:23] code 404, message File not found
+10.2.42.8 - - [04/Mar/2026 17:45:23] "GET /images/cyclones-logo.png HTTP/1.1" 404 -
+10.2.42.8 - - [04/Mar/2026 17:45:23] code 404, message File not found
+10.2.42.8 - - [04/Mar/2026 17:45:23] "GET /images/hero-clinical-art.png HTTP/1.1" 404 -
+10.2.42.8 - - [04/Mar/2026 17:45:26] code 404, message File not found
+10.2.42.8 - - [04/Mar/2026 17:45:26] "GET /favicon.ico HTTP/1.1" 404 -
+10.2.42.8 - - [04/Mar/2026 17:47:59] "GET /programs/integrative-physiotherapy.html HTTP/1.1" 200 -
+10.2.42.8 - - [04/Mar/2026 17:48:01] code 404, message File not found
+10.2.42.8 - - [04/Mar/2026 17:48:01] "GET /images/bengals-logo.png HTTP/1.1" 404 -
+10.2.42.8 - - [04/Mar/2026 17:48:01] code 404, message File not found
+10.2.42.8 - - [04/Mar/2026 17:48:01] "GET /images/cyclones-logo.png HTTP/1.1" 404 -
+10.2.42.8 - - [04/Mar/2026 17:48:01] code 404, message File not found
+10.2.42.8 - - [04/Mar/2026 17:48:01] "GET /images/hero-clinical-art.png HTTP/1.1" 404 -
+10.2.42.8 - - [04/Mar/2026 17:48:18] "GET /team.html HTTP/1.1" 200 -
+10.2.42.8 - - [04/Mar/2026 17:48:18] code 404, message File not found
+10.2.42.8 - - [04/Mar/2026 17:48:18] code 404, message File not found
+10.2.42.8 - - [04/Mar/2026 17:48:18] "GET /images/team/andy-limle.png HTTP/1.1" 404 -
+10.2.42.8 - - [04/Mar/2026 17:48:18] "GET /images/team/dr-contner.png HTTP/1.1" 404 -
+10.2.42.8 - - [04/Mar/2026 17:48:19] code 404, message File not found
+10.2.42.8 - - [04/Mar/2026 17:48:19] "GET /images/team/dr-hekler.png HTTP/1.1" 404 -
+10.2.42.8 - - [04/Mar/2026 17:48:19] code 404, message File not found
+10.2.42.8 - - [04/Mar/2026 17:48:19] "GET /images/team/dr-bree.png HTTP/1.1" 404 -

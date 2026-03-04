@@ -38,10 +38,42 @@
                 </a>
             </div>
             
-            <div class="hidden lg:flex items-center space-x-8 text-sm font-medium">
-                <a href="/index.html" class="nav-link">Home</a>
-                <a href="/#programs" class="nav-link text-clinical-blue">Programs</a>
-                <a href="/treatments/adjunct-therapies-diagnostics.html" class="nav-link">Technology</a>
+                        <div class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+                <a href="/index.html" class="nav-link text-clinical-blue">Home</a>
+                
+                <div class="relative group">
+                    <button class="flex items-center space-x-1 nav-link py-2">
+                        <span>Clinical Focus</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="absolute left-0 mt-0 w-64 bg-white border border-gray-100 shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-4 z-50">
+                        <div class="px-4 pb-2 text-xs font-bold text-gray-400 uppercase tracking-wider">Longevity & Optimization</div>
+                        <a href="/programs/mitoflux-longevity-protocol.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors font-bold">The Mitoflux Protocol</a>
+                        <hr class="my-2 border-gray-100">
+                        <div class="px-4 pb-2 text-xs font-bold text-gray-400 uppercase tracking-wider">Targeted Optimizations</div>
+                        <a href="/programs/cincinnati-chiropractic-care.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Precision Chiropractic</a>
+                        <a href="/programs/integrative-physiotherapy.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Integrative Physiotherapy</a>
+                        <a href="/programs/neuropathy-care.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Neuropathy Care</a>
+                        <a href="/programs/golf-performance-cincinnati.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Golf Optimization</a>
+                        <a href="/programs/womens-health-cincinnati.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Women's Health</a>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <button class="flex items-center space-x-1 nav-link py-2">
+                        <span>Treatments</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="absolute left-0 mt-0 w-64 bg-white border border-gray-100 shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-4 z-50">
+                        <a href="/treatments/class-iv-laser.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Class IV Laser</a>
+                        <a href="/treatments/shockwave-therapy.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Shockwave Therapy</a>
+                        <a href="/treatments/pemf-therapy.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">PEMF Therapy</a>
+                        <a href="/treatments/hyperbaric-oxygen.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Hyperbaric Oxygen</a>
+                        <a href="/treatments/vo2-max-testing.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">VO2 Max Testing</a>
+                        <a href="/treatments/adjunct-therapies-diagnostics.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">All Technologies</a>
+                    </div>
+                </div>
+
                 <a href="/team.html" class="nav-link">Our Team</a>
                 <a href="/patient-resources.html" class="nav-link">Resources</a>
             </div>
@@ -56,72 +88,109 @@
 
     <main>
         <!-- Program Hero -->
-        <section class="py-24 bg-clinical-gray overflow-hidden">
-            <div class="container mx-auto px-6">
+        <section class="py-24 bg-clinical-gray relative overflow-hidden">
+            <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+            <div class="container mx-auto px-6 relative z-10">
                 <div class="flex flex-col lg:flex-row items-center gap-16">
                     <div class="lg:w-1/2">
-                        <h1 class="text-sm font-bold text-clinical-blue uppercase tracking-widest mb-4">Clinical Program 01</h1>
-                        <h2 class="text-5xl lg:text-6xl font-display font-bold mb-8">Precision Chiropractic Care</h2>
+                        <div class="inline-flex items-center px-3 py-1 rounded-full bg-clinical-blue/10 text-clinical-blue text-xs font-bold tracking-widest uppercase mb-6">
+                            Clinical Focus: Biomechanics
+                        </div>
+                        <h1 class="text-5xl lg:text-7xl font-display font-bold mb-8 leading-tight">
+                            Precision <span class="text-clinical-blue">Chiropractic</span> Care
+                        </h1>
                         <div class="prose prose-lg text-gray-600 leading-relaxed max-w-xl">
-                            <p>
-                                Standard, isolated adjustments often fail to address the root cause of chronic dysfunction. We provide robust, comprehensive options for permanent relief that go far beyond standard chiropractic treatments. Utilizing the same pro-level protocols trusted by professional athletes, our team integrates advanced diagnostics and targeted therapies to restore optimal joint kinematics and neurological function.
+                            <p class="text-xl">
+                                Standard, isolated adjustments often fail to address the root cause of chronic dysfunction. We provide robust, comprehensive options for permanent relief that go far beyond standard chiropractic treatments.
                             </p>
                         </div>
-                        <div class="mt-12 flex flex-col sm:flex-row items-center gap-4">
-                            <a href="/contact.html" class="px-8 py-4 bg-clinical-blue text-white rounded-full font-bold text-lg hover:bg-blue-700 transition-all shadow-xl w-full sm:w-auto text-center">
+                        <div class="mt-12 flex flex-col sm:flex-row items-center gap-6">
+                            <a href="/contact.html" class="px-8 py-4 bg-clinical-blue text-white rounded-full font-bold text-lg hover:bg-blue-700 transition-all shadow-xl shadow-blue-100 w-full sm:w-auto text-center">
                                 Request Appointment
                             </a>
-                            <p class="text-[10px] text-gray-500 font-medium uppercase tracking-widest leading-tight">
+                            <p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest leading-tight max-w-[200px]">
                                 We accept and utilize most major insurers for services when able.
                             </p>
                         </div>
                     </div>
                     <div class="lg:w-1/2 relative">
-                        <!-- AI Graphic Placeholder -->
-                        <div class="rounded-3xl overflow-hidden shadow-2xl bg-white p-2">
-                            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Precision Chiropractic Visualization" class="w-full h-full object-cover rounded-2xl">
-                            <!-- Prompt: Cinematic, hyper-realistic, close-up rendering of human cervical spine (C1-C7) set against a bright white background. Diffused surgical lighting highlights translucent, high-tech glowing kinetic energy fields stabilizing the facet joints. -->
+                        <div class="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white">
+                            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Precision Chiropractic Visualization" class="w-full h-full object-cover">
                         </div>
+                        <div class="absolute -top-10 -right-10 w-40 h-40 bg-clinical-blue/10 rounded-full blur-3xl"></div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Strategy Section -->
-        <section class="py-24 bg-white">
+        <section class="py-24 bg-white relative">
             <div class="container mx-auto px-6">
-                <div class="grid lg:grid-cols-3 gap-12">
-                    <div class="lg:col-span-2">
-                        <h3 class="text-3xl font-display font-bold mb-8 text-clinical-blue underline decoration-clinical-green decoration-4 underline-offset-8">Our Different Treatment Strategy</h3>
-                        <div class="space-y-8 text-lg text-gray-600 leading-relaxed">
-                            <p>
-                                Unlike traditional models that focus solely on the "bone out of place" theory, our approach is rooted in <strong>biostatic and biodynamic structural analysis</strong>. We don't just clear joint fixations; we identify the underlying patterns of compensatory movement that create those fixations in the first place.
-                            </p>
-                            <p>
-                                By utilizing pro-level frameworks, we deconstruct the kinematic chain. This allows us to deliver high-velocity, low-amplitude (HVLA) adjustments with extreme precision, supplemented by modalities that down-regulate protective muscular tension and restart the healing cascade.
-                            </p>
+                <div class="grid lg:grid-cols-12 gap-16">
+                    <div class="lg:col-span-8">
+                        <h3 class="text-4xl font-display font-bold mb-12">Our Different <span class="text-clinical-blue italic">Strategy</span></h3>
+                        
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div class="p-8 bg-clinical-gray rounded-3xl border border-gray-100 hover:border-clinical-blue/20 transition-colors">
+                                <h4 class="text-xl font-bold mb-4">Biodynamic Analysis</h4>
+                                <p class="text-gray-600">We don't just clear joint fixations; we identify the underlying patterns of compensatory movement that create those fixations in the first place.</p>
+                            </div>
+                            <div class="p-8 bg-clinical-gray rounded-3xl border border-gray-100 hover:border-clinical-blue/20 transition-colors">
+                                <h4 class="text-xl font-bold mb-4">Kinematic Deconstruction</h4>
+                                <p class="text-gray-600">Utilizing pro-level frameworks to deconstruct the kinematic chain and deliver HVLA adjustments with extreme precision.</p>
+                            </div>
+                            <div class="p-8 bg-clinical-gray rounded-3xl border border-gray-100 hover:border-clinical-blue/20 transition-colors">
+                                <h4 class="text-xl font-bold mb-4">Neuromuscular Re-boot</h4>
+                                <p class="text-gray-600">Targeting mechanoreceptors within the joint capsule to facilitate a rapid change in afferent signaling to the brain.</p>
+                            </div>
+                            <div class="p-8 bg-clinical-gray rounded-3xl border border-gray-100 hover:border-clinical-blue/20 transition-colors">
+                                <h4 class="text-xl font-bold mb-4">Pro-Level Protocols</h4>
+                                <p class="text-gray-600">Applying the same diagnostics and targeted therapies trusted by professional athletes for permanent functional restoration.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="bg-clinical-gray p-8 rounded-3xl h-fit">
-                        <h4 class="text-xl font-bold mb-6">Integrated Solution Stack</h4>
-                        <ul class="space-y-4">
-                            <li><a href="/treatments/spinal-decompression.html" class="flex items-center text-clinical-blue font-bold hover:translate-x-1 transition-transform">Spinal Decompression &rarr;</a></li>
-                            <li><a href="/treatments/class-iv-laser.html" class="flex items-center text-clinical-blue font-bold hover:translate-x-1 transition-transform">Class IV Laser Therapy &rarr;</a></li>
-                            <li><a href="/treatments/shockwave-therapy.html" class="flex items-center text-clinical-blue font-bold hover:translate-x-1 transition-transform">Shockwave Therapy &rarr;</a></li>
-                        </ul>
+                    
+                    <div class="lg:col-span-4">
+                        <div class="sticky top-32 p-8 bg-clinical-blue rounded-[2.5rem] text-white shadow-2xl">
+                            <h4 class="text-2xl font-display font-bold mb-8">Integrated Technology Stack</h4>
+                            <div class="space-y-4">
+                                <a href="/treatments/spinal-decompression.html" class="flex items-center justify-between p-4 bg-white/10 rounded-2xl hover:bg-white/20 transition-colors group">
+                                    <span class="font-bold">Spinal Decompression</span>
+                                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                                </a>
+                                <a href="/treatments/class-iv-laser.html" class="flex items-center justify-between p-4 bg-white/10 rounded-2xl hover:bg-white/20 transition-colors group">
+                                    <span class="font-bold">Class IV Laser</span>
+                                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                                </a>
+                                <a href="/treatments/shockwave-therapy.html" class="flex items-center justify-between p-4 bg-white/10 rounded-2xl hover:bg-white/20 transition-colors group">
+                                    <span class="font-bold">Shockwave Therapy</span>
+                                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                                </a>
+                            </div>
+                            <div class="mt-12 p-6 bg-white/5 rounded-2xl border border-white/10">
+                                <p class="text-sm italic opacity-80 leading-relaxed">
+                                    "Our goal is to restore optimal joint kinematics and neurological function for long-term durability."
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Research Tone Section -->
-        <section class="py-24 bg-clinical-charcoal text-white">
-            <div class="container mx-auto px-6">
+        <!-- Research Evidence Section -->
+        <section class="py-24 bg-clinical-charcoal text-white overflow-hidden relative">
+            <div class="absolute right-0 top-0 w-1/3 h-full bg-dot-pattern opacity-10"></div>
+            <div class="container mx-auto px-6 relative z-10">
                 <div class="max-w-4xl">
-                    <h3 class="text-2xl font-bold mb-8 text-clinical-green">Evidence-Based Clinical Framework</h3>
-                    <p class="text-xl opacity-90 leading-relaxed font-light">
-                        Our clinical protocols are built upon the latest research in <strong>neuro-mechanical regulation</strong>. By targeting the mechanoreceptors within the joint capsule, we facilitate a rapid change in afferent signaling to the brain. This "re-boots" the neuromuscular system, allowing for immediate improvements in range of motion and an immediate reduction in perceived pain intensity.
+                    <h3 class="text-sm font-bold text-clinical-green uppercase tracking-widest mb-8">Clinical Framework</h3>
+                    <p class="text-3xl lg:text-4xl leading-snug font-light mb-12">
+                        Our clinical protocols are built upon the latest research in <strong>neuro-mechanical regulation</strong>. By targeting the mechanoreceptors within the joint capsule, we facilitate a rapid change in afferent signaling to the brain.
                     </p>
+                    <div class="inline-flex items-center space-x-4 px-6 py-3 bg-white/5 rounded-full border border-white/10">
+                        <div class="w-2 h-2 bg-clinical-green rounded-full animate-pulse"></div>
+                        <span class="text-xs font-bold uppercase tracking-widest">Evidence-Based Strategy</span>
+                    </div>
                 </div>
             </div>
         </section>

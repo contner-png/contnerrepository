@@ -73,11 +73,43 @@
                 </a>
             </div>
             
-            <div class="hidden lg:flex items-center space-x-8 text-sm font-medium">
-                <a href="/index.html" class="nav-link">Home</a>
-                <a href="/#programs" class="nav-link">Programs</a>
-                <a href="/treatments/adjunct-therapies-diagnostics.html" class="nav-link">Technology</a>
-                <a href="/team.html" class="nav-link text-clinical-blue">Our Team</a>
+                        <div class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+                <a href="/index.html" class="nav-link text-clinical-blue">Home</a>
+                
+                <div class="relative group">
+                    <button class="flex items-center space-x-1 nav-link py-2">
+                        <span>Clinical Focus</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="absolute left-0 mt-0 w-64 bg-white border border-gray-100 shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-4 z-50">
+                        <div class="px-4 pb-2 text-xs font-bold text-gray-400 uppercase tracking-wider">Longevity & Optimization</div>
+                        <a href="/programs/mitoflux-longevity-protocol.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors font-bold">The Mitoflux Protocol</a>
+                        <hr class="my-2 border-gray-100">
+                        <div class="px-4 pb-2 text-xs font-bold text-gray-400 uppercase tracking-wider">Targeted Optimizations</div>
+                        <a href="/programs/cincinnati-chiropractic-care.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Precision Chiropractic</a>
+                        <a href="/programs/integrative-physiotherapy.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Integrative Physiotherapy</a>
+                        <a href="/programs/neuropathy-care.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Neuropathy Care</a>
+                        <a href="/programs/golf-performance-cincinnati.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Golf Optimization</a>
+                        <a href="/programs/womens-health-cincinnati.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Women's Health</a>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <button class="flex items-center space-x-1 nav-link py-2">
+                        <span>Treatments</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="absolute left-0 mt-0 w-64 bg-white border border-gray-100 shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-4 z-50">
+                        <a href="/treatments/class-iv-laser.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Class IV Laser</a>
+                        <a href="/treatments/shockwave-therapy.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Shockwave Therapy</a>
+                        <a href="/treatments/pemf-therapy.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">PEMF Therapy</a>
+                        <a href="/treatments/hyperbaric-oxygen.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Hyperbaric Oxygen</a>
+                        <a href="/treatments/vo2-max-testing.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">VO2 Max Testing</a>
+                        <a href="/treatments/adjunct-therapies-diagnostics.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">All Technologies</a>
+                    </div>
+                </div>
+
+                <a href="/team.html" class="nav-link">Our Team</a>
                 <a href="/patient-resources.html" class="nav-link">Resources</a>
             </div>
 
@@ -91,104 +123,101 @@
 
     <main>
         <!-- Team Header -->
-        <section class="bg-clinical-gray py-24">
-            <div class="container mx-auto px-6 text-center">
-                <h1 class="text-sm font-bold text-clinical-blue uppercase tracking-widest mb-4">Elite Physical Medicine</h1>
-                <h2 class="text-5xl lg:text-6xl font-display font-bold mb-8">Multidisciplinary Clinical Roster</h2>
+        <section class="bg-clinical-gray py-24 relative overflow-hidden">
+            <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <div class="inline-flex items-center px-3 py-1 rounded-full bg-clinical-blue/10 text-clinical-blue text-xs font-bold tracking-widest uppercase mb-6">
+                    Evidence-Based Excellence
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-display font-bold mb-8">Clinical <span class="text-clinical-blue italic">Roster</span></h1>
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                    Our team integrates pro-level chiropractic, physical therapy, and diagnostics to deliver unparalleled patient outcomes in Greater Cincinnati.
+                    A multidisciplinary team delivering pro-level protocols in chiropractic, physical therapy, and diagnostics.
                 </p>
             </div>
         </section>
 
         <!-- Team Grid -->
-        <section class="py-24 bg-white">
+        <section class="py-24 bg-white relative">
             <div class="container mx-auto px-6">
-                <div class="grid lg:grid-cols-2 gap-12">
+                <div class="grid lg:grid-cols-2 gap-8">
                     <!-- Dr. Andy Limle -->
-                    <div class="flex flex-col md:flex-row bg-clinical-gray rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 group">
-                        <div class="md:w-1/3 bg-gray-200 relative overflow-hidden">
-                            <img src="images/team/andy-limle.png" alt="Dr. Andy Limle" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
-                            <div class="absolute inset-0 bg-clinical-blue/10 mix-blend-multiply group-hover:opacity-0 transition-opacity"></div>
+                    <div class="group bg-clinical-gray rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col">
+                        <div class="h-[400px] relative overflow-hidden">
+                            <img src="images/team/andy-limle.png" alt="Dr. Andy Limle" class="w-full h-full object-cover grayscale group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-clinical-charcoal/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                         </div>
-                        <div class="md:w-2/3 p-8 lg:p-12 flex flex-col justify-center">
-                            <div class="mb-4">
-                                <span class="text-xs font-bold text-clinical-blue uppercase tracking-widest mb-2 block">Founder & Lead Chiropractor</span>
-                                <h3 class="text-3xl font-display font-bold">Dr. Andy Limle</h3>
-                            </div>
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                As the Official Chiropractor for the Cincinnati Bengals and Cyclones, Dr. Limle established the clinic’s pro-level standard of care. His pedigree in high-performance physical medicine informs every clinical protocol, ensuring elite-level care for every patient.
+                        <div class="p-10 lg:p-12">
+                            <span class="text-xs font-bold text-clinical-blue uppercase tracking-widest mb-2 block">Founder & Lead Chiropractor</span>
+                            <h3 class="text-3xl font-display font-bold mb-6">Dr. Andy Limle</h3>
+                            <p class="text-gray-600 mb-8 leading-relaxed text-lg">
+                                As the Official Chiropractor for the Cincinnati Bengals and Cyclones, Dr. Limle established the clinic’s pro-level standard of care.
                             </p>
-                            <div class="flex items-center space-x-4">
-                                <span class="px-3 py-1 bg-white text-xs font-bold rounded-full border border-gray-100 uppercase tracking-tighter">Bengals Medical</span>
-                                <span class="px-3 py-1 bg-white text-xs font-bold rounded-full border border-gray-100 uppercase tracking-tighter">Cyclones Pedigree</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-2 bg-white rounded-full text-xs font-bold border border-gray-100">Bengals Medical</span>
+                                <span class="px-4 py-2 bg-white rounded-full text-xs font-bold border border-gray-100">Cyclones Pedigree</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Dr. Contner -->
-                    <div class="flex flex-col md:flex-row bg-clinical-gray rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 group">
-                        <div class="md:w-1/3 bg-gray-200 relative overflow-hidden">
-                            <img src="images/team/dr-contner.png" alt="Dr. Contner" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
-                            <div class="absolute inset-0 bg-clinical-green/10 mix-blend-multiply group-hover:opacity-0 transition-opacity"></div>
+                    <div class="group bg-clinical-gray rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col">
+                        <div class="h-[400px] relative overflow-hidden">
+                            <img src="images/team/dr-contner.png" alt="Dr. Contner" class="w-full h-full object-cover grayscale group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-clinical-charcoal/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                         </div>
-                        <div class="md:w-2/3 p-8 lg:p-12 flex flex-col justify-center">
-                            <div class="mb-4">
-                                <span class="text-xs font-bold text-clinical-green uppercase tracking-widest mb-2 block">Physical Therapy Director</span>
-                                <h3 class="text-3xl font-display font-bold">Dr. Contner</h3>
-                            </div>
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                An expert in the Biopsychosocial (BPS) model of physiotherapy, Dr. Contner focuses on graded exposure and neuromuscular restoration. He bridges the gap between biological tissue capacity and the central nervous system's perception of pain.
+                        <div class="p-10 lg:p-12">
+                            <span class="text-xs font-bold text-clinical-green uppercase tracking-widest mb-2 block">Physical Therapy Director</span>
+                            <h3 class="text-3xl font-display font-bold mb-6">Dr. Contner</h3>
+                            <p class="text-gray-600 mb-8 leading-relaxed text-lg">
+                                Expert in the Biopsychosocial (BPS) model of physiotherapy, focusing on graded exposure and neuromuscular restoration.
                             </p>
-                            <div class="flex items-center space-x-4">
-                                <span class="px-3 py-1 bg-white text-xs font-bold rounded-full border border-gray-100 uppercase tracking-tighter">BPS Pain Expert</span>
-                                <span class="px-3 py-1 bg-white text-xs font-bold rounded-full border border-gray-100 uppercase tracking-tighter">DPT, Director of Rehab</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-2 bg-white rounded-full text-xs font-bold border border-gray-100">BPS Pain Expert</span>
+                                <span class="px-4 py-2 bg-white rounded-full text-xs font-bold border border-gray-100">Director of Rehab</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Dr. Hekler -->
-                    <div class="flex flex-col md:flex-row bg-clinical-gray rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 group">
-                        <div class="md:w-1/3 bg-gray-200 relative overflow-hidden">
-                            <img src="images/team/dr-hekler.png" alt="Dr. Hekler" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
-                            <div class="absolute inset-0 bg-indigo-100/30 mix-blend-multiply group-hover:opacity-0 transition-opacity"></div>
+                    <div class="group bg-clinical-gray rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col">
+                        <div class="h-[400px] relative overflow-hidden">
+                            <img src="images/team/dr-hekler.png" alt="Dr. Hekler" class="w-full h-full object-cover grayscale group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-clinical-charcoal/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                         </div>
-                        <div class="md:w-2/3 p-8 lg:p-12 flex flex-col justify-center">
-                            <div class="mb-4">
-                                <span class="text-xs font-bold text-indigo-600 uppercase tracking-widest mb-2 block">Lead Chiropractor</span>
-                                <h3 class="text-3xl font-display font-bold">Dr. Hekler</h3>
-                            </div>
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                Specializing in advanced spinal kinematics and joint mechanics, Dr. Hekler provides comprehensive structural diagnostics. His approach focuses on the mechanical integrity of the musculoskeletal system to prevent injury and optimize motion.
+                        <div class="p-10 lg:p-12">
+                            <span class="text-xs font-bold text-indigo-600 uppercase tracking-widest mb-2 block">Lead Chiropractor</span>
+                            <h3 class="text-3xl font-display font-bold mb-6">Dr. Hekler</h3>
+                            <p class="text-gray-600 mb-8 leading-relaxed text-lg">
+                                Specialist in advanced spinal kinematics and joint mechanics, providing comprehensive structural diagnostics.
                             </p>
-                            <div class="flex items-center space-x-4">
-                                <span class="px-3 py-1 bg-white text-xs font-bold rounded-full border border-gray-100 uppercase tracking-tighter">Kinematics Expert</span>
-                                <span class="px-3 py-1 bg-white text-xs font-bold rounded-full border border-gray-100 uppercase tracking-tighter">Structural Specialist</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-2 bg-white rounded-full text-xs font-bold border border-gray-100">Kinematics Expert</span>
+                                <span class="px-4 py-2 bg-white rounded-full text-xs font-bold border border-gray-100">Structural Specialist</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Dr. Bree -->
-                    <div class="flex flex-col md:flex-row bg-clinical-gray rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 group">
-                        <div class="md:w-1/3 bg-gray-200 relative overflow-hidden">
-                            <img src="images/team/dr-bree.png" alt="Dr. Bree" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
-                            <div class="absolute inset-0 bg-pink-100/30 mix-blend-multiply group-hover:opacity-0 transition-opacity"></div>
+                    <div class="group bg-clinical-gray rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col">
+                        <div class="h-[400px] relative overflow-hidden">
+                            <img src="images/team/dr-bree.png" alt="Dr. Bree" class="w-full h-full object-cover grayscale group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-clinical-charcoal/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                         </div>
-                        <div class="md:w-2/3 p-8 lg:p-12 flex flex-col justify-center">
-                            <div class="mb-4">
-                                <span class="text-xs font-bold text-pink-600 uppercase tracking-widest mb-2 block">Chiropractic & Women's Health Director</span>
-                                <h3 class="text-3xl font-display font-bold">Dr. Bree</h3>
-                            </div>
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                Dr. Bree integrates precision chiropractic with female-specific physiology and autonomic regulation. She focuses on the unique mechanical and neurological needs of women across every life stage, from performance to structural durability.
+                        <div class="p-10 lg:p-12">
+                            <span class="text-xs font-bold text-pink-600 uppercase tracking-widest mb-2 block">Women's Health Director</span>
+                            <h3 class="text-3xl font-display font-bold mb-6">Dr. Bree</h3>
+                            <p class="text-gray-600 mb-8 leading-relaxed text-lg">
+                                Integrating precision chiropractic with female-specific physiology and autonomic regulation.
                             </p>
-                            <div class="flex items-center space-x-4">
-                                <span class="px-3 py-1 bg-white text-xs font-bold rounded-full border border-gray-100 uppercase tracking-tighter">Women's Longevity</span>
-                                <span class="px-3 py-1 bg-white text-xs font-bold rounded-full border border-gray-100 uppercase tracking-tighter">Autonomic Health</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-2 bg-white rounded-full text-xs font-bold border border-gray-100">Women's Longevity</span>
+                                <span class="px-4 py-2 bg-white rounded-full text-xs font-bold border border-gray-100">Autonomic Health</span>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
                 <!-- Multidisciplinary Support -->
                 <div class="mt-24 grid md:grid-cols-2 gap-8">

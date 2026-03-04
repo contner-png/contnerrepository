@@ -38,10 +38,42 @@
                 </a>
             </div>
             
-            <div class="hidden lg:flex items-center space-x-8 text-sm font-medium">
-                <a href="/index.html" class="nav-link">Home</a>
-                <a href="/#programs" class="nav-link">Programs</a>
-                <a href="/treatments/adjunct-therapies-diagnostics.html" class="nav-link text-clinical-blue">Technology</a>
+                        <div class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+                <a href="/index.html" class="nav-link text-clinical-blue">Home</a>
+                
+                <div class="relative group">
+                    <button class="flex items-center space-x-1 nav-link py-2">
+                        <span>Clinical Focus</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="absolute left-0 mt-0 w-64 bg-white border border-gray-100 shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-4 z-50">
+                        <div class="px-4 pb-2 text-xs font-bold text-gray-400 uppercase tracking-wider">Longevity & Optimization</div>
+                        <a href="/programs/mitoflux-longevity-protocol.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors font-bold">The Mitoflux Protocol</a>
+                        <hr class="my-2 border-gray-100">
+                        <div class="px-4 pb-2 text-xs font-bold text-gray-400 uppercase tracking-wider">Targeted Optimizations</div>
+                        <a href="/programs/cincinnati-chiropractic-care.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Precision Chiropractic</a>
+                        <a href="/programs/integrative-physiotherapy.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Integrative Physiotherapy</a>
+                        <a href="/programs/neuropathy-care.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Neuropathy Care</a>
+                        <a href="/programs/golf-performance-cincinnati.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Golf Optimization</a>
+                        <a href="/programs/womens-health-cincinnati.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Women's Health</a>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <button class="flex items-center space-x-1 nav-link py-2">
+                        <span>Treatments</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="absolute left-0 mt-0 w-64 bg-white border border-gray-100 shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-4 z-50">
+                        <a href="/treatments/class-iv-laser.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Class IV Laser</a>
+                        <a href="/treatments/shockwave-therapy.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Shockwave Therapy</a>
+                        <a href="/treatments/pemf-therapy.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">PEMF Therapy</a>
+                        <a href="/treatments/hyperbaric-oxygen.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Hyperbaric Oxygen</a>
+                        <a href="/treatments/vo2-max-testing.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">VO2 Max Testing</a>
+                        <a href="/treatments/adjunct-therapies-diagnostics.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">All Technologies</a>
+                    </div>
+                </div>
+
                 <a href="/team.html" class="nav-link">Our Team</a>
                 <a href="/patient-resources.html" class="nav-link">Resources</a>
             </div>
@@ -54,44 +86,49 @@
         </nav>
     </header>
 
-    <main>
+        <main>
         <!-- Technology Hero -->
-        <section class="py-24 bg-clinical-gray overflow-hidden">
-            <div class="container mx-auto px-6">
+        <section class="py-24 bg-clinical-gray relative overflow-hidden">
+            <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+            <div class="container mx-auto px-6 relative z-10">
                 <div class="flex flex-col lg:flex-row items-center gap-16">
                     <div class="lg:w-1/2">
-                        <h1 class="text-sm font-bold text-clinical-blue uppercase tracking-widest mb-4">Applied Regenerative Physics</h1>
-                        <h2 class="text-5xl lg:text-6xl font-display font-bold mb-8 leading-tight">Evidence-Based Class IV Laser Therapy</h2>
+                        <div class="inline-flex items-center px-3 py-1 rounded-full bg-clinical-blue/10 text-clinical-blue text-xs font-bold tracking-widest uppercase mb-6">
+                            Advanced Modality
+                        </div>
+                        <h1 class="text-5xl lg:text-7xl font-display font-bold mb-8 leading-tight">
+                            Evidence-Based Class IV Laser Therapy
+                        </h1>
                         <div class="prose prose-lg text-gray-600 leading-relaxed max-w-xl">
                             <h3 class="text-2xl font-bold text-clinical-charcoal mb-4">Mechanism of Action</h3>
-                            <p>
-                                This high-power modality utilizes specific infrared wavelengths (typically 810nm-980nm) to penetrate deep tissue and trigger <strong>Photobiomodulation</strong>. Cytochrome c oxidase, a key enzyme in the cellular mitochondria, absorbs this light energy. This upregulates the production of <strong>Adenosine Triphosphate (ATP)</strong>, shifts cellular respiration out of oxidative stress, increases localized vasodilation, and expedites the inflammatory cascade for rapid tissue repair.
+                            <p class="text-xl">
+                                &copy; 2026 Cincinnati Chiropractic & Mitoflux Longevity. Serving Greater Cincinnati. All rights reserved.
                             </p>
                         </div>
                         <div class="mt-12">
-                            <a href="/contact.html" class="px-8 py-4 bg-clinical-blue text-white rounded-full font-bold text-lg hover:bg-blue-700 transition-all shadow-xl inline-block text-center">
+                            <a href="/contact.html" class="px-8 py-4 bg-clinical-blue text-white rounded-full font-bold text-lg hover:bg-blue-700 transition-all shadow-xl shadow-blue-100 inline-block text-center">
                                 Request Appointment
                             </a>
                         </div>
                     </div>
                     <div class="lg:w-1/2 relative">
-                        <!-- AI Graphic Placeholder -->
-                        <div class="rounded-3xl overflow-hidden shadow-2xl bg-white p-2">
-                            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Photobiomodulation Visualization" class="w-full h-full object-cover rounded-2xl">
-                            <!-- Prompt: Ultra close-up macro photography of cellular photobiomodulation. The warm red light of a Class IV laser strikes mitochondrial receptors... -->
+                        <div class="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white">
+                            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Evidence-Based Class IV Laser Therapy Visualization" class="w-full h-full object-cover">
                         </div>
+                        <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-clinical-green/10 rounded-full blur-3xl"></div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Clinical Efficacy Section -->
-        <section class="py-24 bg-white">
-            <div class="container mx-auto px-6">
+        <section class="py-24 bg-white relative overflow-hidden">
+            <div class="absolute inset-0 bg-dot-pattern opacity-10"></div>
+            <div class="container mx-auto px-6 relative z-10">
                 <div class="max-w-4xl mx-auto text-center">
-                    <h3 class="text-3xl font-display font-bold mb-8">Rapid Recovery through Mitochondrial Support</h3>
-                    <p class="text-xl text-gray-600 leading-relaxed">
-                        Class IV Laser Therapy is a non-invasive recovery catalyst used by professional athletes to accelerate healing from acute sprains, chronic tendinopathies, and neuro-inflammatory conditions. By providing the cellular "fuel" needed for repair, we significantly reduce recovery timelines and eliminate the need for pharmaceutical interventions.
+                    <h3 class="text-4xl font-display font-bold mb-8">Rapid Recovery through Mitochondrial Support</h3>
+                    <p class="text-2xl text-gray-600 leading-relaxed font-light">
+                        &copy; 2026 Cincinnati Chiropractic & Mitoflux Longevity. Serving Greater Cincinnati. All rights reserved.
                     </p>
                 </div>
             </div>
