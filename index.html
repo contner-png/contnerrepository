@@ -94,7 +94,7 @@
       "alternateName": "Cincinnati Chiropractic",
       "url": "https://cincinnatichiropractic.com",
       "logo": "https://cincinnatichiropractic.com/images/logo.png",
-      "image": "https://cincinnatichiropractic.com/images/hero-clinical-art.png",
+      "image": "https://cincinnatichiropractic.com/https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       "description": "Elite Physical Medicine & Advanced Longevity Care in Greater Cincinnati. Official Chiropractor for the Bengals & Cyclones.",
       "address": {
         "@type": "PostalAddress",
@@ -271,14 +271,24 @@
                                 View Clinical Programs
                             </a>
                         </div>
-                        <div class="flex items-center space-x-8 pt-6">
-                            <img src="images/bengals-logo.png" alt="Cincinnati Bengals" class="h-12 opacity-40 grayscale hover:grayscale-0 transition-all">
-                            <img src="images/cyclones-logo.png" alt="Cincinnati Cyclones" class="h-12 opacity-40 grayscale hover:grayscale-0 transition-all">
+                        <div class="flex items-center space-x-12 pt-8">
+                            <div class="flex flex-col items-center group/logo">
+                                <div class="h-14 flex items-center justify-center px-4 bg-gray-50 rounded-xl border border-gray-100 group-hover/logo:border-clinical-blue transition-colors">
+                                    <span class="text-xl font-display font-black text-clinical-charcoal group-hover/logo:text-clinical-blue transition-colors">BENGALS</span>
+                                </div>
+                                <span class="text-[8px] font-bold uppercase tracking-[0.3em] mt-2 text-gray-400 group-hover/logo:text-clinical-blue">Official Partner</span>
+                            </div>
+                            <div class="flex flex-col items-center group/logo">
+                                <div class="h-14 flex items-center justify-center px-4 bg-gray-50 rounded-xl border border-gray-100 group-hover/logo:border-clinical-blue transition-colors">
+                                    <span class="text-xl font-display font-black text-clinical-charcoal group-hover/logo:text-clinical-blue transition-colors">CYCLONES</span>
+                                </div>
+                                <span class="text-[8px] font-bold uppercase tracking-[0.3em] mt-2 text-gray-400 group-hover/logo:text-clinical-blue">Official Provider</span>
+                            </div>
                         </div>
                     </div>
                     <div class="lg:w-1/2 relative">
-                        <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
-                            <img src="images/hero-clinical-art.png" alt="Elite Physical Medicine" class="w-full h-full object-cover">
+                        <div class="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white aspect-[4/3]">
+                            <img src="https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Elite Physical Medicine" class="w-full h-full object-cover">
                         </div>
                         <div class="absolute -top-12 -right-12 w-64 h-64 bg-clinical-blue/5 rounded-full blur-3xl"></div>
                         <div class="absolute -bottom-12 -left-12 w-64 h-64 bg-clinical-green/5 rounded-full blur-3xl"></div>
@@ -299,79 +309,101 @@
 
                 <div class="grid lg:grid-cols-4 gap-8">
                     <!-- Flagship 1: Chiropractic -->
-                    <div class="group relative bg-clinical-gray rounded-[2.5rem] p-8 transition-all duration-500 hover:bg-clinical-blue overflow-hidden cursor-pointer h-[450px] flex flex-col justify-between border border-gray-100 bento-card">
+                    <div class="group relative bg-white rounded-[3rem] p-10 transition-all duration-700 hover:shadow-[0_40px_80px_-15px_rgba(0,71,171,0.2)] overflow-hidden cursor-pointer h-[520px] flex flex-col justify-between border border-gray-100 bento-card">
                         <div class="relative z-10">
-                            <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-white/10 transition-colors">
-                                <svg class="w-8 h-8 text-clinical-blue group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            <!-- Premium Clinical Emblem: Precision Chiropractic -->
+                            <div class="w-24 h-24 mb-12 relative flex items-center justify-center group-hover:scale-110 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-clinical-blue/5 rounded-[2rem] rotate-6 group-hover:rotate-12 transition-transform"></div>
+                                <div class="absolute inset-0 bg-clinical-blue/10 rounded-[2rem] -rotate-3 group-hover:-rotate-6 transition-transform"></div>
+                                <svg class="w-12 h-12 text-clinical-blue relative z-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 2v20M7 5l10 0M5 10l14 0M5 15l14 0M7 19l10 0" stroke-linecap="round"/>
+                                    <path d="M12 8a4 4 0 014 4M12 16a4 4 0 01-4-4" stroke="currentColor" opacity="0.4"/>
+                                </svg>
                             </div>
-                            <h4 class="text-3xl font-display font-bold mb-4 group-hover:text-white transition-colors leading-tight">Precision Chiropractic</h4>
-                            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-blue-50 text-sm leading-relaxed max-w-xs">
+                            <h4 class="text-3xl font-display font-bold mb-6 text-clinical-charcoal group-hover:text-clinical-blue transition-colors leading-tight italic">Precision Chiropractic</h4>
+                            <p class="text-gray-500 text-base leading-relaxed">
                                 Utilizing spinal kinematics and biodynamic analysis to restore joint mechanics and neurological afferent signaling.
-                            </div>
+                            </p>
                         </div>
                         <div class="relative z-10">
-                            <a href="/programs/cincinnati-chiropractic-care.html" class="inline-flex items-center px-6 py-3 bg-clinical-blue text-white group-hover:bg-white group-hover:text-clinical-blue rounded-full font-bold text-sm transition-all shadow-lg">
+                            <a href="/programs/cincinnati-chiropractic-care.html" class="inline-flex items-center px-8 py-4 bg-clinical-blue text-white rounded-full font-bold text-sm transition-all shadow-xl shadow-blue-100 hover:bg-blue-700 group-hover:translate-y-[-4px]">
                                 Deep Dive <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                             </a>
                         </div>
-                        <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-clinical-blue/5 rounded-full blur-3xl group-hover:bg-white/5"></div>
                     </div>
 
                     <!-- Flagship 2: Physiotherapy -->
-                    <div class="group relative bg-clinical-gray rounded-[2.5rem] p-8 transition-all duration-500 hover:bg-clinical-green overflow-hidden cursor-pointer h-[450px] flex flex-col justify-between border border-gray-100 bento-card">
+                    <div class="group relative bg-white rounded-[3rem] p-10 transition-all duration-700 hover:shadow-[0_40px_80px_-15px_rgba(34,197,94,0.2)] overflow-hidden cursor-pointer h-[520px] flex flex-col justify-between border border-gray-100 bento-card">
                         <div class="relative z-10">
-                            <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-white/10 transition-colors">
-                                <svg class="w-8 h-8 text-clinical-green group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <!-- Premium Clinical Emblem: Integrative Physio -->
+                            <div class="w-24 h-24 mb-12 relative flex items-center justify-center group-hover:scale-110 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-clinical-green/5 rounded-[2rem] rotate-6 group-hover:rotate-12 transition-transform"></div>
+                                <div class="absolute inset-0 bg-clinical-green/10 rounded-[2rem] -rotate-3 group-hover:-rotate-6 transition-transform"></div>
+                                <svg class="w-12 h-12 text-clinical-green relative z-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M20.5 12a8.5 8.5 0 11-17 0 8.5 8.5 0 0117 0z" />
+                                    <path d="M12 7v10M8.5 12h7" stroke-linecap="round"/>
+                                    <circle cx="12" cy="12" r="2" fill="currentColor" fill-opacity="0.2"/>
+                                </svg>
                             </div>
-                            <h4 class="text-3xl font-display font-bold mb-4 group-hover:text-white transition-colors leading-tight">Integrative Physio</h4>
-                            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-green-50 text-sm leading-relaxed max-w-xs">
-                                operating on the Biopsychosocial (BPS) Model, integrating neuro-modulation and graded exposure for pain resolution.
-                            </div>
+                            <h4 class="text-3xl font-display font-bold mb-6 text-clinical-charcoal group-hover:text-clinical-green transition-colors leading-tight italic">Integrative Physio</h4>
+                            <p class="text-gray-500 text-base leading-relaxed">
+                                Operating on the Biopsychosocial (BPS) Model, integrating neuro-modulation and graded exposure for permanent functional recovery.
+                            </p>
                         </div>
                         <div class="relative z-10">
-                            <a href="/programs/integrative-physiotherapy.html" class="inline-flex items-center px-6 py-3 bg-clinical-green text-white group-hover:bg-white group-hover:text-clinical-green rounded-full font-bold text-sm transition-all shadow-lg">
+                            <a href="/programs/integrative-physiotherapy.html" class="inline-flex items-center px-8 py-4 bg-clinical-green text-white rounded-full font-bold text-sm transition-all shadow-xl shadow-green-100 hover:bg-green-600 group-hover:translate-y-[-4px]">
                                 Deep Dive <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                             </a>
                         </div>
-                        <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-clinical-green/5 rounded-full blur-3xl group-hover:bg-white/5"></div>
                     </div>
 
                     <!-- Flagship 3: Personalized Medicine -->
-                    <div class="group relative bg-clinical-gray rounded-[2.5rem] p-8 transition-all duration-500 hover:bg-clinical-charcoal overflow-hidden cursor-pointer h-[450px] flex flex-col justify-between border border-gray-100 bento-card">
+                    <div class="group relative bg-white rounded-[3rem] p-10 transition-all duration-700 hover:shadow-[0_40px_80px_-15px_rgba(51,51,51,0.2)] overflow-hidden cursor-pointer h-[520px] flex flex-col justify-between border border-gray-100 bento-card">
                         <div class="relative z-10">
-                            <div class="w-16 h-16 bg-gray-200 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-white/10 transition-colors">
-                                <svg class="w-8 h-8 text-clinical-charcoal group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04M12 21a11.955 11.955 0 01-8.618-3.04m17.236 0A11.955 11.955 0 0112 21"></path></svg>
+                            <!-- Premium Clinical Emblem: Personalized Medicine -->
+                            <div class="w-24 h-24 mb-12 relative flex items-center justify-center group-hover:scale-110 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-gray-100 rounded-[2rem] rotate-6 group-hover:rotate-12 transition-transform"></div>
+                                <div class="absolute inset-0 bg-gray-200 rounded-[2rem] -rotate-3 group-hover:-rotate-6 transition-transform"></div>
+                                <svg class="w-12 h-12 text-clinical-charcoal relative z-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71L12 2z" stroke-linejoin="round"/>
+                                    <path d="M12 14a3 3 0 100-6 3 3 0 000 6z" stroke="currentColor" opacity="0.4"/>
+                                </svg>
                             </div>
-                            <h4 class="text-3xl font-display font-bold mb-4 group-hover:text-white transition-colors leading-tight">Personalized Medicine</h4>
-                            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-gray-300 text-sm leading-relaxed max-w-xs">
-                                Clinical biomarker tracking and bespoke recovery blueprints tailored to your unique physiological requirements.
-                            </div>
+                            <h4 class="text-3xl font-display font-bold mb-6 text-clinical-charcoal group-hover:text-clinical-blue transition-colors leading-tight italic">Personalized Medicine</h4>
+                            <p class="text-gray-500 text-base leading-relaxed">
+                                Bespoke recovery blueprints engineered from clinical biomarker tracking and advanced cardiopulmonary analytics.
+                            </p>
                         </div>
                         <div class="relative z-10">
-                            <a href="/programs/personalized-medicine-cincinnati.html" class="inline-flex items-center px-6 py-3 bg-clinical-charcoal text-white group-hover:bg-white group-hover:text-clinical-charcoal rounded-full font-bold text-sm transition-all shadow-lg">
+                            <a href="/programs/personalized-medicine-cincinnati.html" class="inline-flex items-center px-8 py-4 bg-clinical-charcoal text-white rounded-full font-bold text-sm transition-all shadow-xl shadow-gray-200 hover:bg-black group-hover:translate-y-[-4px]">
                                 Deep Dive <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                             </a>
                         </div>
-                        <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-white/5 rounded-full blur-3xl"></div>
                     </div>
 
                     <!-- Flagship 4: Longevity -->
-                    <div class="group relative bg-clinical-gray rounded-[2.5rem] p-8 transition-all duration-500 hover:bg-clinical-blue overflow-hidden cursor-pointer h-[450px] flex flex-col justify-between border border-gray-100 bento-card">
+                    <div class="group relative bg-white rounded-[3rem] p-10 transition-all duration-700 hover:shadow-[0_40px_80px_-15px_rgba(0,71,171,0.2)] overflow-hidden cursor-pointer h-[520px] flex flex-col justify-between border border-gray-100 bento-card">
                         <div class="relative z-10">
-                            <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-white/10 transition-colors">
-                                <svg class="w-8 h-8 text-clinical-blue group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                            <!-- Premium Clinical Emblem: Mitoflux Longevity -->
+                            <div class="w-24 h-24 mb-12 relative flex items-center justify-center group-hover:scale-110 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-clinical-blue/5 rounded-[2rem] rotate-6 group-hover:rotate-12 transition-transform"></div>
+                                <div class="absolute inset-0 bg-clinical-blue/10 rounded-[2rem] -rotate-3 group-hover:-rotate-6 transition-transform"></div>
+                                <svg class="w-12 h-12 text-clinical-blue relative z-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor"/>
+                                    <path d="M12 6v12M6 12h12" stroke-linecap="round" opacity="0.3"/>
+                                    <path d="M8 12a4 4 0 118 0 4 4 0 01-8 0z" fill="currentColor" fill-opacity="0.2"/>
+                                </svg>
                             </div>
-                            <h4 class="text-3xl font-display font-bold mb-4 group-hover:text-white transition-colors leading-tight">Mitoflux Longevity</h4>
-                            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-blue-50 text-sm leading-relaxed max-w-xs">
-                                Mitochondrial optimization and metabolic repair designed to maximize human healthspan and systemic energy.
-                            </div>
+                            <h4 class="text-3xl font-display font-bold mb-6 text-clinical-charcoal group-hover:text-clinical-blue transition-colors leading-tight italic">Mitoflux Longevity</h4>
+                            <p class="text-gray-500 text-base leading-relaxed">
+                                Mitochondrial optimization and metabolic repair designed to maximize human healthspan and systemic cellular energy.
+                            </p>
                         </div>
                         <div class="relative z-10">
-                            <a href="/programs/mitoflux-longevity-protocol.html" class="inline-flex items-center px-6 py-3 bg-clinical-blue text-white group-hover:bg-white group-hover:text-clinical-blue rounded-full font-bold text-sm transition-all shadow-lg">
+                            <a href="/programs/mitoflux-longevity-protocol.html" class="inline-flex items-center px-8 py-4 bg-clinical-blue text-white rounded-full font-bold text-sm transition-all shadow-xl shadow-blue-100 hover:bg-blue-700 group-hover:translate-y-[-4px]">
                                 Deep Dive <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                             </a>
                         </div>
-                        <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-clinical-blue/5 rounded-full blur-3xl group-hover:bg-white/5"></div>
                     </div>
                 </div>
             </div>

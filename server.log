@@ -1,14 +1,1 @@
-127.0.0.1 - - [04/Mar/2026 21:00:30] "HEAD /index.html HTTP/1.1" 200 -
-10.2.30.139 - - [04/Mar/2026 21:00:52] "GET / HTTP/1.1" 200 -
-10.2.30.139 - - [04/Mar/2026 21:00:53] code 404, message File not found
-10.2.30.139 - - [04/Mar/2026 21:00:53] "GET /images/longevity-flagship.png HTTP/1.1" 404 -
-10.2.30.139 - - [04/Mar/2026 21:00:53] code 404, message File not found
-10.2.30.139 - - [04/Mar/2026 21:00:53] "GET /images/bengals-logo.png HTTP/1.1" 404 -
-10.2.30.139 - - [04/Mar/2026 21:00:53] code 404, message File not found
-10.2.30.139 - - [04/Mar/2026 21:00:53] "GET /images/cyclones-logo.png HTTP/1.1" 404 -
-10.2.30.139 - - [04/Mar/2026 21:00:53] code 404, message File not found
-10.2.30.139 - - [04/Mar/2026 21:00:53] "GET /images/biomechanics-preview.png HTTP/1.1" 404 -
-10.2.30.139 - - [04/Mar/2026 21:00:53] code 404, message File not found
-10.2.30.139 - - [04/Mar/2026 21:00:53] "GET /images/hero-clinical-art.png HTTP/1.1" 404 -
-10.2.30.139 - - [04/Mar/2026 21:00:55] code 404, message File not found
-10.2.30.139 - - [04/Mar/2026 21:00:55] "GET /favicon.ico HTTP/1.1" 404 -
+nohup: ignoring input
