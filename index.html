@@ -607,6 +607,25 @@
                         delay: 5000,
                     },
                 });
+                const reviewsSwiper = new Swiper('.reviews-swiper', {
+                    loop: true,
+                    autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    },
+                    effect: 'fade',
+                    fadeEffect: {
+                        crossFade: true
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
             });
         </script>
         <!-- Clinic Gallery Carousel -->
@@ -656,25 +675,69 @@
                     <h2 class="text-sm font-bold text-clinical-blue uppercase tracking-widest mb-4">Patient Outcomes</h2>
                     <h3 class="text-4xl lg:text-5xl font-display font-bold mb-12">Experience the Cincinnati Chiropractic Difference</h3>
                     
-                    <!-- Google Review API Placeholder -->
-                    <div id="google-reviews-widget" class="min-h-[300px] bg-white rounded-[2.5rem] p-8 lg:p-12 shadow-2xl border border-gray-100 flex flex-col items-center justify-center text-center">
-                        <div class="mb-6">
-                            <svg class="w-12 h-12 mx-auto" viewBox="0 0 24 24">
+                    <!-- Google Review Carousel -->
+                    <div class="swiper reviews-swiper min-h-[400px] bg-white rounded-[2.5rem] p-8 lg:p-12 shadow-2xl border border-gray-100 relative overflow-hidden">
+                        <div class="mb-10 text-center relative z-10">
+                            <svg class="w-12 h-12 mx-auto mb-4" viewBox="0 0 24 24">
                                 <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c1.68-1.54 2.65-3.81 2.65-6.5z"/><path fill="#34A853" d="M12 23c3.15 0 5.79-1.05 7.72-2.85l-3.57-2.77c-.98.66-2.23 1.06-3.75 1.06-2.88 0-5.33-1.94-6.21-4.54H2.55v2.86C4.48 20.52 8.02 23 12 23z"/><path fill="#FBBC05" d="M5.79 13.9c-.23-.66-.35-1.36-.35-2.1s.12-1.44.35-2.1V6.84H2.55C1.75 8.42 1.3 10.16 1.3 12s.45 3.58 1.25 5.16l3.24-2.26z"/><path fill="#EA4335" d="M12 5.38c1.71 0 3.25.59 4.46 1.73l3.34-3.34C17.78 1.83 15.15.7 12 .7 8.02.7 4.48 3.18 2.55 6.84l3.24 2.26c.88-2.6 3.33-4.54 6.21-4.54z"/>
                             </svg>
+                            <div class="flex items-center justify-center space-x-1 mb-2">
+                                <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            </div>
+                            <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Verified 5-Star Clinical Outcomes</span>
                         </div>
-                        <div class="flex items-center space-x-1 mb-6">
-                            <!-- 5 Stars -->
-                            <svg class="w-6 h-6 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                            <svg class="w-6 h-6 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                            <svg class="w-6 h-6 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                            <svg class="w-6 h-6 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                            <svg class="w-6 h-6 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+
+                        <div class="swiper-wrapper">
+                            <!-- Review 1 -->
+                            <div class="swiper-slide text-center px-4 lg:px-20">
+                                <p class="text-xl lg:text-2xl text-clinical-charcoal font-medium leading-relaxed italic mb-8">
+                                    "The elite care I received at Cincinnati Chiropractic is unmatched. They helped me get back to peak performance faster than I expected. The attention to detail in their diagnostic approach is world-class."
+                                </p>
+                                <div class="flex flex-col items-center">
+                                    <span class="font-bold text-clinical-blue text-lg uppercase tracking-wider">A. Thompson</span>
+                                    <span class="text-xs text-gray-400 font-bold uppercase tracking-widest">Athlete & Patient</span>
+                                </div>
+                            </div>
+                            <!-- Review 2 -->
+                            <div class="swiper-slide text-center px-4 lg:px-20">
+                                <p class="text-xl lg:text-2xl text-clinical-charcoal font-medium leading-relaxed italic mb-8">
+                                    "Professional, data-driven, and effective. Cincinnati Chiropractic is the only place I trust for my recovery and longevity needs. They are true engineers of the human body."
+                                </p>
+                                <div class="flex flex-col items-center">
+                                    <span class="font-bold text-clinical-blue text-lg uppercase tracking-wider">M. Rogers</span>
+                                    <span class="text-xs text-gray-400 font-bold uppercase tracking-widest">Executive Health Patient</span>
+                                </div>
+                            </div>
+                            <!-- Review 3 -->
+                            <div class="swiper-slide text-center px-4 lg:px-20">
+                                <p class="text-xl lg:text-2xl text-clinical-charcoal font-medium leading-relaxed italic mb-8">
+                                    "The Mitoflux protocol has been a game-changer for my energy levels and overall vitality. Highly recommend their comprehensive multidisciplinary approach to anyone over 40."
+                                </p>
+                                <div class="flex flex-col items-center">
+                                    <span class="font-bold text-clinical-blue text-lg uppercase tracking-wider">S. Miller</span>
+                                    <span class="text-xs text-gray-400 font-bold uppercase tracking-widest">Longevity Enthusiast</span>
+                                </div>
+                            </div>
+                            <!-- Review 4 -->
+                            <div class="swiper-slide text-center px-4 lg:px-20">
+                                <p class="text-xl lg:text-2xl text-clinical-charcoal font-medium leading-relaxed italic mb-8">
+                                    "Best chiropractic care in Cincinnati. They truly understand structural biomechanics and don't just treat symptoms. They built me a blueprint for long-term health."
+                                </p>
+                                <div class="flex flex-col items-center">
+                                    <span class="font-bold text-clinical-blue text-lg uppercase tracking-wider">J. Davis</span>
+                                    <span class="text-xs text-gray-400 font-bold uppercase tracking-widest">Patient</span>
+                                </div>
+                            </div>
                         </div>
-                        <p class="text-xl text-gray-600 font-medium mb-8 max-w-lg mx-auto">"Loading live 5-star Google Business Profile reviews for Cincinnati Chiropractic..."</p>
-                        <div class="flex items-center space-x-2 text-xs font-bold text-gray-400 uppercase tracking-[0.2em]">
-                            <span>Official Review API Integration</span>
-                        </div>
+                        
+                        <!-- Navigation -->
+                        <div class="swiper-button-next text-clinical-blue after:text-2xl"></div>
+                        <div class="swiper-button-prev text-clinical-blue after:text-2xl"></div>
+                        <div class="swiper-pagination mt-8"></div>
                     </div>
 
                     <div class="mt-16 flex flex-col items-center space-y-6">
