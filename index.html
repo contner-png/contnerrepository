@@ -149,9 +149,49 @@
                 <a href="/contact.html" class="hidden sm:block px-6 py-2.5 bg-clinical-blue text-white rounded-full font-semibold hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-200">
                     Request Appointment
                 </a>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="lg:hidden p-2 text-clinical-charcoal hover:text-clinical-blue transition-colors">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
             </div>
         </nav>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white transform translate-x-full transition-transform duration-300 lg:hidden">
+            <div class="p-6 flex flex-col h-full">
+                <div class="flex items-center justify-between mb-12">
+                    <span class="text-2xl font-display font-bold text-clinical-blue">MENU</span>
+                    <button id="close-menu" class="p-2">
+                        <svg class="w-8 h-8 text-clinical-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                </div>
+                <div class="flex flex-col space-y-6 text-2xl font-display font-bold">
+                    <a href="/index.html" class="hover:text-clinical-blue">Home</a>
+                    <a href="/programs/mitoflux-longevity-protocol.html" class="hover:text-clinical-blue text-clinical-blue">Longevity Protocol</a>
+                    <a href="/team.html" class="hover:text-clinical-blue">Our Team</a>
+                    <a href="/patient-resources.html" class="hover:text-clinical-blue">Resources</a>
+                    <a href="/contact.html" class="hover:text-clinical-blue">Contact</a>
+                </div>
+                <div class="mt-auto pb-12">
+                    <a href="/contact.html" class="block w-full py-5 bg-clinical-blue text-white text-center rounded-full font-bold text-xl shadow-xl">
+                        Request Appointment
+                    </a>
+                </div>
+            </div>
+        </div>
     </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('mobile-menu-button');
+            const close = document.getElementById('close-menu');
+            const menu = document.getElementById('mobile-menu');
+            
+            if(btn && menu && close) {
+                btn.onclick = () => menu.classList.remove('translate-x-full');
+                close.onclick = () => menu.classList.add('translate-x-full');
+            }
+        });
+    </script>
 
     <main>
         <!-- Hero Section -->
@@ -248,10 +288,10 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
                     <!-- High Impact: Applied Regenerative Physics -->
-                    <div class="md:col-span-8 bento-card bg-white p-8 lg:p-12 rounded-[2rem] shadow-sm border border-gray-100 relative overflow-hidden group">
+                    <div class="md:col-span-8 bento-card bg-white p-8 lg:p-12 rounded-[2rem] shadow-lg md:shadow-sm border border-gray-100 md:border-transparent hover:border-clinical-blue/10 relative overflow-hidden group">
                         <div class="relative z-10">
                             <span class="text-xs font-bold text-clinical-green uppercase tracking-widest mb-4 block">The Recovery Catalyst</span>
-                            <h4 class="text-3xl font-display font-bold mb-6">Applied Regenerative Physics</h4>
+                            <h4 class="text-3xl font-display font-bold mb-6">Applied Regenerative <span class="text-clinical-blue italic">Physics</span></h4>
                             <p class="text-gray-600 text-lg leading-relaxed max-w-xl mb-8">
                                 Rather than relying on pharmaceutical interventions, we utilize advanced medical technology—targeted light (Class IV Laser), acoustic waves (Shockwave), and electromagnetism (PEMF)—to physically force tissue regeneration and reset cellular voltage.
                             </p>
@@ -263,12 +303,12 @@
                     </div>
 
                     <!-- Neurological Resilience -->
-                    <div class="md:col-span-4 bento-card bg-clinical-blue p-8 rounded-[2rem] shadow-lg text-white flex flex-col justify-between group">
+                    <div class="md:col-span-4 bento-card bg-clinical-blue p-8 rounded-[2rem] shadow-xl md:shadow-lg text-white flex flex-col justify-between group border border-white/10">
                         <div>
                             <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6">
                                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
                             </div>
-                            <h4 class="text-2xl font-display font-bold mb-4">Neurological Resilience</h4>
+                            <h4 class="text-2xl font-display font-bold mb-4 italic">Neurological Resilience</h4>
                             <p class="text-blue-100 text-sm leading-relaxed">
                                 Shifting from chronic "fight or flight" to parasympathetic rest. Optimizing deep sleep architecture for cognitive preservation.
                             </p>
@@ -279,23 +319,23 @@
                     </div>
 
                     <!-- Structural Durability -->
-                    <div class="md:col-span-4 bento-card bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 group">
+                    <div class="md:col-span-4 bento-card bg-white p-8 rounded-[2rem] shadow-lg md:shadow-sm border border-gray-100 md:border-transparent hover:border-clinical-blue/10 group">
                         <div class="w-12 h-12 bg-clinical-gray rounded-xl flex items-center justify-center mb-6 group-hover:bg-clinical-blue transition-colors">
                             <svg class="w-6 h-6 text-clinical-blue group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
                         </div>
-                        <h4 class="text-xl font-display font-bold mb-2">The Physical Chassis</h4>
+                        <h4 class="text-xl font-display font-bold mb-2 italic text-clinical-blue">The Physical Chassis</h4>
                         <p class="text-gray-500 text-sm mb-6">Building frames capable of high performance for decades. Preserving fast-twitch fibers and bone density.</p>
                         <a href="/programs/muscle-bone-building.html" class="text-clinical-blue font-bold text-sm">Structural Durability &rarr;</a>
                     </div>
 
                     <!-- Precision Chiro & Physio -->
-                    <div class="md:col-span-8 bento-card bg-white p-8 lg:p-12 rounded-[2rem] shadow-sm border border-gray-100 flex flex-col md:flex-row gap-8 items-center">
+                    <div class="md:col-span-8 bento-card bg-white p-8 lg:p-12 rounded-[2rem] shadow-lg md:shadow-sm border border-gray-100 md:border-transparent hover:border-clinical-blue/10 flex flex-col md:flex-row gap-8 items-center">
                         <div class="md:w-1/2 space-y-4">
-                            <h4 class="text-2xl font-display font-bold leading-tight text-clinical-blue">Precision Biomechanics</h4>
+                            <h4 class="text-2xl font-display font-bold leading-tight text-clinical-blue italic">Precision Biomechanics</h4>
                             <p class="text-gray-600">Restoring joint kinematics through pro-level protocols trusted by elite athletes.</p>
                             <div class="flex gap-4">
-                                <a href="/programs/cincinnati-chiropractic-care.html" class="px-4 py-2 bg-clinical-gray rounded-full text-xs font-bold hover:bg-gray-200 transition-colors">Chiropractic</a>
-                                <a href="/programs/integrative-physiotherapy.html" class="px-4 py-2 bg-clinical-gray rounded-full text-xs font-bold hover:bg-gray-200 transition-colors">Physiotherapy</a>
+                                <a href="/programs/cincinnati-chiropractic-care.html" class="px-4 py-2 bg-clinical-gray rounded-full text-xs font-bold hover:bg-gray-200 transition-colors border border-gray-100">Chiropractic</a>
+                                <a href="/programs/integrative-physiotherapy.html" class="px-4 py-2 bg-clinical-gray rounded-full text-xs font-bold hover:bg-gray-200 transition-colors border border-gray-100">Physiotherapy</a>
                             </div>
                         </div>
                         <div class="md:w-1/2 h-full min-h-[160px] rounded-2xl bg-clinical-gray overflow-hidden">
@@ -316,25 +356,25 @@
                 
                 <div class="swiper clinic-gallery rounded-[2.5rem] shadow-2xl">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide h-[600px] relative">
+                        <div class="swiper-slide h-[400px] md:h-[600px] relative">
                             <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Cincinnati Chiropractic Clinic Environment" class="w-full h-full object-cover">
-                            <div class="absolute bottom-12 left-12 z-10 bg-white/90 backdrop-blur-md px-6 py-4 rounded-2xl shadow-xl">
-                                <h5 class="font-display font-bold text-clinical-blue text-xl">Advanced Recovery Suite</h5>
-                                <p class="text-gray-500 text-sm italic">Elite technology for cellular regeneration.</p>
+                            <div class="absolute bottom-6 left-6 md:bottom-12 md:left-12 z-10 bg-white/90 backdrop-blur-md px-4 py-3 md:px-6 md:py-4 rounded-2xl shadow-xl max-w-[80%] md:max-w-none">
+                                <h5 class="font-display font-bold text-clinical-blue text-lg md:text-xl">Advanced Recovery Suite</h5>
+                                <p class="text-gray-500 text-xs md:text-sm italic">Elite technology for cellular regeneration.</p>
                             </div>
                         </div>
-                        <div class="swiper-slide h-[600px] relative">
+                        <div class="swiper-slide h-[400px] md:h-[600px] relative">
                             <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Treatment Technology Area" class="w-full h-full object-cover">
-                            <div class="absolute bottom-12 left-12 z-10 bg-white/90 backdrop-blur-md px-6 py-4 rounded-2xl shadow-xl">
-                                <h5 class="font-display font-bold text-clinical-blue text-xl">Precision Diagnostics</h5>
-                                <p class="text-gray-500 text-sm italic">Biomarker tracking and performance metrics.</p>
+                            <div class="absolute bottom-6 left-6 md:bottom-12 md:left-12 z-10 bg-white/90 backdrop-blur-md px-4 py-3 md:px-6 md:py-4 rounded-2xl shadow-xl max-w-[80%] md:max-w-none">
+                                <h5 class="font-display font-bold text-clinical-blue text-lg md:text-xl">Precision Diagnostics</h5>
+                                <p class="text-gray-500 text-xs md:text-sm italic">Biomarker tracking and performance metrics.</p>
                             </div>
                         </div>
-                        <div class="swiper-slide h-[600px] relative">
+                        <div class="swiper-slide h-[400px] md:h-[600px] relative">
                             <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Diagnostic & VO2 Max Suite" class="w-full h-full object-cover">
-                            <div class="absolute bottom-12 left-12 z-10 bg-white/90 backdrop-blur-md px-6 py-4 rounded-2xl shadow-xl">
-                                <h5 class="font-display font-bold text-clinical-blue text-xl">The Mitoflux Wing</h5>
-                                <p class="text-gray-500 text-sm italic">Designed for systemic longevity and durability.</p>
+                            <div class="absolute bottom-6 left-6 md:bottom-12 md:left-12 z-10 bg-white/90 backdrop-blur-md px-4 py-3 md:px-6 md:py-4 rounded-2xl shadow-xl max-w-[80%] md:max-w-none">
+                                <h5 class="font-display font-bold text-clinical-blue text-lg md:text-xl">The Mitoflux Wing</h5>
+                                <p class="text-gray-500 text-xs md:text-sm italic">Designed for systemic longevity and durability.</p>
                             </div>
                         </div>
                     </div>
@@ -363,6 +403,46 @@
                 });
             });
         </script>
+        <!-- Social Proof: Google Reviews Widget -->
+        <section class="py-24 bg-clinical-gray relative">
+            <div class="absolute inset-0 bg-dot-pattern opacity-10"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-sm font-bold text-clinical-blue uppercase tracking-widest mb-4">Patient Outcomes</h2>
+                    <h3 class="text-4xl lg:text-5xl font-display font-bold mb-12">Experience the Cincinnati Chiropractic Difference</h3>
+                    
+                    <!-- Google Review API Placeholder -->
+                    <div id="google-reviews-widget" class="min-h-[300px] bg-white rounded-[2.5rem] p-8 lg:p-12 shadow-2xl border border-gray-100 flex flex-col items-center justify-center text-center">
+                        <div class="mb-6">
+                            <svg class="w-12 h-12 mx-auto" viewBox="0 0 24 24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c1.68-1.54 2.65-3.81 2.65-6.5z"/><path fill="#34A853" d="M12 23c3.15 0 5.79-1.05 7.72-2.85l-3.57-2.77c-.98.66-2.23 1.06-3.75 1.06-2.88 0-5.33-1.94-6.21-4.54H2.55v2.86C4.48 20.52 8.02 23 12 23z"/><path fill="#FBBC05" d="M5.79 13.9c-.23-.66-.35-1.36-.35-2.1s.12-1.44.35-2.1V6.84H2.55C1.75 8.42 1.3 10.16 1.3 12s.45 3.58 1.25 5.16l3.24-2.26z"/><path fill="#EA4335" d="M12 5.38c1.71 0 3.25.59 4.46 1.73l3.34-3.34C17.78 1.83 15.15.7 12 .7 8.02.7 4.48 3.18 2.55 6.84l3.24 2.26c.88-2.6 3.33-4.54 6.21-4.54z"/>
+                            </svg>
+                        </div>
+                        <div class="flex items-center space-x-1 mb-6">
+                            <!-- 5 Stars -->
+                            <svg class="w-6 h-6 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-6 h-6 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-6 h-6 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-6 h-6 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-6 h-6 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        </div>
+                        <p class="text-xl text-gray-600 font-medium mb-8 max-w-lg mx-auto">"Loading live 5-star Google Business Profile reviews for Cincinnati Chiropractic..."</p>
+                        <div class="flex items-center space-x-2 text-xs font-bold text-gray-400 uppercase tracking-[0.2em]">
+                            <span>Official Review API Integration</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 flex flex-col items-center space-y-6">
+                        <a href="/contact.html" class="px-12 py-5 bg-clinical-blue text-white rounded-full font-bold text-2xl hover:bg-blue-700 transition-all shadow-2xl hover:shadow-blue-200">
+                            Request Your Appointment
+                        </a>
+                        <p class="text-[10px] text-gray-500 font-bold uppercase tracking-[0.2em]">
+                            We accept and utilize most major insurers for services when able.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="bg-clinical-charcoal text-white pt-24 pb-12">
@@ -386,9 +466,9 @@
                             <p>(513) 662-8500</p>
                         </div>
                     </div>
-                    <!-- Google Map Embed -->
-                    <div class="rounded-2xl overflow-hidden h-48 w-full max-w-md border border-white/5">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m18!1m12!1m3!1d3095.123456789012!2d-84.6152!3d39.1512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8841b5f123456789%3A0xabcdef1234567890!2s3712%20Harrison%20Ave%2C%20Cincinnati%2C%20OH%2045211!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        <!-- Google Map Embed -->
+                    <div class="rounded-2xl overflow-hidden h-48 w-full max-w-md border border-white/5 shadow-inner">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3095.123456789012!2d-84.6152!3d39.1512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8841b5f123456789%3A0xabcdef1234567890!2sCincinnati%20Chiropractic!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
                 <div>

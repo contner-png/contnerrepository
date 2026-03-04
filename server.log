@@ -41,3 +41,81 @@
 10.2.42.8 - - [04/Mar/2026 17:48:19] "GET /images/team/dr-hekler.png HTTP/1.1" 404 -
 10.2.42.8 - - [04/Mar/2026 17:48:19] code 404, message File not found
 10.2.42.8 - - [04/Mar/2026 17:48:19] "GET /images/team/dr-bree.png HTTP/1.1" 404 -
+10.2.51.22 - - [04/Mar/2026 18:11:42] "GET / HTTP/1.1" 200 -
+10.2.51.22 - - [04/Mar/2026 18:11:42] code 404, message File not found
+10.2.51.22 - - [04/Mar/2026 18:11:42] "GET /images/bengals-logo.png HTTP/1.1" 404 -
+10.2.51.22 - - [04/Mar/2026 18:11:42] code 404, message File not found
+10.2.51.22 - - [04/Mar/2026 18:11:42] "GET /images/cyclones-logo.png HTTP/1.1" 404 -
+10.2.51.22 - - [04/Mar/2026 18:11:42] code 404, message File not found
+10.2.51.22 - - [04/Mar/2026 18:11:42] "GET /images/longevity-flagship.png HTTP/1.1" 404 -
+10.2.51.22 - - [04/Mar/2026 18:11:42] code 404, message File not found
+10.2.51.22 - - [04/Mar/2026 18:11:42] "GET /images/hero-clinical-art.png HTTP/1.1" 404 -
+10.2.51.22 - - [04/Mar/2026 18:11:42] code 404, message File not found
+10.2.51.22 - - [04/Mar/2026 18:11:42] "GET /images/biomechanics-preview.png HTTP/1.1" 404 -
+10.2.51.22 - - [04/Mar/2026 18:11:42] code 404, message File not found
+10.2.51.22 - - [04/Mar/2026 18:11:42] "GET /images/cyclones-logo.png HTTP/1.1" 404 -
+10.2.51.22 - - [04/Mar/2026 18:11:42] code 404, message File not found
+10.2.51.22 - - [04/Mar/2026 18:11:42] "GET /images/bengals-logo.png HTTP/1.1" 404 -
+10.2.51.22 - - [04/Mar/2026 18:11:42] code 404, message File not found
+10.2.51.22 - - [04/Mar/2026 18:11:42] "GET /images/hero-clinical-art.png HTTP/1.1" 404 -
+10.2.51.22 - - [04/Mar/2026 18:11:42] code 404, message File not found
+10.2.51.22 - - [04/Mar/2026 18:11:42] "GET /images/longevity-flagship.png HTTP/1.1" 404 -
+10.2.51.22 - - [04/Mar/2026 18:11:42] code 404, message File not found
+10.2.51.22 - - [04/Mar/2026 18:11:42] "GET /images/biomechanics-preview.png HTTP/1.1" 404 -
+10.2.26.139 - - [04/Mar/2026 18:12:05] code 404, message File not found
+10.2.26.139 - - [04/Mar/2026 18:12:05] "GET /favicon.ico HTTP/1.1" 404 -
+10.2.26.139 - - [04/Mar/2026 18:12:05] code 404, message File not found
+10.2.26.139 - - [04/Mar/2026 18:12:05] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 -
+10.2.26.139 - - [04/Mar/2026 18:12:05] code 404, message File not found
+10.2.26.139 - - [04/Mar/2026 18:12:05] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+10.2.51.22 - - [04/Mar/2026 18:12:49] "GET /index.html HTTP/1.1" 200 -
+10.2.51.22 - - [04/Mar/2026 18:12:50] code 404, message File not found
+10.2.51.22 - - [04/Mar/2026 18:12:50] "GET /images/cyclones-logo.png HTTP/1.1" 404 -
+10.2.51.22 - - [04/Mar/2026 18:12:50] code 404, message File not found
+10.2.51.22 - - [04/Mar/2026 18:12:50] "GET /images/bengals-logo.png HTTP/1.1" 404 -
+10.2.51.22 - - [04/Mar/2026 18:12:50] code 404, message File not found
+10.2.51.22 - - [04/Mar/2026 18:12:50] code 404, message File not found
+10.2.51.22 - - [04/Mar/2026 18:12:50] "GET /images/hero-clinical-art.png HTTP/1.1" 404 -
+10.2.51.22 - - [04/Mar/2026 18:12:50] "GET /images/longevity-flagship.png HTTP/1.1" 404 -
+10.2.51.22 - - [04/Mar/2026 18:12:50] code 404, message File not found
+10.2.51.22 - - [04/Mar/2026 18:12:50] "GET /images/biomechanics-preview.png HTTP/1.1" 404 -
+10.2.26.139 - - [04/Mar/2026 18:12:57] code 404, message File not found
+10.2.26.139 - - [04/Mar/2026 18:12:57] code 404, message File not found
+10.2.26.139 - - [04/Mar/2026 18:12:57] code 404, message File not found
+10.2.26.139 - - [04/Mar/2026 18:12:57] "GET /favicon.ico HTTP/1.1" 404 -
+10.2.26.139 - - [04/Mar/2026 18:12:57] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 -
+10.2.26.139 - - [04/Mar/2026 18:12:57] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+10.2.42.8 - - [04/Mar/2026 18:13:04] "GET /index.html HTTP/1.1" 200 -
+10.2.42.8 - - [04/Mar/2026 18:13:04] code 404, message File not found
+10.2.42.8 - - [04/Mar/2026 18:13:04] code 404, message File not found
+10.2.42.8 - - [04/Mar/2026 18:13:04] "GET /images/cyclones-logo.png HTTP/1.1" 404 -
+10.2.42.8 - - [04/Mar/2026 18:13:04] "GET /images/bengals-logo.png HTTP/1.1" 404 -
+10.2.42.8 - - [04/Mar/2026 18:13:04] code 404, message File not found
+10.2.42.8 - - [04/Mar/2026 18:13:04] "GET /images/longevity-flagship.png HTTP/1.1" 404 -
+10.2.42.8 - - [04/Mar/2026 18:13:04] code 404, message File not found
+10.2.42.8 - - [04/Mar/2026 18:13:04] "GET /images/hero-clinical-art.png HTTP/1.1" 404 -
+10.2.42.8 - - [04/Mar/2026 18:13:04] code 404, message File not found
+10.2.42.8 - - [04/Mar/2026 18:13:04] "GET /images/biomechanics-preview.png HTTP/1.1" 404 -
+10.2.42.8 - - [04/Mar/2026 18:13:04] code 404, message File not found
+10.2.42.8 - - [04/Mar/2026 18:13:04] code 404, message File not found
+10.2.42.8 - - [04/Mar/2026 18:13:04] "GET /images/cyclones-logo.png HTTP/1.1" 404 -
+10.2.42.8 - - [04/Mar/2026 18:13:04] "GET /images/bengals-logo.png HTTP/1.1" 404 -
+10.2.42.8 - - [04/Mar/2026 18:13:04] code 404, message File not found
+10.2.42.8 - - [04/Mar/2026 18:13:04] "GET /images/longevity-flagship.png HTTP/1.1" 404 -
+10.2.42.8 - - [04/Mar/2026 18:13:04] code 404, message File not found
+10.2.42.8 - - [04/Mar/2026 18:13:04] "GET /images/hero-clinical-art.png HTTP/1.1" 404 -
+10.2.42.8 - - [04/Mar/2026 18:13:04] code 404, message File not found
+10.2.42.8 - - [04/Mar/2026 18:13:04] "GET /images/biomechanics-preview.png HTTP/1.1" 404 -
+10.2.51.22 - - [04/Mar/2026 18:13:04] code 404, message File not found
+10.2.51.22 - - [04/Mar/2026 18:13:04] "GET /favicon.ico HTTP/1.1" 404 -
+10.2.42.8 - - [04/Mar/2026 18:13:16] "GET /index.html HTTP/1.1" 200 -
+10.2.42.8 - - [04/Mar/2026 18:13:16] code 404, message File not found
+10.2.42.8 - - [04/Mar/2026 18:13:16] "GET /images/bengals-logo.png HTTP/1.1" 404 -
+10.2.42.8 - - [04/Mar/2026 18:13:16] code 404, message File not found
+10.2.42.8 - - [04/Mar/2026 18:13:16] "GET /images/cyclones-logo.png HTTP/1.1" 404 -
+10.2.42.8 - - [04/Mar/2026 18:13:16] code 404, message File not found
+10.2.42.8 - - [04/Mar/2026 18:13:16] "GET /images/hero-clinical-art.png HTTP/1.1" 404 -
+10.2.42.8 - - [04/Mar/2026 18:13:16] code 404, message File not found
+10.2.42.8 - - [04/Mar/2026 18:13:16] "GET /images/longevity-flagship.png HTTP/1.1" 404 -
+10.2.42.8 - - [04/Mar/2026 18:13:16] code 404, message File not found
+10.2.42.8 - - [04/Mar/2026 18:13:16] "GET /images/biomechanics-preview.png HTTP/1.1" 404 -
