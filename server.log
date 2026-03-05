@@ -1,3 +1,7 @@
 nohup: ignoring input
-10.2.48.145 - - [05/Mar/2026 20:04:21] "GET /programs/neuropathy-care.html HTTP/1.1" 200 -
-10.2.48.145 - - [05/Mar/2026 20:04:21] "GET /images/cclogo_trimmed.png HTTP/1.1" 304 -
+10.2.47.136 - - [05/Mar/2026 20:14:38] "GET /programs/neuropathy-care.html HTTP/1.1" 200 -
+10.2.47.136 - - [05/Mar/2026 20:14:55] "GET /programs/neuropathy-care.html HTTP/1.1" 304 -
+10.2.47.136 - - [05/Mar/2026 20:15:05] "GET /programs/neuropathy-care.html HTTP/1.1" 200 -
+10.2.47.136 - - [05/Mar/2026 20:15:05] "GET /images/cclogo_trimmed.png HTTP/1.1" 200 -
+10.2.47.136 - - [05/Mar/2026 20:15:06] code 404, message File not found
+10.2.47.136 - - [05/Mar/2026 20:15:06] "GET /favicon.ico HTTP/1.1" 404 -
