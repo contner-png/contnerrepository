@@ -1,7 +1,11 @@
 nohup: ignoring input
-10.2.47.136 - - [05/Mar/2026 20:14:38] "GET /programs/neuropathy-care.html HTTP/1.1" 200 -
-10.2.47.136 - - [05/Mar/2026 20:14:55] "GET /programs/neuropathy-care.html HTTP/1.1" 304 -
-10.2.47.136 - - [05/Mar/2026 20:15:05] "GET /programs/neuropathy-care.html HTTP/1.1" 200 -
-10.2.47.136 - - [05/Mar/2026 20:15:05] "GET /images/cclogo_trimmed.png HTTP/1.1" 200 -
-10.2.47.136 - - [05/Mar/2026 20:15:06] code 404, message File not found
-10.2.47.136 - - [05/Mar/2026 20:15:06] "GET /favicon.ico HTTP/1.1" 404 -
+10.2.46.220 - - [05/Mar/2026 20:18:21] "GET /programs/neuropathy-care.html HTTP/1.1" 200 -
+10.2.46.220 - - [05/Mar/2026 20:18:32] "GET /programs/neuropathy-care.html HTTP/1.1" 304 -
+10.2.46.220 - - [05/Mar/2026 20:18:39] "GET /programs/neuropathy-care.html HTTP/1.1" 200 -
+10.2.46.220 - - [05/Mar/2026 20:18:39] "GET /images/cclogo_trimmed.png HTTP/1.1" 200 -
+10.2.46.220 - - [05/Mar/2026 20:18:42] code 404, message File not found
+10.2.46.220 - - [05/Mar/2026 20:18:42] "GET /favicon.ico HTTP/1.1" 404 -
+10.2.46.220 - - [05/Mar/2026 20:18:47] "GET /treatments/class-iv-laser.html HTTP/1.1" 200 -
+10.2.46.220 - - [05/Mar/2026 20:18:48] "GET /images/treatments/laser.png HTTP/1.1" 304 -
+10.2.46.220 - - [05/Mar/2026 20:18:57] "GET /programs/cardiometabolic-repair.html HTTP/1.1" 200 -
+10.2.46.220 - - [05/Mar/2026 20:19:20] "GET /programs/integrative-physiotherapy.html HTTP/1.1" 200 -
