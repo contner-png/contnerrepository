@@ -14,9 +14,9 @@
                         clinical: {
                             blue: '#0047AB',
                             green: '#22C55E',
-                            orange: '#FB4F14',
-                            charcoal: '#111827',
-                            gray: '#F9FAFB'
+                            charcoal: '#333333',
+                            gray: '#F9FAFB',
+                            light: '#FFFFFF'
                         }
                     },
                     fontFamily: {
@@ -24,24 +24,13 @@
                         display: ['Lexend', 'sans-serif'],
                     },
                     backgroundImage: {
-                        'grid-pattern': "url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%230047AB" fill-opacity="0.03" fill-rule="evenodd"%3E%3Cpath d="M0 40L40 0H20L0 20M40 40V20L20 40"/%3E%3C/g%3E%3C/svg%3E')",
+                        'grid-pattern': "url('data:image/svg+xml,%3Csvg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"%230047AB\" fill-opacity=\"0.03\" fill-rule=\"evenodd\"%3E%3Cpath d=\"M0 40L40 0H20L0 20M40 40V20L20 40\"/%3E%3C/g%3E%3C/svg%3E')",
                     }
                 }
             }
         }
     </script>
     <style>
-        .blueprint-bg {
-            background-color: #003399;
-            background-image: 
-                linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px),
-                linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-            background-size: 80px 80px, 80px 80px, 20px 20px, 20px 20px;
-            background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
-            position: relative;
-        }
         .treatment-graphic {
             filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
             transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
@@ -209,33 +198,32 @@
     </header>
 
     <main>
-        <!-- Specialized Treatment Hero: Technical Aesthetic -->
-        <section class="relative pt-32 pb-24 overflow-hidden bg-white border-b border-gray-100">
-            <div class="absolute top-0 left-0 right-0 h-2 bg-clinical-green shadow-sm"></div>
+        <!-- Optimized Hero Section (Removed redundant button) -->
+        <section class="relative pt-12 pb-16 overflow-hidden bg-clinical-gray">
             <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
-            
             <div class="container mx-auto px-6 relative z-10">
-                <div class="flex flex-col lg:flex-row items-center gap-20">
-                    <div class="lg:w-1/2 space-y-10">
-                        <div class="inline-flex items-center gap-3 text-clinical-green font-black text-[10px] uppercase tracking-[0.5em]">
-                            <span class="w-12 h-px bg-clinical-green/30"></span>
-                            Clinical Modality
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="lg:w-1/2 space-y-6 text-left">
+                        <div class="inline-flex items-center px-3 py-1 bg-clinical-blue/10 text-clinical-blue text-[9px] font-black uppercase tracking-[0.3em] rounded-md border border-clinical-blue/20">
+                            Clinical Treatment Modality
                         </div>
-                        <h1 class="text-5xl lg:text-8xl font-display font-bold leading-[0.9] italic tracking-tighter text-clinical-charcoal">
+                        <h1 class="text-4xl lg:text-6xl font-display font-bold leading-tight italic text-clinical-charcoal tracking-tighter">
                             Extracorporeal Shockwave Therapy (ESWT)
                         </h1>
-                        <div class="space-y-6">
-                            <p class="text-2xl text-gray-500 font-light italic border-l-4 border-clinical-blue pl-8 py-2 max-w-xl">
-                                Elite Clinical Modality
+                        <div class="space-y-3 max-w-xl">
+                            <h2 class="text-[10px] font-black text-clinical-blue uppercase tracking-[0.4em]">The Definition</h2>
+                            <p class="text-xl lg:text-2xl text-gray-600 font-light leading-relaxed">
+                                A non-invasive acoustic wave therapy utilized to address chronic tendon, muscle, and joint dysfunction that has stopped responding to traditional care.
                             </p>
-                            
                         </div>
                     </div>
-                    <div class="lg:w-1/2">
-                        <div class="relative rounded-[3rem] overflow-hidden shadow-2xl border-[1px] border-gray-100 treatment-graphic">
-                            <img src="/images/cclogo_trimmed.png" alt="Extracorporeal Shockwave Therapy (ESWT)" class="w-full aspect-[4/3] object-cover">
-                            <div class="absolute inset-0 bg-clinical-blue/5 pointer-events-none"></div>
+                    <div class="lg:w-1/2 relative">
+                        <div class="relative z-10 rounded-[2.5rem] overflow-hidden border-[1px] border-gray-100 bg-white shadow-2xl treatment-graphic max-w-xl mx-auto">
+                            <img src="/images/treatments/shockwave.png" alt="Extracorporeal Shockwave Therapy (ESWT)" class="w-full h-full object-contain p-2">
                         </div>
+                        <!-- Depth Accents -->
+                        <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-clinical-blue/5 rounded-full blur-3xl"></div>
+                        <div class="absolute -top-10 -left-10 w-64 h-64 bg-clinical-green/5 rounded-full blur-3xl"></div>
                     </div>
                 </div>
             </div>
@@ -272,22 +260,12 @@
             </div>
         </section>
 
-        <!-- Final Strategic CTA: Blueprint Transformation -->
-        <section class="py-24 blueprint-bg text-white relative overflow-hidden">
-            <div class="absolute inset-0 opacity-10">
-                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <pattern id="treatmentGrid" width="40" height="40" patternUnits="userSpaceOnUse">
-                            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5"/>
-                        </pattern>
-                    </defs>
-                    <rect width="100%" height="100%" fill="url(#treatmentGrid)" />
-                </svg>
-            </div>
-            
+        <!-- Final Call to Action (Strategically Positioned at Bottom) -->
+        <section class="py-20 bg-clinical-blue text-white relative overflow-hidden">
+            <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
             <div class="container mx-auto px-6 text-center relative z-10">
-                <h3 class="text-4xl lg:text-6xl font-display font-bold mb-12 italic tracking-tighter text-white">Ready to accelerate your healing?</h3>
-                <a href="/contact.html" class="px-16 py-8 bg-white text-clinical-blue rounded-full font-bold text-2xl hover:bg-clinical-green hover:text-white transition-all shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-105 transform inline-block">
+                <h3 class="text-3xl lg:text-5xl font-display font-bold mb-8 italic">Ready to start your recovery journey?</h3>
+                <a href="/contact.html" class="px-14 py-6 bg-white text-clinical-blue rounded-full font-bold text-xl hover:bg-clinical-gray transition-all shadow-2xl hover:scale-105 transform inline-block">
                     Request Consultation
                 </a>
             </div>
