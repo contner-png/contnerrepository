@@ -32,13 +32,27 @@
             background-image: radial-gradient(#0047AB 1px, transparent 1px);
             background-size: 30px 30px;
         }
-        .strategy-card {
-            border-top: 4px solid #0047AB;
-            transition: all 0.4s ease;
+        .blueprint-bg {
+            background-color: #003399;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 80px 80px, 80px 80px, 20px 20px, 20px 20px;
+            background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+            position: relative;
         }
-        .strategy-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 30px 60px -12px rgba(0,71,171,0.15);
+        .strategy-module {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .strategy-module:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #22C55E;
+            transform: scale(1.02);
         }
         .condition-tag {
             background: white;
@@ -209,22 +223,25 @@
     </header>
 
     <main>
-        <!-- Section 1: Foundational Pillar Hero -->
+        <!-- Hero Header -->
         <section class="relative pt-32 pb-24 overflow-hidden bg-clinical-gray">
             <div class="absolute inset-0 opacity-10 blueprint-dot"></div>
             <div class="container mx-auto px-6 relative z-10">
                 <div class="max-w-5xl">
-                    <div class="inline-flex items-center px-4 py-2 bg-clinical-blue text-white text-[10px] font-black uppercase tracking-[0.4em] mb-8 rounded-sm">
+                    <div class="inline-flex items-center px-4 py-2 bg-clinical-blue text-white text-[10px] font-black uppercase tracking-[0.4em] mb-8 rounded-sm shadow-lg">
                         Foundational Pillar
                     </div>
                     <h1 class="text-6xl lg:text-8xl font-display font-bold leading-none italic tracking-tighter text-clinical-blue mb-10">
                         Evidence-Based Physical Therapy
                     </h1>
-                    <p class="text-2xl lg:text-3xl text-gray-500 font-light max-w-3xl leading-relaxed italic border-l-4 border-clinical-green pl-8">
-                        The biopsychosocial model of physical rehabilitation and performance.
-                    </p>
+                    <div class="max-w-3xl border-l-4 border-clinical-green pl-8">
+                        <p class="text-2xl lg:text-3xl text-gray-500 font-light leading-relaxed italic">
+                            The biopsychosocial model of physical rehabilitation and performance.
+                        </p>
+                        
+                    </div>
                     <div class="mt-12">
-                        <a href="/contact.html" class="px-12 py-6 bg-clinical-blue text-white rounded-full font-bold text-xl hover:bg-blue-700 transition-all shadow-xl inline-block">
+                        <a href="/contact.html" class="px-12 py-6 bg-clinical-blue text-white rounded-full font-bold text-xl hover:bg-blue-700 transition-all shadow-2xl inline-block">
                             Request Appointment
                         </a>
                     </div>
@@ -232,10 +249,10 @@
             </div>
         </section>
 
-        <!-- Section 2: Our Clinical Philosophy -->
+        <!-- Our Clinical Philosophy -->
         <section class="py-32 bg-white relative">
-            <div class="container mx-auto px-6">
-                <div class="grid lg:grid-cols-2 gap-24 items-center text-left">
+            <div class="container mx-auto px-6 text-left">
+                <div class="grid lg:grid-cols-2 gap-24 items-center">
                     <div class="space-y-10">
                         <h2 class="text-4xl lg:text-5xl font-display font-bold italic text-clinical-charcoal leading-tight">A New Standard of Care</h2>
                         <div class="text-xl lg:text-2xl text-gray-600 leading-relaxed font-light">
@@ -244,38 +261,64 @@
                     </div>
                     <div class="bg-clinical-gray aspect-square rounded-[4rem] border-2 border-dashed border-gray-200 flex items-center justify-center relative overflow-hidden">
                         <div class="absolute inset-0 blueprint-dot opacity-5"></div>
-                        <span class="text-[10px] font-black text-gray-300 uppercase tracking-[0.5em] italic">THE BIOPSYCHOSOCIAL MODEL OF PAIN NEUROSCIENCE</span>
+                        <span class="text-[10px] font-black text-gray-300 uppercase tracking-[0.5em] italic">TECHNICAL SCHEMATIC DATA</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 3: Core Treatment Strategies -->
-        <section class="py-32 bg-clinical-gray border-y border-gray-100">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-20 text-left">
-                    <h2 class="text-4xl lg:text-6xl font-display font-bold italic text-clinical-charcoal tracking-tight">Our Core Strategies</h2>
+        <!-- Core Treatment Strategies: Re-Designed with Blueprint BG -->
+        <section class="py-32 blueprint-bg text-white relative overflow-hidden">
+            <!-- Technical Watermark -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03] pointer-events-none">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+            </div>
+            
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-3xl mb-20 text-left">
+                    <h2 class="text-xs font-black text-clinical-green uppercase tracking-[0.6em] mb-4">The Methodology</h2>
+                    <h3 class="text-5xl lg:text-7xl font-display font-bold italic tracking-tight leading-none text-white">Our Core Strategies</h3>
                 </div>
-                <div class="grid lg:grid-cols-3 gap-8 text-left">
+                <div class="grid lg:grid-cols-3 gap-6">
                     
-    <div class="strategy-card bg-white p-12 rounded-[3rem] shadow-sm flex flex-col justify-between">
-        <div class="space-y-6">
-            <h4 class="text-2xl font-display font-bold text-clinical-blue italic leading-tight">Progressive Load-Bearing</h4>
-            <p class="text-gray-500 text-base font-light leading-relaxed">Utilizing Wolff’s Law to safely load tissues with heavy resistance, forcing bone, tendon, and muscle adaptation.</p>
+    <div class="strategy-module p-12 rounded-[3rem] flex flex-col justify-between h-full relative overflow-hidden group">
+        <div class="absolute top-0 right-0 p-8">
+            <span class="text-4xl font-display font-bold text-white/5 italic">001</span>
+        </div>
+        <div class="space-y-8 relative z-10">
+            <div class="w-12 h-1 bg-clinical-green group-hover:w-24 transition-all duration-500"></div>
+            <div>
+                <h4 class="text-3xl font-display font-bold text-white italic leading-tight mb-6">Progressive Load-Bearing</h4>
+                <p class="text-blue-50 text-base font-light leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Utilizing Wolff’s Law to safely load tissues with heavy resistance, forcing bone, tendon, and muscle adaptation.</p>
+            </div>
         </div>
     </div>
     
-    <div class="strategy-card bg-white p-12 rounded-[3rem] shadow-sm flex flex-col justify-between">
-        <div class="space-y-6">
-            <h4 class="text-2xl font-display font-bold text-clinical-blue italic leading-tight">Cardiometabolic Conditioning</h4>
-            <p class="text-gray-500 text-base font-light leading-relaxed">Integrating Zone 2 and VO2 Max training to build your aerobic engine, improving functional endurance and recovery.</p>
+    <div class="strategy-module p-12 rounded-[3rem] flex flex-col justify-between h-full relative overflow-hidden group">
+        <div class="absolute top-0 right-0 p-8">
+            <span class="text-4xl font-display font-bold text-white/5 italic">002</span>
+        </div>
+        <div class="space-y-8 relative z-10">
+            <div class="w-12 h-1 bg-clinical-green group-hover:w-24 transition-all duration-500"></div>
+            <div>
+                <h4 class="text-3xl font-display font-bold text-white italic leading-tight mb-6">Cardiometabolic Conditioning</h4>
+                <p class="text-blue-50 text-base font-light leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Integrating Zone 2 and VO2 Max training to build your aerobic engine, improving functional endurance and recovery.</p>
+            </div>
         </div>
     </div>
     
-    <div class="strategy-card bg-white p-12 rounded-[3rem] shadow-sm flex flex-col justify-between">
-        <div class="space-y-6">
-            <h4 class="text-2xl font-display font-bold text-clinical-blue italic leading-tight">Graded Exposure</h4>
-            <p class="text-gray-500 text-base font-light leading-relaxed">Systematically reintroducing complex movements to down-regulate pain triggers and restore motor control.</p>
+    <div class="strategy-module p-12 rounded-[3rem] flex flex-col justify-between h-full relative overflow-hidden group">
+        <div class="absolute top-0 right-0 p-8">
+            <span class="text-4xl font-display font-bold text-white/5 italic">003</span>
+        </div>
+        <div class="space-y-8 relative z-10">
+            <div class="w-12 h-1 bg-clinical-green group-hover:w-24 transition-all duration-500"></div>
+            <div>
+                <h4 class="text-3xl font-display font-bold text-white italic leading-tight mb-6">Graded Exposure</h4>
+                <p class="text-blue-50 text-base font-light leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Systematically reintroducing complex movements to down-regulate pain triggers and restore motor control.</p>
+            </div>
         </div>
     </div>
     
@@ -283,16 +326,16 @@
             </div>
         </section>
 
-        <!-- Section 4: Conditions We Treat -->
+        <!-- Conditions We Treat -->
         <section class="py-32 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="flex flex-col lg:flex-row justify-between items-end mb-20 gap-8 text-left">
+            <div class="container mx-auto px-6 text-left">
+                <div class="flex flex-col lg:flex-row justify-between items-end mb-20 gap-8">
                     <div class="max-w-2xl">
                         <h2 class="text-4xl lg:text-6xl font-display font-bold italic text-clinical-charcoal tracking-tight leading-none">What We Treat & Optimize</h2>
                     </div>
                     <p class="text-gray-400 text-lg font-light italic">Comprehensive management of complex physical pathologies.</p>
                 </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-left">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                     
     <div class="condition-tag p-6 rounded-2xl font-bold text-clinical-charcoal flex items-center gap-4">
         <div class="w-2 h-2 rounded-full bg-clinical-green"></div>
@@ -348,7 +391,7 @@
             </div>
         </section>
 
-        <!-- Section 5: Clinical Disclaimer -->
+        <!-- Clinical Disclaimer -->
         <section class="py-24 bg-clinical-charcoal text-white">
             <div class="container mx-auto px-6">
                 <div class="max-w-4xl mx-auto text-center space-y-10">
