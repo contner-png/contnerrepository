@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PEMF Cellular Therapy Cincinnati | Cincinnati Chiropractic & Cincinnati Longevity</title>
+    <title>PEMF (Pulsed Electromagnetic Field) Therapy | Cincinnati Chiropractic & Cincinnati Longevity</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
@@ -22,6 +22,9 @@
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         display: ['Lexend', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "url('data:image/svg+xml,%3Csvg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"%230047AB\" fill-opacity=\"0.03\" fill-rule=\"evenodd\"%3E%3Cpath d=\"M0 40L40 0H20L0 20M40 40V20L20 40\"/%3E%3C/g%3E%3C/svg%3E')",
                     }
                 }
             }
@@ -29,8 +32,7 @@
     </script>
 </head>
 <body class="bg-white text-clinical-charcoal font-sans antialiased">
-    <!-- Global Navigation -->
-                <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
         <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
             <div class="flex items-center">
                 <a href="/index.html" class="flex items-center space-x-3 group">
@@ -179,69 +181,84 @@
         </div>
     </header>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const btn = document.getElementById('mobile-menu-button');
-            const close = document.getElementById('close-menu');
-            const menu = document.getElementById('mobile-menu');
-            
-            if(btn && menu && close) {
-                btn.onclick = () => menu.classList.remove('translate-x-full');
-                close.onclick = () => menu.classList.add('translate-x-full');
-            }
-        });
-    </script>
-
-        <main>
-        <!-- Technology Hero -->
-        <section class="py-24 bg-clinical-gray relative overflow-hidden">
+    <main>
+        <!-- Treatment Hero -->
+        <section class="relative pt-20 pb-32 overflow-hidden bg-clinical-gray border-b border-gray-100">
             <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
             <div class="container mx-auto px-6 relative z-10">
                 <div class="flex flex-col lg:flex-row items-center gap-16">
-                    <div class="lg:w-1/2">
-                        <div class="inline-flex items-center px-3 py-1 rounded-full bg-clinical-blue/10 text-clinical-blue text-xs font-bold tracking-widest uppercase mb-6">
-                            Advanced Modality
+                    <div class="lg:w-1/2 space-y-8 text-center lg:text-left">
+                        <div class="inline-flex items-center px-4 py-2 bg-clinical-blue/10 text-clinical-blue text-xs font-bold uppercase tracking-[0.2em] rounded-full mx-auto lg:mx-0">
+                            Clinical Treatment Modality
                         </div>
-                        <h1 class="text-5xl lg:text-7xl font-display font-bold mb-8 leading-tight">
-                            PEMF Cellular Therapy
+                        <h1 class="text-5xl lg:text-7xl font-display font-bold leading-tight italic text-clinical-charcoal">
+                            PEMF (Pulsed Electromagnetic Field) Therapy
                         </h1>
-                        <div class="prose prose-lg text-gray-600 leading-relaxed max-w-xl">
-                            <h3 class="text-2xl font-bold text-clinical-charcoal mb-4">Mechanism of Action</h3>
-                            <p class="text-xl">
-                                &copy; 2026 Cincinnati Chiropractic & Cincinnati Longevity. Serving Greater Cincinnati. All rights reserved.
+                        <div class="space-y-4">
+                            <h2 class="text-sm font-bold text-clinical-blue uppercase tracking-widest text-left">What It Is</h2>
+                            <p class="text-2xl text-gray-600 font-light leading-relaxed text-left">
+                                A restorative, non-invasive therapy that uses mild, pulsing magnetic fields to support cellular function and optimize recovery.
                             </p>
                         </div>
-                        <div class="mt-12">
-                            <a href="/contact.html" class="px-8 py-4 bg-clinical-blue text-white rounded-full font-bold text-lg hover:bg-blue-700 transition-all shadow-xl shadow-blue-100 inline-block text-center">
-                                Request Appointment
+                        <div class="pt-4 text-left">
+                            <a href="/contact.html" class="px-10 py-5 bg-clinical-blue text-white rounded-full font-bold text-lg hover:bg-blue-700 transition-all shadow-xl hover:shadow-blue-200 inline-block">
+                                Request Consultation
                             </a>
                         </div>
                     </div>
                     <div class="lg:w-1/2 relative">
-                        <div class="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white">
-                            <img src="/images/treatments/PEMF.png" alt="PEMF Therapy Benefits Infographic" class="w-full h-full object-cover">
+                        <div class="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white aspect-square lg:aspect-auto max-w-2xl mx-auto bg-white">
+                            <img src="/images/treatments/PEMF.png" alt="PEMF (Pulsed Electromagnetic Field) Therapy" class="w-full h-full object-contain p-4">
                         </div>
-                        <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-clinical-green/10 rounded-full blur-3xl"></div>
+                        <div class="absolute -bottom-12 -right-12 w-64 h-64 bg-clinical-blue/5 rounded-full blur-3xl"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Clinical Efficacy Section -->
-        <section class="py-24 bg-white relative overflow-hidden">
-            <div class="absolute inset-0 bg-dot-pattern opacity-10"></div>
-            <div class="container mx-auto px-6 relative z-10">
-                <div class="max-w-4xl mx-auto text-center">
-                    <h3 class="text-4xl font-display font-bold mb-8">Recharging the Body's Battery</h3>
-                    <p class="text-2xl text-gray-600 leading-relaxed font-light">
-                        &copy; 2026 Cincinnati Chiropractic & Cincinnati Longevity. Serving Greater Cincinnati. All rights reserved.
-                    </p>
+        <!-- Technical Deep Dive -->
+        <section class="py-24 bg-white relative">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- The Science -->
+                    <div class="bg-clinical-gray p-12 lg:p-16 rounded-[3rem] border border-gray-100 relative group overflow-hidden">
+                        <div class="absolute top-0 right-0 p-8 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity">
+                            <svg class="w-32 h-32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
+                        </div>
+                        <h3 class="text-sm font-bold text-clinical-blue uppercase tracking-widest mb-6 italic">Mechanism of Action</h3>
+                        <h4 class="text-3xl font-display font-bold mb-8">The Science</h4>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">
+                            Healthy human cells rely on a specific electrical charge (transmembrane potential) to absorb nutrients and expel waste. Inflammation and cellular stress can degrade this voltage. PEMF induces a targeted electromagnetic field that helps optimize this cellular charge, supporting efficient ion exchange and healthy cellular metabolism.
+                        </p>
+                    </div>
+
+                    <!-- Why We Use It -->
+                    <div class="bg-clinical-charcoal p-12 lg:p-16 rounded-[3rem] text-white relative group overflow-hidden">
+                        <div class="absolute top-0 right-0 p-8 opacity-[0.05] group-hover:opacity-[0.1] transition-opacity">
+                            <svg class="w-32 h-32" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        </div>
+                        <h3 class="text-sm font-bold text-clinical-green uppercase tracking-widest mb-6 italic">Clinical Application</h3>
+                        <h4 class="text-3xl font-display font-bold mb-8 text-white">Why We Use It</h4>
+                        <p class="text-lg text-blue-50 leading-relaxed opacity-90 font-light">
+                            We utilize PEMF as a systemic "reset." It is widely supported in clinical literature for facilitating bone density and tissue health, and we employ it to help shift the central nervous system out of a chronic state of stress into a restorative, parasympathetic state.
+                        </p>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-clinical-blue text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-3xl lg:text-5xl font-display font-bold mb-8 italic">Ready to start your recovery journey?</h3>
+                <a href="/contact.html" class="px-12 py-6 bg-white text-clinical-blue rounded-full font-bold text-xl hover:bg-gray-100 transition-all shadow-2xl inline-block">
+                    Request Appointment
+                </a>
             </div>
         </section>
     </main>
 
-        <footer class="bg-clinical-charcoal text-white pt-24 pb-12">
+    <footer class="bg-clinical-charcoal text-white pt-24 pb-12">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-12 mb-16 border-b border-white/10 pb-16">
                 <div class="col-span-1 lg:col-span-2 space-y-8">

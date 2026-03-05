@@ -22,6 +22,9 @@
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         display: ['Lexend', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "url('data:image/svg+xml,%3Csvg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"%230047AB\" fill-opacity=\"0.03\" fill-rule=\"evenodd\"%3E%3Cpath d=\"M0 40L40 0H20L0 20M40 40V20L20 40\"/%3E%3C/g%3E%3C/svg%3E')",
                     }
                 }
             }
@@ -29,7 +32,6 @@
     </script>
 </head>
 <body class="bg-white text-clinical-charcoal font-sans antialiased">
-    <!-- Navigation included via build process -->
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
         <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
             <div class="flex items-center">
@@ -180,50 +182,78 @@
     </header>
 
     <main>
-        <!-- Technology Hero -->
-        <section class="py-24 bg-clinical-gray relative overflow-hidden">
+        <!-- Treatment Hero -->
+        <section class="relative pt-20 pb-32 overflow-hidden bg-clinical-gray border-b border-gray-100">
             <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
             <div class="container mx-auto px-6 relative z-10">
                 <div class="flex flex-col lg:flex-row items-center gap-16">
-                    <div class="lg:w-1/2">
-                        <div class="inline-flex items-center px-3 py-1 rounded-full bg-clinical-blue/10 text-clinical-blue text-xs font-bold tracking-widest uppercase mb-6">
-                            Advanced Modality
+                    <div class="lg:w-1/2 space-y-8 text-center lg:text-left">
+                        <div class="inline-flex items-center px-4 py-2 bg-clinical-blue/10 text-clinical-blue text-xs font-bold uppercase tracking-[0.2em] rounded-full mx-auto lg:mx-0">
+                            Clinical Treatment Modality
                         </div>
-                        <h1 class="text-5xl lg:text-7xl font-display font-bold mb-8 leading-tight">
+                        <h1 class="text-5xl lg:text-7xl font-display font-bold leading-tight italic text-clinical-charcoal">
                             Spinal Decompression
                         </h1>
-                        <div class="prose prose-lg text-gray-600 leading-relaxed max-w-xl">
-                            <h3 class="text-2xl font-bold text-clinical-charcoal mb-4">Mechanism of Action</h3>
-                            <p class="text-xl">
-                                Engineering negative intradiscal pressure to facilitate nutrient exchange and disc rehydration.
+                        <div class="space-y-4">
+                            <h2 class="text-sm font-bold text-clinical-blue uppercase tracking-widest text-left">What It Is</h2>
+                            <p class="text-2xl text-gray-600 font-light leading-relaxed text-left">
+                                A highly advanced, non-surgical motorized traction therapy designed to relieve pressure on the spine and intervertebral discs.
                             </p>
                         </div>
-                        <div class="mt-12">
-                            <a href="/contact.html" class="px-8 py-4 bg-clinical-blue text-white rounded-full font-bold text-lg hover:bg-blue-700 transition-all shadow-xl shadow-blue-100 inline-block text-center">
-                                Request Appointment
+                        <div class="pt-4 text-left">
+                            <a href="/contact.html" class="px-10 py-5 bg-clinical-blue text-white rounded-full font-bold text-lg hover:bg-blue-700 transition-all shadow-xl hover:shadow-blue-200 inline-block">
+                                Request Consultation
                             </a>
                         </div>
                     </div>
                     <div class="lg:w-1/2 relative">
-                        <div class="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white">
-                            <img src="/images/treatments/decompression.png" alt="Spinal Decompression Benefits" class="w-full h-full object-cover">
+                        <div class="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white aspect-square lg:aspect-auto max-w-2xl mx-auto bg-white">
+                            <img src="/images/treatments/decompression.png" alt="Spinal Decompression" class="w-full h-full object-contain p-4">
                         </div>
-                        <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-clinical-green/10 rounded-full blur-3xl"></div>
+                        <div class="absolute -bottom-12 -right-12 w-64 h-64 bg-clinical-blue/5 rounded-full blur-3xl"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Clinical Efficacy Section -->
-        <section class="py-24 bg-white relative overflow-hidden">
-            <div class="absolute inset-0 bg-dot-pattern opacity-10"></div>
-            <div class="container mx-auto px-6 relative z-10">
-                <div class="max-w-4xl mx-auto text-center">
-                    <h3 class="text-4xl font-display font-bold mb-8">Precision Mechanical Traction</h3>
-                    <p class="text-2xl text-gray-600 leading-relaxed font-light">
-                        Our advanced spinal decompression system allows for targeted, computerized axial traction designed to alleviate pressure on compromised nerve roots.
-                    </p>
+        <!-- Technical Deep Dive -->
+        <section class="py-24 bg-white relative">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- The Science -->
+                    <div class="bg-clinical-gray p-12 lg:p-16 rounded-[3rem] border border-gray-100 relative group overflow-hidden">
+                        <div class="absolute top-0 right-0 p-8 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity">
+                            <svg class="w-32 h-32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
+                        </div>
+                        <h3 class="text-sm font-bold text-clinical-blue uppercase tracking-widest mb-6 italic">Mechanism of Action</h3>
+                        <h4 class="text-3xl font-display font-bold mb-8">The Science</h4>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">
+                            By gently and precisely stretching the spine, decompression creates negative intradiscal pressure (a vacuum effect) within the disc space. This mechanical action promotes the retraction of bulging or herniated disc material and facilitates the influx of oxygen, water, and nutrient-rich fluids back into the degenerated disc.
+                        </p>
+                    </div>
+
+                    <!-- Why We Use It -->
+                    <div class="bg-clinical-charcoal p-12 lg:p-16 rounded-[3rem] text-white relative group overflow-hidden">
+                        <div class="absolute top-0 right-0 p-8 opacity-[0.05] group-hover:opacity-[0.1] transition-opacity">
+                            <svg class="w-32 h-32" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        </div>
+                        <h3 class="text-sm font-bold text-clinical-green uppercase tracking-widest mb-6 italic">Clinical Application</h3>
+                        <h4 class="text-3xl font-display font-bold mb-8 text-white">Why We Use It</h4>
+                        <p class="text-lg text-blue-50 leading-relaxed opacity-90 font-light">
+                            It provides a highly effective, conservative alternative to injections or surgery. We use it extensively to manage chronic lumbar and cervical pain, sciatica, radiculopathy, and degenerative disc disease.
+                        </p>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-clinical-blue text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-3xl lg:text-5xl font-display font-bold mb-8 italic">Ready to start your recovery journey?</h3>
+                <a href="/contact.html" class="px-12 py-6 bg-white text-clinical-blue rounded-full font-bold text-xl hover:bg-gray-100 transition-all shadow-2xl inline-block">
+                    Request Appointment
+                </a>
             </div>
         </section>
     </main>
