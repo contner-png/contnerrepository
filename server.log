@@ -1,8 +1,7 @@
 nohup: ignoring input
-10.2.47.136 - - [05/Mar/2026 15:10:39] "GET /treatments/pemf-therapy.html HTTP/1.1" 200 -
-10.2.47.136 - - [05/Mar/2026 15:10:40] "GET /images/treatments/PEMF.png HTTP/1.1" 304 -
-10.2.47.136 - - [05/Mar/2026 15:12:49] "GET /treatments/vagus-nerve-stimulation.html HTTP/1.1" 200 -
-10.2.47.136 - - [05/Mar/2026 15:12:54] "GET /treatments/longevity-blood-panels.html HTTP/1.1" 200 -
-10.2.47.136 - - [05/Mar/2026 15:13:02] "GET /treatments/vo2-max-testing.html HTTP/1.1" 200 -
-10.2.46.220 - - [05/Mar/2026 15:27:46] "GET /index.html HTTP/1.1" 200 -
-10.2.46.220 - - [05/Mar/2026 15:27:47] "GET /images/treatments/bengals.png HTTP/1.1" 304 -
+10.2.47.136 - - [05/Mar/2026 15:28:41] "GET /programs/cincinnati-chiropractic-care.html HTTP/1.1" 200 -
+10.2.47.136 - - [05/Mar/2026 15:28:45] "GET /treatments/class-iv-laser.html HTTP/1.1" 200 -
+10.2.47.136 - - [05/Mar/2026 15:28:50] "GET /treatments/dry-needling.html HTTP/1.1" 200 -
+10.2.47.136 - - [05/Mar/2026 15:28:51] "GET /images/treatments/dryneedling.png HTTP/1.1" 200 -
+10.2.47.136 - - [05/Mar/2026 15:29:02] "GET /treatments/spinal-decompression.html HTTP/1.1" 200 -
+10.2.47.136 - - [05/Mar/2026 15:29:03] "GET /images/treatments/decompression.png HTTP/1.1" 200 -
