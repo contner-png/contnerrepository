@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tVNS (Transcutaneous Vagus Nerve Stimulation) | Cincinnati Chiropractic & Cincinnati Longevity</title>
+    <title>HRV & Autonomic Optimization | Cincinnati Chiropractic & Cincinnati Longevity</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
@@ -22,22 +22,33 @@
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         display: ['Lexend', 'sans-serif'],
-                    },
-                    backgroundImage: {
-                        'grid-pattern': "url('data:image/svg+xml,%3Csvg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"%230047AB\" fill-opacity=\"0.03\" fill-rule=\"evenodd\"%3E%3Cpath d=\"M0 40L40 0H20L0 20M40 40V20L20 40\"/%3E%3C/g%3E%3C/svg%3E')",
                     }
                 }
             }
         }
     </script>
     <style>
-        .treatment-graphic {
-            filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
-            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        .blueprint-grid {
+            background-image: radial-gradient(circle at 2px 2px, rgba(0,71,171,0.05) 1px, transparent 0);
+            background-size: 32px 32px;
         }
-        .treatment-graphic:hover {
-            transform: translateY(-8px) scale(1.02);
-            filter: drop-shadow(0 35px 35px rgb(0 0 0 / 0.2));
+        .graphic-container {
+            position: relative;
+            background: #f8fafc;
+            border: 1px dashed #cbd5e1;
+            border-radius: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .graphic-container::before {
+            content: 'SCIENTIFIC DATA VISUALIZATION';
+            font-family: 'Lexend', sans-serif;
+            font-size: 10px;
+            font-weight: 800;
+            color: #94a3b8;
+            letter-spacing: 0.3em;
         }
     </style>
 </head>
@@ -196,76 +207,140 @@
     </header>
 
     <main>
-        <!-- Optimized Hero Section (Removed redundant button) -->
-        <section class="relative pt-12 pb-16 overflow-hidden bg-clinical-gray">
-            <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        <section class="relative pt-24 pb-20 overflow-hidden bg-clinical-charcoal text-white text-center">
+            <div class="absolute inset-0 opacity-10 blueprint-grid"></div>
             <div class="container mx-auto px-6 relative z-10">
-                <div class="flex flex-col lg:flex-row items-center gap-12">
-                    <div class="lg:w-1/2 space-y-6 text-left">
-                        <div class="inline-flex items-center px-3 py-1 bg-clinical-blue/10 text-clinical-blue text-[9px] font-black uppercase tracking-[0.3em] rounded-md border border-clinical-blue/20">
-                            Clinical Treatment Modality
-                        </div>
-                        <h1 class="text-4xl lg:text-6xl font-display font-bold leading-tight italic text-clinical-charcoal tracking-tighter">
-                            tVNS (Transcutaneous Vagus Nerve Stimulation)
-                        </h1>
-                        <div class="space-y-3 max-w-xl">
-                            <h2 class="text-[10px] font-black text-clinical-blue uppercase tracking-[0.4em]">The Definition</h2>
-                            <p class="text-xl lg:text-2xl text-gray-600 font-light leading-relaxed">
-                                A cutting-edge, non-invasive neuromodulation technology used to regulate the body's stress response and promote deep neurological recovery.
-                            </p>
-                        </div>
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <div class="inline-flex items-center px-4 py-2 bg-clinical-green/20 text-clinical-green text-[10px] font-black uppercase tracking-[0.3em] rounded-full border border-clinical-green/30">
+                        Clinical Performance Protocol
                     </div>
-                    <div class="lg:w-1/2 relative">
-                        <div class="relative z-10 rounded-[2.5rem] overflow-hidden border-[1px] border-gray-100 bg-white shadow-2xl treatment-graphic max-w-xl mx-auto">
-                            <img src="/images/treatments/tvns.png" alt="tVNS (Transcutaneous Vagus Nerve Stimulation)" class="w-full h-full object-contain p-2">
-                        </div>
-                        <!-- Depth Accents -->
-                        <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-clinical-blue/5 rounded-full blur-3xl"></div>
-                        <div class="absolute -top-10 -left-10 w-64 h-64 bg-clinical-green/5 rounded-full blur-3xl"></div>
+                    <h1 class="text-5xl lg:text-7xl font-display font-bold leading-tight italic tracking-tighter text-white">HRV & Autonomic Optimization</h1>
+                    <p class="text-xl lg:text-2xl text-gray-300 font-light max-w-2xl mx-auto leading-relaxed">Lifting the ceiling on autonomic flexibility and stress resilience.</p>
+                    <div class="pt-4">
+                        <a href="/contact.html" class="px-12 py-6 bg-clinical-blue text-white rounded-full font-bold text-xl hover:bg-blue-700 transition-all shadow-2xl inline-block">Request Appointment</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Technical Deep Dive -->
-        <section class="py-16 bg-white relative">
+        <section class="py-24 bg-white relative">
             <div class="container mx-auto px-6">
-                <div class="grid lg:grid-cols-2 gap-8">
-                    <!-- The Science Panel -->
-                    <div class="bg-clinical-gray p-10 lg:p-12 rounded-[2.5rem] border border-gray-100 relative group overflow-hidden flex flex-col">
-                        <div class="absolute top-0 right-0 p-6 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity">
-                            <svg class="w-20 h-20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
-                        </div>
-                        <h3 class="text-[9px] font-black text-clinical-blue uppercase tracking-[0.4em] mb-4 italic">Mechanism of Action</h3>
-                        <h4 class="text-2xl lg:text-3xl font-display font-bold mb-6">The Science</h4>
-                        <p class="text-base lg:text-lg text-gray-600 leading-relaxed font-light">
-                            tVNS delivers mild electrical impulses through the skin to the auricular (ear) branch of the vagus nerve. This stimulation travels directly to the brainstem, helping to shift the autonomic nervous system out of sympathetic over-activation ("fight or flight") and into parasympathetic dominance ("rest and digest"), which is clinically shown to lower systemic inflammatory markers.
-                        </p>
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-8">
+                        <h2 class="text-sm font-black text-clinical-blue uppercase tracking-[0.4em] italic">The Clinical Reality</h2>
+                        <div class="text-xl lg:text-2xl text-gray-600 leading-relaxed font-light">Heart Rate Variability (HRV) is the ultimate real-time metric of your body's autonomic health. A chronically low HRV indicates a nervous system trapped in a sympathetic "fight or flight" state. We utilize targeted applied physics and structural care to lift the ceiling on your flexibility.</div>
                     </div>
-
-                    <!-- Why We Use It Panel -->
-                    <div class="bg-clinical-charcoal p-10 lg:p-12 rounded-[2.5rem] text-white relative group overflow-hidden flex flex-col">
-                        <div class="absolute top-0 right-0 p-6 opacity-[0.05] group-hover:opacity-[0.1] transition-opacity">
-                            <svg class="w-20 h-20" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                        </div>
-                        <h3 class="text-[9px] font-black text-clinical-green uppercase tracking-[0.4em] mb-4 italic">Clinical Application</h3>
-                        <h4 class="text-2xl lg:text-3xl font-display font-bold mb-6 text-white">Why We Use It</h4>
-                        <p class="text-base lg:text-lg text-blue-50 leading-relaxed opacity-90 font-light">
-                            Chronic pain, anxiety, and sleep disruption are deeply tied to an overactive nervous system. We use tVNS to structurally prepare the brain for restorative sleep and accelerate full-body recovery.
-                        </p>
-                    </div>
+                    <div class="graphic-container aspect-square lg:aspect-video"></div>
                 </div>
             </div>
         </section>
 
-        <!-- Final Call to Action (Strategically Positioned at Bottom) -->
-        <section class="py-20 bg-clinical-blue text-white relative overflow-hidden">
-            <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
-            <div class="container mx-auto px-6 text-center relative z-10">
-                <h3 class="text-3xl lg:text-5xl font-display font-bold mb-8 italic">Ready to start your recovery journey?</h3>
-                <a href="/contact.html" class="px-14 py-6 bg-white text-clinical-blue rounded-full font-bold text-xl hover:bg-clinical-gray transition-all shadow-2xl hover:scale-105 transform inline-block">
-                    Request Consultation
-                </a>
+        <section class="py-24 bg-clinical-gray relative overflow-hidden border-y border-gray-100">
+            <div class="absolute inset-0 opacity-5 blueprint-grid"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-sm font-black text-clinical-blue uppercase tracking-[0.4em] italic mb-4">The Arsenal</h2>
+                    <h3 class="text-4xl lg:text-5xl font-display font-bold text-clinical-charcoal italic">The Clinical Stack</h3>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <a href="/treatments/vagus-nerve-stimulation.html" class="group bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
+        <div>
+            <h4 class="text-xl font-bold text-clinical-charcoal group-hover:text-clinical-blue transition-colors mb-2 italic">tVNS</h4>
+            <p class="text-gray-500 text-sm font-light leading-relaxed">Direct electrical neuromodulation for parasympathetic shift.</p>
+        </div>
+        <div class="mt-6 flex items-center text-clinical-blue text-[10px] font-black uppercase tracking-widest">Deep Dive &rarr;</div>
+    </a>
+    
+    <a href="/programs/cincinnati-chiropractic-care.html" class="group bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
+        <div>
+            <h4 class="text-xl font-bold text-clinical-charcoal group-hover:text-clinical-blue transition-colors mb-2 italic">Precision Chiropractic</h4>
+            <p class="text-gray-500 text-sm font-light leading-relaxed">To remove physical stressors driving tension.</p>
+        </div>
+        <div class="mt-6 flex items-center text-clinical-blue text-[10px] font-black uppercase tracking-widest">Deep Dive &rarr;</div>
+    </a>
+    
+    <a href="/treatments/hyperbaric-oxygen.html" class="group bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
+        <div>
+            <h4 class="text-xl font-bold text-clinical-charcoal group-hover:text-clinical-blue transition-colors mb-2 italic">Hyperbaric Oxygen</h4>
+            <p class="text-gray-500 text-sm font-light leading-relaxed">To flood the brain and body with oxygen.</p>
+        </div>
+        <div class="mt-6 flex items-center text-clinical-blue text-[10px] font-black uppercase tracking-widest">Deep Dive &rarr;</div>
+    </a>
+    
+    <a href="/treatments/sleep-testing.html" class="group bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
+        <div>
+            <h4 class="text-xl font-bold text-clinical-charcoal group-hover:text-clinical-blue transition-colors mb-2 italic">At-Home Sleep Testing</h4>
+            <p class="text-gray-500 text-sm font-light leading-relaxed">To identify overnight autonomic disruptions.</p>
+        </div>
+        <div class="mt-6 flex items-center text-clinical-blue text-[10px] font-black uppercase tracking-widest">Deep Dive &rarr;</div>
+    </a>
+    
+    <a href="/programs/integrative-physiotherapy.html" class="group bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
+        <div>
+            <h4 class="text-xl font-bold text-clinical-charcoal group-hover:text-clinical-blue transition-colors mb-2 italic">Zone 2 Training</h4>
+            <p class="text-gray-500 text-sm font-light leading-relaxed">To build aerobic efficiency and vagal tone.</p>
+        </div>
+        <div class="mt-6 flex items-center text-clinical-blue text-[10px] font-black uppercase tracking-widest">Deep Dive &rarr;</div>
+    </a>
+    
+    <a href="/treatments/targeted-supplements.html" class="group bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
+        <div>
+            <h4 class="text-xl font-bold text-clinical-charcoal group-hover:text-clinical-blue transition-colors mb-2 italic">Targeted Supplements</h4>
+            <p class="text-gray-500 text-sm font-light leading-relaxed">To chemically support nervous system regulation.</p>
+        </div>
+        <div class="mt-6 flex items-center text-clinical-blue text-[10px] font-black uppercase tracking-widest">Deep Dive &rarr;</div>
+    </a>
+    </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-5xl mx-auto bg-clinical-charcoal p-10 lg:p-16 rounded-[3rem] text-white relative overflow-hidden shadow-2xl">
+                    <p class="text-lg lg:text-xl leading-relaxed font-light italic opacity-90">"Please note: Our multimodal approach is highly personalized. The therapies listed above are powerful tools in our clinical arsenal, but we do not believe in one-size-fits-all healthcare. Your specific optimization plan will be custom-engineered based on your diagnostics and may or may not include every modality listed. Additionally, we accept and utilize most major insurers for services when able."</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-sm font-black text-clinical-blue uppercase tracking-[0.4em] italic mb-4">Data-Driven Results</h2>
+                    <h3 class="text-4xl lg:text-5xl font-display font-bold text-clinical-charcoal italic">Measuring Success</h3>
+                </div>
+                <div class="grid md:grid-cols-3 gap-12">
+    <div class="text-center space-y-4">
+        <div class="w-16 h-16 bg-clinical-blue/5 rounded-2xl flex items-center justify-center mx-auto">
+            <svg class="w-8 h-8 text-clinical-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        </div>
+        <h4 class="text-xl font-bold text-clinical-charcoal italic">Elevated HRV</h4>
+        <p class="text-gray-500 text-sm font-light leading-relaxed">Validated increase in baseline HRV scores.</p>
+    </div>
+    
+    <div class="text-center space-y-4">
+        <div class="w-16 h-16 bg-clinical-blue/5 rounded-2xl flex items-center justify-center mx-auto">
+            <svg class="w-8 h-8 text-clinical-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        </div>
+        <h4 class="text-xl font-bold text-clinical-charcoal italic">Lowered RHR</h4>
+        <p class="text-gray-500 text-sm font-light leading-relaxed">Significant reduction in resting heart rate.</p>
+    </div>
+    
+    <div class="text-center space-y-4">
+        <div class="w-16 h-16 bg-clinical-blue/5 rounded-2xl flex items-center justify-center mx-auto">
+            <svg class="w-8 h-8 text-clinical-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        </div>
+        <h4 class="text-xl font-bold text-clinical-charcoal italic">Stress Resilience</h4>
+        <p class="text-gray-500 text-sm font-light leading-relaxed">Improved objective metrics of resilience.</p>
+    </div>
+    </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-clinical-blue text-white text-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 blueprint-grid"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <h2 class="text-4xl lg:text-6xl font-display font-bold mb-12 italic tracking-tighter">Engineered for Your Peak Performance</h2>
+                <a href="/contact.html" class="px-16 py-8 bg-white text-clinical-blue rounded-full font-bold text-2xl hover:bg-gray-100 transition-all shadow-2xl hover:scale-105 transform inline-block">Request Appointment</a>
             </div>
         </section>
     </main>

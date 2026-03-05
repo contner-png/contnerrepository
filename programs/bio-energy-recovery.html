@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bio-Energy Recovery | Cincinnati Chiropractic & Cincinnati Longevity</title>
+    <title>Bio-Energy Recovery (ME/CFS) | Cincinnati Chiropractic & Cincinnati Longevity</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
@@ -16,24 +16,44 @@
                             green: '#22C55E',
                             charcoal: '#333333',
                             gray: '#F9FAFB',
-                            light: '#FFFFFF',
-                            accent: '#E0F2FE'
+                            light: '#FFFFFF'
                         }
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         display: ['Lexend', 'sans-serif'],
-                    },
-                    backgroundImage: {
-                        'grid-pattern': "url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%230047AB" fill-opacity="0.03" fill-rule="evenodd"%3E%3Cpath d="M0 40L40 0H20L0 20M40 40V20L20 40"/%3E%3C/g%3E%3C/svg%3E')",
                     }
                 }
             }
         }
     </script>
+    <style>
+        .blueprint-grid {
+            background-image: radial-gradient(circle at 2px 2px, rgba(0,71,171,0.05) 1px, transparent 0);
+            background-size: 32px 32px;
+        }
+        .graphic-container {
+            position: relative;
+            background: #f8fafc;
+            border: 1px dashed #cbd5e1;
+            border-radius: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .graphic-container::before {
+            content: 'SCIENTIFIC DATA VISUALIZATION';
+            font-family: 'Lexend', sans-serif;
+            font-size: 10px;
+            font-weight: 800;
+            color: #94a3b8;
+            letter-spacing: 0.3em;
+        }
+    </style>
 </head>
 <body class="bg-white text-clinical-charcoal font-sans antialiased">
-        <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
         <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
             <div class="flex items-center">
                 <a href="/index.html" class="flex items-center space-x-3 group">
@@ -68,16 +88,15 @@
                     </button>
                     <div class="absolute left-0 mt-0 w-72 bg-white border border-gray-100 shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-4 z-50">
                         <div class="px-4 pb-2 text-[10px] font-bold text-gray-400 uppercase tracking-widest">Chronic Management</div>
-                        <a href="/programs/neuropathy-care.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Neuropathy Care</a>
-                        <a href="/programs/cardiometabolic-repair.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Cardiometabolic Repair</a>
-                        <a href="/programs/bio-energy-recovery.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Bio-Energy Recovery</a>
-                        <a href="/programs/brain-health-sleep-optimization.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Sleep Optimization</a>
+                        <a href="/programs/neuropathy-care.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal font-semibold tracking-tight">Neuropathy Care</a>
+                        <a href="/programs/cardiometabolic-repair.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal font-semibold tracking-tight">Cardiometabolic Repair</a>
+                        <a href="/programs/bio-energy-recovery.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal font-semibold tracking-tight">Bio-Energy Recovery</a>
+                        <a href="/programs/brain-health-sleep-optimization.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal font-semibold tracking-tight">Sleep Optimization</a>
                         <hr class="my-2 border-gray-100">
                         <div class="px-4 pb-2 text-[10px] font-bold text-gray-400 uppercase tracking-widest">Performance & Structure</div>
-                        <a href="/programs/balance-fall-prevention.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Balance & Fall Prevention</a>
-                        <a href="/programs/muscle-bone-building.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Muscle & Bone Building</a>
-                        <a href="/programs/golf-performance-cincinnati.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Golf Optimization</a>
-                        <a href="/programs/womens-health-cincinnati.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Women's Health</a>
+                        <a href="/programs/balance-fall-prevention.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal font-semibold tracking-tight">Balance & Fall Prevention</a>
+                        <a href="/programs/golf-performance-cincinnati.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal font-semibold tracking-tight">Golf Optimization</a>
+                        <a href="/programs/hrv-optimization.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal font-semibold tracking-tight">HRV Optimization</a>
                     </div>
                 </div>
 
@@ -136,7 +155,12 @@
                     <div class="space-y-2">
                         <span class="text-[10px] uppercase tracking-widest text-gray-400 block mb-2">Specialized Protocols</span>
                         <a href="/programs/neuropathy-care.html" class="block text-lg hover:text-clinical-blue text-clinical-charcoal">Neuropathy</a>
-                        <a href="/programs/muscle-bone-building.html" class="block text-lg hover:text-clinical-blue text-clinical-charcoal">Muscle & Bone</a>
+                        <a href="/programs/cardiometabolic-repair.html" class="block text-lg hover:text-clinical-blue text-clinical-charcoal">Cardiometabolic</a>
+                        <a href="/programs/bio-energy-recovery.html" class="block text-lg hover:text-clinical-blue text-clinical-charcoal">Bio-Energy</a>
+                        <a href="/programs/brain-health-sleep-optimization.html" class="block text-lg hover:text-clinical-blue text-clinical-charcoal">Sleep Optimization</a>
+                        <a href="/programs/balance-fall-prevention.html" class="block text-lg hover:text-clinical-blue text-clinical-charcoal">Balance & Fall</a>
+                        <a href="/programs/golf-performance-cincinnati.html" class="block text-lg hover:text-clinical-blue text-clinical-charcoal">Golf Optimization</a>
+                        <a href="/programs/hrv-optimization.html" class="block text-lg hover:text-clinical-blue text-clinical-charcoal">HRV Optimization</a>
                     </div>
                     <div class="space-y-2">
                         <span class="text-[10px] uppercase tracking-widest text-gray-400 block mb-2">Treatments</span>
@@ -182,97 +206,154 @@
         </div>
     </header>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const btn = document.getElementById('mobile-menu-button');
-            const close = document.getElementById('close-menu');
-            const menu = document.getElementById('mobile-menu');
-            
-            if(btn && menu && close) {
-                btn.onclick = () => menu.classList.remove('translate-x-full');
-                close.onclick = () => menu.classList.add('translate-x-full');
-            }
-        });
-    </script>
-
     <main>
-        <!-- Program Hero -->
-        <section class="py-24 bg-clinical-gray relative overflow-hidden">
-            <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        <section class="relative pt-24 pb-20 overflow-hidden bg-clinical-charcoal text-white text-center">
+            <div class="absolute inset-0 opacity-10 blueprint-grid"></div>
             <div class="container mx-auto px-6 relative z-10">
-                <div class="flex flex-col lg:flex-row items-center gap-16">
-                    <div class="lg:w-1/2">
-                        <div class="inline-flex items-center px-3 py-1 rounded-full bg-clinical-blue/10 text-clinical-blue text-xs font-bold tracking-widest uppercase mb-6">
-                            Clinical Protocol
-                        </div>
-                        <h1 class="text-5xl lg:text-7xl font-display font-bold mb-8 leading-tight">
-                            Bio-Energy Recovery
-                        </h1>
-                        <div class="prose prose-lg text-gray-600 leading-relaxed max-w-xl">
-                            <p class="text-2xl font-light italic">
-                                Stabilizing biological environments for systemic recovery.
-                            </p>
-                        </div>
-                        <div class="mt-12 flex flex-col sm:flex-row items-center gap-6">
-                            <a href="/contact.html" class="px-8 py-4 bg-clinical-blue text-white rounded-full font-bold text-lg hover:bg-blue-700 transition-all shadow-xl w-full sm:w-auto text-center">
-                                Request Appointment
-                            </a>
-                        </div>
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <div class="inline-flex items-center px-4 py-2 bg-clinical-green/20 text-clinical-green text-[10px] font-black uppercase tracking-[0.3em] rounded-full border border-clinical-green/30">
+                        Clinical Performance Protocol
                     </div>
-                    <div class="lg:w-1/2 relative">
-                        <div class="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white">
-                            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Bio-Energy Recovery" class="w-full h-full object-cover">
-                        </div>
+                    <h1 class="text-5xl lg:text-7xl font-display font-bold leading-tight italic tracking-tighter text-white">Bio-Energy Recovery (ME/CFS)</h1>
+                    <p class="text-xl lg:text-2xl text-gray-300 font-light max-w-2xl mx-auto leading-relaxed">Neuro-modulatory care for chronic fatigue and systemic exhaustion.</p>
+                    <div class="pt-4">
+                        <a href="/contact.html" class="px-12 py-6 bg-clinical-blue text-white rounded-full font-bold text-xl hover:bg-blue-700 transition-all shadow-2xl inline-block">Request Appointment</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Strategy Section -->
         <section class="py-24 bg-white relative">
             <div class="container mx-auto px-6">
-                <div class="grid lg:grid-cols-12 gap-16">
-                    <div class="lg:col-span-8">
-                        <h3 class="text-4xl font-display font-bold mb-12">Clinical <span class="text-clinical-blue italic text-3xl">Strategy</span></h3>
-                        
-                        <div class="grid md:grid-cols-2 gap-8">
-                            <div class="p-8 bg-clinical-gray rounded-3xl border border-gray-100">
-                                <h4 class="text-xl font-bold mb-4">Mechanism</h4>
-                                <p class="text-gray-600 text-sm leading-relaxed">Systemic exhaustion often results from a collapse in cellular voltage. We utilize regenerative physics to reset the biological environment and facilitate healing.</p>
-                            </div>
-                            <div class="p-8 bg-clinical-gray rounded-3xl border border-gray-100">
-                                <h4 class="text-xl font-bold mb-4">Evidence</h4>
-                                <p class="text-gray-600 text-sm leading-relaxed">Our protocols combine hyperbaric oxygen with electromagnetic field therapy to saturate the tissues with the substrates required for rapid repair.</p>
-                            </div>
-                        </div>
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-8">
+                        <h2 class="text-sm font-black text-clinical-blue uppercase tracking-[0.4em] italic">The Clinical Reality</h2>
+                        <div class="text-xl lg:text-2xl text-gray-600 leading-relaxed font-light">Conditions like ME/CFS, Long COVID, and Fibromyalgia represent a severe cellular energy deficit combined with a hypersensitive central nervous system. We utilize a pacing-focused, neuro-modulatory approach. By prioritizing energy conservation and reducing inflammation, we safely expand your physical capacity.</div>
                     </div>
-                    
-                    <div class="lg:col-span-4">
-                        <div class="sticky top-32 p-8 bg-clinical-blue rounded-[2.5rem] text-white shadow-2xl">
-                            <h4 class="text-2xl font-display font-bold mb-8">Technology Stack</h4>
-                            <div class="space-y-4">
-                                                                <a href="/treatments/hyperbaric-oxygen.html" class="flex items-center justify-between p-4 bg-white/10 rounded-2xl hover:bg-white/20 transition-colors group">
-                                    <span class="font-bold">Hyperbaric Oxygen</span>
-                                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                                </a>
-                                <a href="/treatments/pemf-therapy.html" class="flex items-center justify-between p-4 bg-white/10 rounded-2xl hover:bg-white/20 transition-colors group">
-                                    <span class="font-bold">PEMF Therapy</span>
-                                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                                </a>
-                                <a href="/treatments/class-iv-laser.html" class="flex items-center justify-between p-4 bg-white/10 rounded-2xl hover:bg-white/20 transition-colors group">
-                                    <span class="font-bold">Class IV Laser</span>
-                                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
+                    <div class="graphic-container aspect-square lg:aspect-video"></div>
                 </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-clinical-gray relative overflow-hidden border-y border-gray-100">
+            <div class="absolute inset-0 opacity-5 blueprint-grid"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-sm font-black text-clinical-blue uppercase tracking-[0.4em] italic mb-4">The Arsenal</h2>
+                    <h3 class="text-4xl lg:text-5xl font-display font-bold text-clinical-charcoal italic">The Clinical Stack</h3>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <a href="/programs/integrative-physiotherapy.html" class="group bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
+        <div>
+            <h4 class="text-xl font-bold text-clinical-charcoal group-hover:text-clinical-blue transition-colors mb-2 italic">Physical Therapy</h4>
+            <p class="text-gray-500 text-sm font-light leading-relaxed">To expertly manage pacing and energy envelope.</p>
+        </div>
+        <div class="mt-6 flex items-center text-clinical-blue text-[10px] font-black uppercase tracking-widest">Deep Dive &rarr;</div>
+    </a>
+    
+    <a href="/programs/cincinnati-chiropractic-care.html" class="group bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
+        <div>
+            <h4 class="text-xl font-bold text-clinical-charcoal group-hover:text-clinical-blue transition-colors mb-2 italic">Precision Chiropractic</h4>
+            <p class="text-gray-500 text-sm font-light leading-relaxed">To clear biomechanical restrictions.</p>
+        </div>
+        <div class="mt-6 flex items-center text-clinical-blue text-[10px] font-black uppercase tracking-widest">Deep Dive &rarr;</div>
+    </a>
+    
+    <a href="/treatments/vagus-nerve-stimulation.html" class="group bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
+        <div>
+            <h4 class="text-xl font-bold text-clinical-charcoal group-hover:text-clinical-blue transition-colors mb-2 italic">tVNS</h4>
+            <p class="text-gray-500 text-sm font-light leading-relaxed">To manually shift the body out of "fight or flight".</p>
+        </div>
+        <div class="mt-6 flex items-center text-clinical-blue text-[10px] font-black uppercase tracking-widest">Deep Dive &rarr;</div>
+    </a>
+    
+    <a href="/treatments/hyperbaric-oxygen.html" class="group bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
+        <div>
+            <h4 class="text-xl font-bold text-clinical-charcoal group-hover:text-clinical-blue transition-colors mb-2 italic">Hyperbaric Oxygen</h4>
+            <p class="text-gray-500 text-sm font-light leading-relaxed">To reduce systemic neuro-inflammation.</p>
+        </div>
+        <div class="mt-6 flex items-center text-clinical-blue text-[10px] font-black uppercase tracking-widest">Deep Dive &rarr;</div>
+    </a>
+    
+    <a href="/treatments/pemf-therapy.html" class="group bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
+        <div>
+            <h4 class="text-xl font-bold text-clinical-charcoal group-hover:text-clinical-blue transition-colors mb-2 italic">PEMF Therapy</h4>
+            <p class="text-gray-500 text-sm font-light leading-relaxed">To stabilize cellular membranes and recovery.</p>
+        </div>
+        <div class="mt-6 flex items-center text-clinical-blue text-[10px] font-black uppercase tracking-widest">Deep Dive &rarr;</div>
+    </a>
+    
+    <a href="/treatments/red-light-therapy.html" class="group bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
+        <div>
+            <h4 class="text-xl font-bold text-clinical-charcoal group-hover:text-clinical-blue transition-colors mb-2 italic">Red Light Therapy</h4>
+            <p class="text-gray-500 text-sm font-light leading-relaxed">To support systemic ATP production.</p>
+        </div>
+        <div class="mt-6 flex items-center text-clinical-blue text-[10px] font-black uppercase tracking-widest">Deep Dive &rarr;</div>
+    </a>
+    
+    <a href="/treatments/targeted-supplements.html" class="group bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
+        <div>
+            <h4 class="text-xl font-bold text-clinical-charcoal group-hover:text-clinical-blue transition-colors mb-2 italic">Targeted Supplements</h4>
+            <p class="text-gray-500 text-sm font-light leading-relaxed">Addressing underlying biochemical roadblocks.</p>
+        </div>
+        <div class="mt-6 flex items-center text-clinical-blue text-[10px] font-black uppercase tracking-widest">Deep Dive &rarr;</div>
+    </a>
+    </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-5xl mx-auto bg-clinical-charcoal p-10 lg:p-16 rounded-[3rem] text-white relative overflow-hidden shadow-2xl">
+                    <p class="text-lg lg:text-xl leading-relaxed font-light italic opacity-90">"Please note: Our multimodal approach is highly personalized. The therapies listed above are powerful tools in our clinical arsenal, but we do not believe in one-size-fits-all healthcare. Your specific optimization plan will be custom-engineered based on your diagnostics and may or may not include every modality listed. Additionally, we accept and utilize most major insurers for services when able."</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-sm font-black text-clinical-blue uppercase tracking-[0.4em] italic mb-4">Data-Driven Results</h2>
+                    <h3 class="text-4xl lg:text-5xl font-display font-bold text-clinical-charcoal italic">Measuring Success</h3>
+                </div>
+                <div class="grid md:grid-cols-3 gap-12">
+    <div class="text-center space-y-4">
+        <div class="w-16 h-16 bg-clinical-blue/5 rounded-2xl flex items-center justify-center mx-auto">
+            <svg class="w-8 h-8 text-clinical-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        </div>
+        <h4 class="text-xl font-bold text-clinical-charcoal italic">Energy Envelope</h4>
+        <p class="text-gray-500 text-sm font-light leading-relaxed">Statistically significant expansion of daily capacity.</p>
+    </div>
+    
+    <div class="text-center space-y-4">
+        <div class="w-16 h-16 bg-clinical-blue/5 rounded-2xl flex items-center justify-center mx-auto">
+            <svg class="w-8 h-8 text-clinical-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        </div>
+        <h4 class="text-xl font-bold text-clinical-charcoal italic">PEM Reduction</h4>
+        <p class="text-gray-500 text-sm font-light leading-relaxed">Drastic reduction in post-exertional malaise.</p>
+    </div>
+    
+    <div class="text-center space-y-4">
+        <div class="w-16 h-16 bg-clinical-blue/5 rounded-2xl flex items-center justify-center mx-auto">
+            <svg class="w-8 h-8 text-clinical-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        </div>
+        <h4 class="text-xl font-bold text-clinical-charcoal italic">Improved HRV</h4>
+        <p class="text-gray-500 text-sm font-light leading-relaxed">Validated shift toward parasympathetic dominance.</p>
+    </div>
+    </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-clinical-blue text-white text-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 blueprint-grid"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <h2 class="text-4xl lg:text-6xl font-display font-bold mb-12 italic tracking-tighter">Engineered for Your Peak Performance</h2>
+                <a href="/contact.html" class="px-16 py-8 bg-white text-clinical-blue rounded-full font-bold text-2xl hover:bg-gray-100 transition-all shadow-2xl hover:scale-105 transform inline-block">Request Appointment</a>
             </div>
         </section>
     </main>
 
-        <footer class="bg-clinical-charcoal text-white pt-24 pb-12">
+    <footer class="bg-clinical-charcoal text-white pt-24 pb-12">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-12 mb-16 border-b border-white/10 pb-16">
                 <div class="col-span-1 lg:col-span-2 space-y-8">

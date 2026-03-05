@@ -1,12 +1,5 @@
 nohup: ignoring input
-10.2.48.145 - - [05/Mar/2026 19:21:58] "GET /treatments/shockwave-therapy.html HTTP/1.1" 304 -
-10.2.48.145 - - [05/Mar/2026 19:22:06] "GET /treatments/shockwave-therapy.html HTTP/1.1" 304 -
-10.2.48.145 - - [05/Mar/2026 19:22:10] "GET /treatments/shockwave-therapy.html HTTP/1.1" 200 -
-10.2.48.145 - - [05/Mar/2026 19:22:11] "GET /images/treatments/shockwave.png HTTP/1.1" 200 -
-10.2.48.145 - - [05/Mar/2026 19:22:11] "GET /images/cclogo_trimmed.png HTTP/1.1" 200 -
-10.2.48.145 - - [05/Mar/2026 19:22:11] code 404, message File not found
-10.2.48.145 - - [05/Mar/2026 19:22:11] "GET /favicon.ico HTTP/1.1" 404 -
-10.2.48.145 - - [05/Mar/2026 19:22:21] "GET /treatments/class-iv-laser.html HTTP/1.1" 200 -
-10.2.48.145 - - [05/Mar/2026 19:22:22] "GET /images/treatments/laser.png HTTP/1.1" 304 -
-10.2.48.145 - - [05/Mar/2026 19:22:29] "GET /treatments/longevity-blood-panels.html HTTP/1.1" 200 -
-10.2.48.145 - - [05/Mar/2026 19:22:29] "GET /images/treatments/longevitypanel.png HTTP/1.1" 200 -
+10.2.42.8 - - [05/Mar/2026 19:26:57] "GET /treatments/shockwave-therapy.html HTTP/1.1" 200 -
+10.2.42.8 - - [05/Mar/2026 19:27:31] "GET /treatments/sleep-testing.html HTTP/1.1" 200 -
+10.2.42.8 - - [05/Mar/2026 19:27:31] "GET /images/treatments/sleepstudy.jpg HTTP/1.1" 200 -
+10.2.42.8 - - [05/Mar/2026 19:28:23] "GET /programs/neuropathy-care.html HTTP/1.1" 200 -
