@@ -322,83 +322,96 @@
 
     <main>
         <!-- Elite Brand Synergy Hero -->
-        <section class="relative min-h-[100vh] bg-clinical-charcoal flex flex-col items-center justify-center overflow-hidden py-32">
-            <!-- Advanced Background Architecture -->
+        <section class="relative min-h-[100vh] bg-[#050505] flex flex-col items-center justify-center overflow-hidden py-32">
+            <!-- Cinematic Background Architecture -->
             <div class="absolute inset-0 z-0">
-                <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
-                <div class="absolute inset-0 bg-gradient-to-b from-clinical-charcoal via-transparent to-clinical-charcoal"></div>
+                <!-- Abstract Technical Mesh -->
+                <div class="absolute inset-0 opacity-[0.15]" 
+                     style="background-image: radial-gradient(#1e3a8a 0.5px, transparent 0.5px), radial-gradient(#1e3a8a 0.5px, #050505 0.5px); background-size: 30px 30px; background-position: 0 0, 15px 15px;"></div>
+                
+                <!-- Depth Gradients -->
+                <div class="absolute inset-0 bg-gradient-to-tr from-[#050505] via-transparent to-[#050505] opacity-80"></div>
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,71,171,0.1),transparent_70%)]"></div>
+                
+                <!-- Moving Light Rays (CSS Animation) -->
+                <div class="absolute top-0 left-1/4 w-[1px] h-full bg-gradient-to-b from-transparent via-clinical-blue/20 to-transparent animate-[scan_8s_linear_infinite]"></div>
+                <div class="absolute top-0 right-1/4 w-[1px] h-full bg-gradient-to-b from-transparent via-clinical-green/20 to-transparent animate-[scan_8s_linear_infinite_reverse]"></div>
                 
                 <!-- Dynamic Light Orbs -->
-                <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-clinical-blue/20 rounded-full blur-[150px] animate-pulse"></div>
-                <div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-clinical-green/10 rounded-full blur-[150px] animate-pulse" style="animation-delay: 2s;"></div>
-                
-                <!-- Technical Blueprint Overlays -->
-                <svg class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
-                    <path d="M0 20 L100 20 M0 80 L100 80 M20 0 L20 100 M80 0 L80 100" stroke="white" stroke-width="0.1" fill="none" />
-                    <circle cx="50" cy="50" r="30" stroke="white" stroke-width="0.05" fill="none" />
-                </svg>
+                <div class="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-clinical-blue/10 rounded-full blur-[180px] animate-pulse"></div>
+                <div class="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-clinical-green/5 rounded-full blur-[180px] animate-pulse" style="animation-delay: 3s;"></div>
             </div>
+
+            <style>
+                @keyframes scan {
+                    0% { transform: translateY(-100%); opacity: 0; }
+                    50% { opacity: 1; }
+                    100% { transform: translateY(100%); opacity: 0; }
+                }
+            </style>
 
             <div class="container mx-auto px-6 relative z-10 text-center">
                 <div class="max-w-5xl mx-auto space-y-16">
-                    <!-- Brand Partnership Badge -->
-                    <div class="inline-flex items-center space-x-4 px-6 py-2.5 bg-white/5 backdrop-blur-xl rounded-full border border-white/10 shadow-2xl">
-                        <img src="/images/treatments/bengals.svg" alt="Bengals" class="h-6 w-auto brightness-0 invert">
-                        <div class="w-px h-4 bg-white/20"></div>
-                        <span class="text-[10px] font-bold text-white uppercase tracking-[0.3em]">Official Clinical Excellence</span>
-                        <div class="w-px h-4 bg-white/20"></div>
-                        <img src="/images/treatments/cyclones.png" alt="Cyclones" class="h-6 w-auto brightness-0 invert">
+                    <!-- Clarified Practitioner Credentials Badge -->
+                    <div class="inline-flex flex-col items-center space-y-4">
+                        <div class="inline-flex items-center space-x-4 px-6 py-3 bg-white/5 backdrop-blur-2xl rounded-2xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+                            <div class="flex items-center space-x-3">
+                                <img src="/images/treatments/bengals.svg" alt="Bengals" class="h-7 w-auto brightness-0 invert">
+                                <img src="/images/treatments/cyclones.png" alt="Cyclones" class="h-7 w-auto brightness-0 invert">
+                            </div>
+                            <div class="w-px h-6 bg-white/20"></div>
+                            <div class="text-left">
+                                <span class="block text-[10px] font-black text-white uppercase tracking-[0.3em] leading-tight">Dr. Andrew Limle</span>
+                                <span class="block text-[8px] font-bold text-gray-400 uppercase tracking-[0.1em] mt-0.5">Official Team Chiropractor</span>
+                            </div>
+                        </div>
+                        <p class="text-[9px] text-gray-500 uppercase tracking-widest font-medium opacity-60">Professional Athlete Care Standards applied to Private Practice</p>
                     </div>
 
                     <!-- Synergetic Heading -->
                     <div class="space-y-4">
-                        <h1 class="text-6xl lg:text-9xl font-display font-bold text-white leading-[0.9] tracking-tighter">
+                        <h1 class="text-6xl lg:text-[10rem] font-display font-bold text-white leading-[0.85] tracking-tighter">
                             CINCINNATI <br>
-                            <span class="inline-block relative group">
-                                <span class="text-clinical-blue italic group-hover:text-white transition-colors duration-500">CHIROPRACTIC</span>
-                                <span class="absolute -bottom-2 left-0 w-full h-1 bg-clinical-blue transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+                            <span class="inline-block relative group px-2">
+                                <span class="text-clinical-blue group-hover:text-white transition-colors duration-700">CHIROPRACTIC</span>
+                                <span class="absolute -bottom-2 left-0 w-full h-1.5 bg-clinical-blue transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left shadow-[0_0_20px_#0047AB]"></span>
                             </span>
-                            <span class="text-white/20 font-light mx-4">&</span>
-                            <span class="inline-block relative group">
-                                <span class="text-clinical-green italic group-hover:text-white transition-colors duration-500">LONGEVITY</span>
-                                <span class="absolute -bottom-2 left-0 w-full h-1 bg-clinical-green transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+                            <span class="text-white/10 font-thin mx-4 block lg:inline">&</span>
+                            <span class="inline-block relative group px-2">
+                                <span class="text-clinical-green group-hover:text-white transition-colors duration-700">LONGEVITY</span>
+                                <span class="absolute -bottom-2 left-0 w-full h-1.5 bg-clinical-green transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left shadow-[0_0_20px_#22C55E]"></span>
                             </span>
                         </h1>
                     </div>
 
                     <!-- Professional Credo -->
-                    <div class="max-w-3xl mx-auto space-y-8">
+                    <div class="max-w-3xl mx-auto space-y-10">
                         <p class="text-xl lg:text-2xl text-gray-400 font-light leading-relaxed">
-                            Elite physical medicine meets the frontier of longevity science. From <span class="text-white font-medium">pro-level structural care</span> to <span class="text-white font-medium">comprehensive medical optimization</span>, we build the blueprint for your peak performance.
+                            Elite physical medicine meets the frontier of longevity science. From <span class="text-white font-medium border-b border-clinical-blue/30 pb-1">Precision Structural Care</span> to <span class="text-white font-medium border-b border-clinical-green/30 pb-1">Advanced Medical Optimization</span>.
                         </p>
                         
-                        <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-                            <a href="/contact.html" class="px-12 py-6 bg-clinical-blue text-white rounded-full font-bold text-xl hover:bg-blue-600 transition-all shadow-[0_0_40px_-5px_rgba(0,71,171,0.5)] hover:shadow-blue-500/40">
-                                Start Your Blueprint
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-8">
+                            <a href="/contact.html" class="group/btn relative px-12 py-6 bg-clinical-blue text-white rounded-2xl font-bold text-xl overflow-hidden transition-all hover:scale-105 shadow-[0_20px_40px_-10px_rgba(0,71,171,0.5)]">
+                                <span class="relative z-10">Request Consultation</span>
+                                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000"></div>
                             </a>
-                            <a href="#programs" class="px-12 py-6 bg-white/5 backdrop-blur-md border border-white/10 text-white rounded-full font-bold text-xl hover:bg-white/10 transition-all">
-                                Clinical Programs
+                            <a href="#programs" class="px-12 py-6 bg-white/5 backdrop-blur-md border border-white/10 text-white rounded-2xl font-bold text-xl hover:bg-white/10 transition-all border-white/20">
+                                View Clinical Programs
                             </a>
                         </div>
                     </div>
 
-                    <!-- Professional Indicators -->
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-white/5 max-w-4xl mx-auto">
-                        <div class="text-center group">
-                            <span class="block text-3xl font-display font-bold text-white group-hover:text-clinical-blue transition-colors">15+</span>
-                            <span class="text-[9px] uppercase tracking-[0.2em] text-gray-500 font-bold">Years Experience</span>
+                    <!-- Clarified Practice Structure -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5 border border-white/10 rounded-[2rem] overflow-hidden max-w-4xl mx-auto backdrop-blur-sm">
+                        <div class="p-8 bg-clinical-charcoal/40 group hover:bg-clinical-blue/5 transition-colors">
+                            <h4 class="text-clinical-blue font-bold uppercase tracking-widest text-xs mb-3 italic">Division 01</h4>
+                            <span class="block text-2xl font-display font-bold text-white mb-2">Chiropractic</span>
+                            <p class="text-sm text-gray-500 leading-relaxed">Official standards of structural integrity and kinematic restoration.</p>
                         </div>
-                        <div class="text-center group">
-                            <span class="block text-3xl font-display font-bold text-white group-hover:text-clinical-green transition-colors italic">Medical</span>
-                            <span class="text-[9px] uppercase tracking-[0.2em] text-gray-500 font-bold">Diagnostics</span>
-                        </div>
-                        <div class="text-center group">
-                            <span class="block text-3xl font-display font-bold text-white group-hover:text-clinical-blue transition-colors italic">Structural</span>
-                            <span class="text-[9px] uppercase tracking-[0.2em] text-gray-500 font-bold">Integrity</span>
-                        </div>
-                        <div class="text-center group">
-                            <span class="block text-3xl font-display font-bold text-white group-hover:text-clinical-green transition-colors">Pro</span>
-                            <span class="text-[9px] uppercase tracking-[0.2em] text-gray-500 font-bold">Level Care</span>
+                        <div class="p-8 bg-clinical-charcoal/40 group hover:bg-clinical-green/5 transition-colors">
+                            <h4 class="text-clinical-green font-bold uppercase tracking-widest text-xs mb-3 italic">Division 02</h4>
+                            <span class="block text-2xl font-display font-bold text-white mb-2">Longevity Medical</span>
+                            <p class="text-sm text-gray-500 leading-relaxed">Comprehensive diagnostics, cellular repair, and physiological optimization.</p>
                         </div>
                     </div>
                 </div>
