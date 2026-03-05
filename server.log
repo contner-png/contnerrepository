@@ -1,7 +1,1 @@
 nohup: ignoring input
-10.2.47.136 - - [05/Mar/2026 15:28:41] "GET /programs/cincinnati-chiropractic-care.html HTTP/1.1" 200 -
-10.2.47.136 - - [05/Mar/2026 15:28:45] "GET /treatments/class-iv-laser.html HTTP/1.1" 200 -
-10.2.47.136 - - [05/Mar/2026 15:28:50] "GET /treatments/dry-needling.html HTTP/1.1" 200 -
-10.2.47.136 - - [05/Mar/2026 15:28:51] "GET /images/treatments/dryneedling.png HTTP/1.1" 200 -
-10.2.47.136 - - [05/Mar/2026 15:29:02] "GET /treatments/spinal-decompression.html HTTP/1.1" 200 -
-10.2.47.136 - - [05/Mar/2026 15:29:03] "GET /images/treatments/decompression.png HTTP/1.1" 200 -
