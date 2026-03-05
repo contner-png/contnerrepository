@@ -14,9 +14,9 @@
                         clinical: {
                             blue: '#0047AB',
                             green: '#22C55E',
-                            charcoal: '#111827',
-                            gray: '#F9FAFB',
-                            light: '#FFFFFF'
+                            orange: '#FB4F14',
+                            charcoal: '#050505',
+                            gray: '#F9FAFB'
                         }
                     },
                     fontFamily: {
@@ -32,35 +32,33 @@
             background-image: radial-gradient(circle at 2px 2px, rgba(37,99,235,0.1) 1px, transparent 0);
             background-size: 40px 40px;
         }
-        .clinical-module {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .clinical-module:hover {
-            background: rgba(255, 255, 255, 0.07);
-            border-color: #22C55E;
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px -10px rgba(34, 197, 94, 0.2);
-        }
-        .graphic-container {
-            background: #0f172a;
-            border: 1px solid rgba(37, 99, 235, 0.2);
-            border-radius: 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
+        .bento-stack-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
             position: relative;
+            overflow: hidden;
         }
-        .graphic-container::after {
-            content: 'CELLULAR VOLTAGE DIAGRAM';
-            font-family: 'Lexend', sans-serif;
-            font-size: 9px;
-            font-weight: 900;
-            color: rgba(37, 99, 235, 0.4);
-            letter-spacing: 0.5em;
+        .bento-stack-item::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top right, rgba(251,79,20,0.1), transparent 70%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .bento-stack-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: #FB4F14;
+            transform: scale(1.02);
+            z-index: 10;
+        }
+        .bento-stack-item:hover::before {
+            opacity: 1;
+        }
+        .tech-id {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
         }
     </style>
 </head>
@@ -223,12 +221,12 @@
         <section class="relative pt-24 pb-20 overflow-hidden bg-clinical-charcoal text-white text-center">
             <div class="absolute inset-0 opacity-20 blueprint-grid"></div>
             <div class="container mx-auto px-6 relative z-10">
-                <div class="max-w-4xl mx-auto space-y-6">
-                    <div class="inline-flex items-center px-4 py-2 bg-clinical-green/20 text-clinical-green text-[10px] font-black uppercase tracking-[0.3em] rounded-full border border-clinical-green/30">
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <div class="inline-flex items-center px-4 py-2 bg-clinical-orange/20 text-clinical-orange text-[10px] font-black uppercase tracking-[0.4em] rounded-full border border-clinical-orange/30">
                         Systemic Restoration Protocol
                     </div>
                     <h1 class="text-5xl lg:text-8xl font-display font-bold leading-tight italic tracking-tighter text-white">Bio-Energy Recovery</h1>
-                    <p class="text-xl lg:text-2xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed">Neuro-modulatory care for chronic fatigue states.</p>
+                    <p class="text-xl lg:text-2xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed italic">Neuro-modulatory care for fatigue.</p>
                 </div>
             </div>
         </section>
@@ -237,106 +235,114 @@
         <section class="py-24 bg-white relative">
             <div class="container mx-auto px-6">
                 <div class="grid lg:grid-cols-2 gap-20 items-center">
-                    <div class="space-y-8 text-left">
-                        <h2 class="text-sm font-black text-clinical-blue uppercase tracking-[0.5em] italic">The Clinical Reality</h2>
-                        <div class="text-xl lg:text-2xl text-gray-600 leading-relaxed font-light border-l-4 border-clinical-blue/20 pl-8">
-                            Conditions like ME/CFS and Long COVID represent a cellular energy deficit with a hypersensitive nervous system. We safely expand physical capacity without triggering post-exertional crashes by prioritizing energy conservation.
+                    <div class="space-y-10 text-left">
+                        <div>
+                            <h2 class="text-xs font-black text-clinical-blue uppercase tracking-[0.6em] mb-6">Foundational Diagnostic</h2>
+                            <h3 class="text-4xl font-display font-bold italic text-clinical-charcoal">The Clinical Reality</h3>
+                        </div>
+                        <div class="text-xl lg:text-2xl text-gray-600 leading-relaxed font-light border-l-4 border-clinical-orange pl-8 py-2">
+                            Conditions like ME/CFS and Long COVID represent a cellular energy deficit. We safely expand physical capacity without triggering crashes by prioritizing energy conservation.
                         </div>
                     </div>
-                    <div class="graphic-container aspect-square lg:aspect-video shadow-2xl shadow-blue-900/20">
-                        <div class="absolute inset-0 blueprint-grid opacity-10"></div>
-                        <svg class="w-full h-full p-12 opacity-20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="0.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-gradient-to-tr from-clinical-orange/20 to-clinical-blue/20 rounded-[3rem] blur-2xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="relative z-10 bg-[#0f172a] aspect-video rounded-[2.5rem] border border-white/10 flex items-center justify-center overflow-hidden shadow-2xl">
+                            <div class="absolute inset-0 blueprint-grid opacity-20"></div>
+                            <span class="text-[10px] font-black text-clinical-blue uppercase tracking-[0.5em] opacity-40 italic">Structural Neural Mapping</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- The Arsenal: Re-Designed Grid -->
-        <section class="py-24 bg-[#020617] text-white relative overflow-hidden">
+        <!-- The Arsenal -->
+        <section class="py-32 bg-[#020617] text-white relative overflow-hidden">
             <div class="absolute inset-0 opacity-10 blueprint-grid"></div>
             <div class="container mx-auto px-6 relative z-10">
-                <div class="text-center mb-20">
-                    <h2 class="text-sm font-black text-clinical-green uppercase tracking-[0.5em] italic mb-4">Tactical Arsenal</h2>
-                    <h3 class="text-5xl lg:text-6xl font-display font-bold italic tracking-tight">The Clinical Stack</h3>
+                <div class="flex flex-col lg:flex-row justify-between items-end mb-20 gap-8 text-left">
+                    <div class="max-w-2xl">
+                        <h2 class="text-xs font-black text-clinical-orange uppercase tracking-[0.6em] mb-4">Tactical Arsenal</h2>
+                        <h3 class="text-5xl lg:text-7xl font-display font-bold italic tracking-tight text-white leading-none">The Clinical Stack</h3>
+                    </div>
+                    <p class="text-gray-400 max-w-sm text-sm font-light leading-relaxed">Integrated technical modalities synchronized for rapid physiological adaptation and structural repair.</p>
                 </div>
-                
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-4">
                     
-    <a href="/programs/integrative-physiotherapy.html" class="clinical-module group p-10 rounded-[2.5rem] flex flex-col justify-between h-full">
-        <div>
-            <div class="flex items-center justify-between mb-8">
-                <span class="text-[10px] font-black text-clinical-green opacity-40 font-mono tracking-widest">MOD-01</span>
-                <div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-clinical-green group-hover:border-clinical-green transition-all duration-500">
-                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                </div>
+    <a href="/programs/integrative-physiotherapy.html" class="bento-stack-item group p-10 rounded-[3rem] flex flex-col justify-between h-full md:col-span-6 lg:col-span-8">
+        <div class="flex justify-between items-start mb-12">
+            <div class="tech-id text-[10px] font-black text-clinical-orange opacity-50 font-mono tracking-widest uppercase">MOD-X-01</div>
+            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </div>
-            <h4 class="text-2xl font-display font-bold text-white group-hover:text-clinical-green transition-colors italic mb-4 leading-tight">Physical Therapy</h4>
-            <p class="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-300 transition-colors">Manage pacing and energy envelope development.</p>
+        </div>
+        <div>
+            <h4 class="text-3xl font-display font-bold text-white group-hover:text-clinical-orange transition-colors italic mb-4 leading-tight tracking-tight">Physical Therapy</h4>
+            <p class="text-gray-400 text-base font-light leading-relaxed group-hover:text-gray-200 transition-colors max-w-sm">Manage pacing and energy envelope development.</p>
         </div>
     </a>
     
-    <a href="/programs/cincinnati-chiropractic-care.html" class="clinical-module group p-10 rounded-[2.5rem] flex flex-col justify-between h-full">
-        <div>
-            <div class="flex items-center justify-between mb-8">
-                <span class="text-[10px] font-black text-clinical-green opacity-40 font-mono tracking-widest">MOD-02</span>
-                <div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-clinical-green group-hover:border-clinical-green transition-all duration-500">
-                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                </div>
+    <a href="/programs/cincinnati-chiropractic-care.html" class="bento-stack-item group p-10 rounded-[3rem] flex flex-col justify-between h-full md:col-span-3 lg:col-span-4">
+        <div class="flex justify-between items-start mb-12">
+            <div class="tech-id text-[10px] font-black text-clinical-orange opacity-50 font-mono tracking-widest uppercase">MOD-X-02</div>
+            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </div>
-            <h4 class="text-2xl font-display font-bold text-white group-hover:text-clinical-green transition-colors italic mb-4 leading-tight">Precision Chiropractic</h4>
-            <p class="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-300 transition-colors">Clear restrictions stopping energy waste.</p>
+        </div>
+        <div>
+            <h4 class="text-3xl font-display font-bold text-white group-hover:text-clinical-orange transition-colors italic mb-4 leading-tight tracking-tight">Precision Chiropractic</h4>
+            <p class="text-gray-400 text-base font-light leading-relaxed group-hover:text-gray-200 transition-colors max-w-sm">Clear restrictions stopping energy waste.</p>
         </div>
     </a>
     
-    <a href="/treatments/vagus-nerve-stimulation.html" class="clinical-module group p-10 rounded-[2.5rem] flex flex-col justify-between h-full">
-        <div>
-            <div class="flex items-center justify-between mb-8">
-                <span class="text-[10px] font-black text-clinical-green opacity-40 font-mono tracking-widest">MOD-03</span>
-                <div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-clinical-green group-hover:border-clinical-green transition-all duration-500">
-                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                </div>
+    <a href="/treatments/vagus-nerve-stimulation.html" class="bento-stack-item group p-10 rounded-[3rem] flex flex-col justify-between h-full md:col-span-3 lg:col-span-4">
+        <div class="flex justify-between items-start mb-12">
+            <div class="tech-id text-[10px] font-black text-clinical-orange opacity-50 font-mono tracking-widest uppercase">MOD-X-03</div>
+            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </div>
-            <h4 class="text-2xl font-display font-bold text-white group-hover:text-clinical-green transition-colors italic mb-4 leading-tight">tVNS Stimulation</h4>
-            <p class="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-300 transition-colors">Shift the body out of fight or flight.</p>
+        </div>
+        <div>
+            <h4 class="text-3xl font-display font-bold text-white group-hover:text-clinical-orange transition-colors italic mb-4 leading-tight tracking-tight">tVNS Stimulation</h4>
+            <p class="text-gray-400 text-base font-light leading-relaxed group-hover:text-gray-200 transition-colors max-w-sm">Shift the body out of fight or flight.</p>
         </div>
     </a>
     
-    <a href="/treatments/hyperbaric-oxygen.html" class="clinical-module group p-10 rounded-[2.5rem] flex flex-col justify-between h-full">
-        <div>
-            <div class="flex items-center justify-between mb-8">
-                <span class="text-[10px] font-black text-clinical-green opacity-40 font-mono tracking-widest">MOD-04</span>
-                <div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-clinical-green group-hover:border-clinical-green transition-all duration-500">
-                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                </div>
+    <a href="/treatments/hyperbaric-oxygen.html" class="bento-stack-item group p-10 rounded-[3rem] flex flex-col justify-between h-full md:col-span-3 lg:col-span-4">
+        <div class="flex justify-between items-start mb-12">
+            <div class="tech-id text-[10px] font-black text-clinical-orange opacity-50 font-mono tracking-widest uppercase">MOD-X-04</div>
+            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </div>
-            <h4 class="text-2xl font-display font-bold text-white group-hover:text-clinical-green transition-colors italic mb-4 leading-tight">Hyperbaric Oxygen</h4>
-            <p class="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-300 transition-colors">Reduce systemic neuro-inflammation.</p>
+        </div>
+        <div>
+            <h4 class="text-3xl font-display font-bold text-white group-hover:text-clinical-orange transition-colors italic mb-4 leading-tight tracking-tight">Hyperbaric Oxygen</h4>
+            <p class="text-gray-400 text-base font-light leading-relaxed group-hover:text-gray-200 transition-colors max-w-sm">Reduce systemic neuro-inflammation.</p>
         </div>
     </a>
     
-    <a href="/treatments/pemf-therapy.html" class="clinical-module group p-10 rounded-[2.5rem] flex flex-col justify-between h-full">
-        <div>
-            <div class="flex items-center justify-between mb-8">
-                <span class="text-[10px] font-black text-clinical-green opacity-40 font-mono tracking-widest">MOD-05</span>
-                <div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-clinical-green group-hover:border-clinical-green transition-all duration-500">
-                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                </div>
+    <a href="/treatments/pemf-therapy.html" class="bento-stack-item group p-10 rounded-[3rem] flex flex-col justify-between h-full md:col-span-3 lg:col-span-4">
+        <div class="flex justify-between items-start mb-12">
+            <div class="tech-id text-[10px] font-black text-clinical-orange opacity-50 font-mono tracking-widest uppercase">MOD-X-05</div>
+            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </div>
-            <h4 class="text-2xl font-display font-bold text-white group-hover:text-clinical-green transition-colors italic mb-4 leading-tight">PEMF Therapy</h4>
-            <p class="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-300 transition-colors">Stabilize cellular membranes.</p>
+        </div>
+        <div>
+            <h4 class="text-3xl font-display font-bold text-white group-hover:text-clinical-orange transition-colors italic mb-4 leading-tight tracking-tight">PEMF Therapy</h4>
+            <p class="text-gray-400 text-base font-light leading-relaxed group-hover:text-gray-200 transition-colors max-w-sm">Stabilize cellular membranes.</p>
         </div>
     </a>
     
-    <a href="/treatments/red-light-therapy.html" class="clinical-module group p-10 rounded-[2.5rem] flex flex-col justify-between h-full">
-        <div>
-            <div class="flex items-center justify-between mb-8">
-                <span class="text-[10px] font-black text-clinical-green opacity-40 font-mono tracking-widest">MOD-06</span>
-                <div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-clinical-green group-hover:border-clinical-green transition-all duration-500">
-                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                </div>
+    <a href="/treatments/red-light-therapy.html" class="bento-stack-item group p-10 rounded-[3rem] flex flex-col justify-between h-full md:col-span-6 lg:col-span-8">
+        <div class="flex justify-between items-start mb-12">
+            <div class="tech-id text-[10px] font-black text-clinical-orange opacity-50 font-mono tracking-widest uppercase">MOD-X-06</div>
+            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </div>
-            <h4 class="text-2xl font-display font-bold text-white group-hover:text-clinical-green transition-colors italic mb-4 leading-tight">Red Light Therapy</h4>
-            <p class="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-300 transition-colors">Support systemic ATP production.</p>
+        </div>
+        <div>
+            <h4 class="text-3xl font-display font-bold text-white group-hover:text-clinical-orange transition-colors italic mb-4 leading-tight tracking-tight">Red Light Therapy</h4>
+            <p class="text-gray-400 text-base font-light leading-relaxed group-hover:text-gray-200 transition-colors max-w-sm">Support systemic ATP production.</p>
         </div>
     </a>
     
@@ -344,17 +350,18 @@
             </div>
         </section>
 
-        <!-- Clinical Disclaimer -->
-        <section class="py-20 bg-white">
+        <!-- Disclaimer -->
+        <section class="py-24 bg-white">
             <div class="container mx-auto px-6">
-                <div class="max-w-5xl mx-auto bg-clinical-gray p-12 lg:p-20 rounded-[4rem] text-clinical-charcoal relative overflow-hidden border border-gray-100 shadow-inner">
-                    <div class="relative z-10 text-left">
-                        <p class="text-lg lg:text-2xl leading-relaxed font-light italic text-gray-500">
-                            "Our multimodal approach is highly personalized. The therapies listed above are powerful tools in our clinical arsenal, but we do not believe in one-size-fits-all healthcare. Your specific optimization plan will be custom-engineered based on your diagnostics and may or may not include every modality listed."
+                <div class="max-w-5xl mx-auto bg-clinical-gray p-12 lg:p-20 rounded-[4rem] text-clinical-charcoal relative overflow-hidden border border-gray-100 shadow-2xl">
+                    <div class="relative z-10 text-left space-y-8">
+                        <svg class="w-12 h-12 text-clinical-orange opacity-20" fill="currentColor" viewBox="0 0 24 24"><path d="M13 14h-2v-4h2m0 8h-2v-2h2M1 21h22L12 2 1 21z"/></svg>
+                        <p class="text-xl lg:text-3xl leading-relaxed font-light italic text-gray-600">
+                            "Our multimodal approach is highly personalized. The therapies listed above are powerful tools in our arsenal, but we custom-engineer each plan based on your unique diagnostics."
                         </p>
-                        <div class="mt-8 pt-8 border-t border-gray-200">
-                            <span class="text-xs font-bold text-clinical-blue uppercase tracking-widest">Insurance Notice:</span>
-                            <p class="text-sm text-gray-400 mt-2">We accept and utilize most major insurers for services when applicable.</p>
+                        <div class="flex items-center gap-4 text-xs font-black text-clinical-blue uppercase tracking-widest">
+                            <span class="w-12 h-px bg-clinical-blue/30"></span>
+                            <span>Most Major Insurers Accepted</span>
                         </div>
                     </div>
                 </div>
@@ -363,40 +370,40 @@
 
         <!-- Measuring Success -->
         <section class="py-24 bg-white border-t border-gray-50">
-            <div class="container mx-auto px-6 text-left">
-                <div class="text-center mb-20">
-                    <h2 class="text-sm font-black text-clinical-blue uppercase tracking-[0.5em] italic mb-4">Objective Data</h2>
-                    <h3 class="text-5xl font-display font-bold italic text-clinical-charcoal tracking-tight">Measuring Success</h3>
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-24 text-left">
+                    <h2 class="text-xs font-black text-clinical-blue uppercase tracking-[0.6em] mb-4 text-center">Objective Data</h2>
+                    <h3 class="text-5xl lg:text-6xl font-display font-bold italic text-clinical-charcoal tracking-tight leading-none text-center">Measuring Success</h3>
                 </div>
-                <div class="grid md:grid-cols-3 gap-16">
+                <div class="grid md:grid-cols-3 gap-20">
                     
-    <div class="text-center space-y-6 group">
-        <div class="w-20 h-20 bg-clinical-blue/5 rounded-[2rem] flex items-center justify-center mx-auto group-hover:bg-clinical-blue group-hover:text-white transition-all duration-500">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+    <div class="text-center space-y-8 group">
+        <div class="w-24 h-24 bg-clinical-orange/5 rounded-[2.5rem] flex items-center justify-center mx-auto group-hover:bg-clinical-orange group-hover:text-white transition-all duration-700 group-hover:rotate-12">
+            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
         </div>
-        <div class="space-y-2">
-            <h4 class="text-2xl font-display font-bold text-clinical-charcoal italic tracking-tight">Energy Envelope</h4>
-            <p class="text-gray-500 text-base font-light leading-relaxed px-4">Expansion of daily physical capacity.</p>
-        </div>
-    </div>
-    
-    <div class="text-center space-y-6 group">
-        <div class="w-20 h-20 bg-clinical-blue/5 rounded-[2rem] flex items-center justify-center mx-auto group-hover:bg-clinical-blue group-hover:text-white transition-all duration-500">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-        </div>
-        <div class="space-y-2">
-            <h4 class="text-2xl font-display font-bold text-clinical-charcoal italic tracking-tight">PEM Reduction</h4>
-            <p class="text-gray-500 text-base font-light leading-relaxed px-4">Reduction in post-exertional malaise frequency.</p>
+        <div class="space-y-4 text-center">
+            <h4 class="text-3xl font-display font-bold text-clinical-charcoal italic tracking-tight leading-none">Energy Envelope</h4>
+            <p class="text-gray-500 text-lg font-light leading-relaxed px-4">Expansion of daily physical capacity.</p>
         </div>
     </div>
     
-    <div class="text-center space-y-6 group">
-        <div class="w-20 h-20 bg-clinical-blue/5 rounded-[2rem] flex items-center justify-center mx-auto group-hover:bg-clinical-blue group-hover:text-white transition-all duration-500">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+    <div class="text-center space-y-8 group">
+        <div class="w-24 h-24 bg-clinical-orange/5 rounded-[2.5rem] flex items-center justify-center mx-auto group-hover:bg-clinical-orange group-hover:text-white transition-all duration-700 group-hover:rotate-12">
+            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
         </div>
-        <div class="space-y-2">
-            <h4 class="text-2xl font-display font-bold text-clinical-charcoal italic tracking-tight">Improved HRV</h4>
-            <p class="text-gray-500 text-base font-light leading-relaxed px-4">Validated shift toward parasympathetic dominance.</p>
+        <div class="space-y-4 text-center">
+            <h4 class="text-3xl font-display font-bold text-clinical-charcoal italic tracking-tight leading-none">PEM Frequency</h4>
+            <p class="text-gray-500 text-lg font-light leading-relaxed px-4">Reduction in post-exertional malaise.</p>
+        </div>
+    </div>
+    
+    <div class="text-center space-y-8 group">
+        <div class="w-24 h-24 bg-clinical-orange/5 rounded-[2.5rem] flex items-center justify-center mx-auto group-hover:bg-clinical-orange group-hover:text-white transition-all duration-700 group-hover:rotate-12">
+            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        </div>
+        <div class="space-y-4 text-center">
+            <h4 class="text-3xl font-display font-bold text-clinical-charcoal italic tracking-tight leading-none">Improved HRV</h4>
+            <p class="text-gray-500 text-lg font-light leading-relaxed px-4">Validated shift toward parasympathetic dominance.</p>
         </div>
     </div>
     
@@ -404,12 +411,12 @@
             </div>
         </section>
 
-        <!-- Final Strategic CTA -->
+        <!-- Final CTA -->
         <section class="py-32 bg-clinical-blue text-white text-center relative overflow-hidden">
             <div class="absolute inset-0 opacity-20 blueprint-grid"></div>
             <div class="container mx-auto px-6 relative z-10 text-center">
-                <h2 class="text-5xl lg:text-7xl font-display font-bold mb-12 italic tracking-tighter">Engineered for Your <br>Peak Performance</h2>
-                <a href="/contact.html" class="px-16 py-8 bg-white text-clinical-blue rounded-full font-bold text-2xl hover:bg-gray-100 transition-all shadow-2xl hover:scale-105 transform inline-block">
+                <h2 class="text-5xl lg:text-8xl font-display font-bold mb-12 italic tracking-tighter text-white">Engineered for Your <br>Peak Performance</h2>
+                <a href="/contact.html" class="px-20 py-10 bg-white text-clinical-blue rounded-full font-bold text-3xl hover:bg-clinical-orange hover:text-white transition-all shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-105 transform inline-block">
                     Request Appointment
                 </a>
             </div>

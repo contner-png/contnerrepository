@@ -1,3 +1,4 @@
 nohup: ignoring input
-10.2.48.145 - - [05/Mar/2026 20:24:11] "GET /programs/neuropathy-care.html HTTP/1.1" 200 -
-10.2.48.145 - - [05/Mar/2026 20:24:46] "GET /programs/cardiometabolic-repair.html HTTP/1.1" 200 -
+10.2.42.8 - - [05/Mar/2026 20:36:48] "GET /programs/neuropathy-care.html HTTP/1.1" 200 -
+10.2.42.8 - - [05/Mar/2026 20:39:38] "GET /programs/neuropathy-care.html HTTP/1.1" 304 -
+10.2.42.8 - - [05/Mar/2026 20:39:57] "GET /programs/cardiometabolic-repair.html HTTP/1.1" 200 -
