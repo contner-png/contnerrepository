@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VO2 Max Testing | Cincinnati Chiropractic & Cincinnati Longevity</title>
+    <title>Longevity & Healthspan | Cincinnati Chiropractic & Cincinnati Longevity</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
@@ -14,30 +14,47 @@
                         clinical: {
                             blue: '#0047AB',
                             green: '#22C55E',
-                            charcoal: '#333333',
-                            gray: '#F9FAFB',
-                            light: '#FFFFFF'
+                            orange: '#FB4F14',
+                            charcoal: '#050505',
+                            gray: '#F9FAFB'
                         }
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         display: ['Lexend', 'sans-serif'],
-                    },
-                    backgroundImage: {
-                        'grid-pattern': "url('data:image/svg+xml,%3Csvg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"%230047AB\" fill-opacity=\"0.03\" fill-rule=\"evenodd\"%3E%3Cpath d=\"M0 40L40 0H20L0 20M40 40V20L20 40\"/%3E%3C/g%3E%3C/svg%3E')",
                     }
                 }
             }
         }
     </script>
     <style>
-        .treatment-graphic {
-            filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
-            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        .blueprint-grid {
+            background-image: radial-gradient(circle at 2px 2px, rgba(37,99,235,0.1) 1px, transparent 0);
+            background-size: 40px 40px;
         }
-        .treatment-graphic:hover {
-            transform: translateY(-8px) scale(1.02);
-            filter: drop-shadow(0 35px 35px rgb(0 0 0 / 0.2));
+        .bento-stack-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .bento-stack-item::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top right, rgba(251,79,20,0.1), transparent 70%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .bento-stack-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: #FB4F14;
+            transform: scale(1.02);
+            z-index: 10;
+        }
+        .bento-stack-item:hover::before {
+            opacity: 1;
         }
     </style>
 </head>
@@ -198,75 +215,225 @@
     </header>
 
     <main>
-        <!-- Optimized Hero Section (Removed redundant button) -->
-        <section class="relative pt-12 pb-16 overflow-hidden bg-clinical-gray">
-            <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        <!-- Hero Header -->
+        <section class="relative pt-24 pb-20 overflow-hidden bg-clinical-charcoal text-white text-center">
+            <div class="absolute inset-0 opacity-20 blueprint-grid"></div>
             <div class="container mx-auto px-6 relative z-10">
-                <div class="flex flex-col lg:flex-row items-center gap-12">
-                    <div class="lg:w-1/2 space-y-6 text-left">
-                        <div class="inline-flex items-center px-3 py-1 bg-clinical-blue/10 text-clinical-blue text-[9px] font-black uppercase tracking-[0.3em] rounded-md border border-clinical-blue/20">
-                            Clinical Treatment Modality
-                        </div>
-                        <h1 class="text-4xl lg:text-6xl font-display font-bold leading-tight italic text-clinical-charcoal tracking-tighter">
-                            VO2 Max Testing
-                        </h1>
-                        <div class="space-y-3 max-w-xl">
-                            <h2 class="text-[10px] font-black text-clinical-blue uppercase tracking-[0.4em]">The Definition</h2>
-                            <p class="text-xl lg:text-2xl text-gray-600 font-light leading-relaxed">
-                                The absolute clinical gold standard assessment for measuring your ultimate cardiorespiratory fitness, aerobic healthspan, and metabolic efficiency.
-                            </p>
-                        </div>
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <div class="inline-flex items-center px-4 py-2 bg-clinical-orange/20 text-clinical-orange text-[10px] font-black uppercase tracking-[0.4em] rounded-full border border-clinical-orange/30">
+                        Biological Age Optimization
                     </div>
-                    <div class="lg:w-1/2 relative">
-                        <div class="relative z-10 rounded-[2.5rem] overflow-hidden border-[1px] border-gray-100 bg-white shadow-2xl treatment-graphic max-w-xl mx-auto">
-                            <img src="/images/treatments/vo2max.png" alt="VO2 Max Testing" class="w-full h-full object-contain p-2">
-                        </div>
-                        <!-- Depth Accents -->
-                        <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-clinical-blue/5 rounded-full blur-3xl"></div>
-                        <div class="absolute -top-10 -left-10 w-64 h-64 bg-clinical-green/5 rounded-full blur-3xl"></div>
-                    </div>
+                    <h1 class="text-5xl lg:text-8xl font-display font-bold leading-tight italic tracking-tighter text-white">Longevity & Healthspan</h1>
+                    <p class="text-xl lg:text-2xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed italic">Proactive engineering for maximum vitality.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Technical Deep Dive -->
-        <section class="py-16 bg-white relative">
+        <!-- The Clinical Reality -->
+        <section class="py-24 bg-white relative">
             <div class="container mx-auto px-6">
-                <div class="grid lg:grid-cols-2 gap-8">
-                    <!-- The Science Panel -->
-                    <div class="bg-clinical-gray p-10 lg:p-12 rounded-[2.5rem] border border-gray-100 relative group overflow-hidden flex flex-col">
-                        <div class="absolute top-0 right-0 p-6 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity">
-                            <svg class="w-20 h-20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
+                <div class="grid lg:grid-cols-2 gap-20 items-center">
+                    <div class="space-y-10 text-left">
+                        <div>
+                            <h2 class="text-xs font-black text-clinical-blue uppercase tracking-[0.6em] mb-6">Foundational Diagnostic</h2>
+                            <h3 class="text-4xl font-display font-bold italic text-clinical-charcoal">The Clinical Reality</h3>
                         </div>
-                        <h3 class="text-[9px] font-black text-clinical-blue uppercase tracking-[0.4em] mb-4 italic">Mechanism of Action</h3>
-                        <h4 class="text-2xl lg:text-3xl font-display font-bold mb-6">The Science</h4>
-                        <p class="text-base lg:text-lg text-gray-600 leading-relaxed font-light">
-                            Through a graded exercise test utilizing a clinical metabolic cart, we precisely measure the maximum volume of oxygen your body can transport and utilize at peak exertion. It provides an exact, objective metric of your mitochondrial efficiency and cardiovascular capacity.
-                        </p>
+                        <div class="text-xl lg:text-2xl text-gray-600 leading-relaxed font-light border-l-4 border-clinical-orange pl-8 py-2">
+                            Standard healthcare is strictly reactive. True longevity care is proactive. It requires reverse-engineering your physical, metabolic, and neurological capacity now to drastically extend your healthspan. We utilize advanced diagnostics to build a robust physical chassis and efficient cellular engine.
+                        </div>
                     </div>
-
-                    <!-- Why We Use It Panel -->
-                    <div class="bg-clinical-charcoal p-10 lg:p-12 rounded-[2.5rem] text-white relative group overflow-hidden flex flex-col">
-                        <div class="absolute top-0 right-0 p-6 opacity-[0.05] group-hover:opacity-[0.1] transition-opacity">
-                            <svg class="w-20 h-20" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-gradient-to-tr from-clinical-orange/20 to-clinical-blue/20 rounded-[3rem] blur-2xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="relative z-10 bg-[#0f172a] aspect-video rounded-[2.5rem] border border-white/10 flex items-center justify-center overflow-hidden shadow-2xl">
+                            <div class="absolute inset-0 blueprint-grid opacity-20"></div>
+                            <span class="text-[10px] font-black text-clinical-blue uppercase tracking-[0.5em] opacity-40 italic">Structural Neural Mapping</span>
                         </div>
-                        <h3 class="text-[9px] font-black text-clinical-green uppercase tracking-[0.4em] mb-4 italic">Clinical Application</h3>
-                        <h4 class="text-2xl lg:text-3xl font-display font-bold mb-6 text-white">Why We Use It</h4>
-                        <p class="text-base lg:text-lg text-blue-50 leading-relaxed opacity-90 font-light">
-                            A high VO2 Max is widely recognized in scientific literature as one of the strongest predictors of longevity and delayed all-cause mortality. It gives our team the baseline data required to design your personalized cardiometabolic repair protocols.
-                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Final Call to Action (Strategically Positioned at Bottom) -->
-        <section class="py-20 bg-clinical-blue text-white relative overflow-hidden">
-            <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
-            <div class="container mx-auto px-6 text-center relative z-10">
-                <h3 class="text-3xl lg:text-5xl font-display font-bold mb-8 italic">Ready to start your recovery journey?</h3>
-                <a href="/contact.html" class="px-14 py-6 bg-white text-clinical-blue rounded-full font-bold text-xl hover:bg-clinical-gray transition-all shadow-2xl hover:scale-105 transform inline-block">
-                    Request Consultation
+        <!-- The Arsenal -->
+        <section class="py-32 bg-[#020617] text-white relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 blueprint-grid"></div>
+            <div class="container mx-auto px-6 relative z-10 text-left">
+                <div class="flex flex-col lg:flex-row justify-between items-end mb-20 gap-8">
+                    <div class="max-w-2xl">
+                        <h2 class="text-xs font-black text-clinical-orange uppercase tracking-[0.6em] mb-4">Tactical Arsenal</h2>
+                        <h3 class="text-5xl lg:text-7xl font-display font-bold italic tracking-tight text-white leading-none">The Clinical Stack</h3>
+                    </div>
+                    <p class="text-gray-400 max-w-sm text-sm font-light leading-relaxed">Integrated technical modalities synchronized for rapid physiological adaptation and structural repair.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-4">
+                    
+    <a href="/treatments/longevity-blood-panels.html" class="bento-stack-item group p-10 rounded-[3rem] flex flex-col justify-between h-full lg:col-span-3 md:col-span-6">
+        <div class="flex justify-end items-start mb-8">
+            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </div>
+        </div>
+        <div>
+            <h4 class="text-2xl font-display font-bold text-white group-hover:text-clinical-orange transition-colors italic mb-4 leading-tight tracking-tight">Longevity Blood Panels</h4>
+            <p class="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-200 transition-colors">Objective baseline of risk factors.</p>
+        </div>
+    </a>
+    
+    <a href="/treatments/vo2-max-testing.html" class="bento-stack-item group p-10 rounded-[3rem] flex flex-col justify-between h-full lg:col-span-3 md:col-span-6">
+        <div class="flex justify-end items-start mb-8">
+            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </div>
+        </div>
+        <div>
+            <h4 class="text-2xl font-display font-bold text-white group-hover:text-clinical-orange transition-colors italic mb-4 leading-tight tracking-tight">VO2 Max Testing</h4>
+            <p class="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-200 transition-colors">Measure cardsiorespiratory fitness.</p>
+        </div>
+    </a>
+    
+    <a href="/programs/integrative-physiotherapy.html" class="bento-stack-item group p-10 rounded-[3rem] flex flex-col justify-between h-full lg:col-span-3 md:col-span-6">
+        <div class="flex justify-end items-start mb-8">
+            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </div>
+        </div>
+        <div>
+            <h4 class="text-2xl font-display font-bold text-white group-hover:text-clinical-orange transition-colors italic mb-4 leading-tight tracking-tight">Strength & Zone 2</h4>
+            <p class="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-200 transition-colors">Build bone density and flexibility.</p>
+        </div>
+    </a>
+    
+    <a href="/treatments/hyperbaric-oxygen.html" class="bento-stack-item group p-10 rounded-[3rem] flex flex-col justify-between h-full lg:col-span-3 md:col-span-6">
+        <div class="flex justify-end items-start mb-8">
+            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </div>
+        </div>
+        <div>
+            <h4 class="text-2xl font-display font-bold text-white group-hover:text-clinical-orange transition-colors italic mb-4 leading-tight tracking-tight">Hyperbaric Oxygen</h4>
+            <p class="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-200 transition-colors">Mobilize stem cells and reduce inflammation.</p>
+        </div>
+    </a>
+    
+    <a href="/treatments/pemf-therapy.html" class="bento-stack-item group p-10 rounded-[3rem] flex flex-col justify-between h-full lg:col-span-3 md:col-span-6">
+        <div class="flex justify-end items-start mb-8">
+            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </div>
+        </div>
+        <div>
+            <h4 class="text-2xl font-display font-bold text-white group-hover:text-clinical-orange transition-colors italic mb-4 leading-tight tracking-tight">PEMF Therapy</h4>
+            <p class="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-200 transition-colors">Reset cellular voltage.</p>
+        </div>
+    </a>
+    
+    <a href="/treatments/red-light-therapy.html" class="bento-stack-item group p-10 rounded-[3rem] flex flex-col justify-between h-full lg:col-span-3 md:col-span-6">
+        <div class="flex justify-end items-start mb-8">
+            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </div>
+        </div>
+        <div>
+            <h4 class="text-2xl font-display font-bold text-white group-hover:text-clinical-orange transition-colors italic mb-4 leading-tight tracking-tight">Red Light Therapy</h4>
+            <p class="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-200 transition-colors">Trigger mitochondrial biogenesis.</p>
+        </div>
+    </a>
+    
+    <a href="/treatments/sleep-testing.html" class="bento-stack-item group p-10 rounded-[3rem] flex flex-col justify-between h-full lg:col-span-3 md:col-span-6">
+        <div class="flex justify-end items-start mb-8">
+            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </div>
+        </div>
+        <div>
+            <h4 class="text-2xl font-display font-bold text-white group-hover:text-clinical-orange transition-colors italic mb-4 leading-tight tracking-tight">At-Home Sleep Testing</h4>
+            <p class="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-200 transition-colors">Ensure deep wave sleep architecture.</p>
+        </div>
+    </a>
+    
+    <a href="/treatments/targeted-supplements.html" class="bento-stack-item group p-10 rounded-[3rem] flex flex-col justify-between h-full lg:col-span-3 md:col-span-6">
+        <div class="flex justify-end items-start mb-8">
+            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </div>
+        </div>
+        <div>
+            <h4 class="text-2xl font-display font-bold text-white group-hover:text-clinical-orange transition-colors italic mb-4 leading-tight tracking-tight">Targeted Supplements</h4>
+            <p class="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-200 transition-colors">Correct specific biochemical deficits.</p>
+        </div>
+    </a>
+    
+                </div>
+            </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-5xl mx-auto bg-clinical-gray p-12 lg:p-20 rounded-[4rem] text-clinical-charcoal relative overflow-hidden border border-gray-100 shadow-2xl">
+                    <div class="relative z-10 text-left space-y-8">
+                        <svg class="w-12 h-12 text-clinical-orange opacity-20" fill="currentColor" viewBox="0 0 24 24"><path d="M13 14h-2v-4h2m0 8h-2v-2h2M1 21h22L12 2 1 21z"/></svg>
+                        <p class="text-xl lg:text-3xl leading-relaxed font-light italic text-gray-600">
+                            "Our multimodal approach is highly personalized. The therapies listed above are powerful tools in our arsenal, but we custom-engineer each plan based on your unique diagnostics."
+                        </p>
+                        <div class="flex items-center gap-4 text-xs font-black text-clinical-blue uppercase tracking-widest">
+                            <span class="w-12 h-px bg-clinical-blue/30"></span>
+                            <span>Most Major Insurers Accepted</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Measuring Success -->
+        <section class="py-24 bg-white border-t border-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-24">
+                    <h2 class="text-xs font-black text-clinical-blue uppercase tracking-[0.6em] mb-4 text-center">Objective Data</h2>
+                    <h3 class="text-5xl lg:text-6xl font-display font-bold italic text-clinical-charcoal tracking-tight leading-none text-center">Measuring Success</h3>
+                </div>
+                <div class="grid md:grid-cols-3 gap-20">
+                    
+    <div class="text-center space-y-8 group">
+        <div class="w-24 h-24 bg-clinical-orange/5 rounded-[2.5rem] flex items-center justify-center mx-auto group-hover:bg-clinical-orange group-hover:text-white transition-all duration-700 group-hover:rotate-12">
+            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        </div>
+        <div class="space-y-4 text-center">
+            <h4 class="text-3xl font-display font-bold text-clinical-charcoal italic tracking-tight leading-none">Elite VO2 Max</h4>
+            <p class="text-gray-500 text-lg font-light leading-relaxed px-4">VO2 Max score reaching top 10th percentile.</p>
+        </div>
+    </div>
+    
+    <div class="text-center space-y-8 group">
+        <div class="w-24 h-24 bg-clinical-orange/5 rounded-[2.5rem] flex items-center justify-center mx-auto group-hover:bg-clinical-orange group-hover:text-white transition-all duration-700 group-hover:rotate-12">
+            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        </div>
+        <div class="space-y-4 text-center">
+            <h4 class="text-3xl font-display font-bold text-clinical-charcoal italic tracking-tight leading-none">Optimized Lipids</h4>
+            <p class="text-gray-500 text-lg font-light leading-relaxed px-4">Superior advanced lipid markers (ApoB).</p>
+        </div>
+    </div>
+    
+    <div class="text-center space-y-8 group">
+        <div class="w-24 h-24 bg-clinical-orange/5 rounded-[2.5rem] flex items-center justify-center mx-auto group-hover:bg-clinical-orange group-hover:text-white transition-all duration-700 group-hover:rotate-12">
+            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        </div>
+        <div class="space-y-4 text-center">
+            <h4 class="text-3xl font-display font-bold text-clinical-charcoal italic tracking-tight leading-none">Structural Density</h4>
+            <p class="text-gray-500 text-lg font-light leading-relaxed px-4">Increased lean muscle and bone density.</p>
+        </div>
+    </div>
+    
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="py-32 bg-clinical-blue text-white text-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-20 blueprint-grid"></div>
+            <div class="container mx-auto px-6 relative z-10 text-center">
+                <h2 class="text-5xl lg:text-8xl font-display font-bold mb-12 italic tracking-tighter text-white">Engineered for Your <br>Peak Performance</h2>
+                <a href="/contact.html" class="px-20 py-10 bg-white text-clinical-blue rounded-full font-bold text-3xl hover:bg-clinical-orange hover:text-white transition-all shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-105 transform inline-block">
+                    Request Appointment
                 </a>
             </div>
         </section>

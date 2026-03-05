@@ -1,1 +1,9 @@
 nohup: ignoring input
+10.2.46.220 - - [05/Mar/2026 21:02:18] code 404, message File not found
+10.2.46.220 - - [05/Mar/2026 21:02:18] "GET /programs/longevity-healthspan-optimization.html HTTP/1.1" 404 -
+10.2.46.220 - - [05/Mar/2026 21:02:25] "GET /programs/hrv-optimization.html HTTP/1.1" 200 -
+10.2.46.220 - - [05/Mar/2026 21:02:25] "GET /images/cclogo_trimmed.png HTTP/1.1" 304 -
+10.2.46.220 - - [05/Mar/2026 21:02:58] code 404, message File not found
+10.2.46.220 - - [05/Mar/2026 21:02:58] "GET /programs/longevity-healthspan-optimization.html HTTP/1.1" 404 -
+10.2.46.220 - - [05/Mar/2026 21:03:00] code 404, message File not found
+10.2.46.220 - - [05/Mar/2026 21:03:00] "GET /programs/longevity-healthspan-optimization.html HTTP/1.1" 404 -
