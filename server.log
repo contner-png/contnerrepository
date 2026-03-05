@@ -8,3 +8,7 @@ nohup: ignoring input
 10.2.17.157 - - [05/Mar/2026 22:03:39] "GET /programs/neuropathy-care.html HTTP/1.1" 200 -
 10.2.17.157 - - [05/Mar/2026 22:03:44] "GET /programs/cincinnati-chiropractic-care.html HTTP/1.1" 200 -
 10.2.46.220 - - [05/Mar/2026 22:07:53] "GET /programs/integrative-physiotherapy.html HTTP/1.1" 304 -
+10.2.46.220 - - [05/Mar/2026 22:11:57] "GET /index.html HTTP/1.1" 200 -
+10.2.46.220 - - [05/Mar/2026 22:11:57] "GET /images/treatments/bengals.svg HTTP/1.1" 304 -
+10.2.46.220 - - [05/Mar/2026 22:11:58] "GET /images/treatments/cyclones.png HTTP/1.1" 304 -
+10.2.46.220 - - [05/Mar/2026 22:12:47] "GET /programs/cincinnati-chiropractic-care.html HTTP/1.1" 200 -
