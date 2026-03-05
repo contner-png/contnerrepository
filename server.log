@@ -1,1 +1,4 @@
 nohup: ignoring input
+10.2.47.136 - - [05/Mar/2026 15:51:24] "GET / HTTP/1.1" 200 -
+10.2.47.136 - - [05/Mar/2026 15:51:25] "GET /images/cclogo_trimmed.png HTTP/1.1" 200 -
+10.2.47.136 - - [05/Mar/2026 15:51:25] "GET /images/treatments/bengals.svg HTTP/1.1" 200 -
