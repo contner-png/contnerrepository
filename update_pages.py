@@ -50,7 +50,7 @@ template = """<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{title} | Cincinnati Chiropractic & Mitoflux Longevity</title>
+    <title>{title} | Cincinnati Chiropractic & Cincinnati Longevity</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
@@ -142,7 +142,7 @@ template = """<!DOCTYPE html>
 
     <footer class="bg-clinical-charcoal text-white pt-24 pb-12">
         <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2026 Cincinnati Chiropractic & Mitoflux Longevity. All rights reserved.</p>
+            <p>&copy; 2026 Cincinnati Chiropractic & Cincinnati Longevity. All rights reserved.</p>
         </div>
     </footer>
 </body>
