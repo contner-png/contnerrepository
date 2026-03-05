@@ -1,2 +1,15 @@
 nohup: ignoring input
-10.2.17.157 - - [05/Mar/2026 19:10:49] "GET /treatments/shockwave-therapy.html HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  10.2.48.145 - - [05/Mar/2026 19:18:47] "GET /treatments/shockwave-therapy.html HTTP/1.1" 304 -
+10.2.48.145 - - [05/Mar/2026 19:18:48] "GET /images/cclogo_trimmed.png HTTP/1.1" 304 -
+10.2.48.145 - - [05/Mar/2026 19:18:48] "GET /images/treatments/shockwave.png HTTP/1.1" 304 -
+10.2.48.145 - - [05/Mar/2026 19:19:10] "GET /treatments/shockwave-therapy.html HTTP/1.1" 304 -
+10.2.48.145 - - [05/Mar/2026 19:19:16] "GET /treatments/shockwave-therapy.html HTTP/1.1" 304 -
+    return super().server_bind()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/local/lib/python3.12/socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
