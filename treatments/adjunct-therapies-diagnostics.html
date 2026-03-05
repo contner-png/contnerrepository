@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adjunct Therapies & Diagnostics Cincinnati | Cincinnati Chiropractic & Cincinnati Longevity</title>
+    <title>Adjunct Therapies & Diagnostics | Cincinnati Chiropractic & Cincinnati Longevity</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
@@ -14,23 +14,46 @@
                         clinical: {
                             blue: '#0047AB',
                             green: '#22C55E',
-                            charcoal: '#333333',
-                            gray: '#F9FAFB',
-                            light: '#FFFFFF'
+                            orange: '#FB4F14',
+                            charcoal: '#111827',
+                            gray: '#F9FAFB'
                         }
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         display: ['Lexend', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%230047AB" fill-opacity="0.03" fill-rule="evenodd"%3E%3Cpath d="M0 40L40 0H20L0 20M40 40V20L20 40"/%3E%3C/g%3E%3C/svg%3E')",
                     }
                 }
             }
         }
     </script>
+    <style>
+        .blueprint-bg {
+            background-color: #003399;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 80px 80px, 80px 80px, 20px 20px, 20px 20px;
+            background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+            position: relative;
+        }
+        .treatment-graphic {
+            filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .treatment-graphic:hover {
+            transform: translateY(-8px) scale(1.02);
+            filter: drop-shadow(0 35px 35px rgb(0 0 0 / 0.2));
+        }
+    </style>
 </head>
 <body class="bg-white text-clinical-charcoal font-sans antialiased">
-    <!-- Global Navigation -->
-                <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
         <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
             <div class="flex items-center">
                 <a href="/index.html" class="flex items-center space-x-3 group">
@@ -185,78 +208,76 @@
         </div>
     </header>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const btn = document.getElementById('mobile-menu-button');
-            const close = document.getElementById('close-menu');
-            const menu = document.getElementById('mobile-menu');
-            
-            if(btn && menu && close) {
-                btn.onclick = () => menu.classList.remove('translate-x-full');
-                close.onclick = () => menu.classList.add('translate-x-full');
-            }
-        });
-    </script>
-
     <main>
-        <section class="py-24 bg-clinical-gray">
-            <div class="container mx-auto px-6 text-center">
-                <h1 class="text-sm font-bold text-clinical-blue uppercase tracking-widest mb-4">Supporting Technology</h1>
-                <h2 class="text-5xl lg:text-6xl font-display font-bold mb-8">Adjunct Therapies & Diagnostics</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                    Our evidence-based model is supported by a comprehensive suite of diagnostic tools and therapeutic modalities designed to optimize physiological signal and structural integrity.
-                </p>
-            </div>
-        </section>
-
-        <section class="py-24 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="grid lg:grid-cols-2 gap-16">
-                    <!-- Spinal Decompression -->
-                    <div class="space-y-6">
-                        <h3 class="text-3xl font-display font-bold text-clinical-blue">Spinal Decompression</h3>
-                        <p class="text-lg text-gray-600 leading-relaxed">
-                            A non-surgical, computerized traction therapy designed to relieve pressure on the spinal discs and nerves. By creating negative intradiscal pressure, we facilitate the retraction of herniated or bulging disc material and stimulate the flow of nutrient-rich fluids back into the disc space.
+        <!-- Specialized Treatment Hero -->
+        <section class="relative pt-32 pb-24 overflow-hidden bg-white border-b border-gray-100">
+            <div class="absolute top-0 left-0 right-0 h-2 bg-clinical-green shadow-sm"></div>
+            <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
+            
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="flex flex-col lg:flex-row items-center gap-20">
+                    <div class="lg:w-1/2 space-y-10">
+                        <div class="inline-flex items-center gap-3 text-clinical-green font-black text-[10px] uppercase tracking-[0.5em]">
+                            <span class="w-12 h-px bg-clinical-green/30"></span>
+                            Clinical Modality
+                        </div>
+                        <h1 class="text-5xl lg:text-8xl font-display font-bold leading-[0.9] italic tracking-tighter text-clinical-charcoal">
+                            Adjunct Therapies & Diagnostics
+                        </h1>
+                        <p class="text-2xl text-gray-500 font-light italic border-l-4 border-clinical-blue pl-8 py-2 max-w-xl">
+                            Precision technology supporting the clinical blueprint.
                         </p>
                     </div>
-
-                    <!-- Targeted Supplements -->
-                    <div class="space-y-6">
-                        <h3 class="text-3xl font-display font-bold text-clinical-blue">Targeted Supplements</h3>
-                        <p class="text-lg text-gray-600 leading-relaxed">
-                            We utilize pharmaceutical-grade nutraceuticals to support mitochondrial function, reduce systemic inflammation, and optimize hormonal pathways. Every supplementation strategy is based on objective biomarker data.
-                        </p>
-                    </div>
-
-                    <!-- Longevity Blood Panels -->
-                    <div class="space-y-6">
-                        <h3 class="text-3xl font-display font-bold text-clinical-blue">Longevity Blood Panels</h3>
-                        <p class="text-lg text-gray-600 leading-relaxed">
-                            Our comprehensive clinical diagnostics go beyond standard lab work. We analyze advanced markers of metabolic health, cardiovascular risk, and biological age to engineering your personalized recovery blueprint.
-                        </p>
-                    </div>
-
-                    <!-- Sleep Testing -->
-                    <div class="space-y-6">
-                        <h3 class="text-3xl font-display font-bold text-clinical-blue">Clinical Sleep Testing</h3>
-                        <p class="text-lg text-gray-600 leading-relaxed">
-                            Objective analysis of sleep architecture and autonomic regulation. We identify the physiological roadblocks preventing deep-wave rest and cognitive recovery.
-                        </p>
-                    </div>
-
-                    <!-- tVNS -->
-                    <div class="space-y-6">
-                        <h3 class="text-3xl font-display font-bold text-clinical-blue">tVNS Neuro-Modulation</h3>
-                        <p class="text-lg text-gray-600 leading-relaxed">
-                            Transcutaneous Vagus Nerve Stimulation (tVNS) allows us to manually shift the body out of chronic sympathetic stress. By stimulating the vagus nerve, we facilitate restorative recovery and systemic neuro-inflammation reduction.
-                        </p>
+                    <div class="lg:w-1/2">
+                        <div class="relative rounded-[3rem] overflow-hidden shadow-2xl border-[1px] border-gray-100 treatment-graphic bg-white p-2">
+                            <img src="/images/treatments/diagnostics.png" alt="Adjunct Therapies & Diagnostics" class="w-full h-full object-contain">
+                            <div class="absolute inset-0 bg-clinical-blue/5 pointer-events-none"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        
+        <section class="py-24 bg-white relative">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="bg-clinical-gray p-10 rounded-[2.5rem]">
+                        <h3 class="text-2xl font-display font-bold text-clinical-blue mb-4">Diagnostics</h3>
+                        <p class="text-gray-600 font-light">Advanced imaging and physiological testing to find the objective root cause.</p>
+                    </div>
+                    <div class="bg-clinical-gray p-10 rounded-[2.5rem]">
+                        <h3 class="text-2xl font-display font-bold text-clinical-blue mb-4">Supportive Modalities</h3>
+                        <p class="text-gray-600 font-light">Additional clinical tools used to accelerate the healing cascade and reduce inflammation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- Final Strategic CTA -->
+        <section class="py-24 blueprint-bg text-white relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10">
+                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="treatmentGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+                            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5"/>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#treatmentGrid)" />
+                </svg>
+            </div>
+            
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <h3 class="text-4xl lg:text-6xl font-display font-bold mb-12 italic tracking-tighter text-white">Ready to accelerate your healing?</h3>
+                <a href="/contact.html" class="px-16 py-8 bg-white text-clinical-blue rounded-full font-bold text-2xl hover:bg-clinical-green hover:text-white transition-all shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-105 transform inline-block">
+                    Request Consultation
+                </a>
+            </div>
+        </section>
     </main>
 
-        <footer class="bg-clinical-charcoal text-white pt-24 pb-12">
+    <footer class="bg-clinical-charcoal text-white pt-24 pb-12">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-12 mb-16 border-b border-white/10 pb-16">
                 <div class="col-span-1 lg:col-span-2 space-y-8">

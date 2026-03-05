@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red Light Therapy & Mitochondrial Support Cincinnati | Cincinnati Chiropractic & Cincinnati Longevity</title>
+    <title>Red Light Therapy & Mitochondrial Support | Cincinnati Chiropractic & Cincinnati Longevity</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
@@ -14,23 +14,46 @@
                         clinical: {
                             blue: '#0047AB',
                             green: '#22C55E',
-                            charcoal: '#333333',
-                            gray: '#F9FAFB',
-                            light: '#FFFFFF'
+                            orange: '#FB4F14',
+                            charcoal: '#111827',
+                            gray: '#F9FAFB'
                         }
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         display: ['Lexend', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%230047AB" fill-opacity="0.03" fill-rule="evenodd"%3E%3Cpath d="M0 40L40 0H20L0 20M40 40V20L20 40"/%3E%3C/g%3E%3C/svg%3E')",
                     }
                 }
             }
         }
     </script>
+    <style>
+        .blueprint-bg {
+            background-color: #003399;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 80px 80px, 80px 80px, 20px 20px, 20px 20px;
+            background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+            position: relative;
+        }
+        .treatment-graphic {
+            filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .treatment-graphic:hover {
+            transform: translateY(-8px) scale(1.02);
+            filter: drop-shadow(0 35px 35px rgb(0 0 0 / 0.2));
+        }
+    </style>
 </head>
 <body class="bg-white text-clinical-charcoal font-sans antialiased">
-    <!-- Global Navigation -->
-                <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
         <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
             <div class="flex items-center">
                 <a href="/index.html" class="flex items-center space-x-3 group">
@@ -185,69 +208,64 @@
         </div>
     </header>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const btn = document.getElementById('mobile-menu-button');
-            const close = document.getElementById('close-menu');
-            const menu = document.getElementById('mobile-menu');
+    <main>
+        <!-- Specialized Treatment Hero: Modern Clinical Design -->
+        <section class="relative pt-32 pb-24 overflow-hidden bg-white border-b border-gray-100">
+            <div class="absolute top-0 left-0 right-0 h-2 bg-clinical-green shadow-sm"></div>
+            <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
             
-            if(btn && menu && close) {
-                btn.onclick = () => menu.classList.remove('translate-x-full');
-                close.onclick = () => menu.classList.add('translate-x-full');
-            }
-        });
-    </script>
-
-        <main>
-        <!-- Technology Hero -->
-        <section class="py-24 bg-clinical-gray relative overflow-hidden">
-            <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
             <div class="container mx-auto px-6 relative z-10">
-                <div class="flex flex-col lg:flex-row items-center gap-16">
-                    <div class="lg:w-1/2">
-                        <div class="inline-flex items-center px-3 py-1 rounded-full bg-clinical-blue/10 text-clinical-blue text-xs font-bold tracking-widest uppercase mb-6">
-                            Advanced Modality
+                <div class="flex flex-col lg:flex-row items-center gap-20">
+                    <div class="lg:w-1/2 space-y-10">
+                        <div class="inline-flex items-center gap-3 text-clinical-green font-black text-[10px] uppercase tracking-[0.5em]">
+                            <span class="w-12 h-px bg-clinical-green/30"></span>
+                            Clinical Modality
                         </div>
-                        <h1 class="text-5xl lg:text-7xl font-display font-bold mb-8 leading-tight">
+                        <h1 class="text-5xl lg:text-8xl font-display font-bold leading-[0.9] italic tracking-tighter text-clinical-charcoal">
                             Red Light Therapy & Mitochondrial Support
                         </h1>
-                        <div class="prose prose-lg text-gray-600 leading-relaxed max-w-xl">
-                            <h3 class="text-2xl font-bold text-clinical-charcoal mb-4">Mechanism of Action</h3>
-                            <p class="text-xl">
-                                &copy; 2026 Cincinnati Chiropractic & Cincinnati Longevity. Serving Greater Cincinnati. All rights reserved.
+                        <div class="space-y-6">
+                            <p class="text-2xl text-gray-500 font-light italic border-l-4 border-clinical-blue pl-8 py-2 max-w-xl">
+                                Elite Clinical Modality
                             </p>
-                        </div>
-                        <div class="mt-12">
-                            <a href="/contact.html" class="px-8 py-4 bg-clinical-blue text-white rounded-full font-bold text-lg hover:bg-blue-700 transition-all shadow-xl shadow-blue-100 inline-block text-center">
-                                Request Appointment
-                            </a>
+                            
                         </div>
                     </div>
-                    <div class="lg:w-1/2 relative">
-                        <div class="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white">
-                            <img src="/images/treatments/redlight.png" alt="Red Light Therapy Benefits" class="w-full h-full object-cover">
+                    <div class="lg:w-1/2">
+                        <div class="relative rounded-[3rem] overflow-hidden shadow-2xl border-[1px] border-gray-100 treatment-graphic bg-white p-2">
+                            <img src="/images/treatments/redlight.png" alt="Red Light Therapy & Mitochondrial Support" class="w-full h-full object-contain">
+                            <div class="absolute inset-0 bg-clinical-blue/5 pointer-events-none"></div>
                         </div>
-                        <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-clinical-green/10 rounded-full blur-3xl"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Clinical Efficacy Section -->
-        <section class="py-24 bg-white relative overflow-hidden">
-            <div class="absolute inset-0 bg-dot-pattern opacity-10"></div>
-            <div class="container mx-auto px-6 relative z-10">
-                <div class="max-w-4xl mx-auto text-center">
-                    <h3 class="text-4xl font-display font-bold mb-8">Full-Body Bio-Stacking</h3>
-                    <p class="text-2xl text-gray-600 leading-relaxed font-light">
-                        &copy; 2026 Cincinnati Chiropractic & Cincinnati Longevity. Serving Greater Cincinnati. All rights reserved.
-                    </p>
-                </div>
+        
+
+        <!-- Final Strategic CTA: Blueprint Aesthetic -->
+        <section class="py-24 blueprint-bg text-white relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10">
+                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="treatmentGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+                            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5"/>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#treatmentGrid)" />
+                </svg>
+            </div>
+            
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <h3 class="text-4xl lg:text-6xl font-display font-bold mb-12 italic tracking-tighter text-white">Ready to accelerate your healing?</h3>
+                <a href="/contact.html" class="px-16 py-8 bg-white text-clinical-blue rounded-full font-bold text-2xl hover:bg-clinical-green hover:text-white transition-all shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-105 transform inline-block">
+                    Request Consultation
+                </a>
             </div>
         </section>
     </main>
 
-        <footer class="bg-clinical-charcoal text-white pt-24 pb-12">
+    <footer class="bg-clinical-charcoal text-white pt-24 pb-12">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-12 mb-16 border-b border-white/10 pb-16">
                 <div class="col-span-1 lg:col-span-2 space-y-8">

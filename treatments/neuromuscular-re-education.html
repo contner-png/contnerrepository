@@ -14,10 +14,9 @@
                         clinical: {
                             blue: '#0047AB',
                             green: '#22C55E',
-                            charcoal: '#333333',
-                            gray: '#F9FAFB',
-                            light: '#FFFFFF',
-                            accent: '#E0F2FE'
+                            orange: '#FB4F14',
+                            charcoal: '#111827',
+                            gray: '#F9FAFB'
                         }
                     },
                     fontFamily: {
@@ -31,9 +30,30 @@
             }
         }
     </script>
+    <style>
+        .blueprint-bg {
+            background-color: #003399;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 80px 80px, 80px 80px, 20px 20px, 20px 20px;
+            background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+            position: relative;
+        }
+        .treatment-graphic {
+            filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .treatment-graphic:hover {
+            transform: translateY(-8px) scale(1.02);
+            filter: drop-shadow(0 35px 35px rgb(0 0 0 / 0.2));
+        }
+    </style>
 </head>
 <body class="bg-white text-clinical-charcoal font-sans antialiased">
-            <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
         <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
             <div class="flex items-center">
                 <a href="/index.html" class="flex items-center space-x-3 group">
@@ -188,36 +208,80 @@
         </div>
     </header>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const btn = document.getElementById('mobile-menu-button');
-            const close = document.getElementById('close-menu');
-            const menu = document.getElementById('mobile-menu');
-            
-            if(btn && menu && close) {
-                btn.onclick = () => menu.classList.remove('translate-x-full');
-                close.onclick = () => menu.classList.add('translate-x-full');
-            }
-        });
-    </script>
-
     <main>
-        <section class="py-24 bg-clinical-gray relative overflow-hidden">
-            <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
-            <div class="container mx-auto px-6 relative z-10 text-center">
-                <h1 class="text-sm font-bold text-clinical-blue uppercase tracking-widest mb-4">Advanced Modality</h1>
-                <h2 class="text-5xl lg:text-7xl font-display font-bold mb-8 leading-tight">Neuromuscular Re-education</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-12">
-                    Integrating elite diagnostic and therapeutic technology to engineer optimal patient outcomes.
-                </p>
-                <a href="/contact.html" class="px-8 py-4 bg-clinical-blue text-white rounded-full font-bold text-lg hover:bg-blue-700 transition-all shadow-xl">
-                    Request Clinical Blueprint
+        <!-- Specialized Treatment Hero -->
+        <section class="relative pt-32 pb-24 overflow-hidden bg-white border-b border-gray-100">
+            <div class="absolute top-0 left-0 right-0 h-2 bg-clinical-green shadow-sm"></div>
+            <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
+            
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="flex flex-col lg:flex-row items-center gap-20">
+                    <div class="lg:w-1/2 space-y-10">
+                        <div class="inline-flex items-center gap-3 text-clinical-green font-black text-[10px] uppercase tracking-[0.5em]">
+                            <span class="w-12 h-px bg-clinical-green/30"></span>
+                            Clinical Modality
+                        </div>
+                        <h1 class="text-5xl lg:text-8xl font-display font-bold leading-[0.9] italic tracking-tighter text-clinical-charcoal">
+                            Neuromuscular Re-education
+                        </h1>
+                        <p class="text-2xl text-gray-500 font-light italic border-l-4 border-clinical-blue pl-8 py-2 max-w-xl">
+                            Restoring functional movement patterns through neurological synchronization.
+                        </p>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <div class="relative rounded-[3rem] overflow-hidden shadow-2xl border-[1px] border-gray-100 treatment-graphic bg-white p-2">
+                            <img src="/images/treatments/reeducation.png" alt="Neuromuscular Re-education" class="w-full h-full object-contain">
+                            <div class="absolute inset-0 bg-clinical-blue/5 pointer-events-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="py-24 bg-white relative">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16">
+                    <div class="bg-clinical-gray p-12 rounded-[3rem] border border-gray-100">
+                        <h3 class="text-3xl font-display font-bold text-clinical-blue mb-6">The Science</h3>
+                        <p class="text-lg text-gray-600 leading-relaxed font-light">
+                            Neuromuscular re-education involves retraining the brain and spinal cord to communicate effectively with the muscles. After injury or chronic pain, these neural pathways often become degraded. We utilize specific exercises and stimulation to rebuild these high-speed feedback loops.
+                        </p>
+                    </div>
+                    <div class="bg-clinical-charcoal p-12 rounded-[3rem] text-white">
+                        <h3 class="text-3xl font-display font-bold text-clinical-green mb-6">Why We Use It</h3>
+                        <p class="text-lg text-blue-50 leading-relaxed font-light opacity-90">
+                            Elite athletes rely on perfect motor control. We apply these same principles to every patient, ensuring that once pain is reduced, the structural mechanics are restored to prevent future breakdown.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- Final Strategic CTA -->
+        <section class="py-24 blueprint-bg text-white relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10">
+                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="treatmentGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+                            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5"/>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#treatmentGrid)" />
+                </svg>
+            </div>
+            
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <h3 class="text-4xl lg:text-6xl font-display font-bold mb-12 italic tracking-tighter text-white">Ready to accelerate your healing?</h3>
+                <a href="/contact.html" class="px-16 py-8 bg-white text-clinical-blue rounded-full font-bold text-2xl hover:bg-clinical-green hover:text-white transition-all shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-105 transform inline-block">
+                    Request Consultation
                 </a>
             </div>
         </section>
     </main>
 
-        <footer class="bg-clinical-charcoal text-white pt-24 pb-12">
+    <footer class="bg-clinical-charcoal text-white pt-24 pb-12">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-12 mb-16 border-b border-white/10 pb-16">
                 <div class="col-span-1 lg:col-span-2 space-y-8">
