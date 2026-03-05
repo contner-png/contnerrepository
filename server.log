@@ -1,15 +1,12 @@
 nohup: ignoring input
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  10.2.48.145 - - [05/Mar/2026 19:18:47] "GET /treatments/shockwave-therapy.html HTTP/1.1" 304 -
-10.2.48.145 - - [05/Mar/2026 19:18:48] "GET /images/cclogo_trimmed.png HTTP/1.1" 304 -
-10.2.48.145 - - [05/Mar/2026 19:18:48] "GET /images/treatments/shockwave.png HTTP/1.1" 304 -
-10.2.48.145 - - [05/Mar/2026 19:19:10] "GET /treatments/shockwave-therapy.html HTTP/1.1" 304 -
-10.2.48.145 - - [05/Mar/2026 19:19:16] "GET /treatments/shockwave-therapy.html HTTP/1.1" 304 -
-    return super().server_bind()
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/local/lib/python3.12/http/server.py", line 136, in server_bind
-    socketserver.TCPServer.server_bind(self)
-  File "/usr/local/lib/python3.12/socketserver.py", line 478, in server_bind
-    self.socket.bind(self.server_address)
-OSError: [Errno 98] Address already in use
+10.2.48.145 - - [05/Mar/2026 19:21:58] "GET /treatments/shockwave-therapy.html HTTP/1.1" 304 -
+10.2.48.145 - - [05/Mar/2026 19:22:06] "GET /treatments/shockwave-therapy.html HTTP/1.1" 304 -
+10.2.48.145 - - [05/Mar/2026 19:22:10] "GET /treatments/shockwave-therapy.html HTTP/1.1" 200 -
+10.2.48.145 - - [05/Mar/2026 19:22:11] "GET /images/treatments/shockwave.png HTTP/1.1" 200 -
+10.2.48.145 - - [05/Mar/2026 19:22:11] "GET /images/cclogo_trimmed.png HTTP/1.1" 200 -
+10.2.48.145 - - [05/Mar/2026 19:22:11] code 404, message File not found
+10.2.48.145 - - [05/Mar/2026 19:22:11] "GET /favicon.ico HTTP/1.1" 404 -
+10.2.48.145 - - [05/Mar/2026 19:22:21] "GET /treatments/class-iv-laser.html HTTP/1.1" 200 -
+10.2.48.145 - - [05/Mar/2026 19:22:22] "GET /images/treatments/laser.png HTTP/1.1" 304 -
+10.2.48.145 - - [05/Mar/2026 19:22:29] "GET /treatments/longevity-blood-panels.html HTTP/1.1" 200 -
+10.2.48.145 - - [05/Mar/2026 19:22:29] "GET /images/treatments/longevitypanel.png HTTP/1.1" 200 -

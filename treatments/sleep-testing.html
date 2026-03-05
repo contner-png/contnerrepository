@@ -30,6 +30,16 @@
             }
         }
     </script>
+    <style>
+        .treatment-graphic {
+            filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .treatment-graphic:hover {
+            transform: translateY(-8px) scale(1.02);
+            filter: drop-shadow(0 35px 35px rgb(0 0 0 / 0.2));
+        }
+    </style>
 </head>
 <body class="bg-white text-clinical-charcoal font-sans antialiased">
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
@@ -182,64 +192,61 @@
     </header>
 
     <main>
-        <!-- Treatment Hero -->
-        <section class="relative pt-20 pb-32 overflow-hidden bg-clinical-gray border-b border-gray-100">
-            <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        <!-- Optimized Hero Section (Removed redundant button) -->
+        <section class="relative pt-12 pb-16 overflow-hidden bg-clinical-gray">
+            <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
             <div class="container mx-auto px-6 relative z-10">
-                <div class="flex flex-col lg:flex-row items-center gap-16">
-                    <div class="lg:w-1/2 space-y-8 text-center lg:text-left">
-                        <div class="inline-flex items-center px-4 py-2 bg-clinical-blue/10 text-clinical-blue text-xs font-bold uppercase tracking-[0.2em] rounded-full mx-auto lg:mx-0">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="lg:w-1/2 space-y-6 text-left">
+                        <div class="inline-flex items-center px-3 py-1 bg-clinical-blue/10 text-clinical-blue text-[9px] font-black uppercase tracking-[0.3em] rounded-md border border-clinical-blue/20">
                             Clinical Treatment Modality
                         </div>
-                        <h1 class="text-5xl lg:text-7xl font-display font-bold leading-tight italic text-clinical-charcoal">
+                        <h1 class="text-4xl lg:text-6xl font-display font-bold leading-tight italic text-clinical-charcoal tracking-tighter">
                             Sleep Testing
                         </h1>
-                        <div class="space-y-4">
-                            <h2 class="text-sm font-bold text-clinical-blue uppercase tracking-widest text-left">What It Is</h2>
-                            <p class="text-2xl text-gray-600 font-light leading-relaxed text-left">
+                        <div class="space-y-3 max-w-xl">
+                            <h2 class="text-[10px] font-black text-clinical-blue uppercase tracking-[0.4em]">The Definition</h2>
+                            <p class="text-xl lg:text-2xl text-gray-600 font-light leading-relaxed">
                                 Clinical-grade, at-home diagnostic testing to objectively measure your sleep architecture, breathing, and overnight autonomic function.
                             </p>
                         </div>
-                        <div class="pt-4 text-left">
-                            <a href="/contact.html" class="px-10 py-5 bg-clinical-blue text-white rounded-full font-bold text-lg hover:bg-blue-700 transition-all shadow-xl hover:shadow-blue-200 inline-block">
-                                Request Consultation
-                            </a>
-                        </div>
                     </div>
                     <div class="lg:w-1/2 relative">
-                        <div class="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white aspect-square lg:aspect-auto max-w-2xl mx-auto bg-white">
-                            <img src="/images/treatments/sleepstudy.jpg" alt="Sleep Testing" class="w-full h-full object-contain p-4">
+                        <div class="relative z-10 rounded-[2.5rem] overflow-hidden border-[1px] border-gray-100 bg-white shadow-2xl treatment-graphic max-w-xl mx-auto">
+                            <img src="/images/treatments/sleepstudy.jpg" alt="Sleep Testing" class="w-full h-full object-contain p-2">
                         </div>
-                        <div class="absolute -bottom-12 -right-12 w-64 h-64 bg-clinical-blue/5 rounded-full blur-3xl"></div>
+                        <!-- Depth Accents -->
+                        <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-clinical-blue/5 rounded-full blur-3xl"></div>
+                        <div class="absolute -top-10 -left-10 w-64 h-64 bg-clinical-green/5 rounded-full blur-3xl"></div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Technical Deep Dive -->
-        <section class="py-24 bg-white relative">
+        <section class="py-16 bg-white relative">
             <div class="container mx-auto px-6">
-                <div class="grid lg:grid-cols-2 gap-12">
-                    <!-- The Science -->
-                    <div class="bg-clinical-gray p-12 lg:p-16 rounded-[3rem] border border-gray-100 relative group overflow-hidden">
-                        <div class="absolute top-0 right-0 p-8 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity">
-                            <svg class="w-32 h-32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <!-- The Science Panel -->
+                    <div class="bg-clinical-gray p-10 lg:p-12 rounded-[2.5rem] border border-gray-100 relative group overflow-hidden flex flex-col">
+                        <div class="absolute top-0 right-0 p-6 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity">
+                            <svg class="w-20 h-20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
                         </div>
-                        <h3 class="text-sm font-bold text-clinical-blue uppercase tracking-widest mb-6 italic">Mechanism of Action</h3>
-                        <h4 class="text-3xl font-display font-bold mb-8">The Science</h4>
-                        <p class="text-lg text-gray-600 leading-relaxed font-light">
+                        <h3 class="text-[9px] font-black text-clinical-blue uppercase tracking-[0.4em] mb-4 italic">Mechanism of Action</h3>
+                        <h4 class="text-2xl lg:text-3xl font-display font-bold mb-6">The Science</h4>
+                        <p class="text-base lg:text-lg text-gray-600 leading-relaxed font-light">
                             Our advanced biometrics track blood oxygen saturation, heart rate variability (HRV), respiratory effort, and sleep staging (REM vs. Deep Sleep). This precise data identifies hidden physiological roadblocks like sleep apnea, oxygen desaturation, or sympathetic hyperarousal during the night.
                         </p>
                     </div>
 
-                    <!-- Why We Use It -->
-                    <div class="bg-clinical-charcoal p-12 lg:p-16 rounded-[3rem] text-white relative group overflow-hidden">
-                        <div class="absolute top-0 right-0 p-8 opacity-[0.05] group-hover:opacity-[0.1] transition-opacity">
-                            <svg class="w-32 h-32" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    <!-- Why We Use It Panel -->
+                    <div class="bg-clinical-charcoal p-10 lg:p-12 rounded-[2.5rem] text-white relative group overflow-hidden flex flex-col">
+                        <div class="absolute top-0 right-0 p-6 opacity-[0.05] group-hover:opacity-[0.1] transition-opacity">
+                            <svg class="w-20 h-20" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
                         </div>
-                        <h3 class="text-sm font-bold text-clinical-green uppercase tracking-widest mb-6 italic">Clinical Application</h3>
-                        <h4 class="text-3xl font-display font-bold mb-8 text-white">Why We Use It</h4>
-                        <p class="text-lg text-blue-50 leading-relaxed opacity-90 font-light">
+                        <h3 class="text-[9px] font-black text-clinical-green uppercase tracking-[0.4em] mb-4 italic">Clinical Application</h3>
+                        <h4 class="text-2xl lg:text-3xl font-display font-bold mb-6 text-white">Why We Use It</h4>
+                        <p class="text-base lg:text-lg text-blue-50 leading-relaxed opacity-90 font-light">
                             Sleep is the ultimate performance-enhancing state. We cannot optimize your longevity or effectively heal chronic pain if your brain and body are failing to reach deep, restorative sleep phases.
                         </p>
                     </div>
@@ -247,12 +254,13 @@
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="py-20 bg-clinical-blue text-white">
-            <div class="container mx-auto px-6 text-center">
+        <!-- Final Call to Action (Strategically Positioned at Bottom) -->
+        <section class="py-20 bg-clinical-blue text-white relative overflow-hidden">
+            <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+            <div class="container mx-auto px-6 text-center relative z-10">
                 <h3 class="text-3xl lg:text-5xl font-display font-bold mb-8 italic">Ready to start your recovery journey?</h3>
-                <a href="/contact.html" class="px-12 py-6 bg-white text-clinical-blue rounded-full font-bold text-xl hover:bg-gray-100 transition-all shadow-2xl inline-block">
-                    Request Appointment
+                <a href="/contact.html" class="px-14 py-6 bg-white text-clinical-blue rounded-full font-bold text-xl hover:bg-clinical-gray transition-all shadow-2xl hover:scale-105 transform inline-block">
+                    Request Consultation
                 </a>
             </div>
         </section>
