@@ -28,9 +28,16 @@
         }
     </script>
     <style>
-        .blueprint-grid {
-            background-image: radial-gradient(circle at 2px 2px, rgba(37,99,235,0.1) 1px, transparent 0);
-            background-size: 40px 40px;
+        .blueprint-bg {
+            background-color: #003399;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 80px 80px, 80px 80px, 20px 20px, 20px 20px;
+            background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+            position: relative;
         }
         .bento-stack-item {
             background: rgba(255, 255, 255, 0.02);
@@ -215,18 +222,37 @@
     </header>
 
     <main>
-        <!-- Hero Header -->
-        <section class="relative pt-24 pb-20 overflow-hidden bg-clinical-charcoal text-white text-center">
-            <div class="absolute inset-0 opacity-20 blueprint-grid"></div>
+        <!-- Re-Designed Hero Section: Unique Blueprint Aesthetic -->
+        <section class="relative pt-32 pb-24 overflow-hidden blueprint-bg text-white text-center">
+            <!-- Decorative technical overlay -->
+            <div class="absolute inset-0 pointer-events-none opacity-10">
+                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="smallGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+                            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="white" stroke-width="0.5"/>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#smallGrid)" />
+                </svg>
+            </div>
+            
             <div class="container mx-auto px-6 relative z-10">
-                <div class="max-w-4xl mx-auto space-y-8">
-                    <div class="inline-flex items-center px-4 py-2 bg-clinical-orange/20 text-clinical-orange text-[10px] font-black uppercase tracking-[0.4em] rounded-full border border-clinical-orange/30">
+                <div class="max-w-5xl mx-auto space-y-10">
+                    <div class="inline-flex items-center px-5 py-2 bg-clinical-green/20 text-clinical-green text-[10px] font-black uppercase tracking-[0.5em] rounded-full border border-clinical-green/30 backdrop-blur-sm">
                         Kinematic Sequence Protocol
                     </div>
-                    <h1 class="text-5xl lg:text-8xl font-display font-bold leading-tight italic tracking-tighter text-white">Golf Optimization</h1>
-                    <p class="text-xl lg:text-2xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed italic">Biomechanical repair for the modern swing.</p>
+                    <h1 class="text-6xl lg:text-9xl font-display font-bold leading-none italic tracking-tighter text-white drop-shadow-2xl">
+                        Golf Optimization
+                    </h1>
+                    <div class="w-24 h-1 bg-clinical-orange mx-auto rounded-full"></div>
+                    <p class="text-xl lg:text-3xl text-blue-50 font-light max-w-3xl mx-auto leading-relaxed italic opacity-90">
+                        Biomechanical repair for the modern swing.
+                    </p>
                 </div>
             </div>
+            
+            <!-- Bottom Fade -->
+            <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
         </section>
 
         <!-- The Clinical Reality -->
@@ -256,8 +282,11 @@
         <!-- The Arsenal -->
         <section class="py-32 bg-[#020617] text-white relative overflow-hidden">
             <div class="absolute inset-0 opacity-10 blueprint-grid"></div>
-            <div class="container mx-auto px-6 relative z-10 text-left">
-                <div class="flex flex-col lg:flex-row justify-between items-end mb-20 gap-8">
+            <!-- Large decorative text -->
+            <div class="absolute -top-20 -left-20 text-[200px] font-black text-white/[0.02] pointer-events-none select-none italic">STACK</div>
+            
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="flex flex-col lg:flex-row justify-between items-end mb-20 gap-8 text-left">
                     <div class="max-w-2xl">
                         <h2 class="text-xs font-black text-clinical-orange uppercase tracking-[0.6em] mb-4">Tactical Arsenal</h2>
                         <h3 class="text-5xl lg:text-7xl font-display font-bold italic tracking-tight text-white leading-none">The Clinical Stack</h3>
