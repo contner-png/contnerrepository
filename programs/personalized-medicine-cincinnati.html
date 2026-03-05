@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personalized Medicine | Cincinnati Chiropractic & Cincinnati Longevity</title>
+    <title>Personalized Medicine & Longevity | Cincinnati Chiropractic & Cincinnati Longevity</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
@@ -14,26 +14,46 @@
                         clinical: {
                             blue: '#0047AB',
                             green: '#22C55E',
+                            orange: '#FB4F14',
                             charcoal: '#333333',
-                            gray: '#F9FAFB',
-                            light: '#FFFFFF',
-                            accent: '#E0F2FE'
+                            gray: '#F9FAFB'
                         }
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         display: ['Lexend', 'sans-serif'],
-                    },
-                    backgroundImage: {
-                        'grid-pattern': "url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%230047AB" fill-opacity="0.03" fill-rule="evenodd"%3E%3Cpath d="M0 40L40 0H20L0 20M40 40V20L20 40"/%3E%3C/g%3E%3C/svg%3E')",
                     }
                 }
             }
         }
     </script>
+    <style>
+        .blueprint-dot {
+            background-image: radial-gradient(#0047AB 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        .strategy-card {
+            border-top: 4px solid #0047AB;
+            transition: all 0.4s ease;
+        }
+        .strategy-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px -12px rgba(0,71,171,0.15);
+        }
+        .condition-tag {
+            background: white;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        .condition-tag:hover {
+            border-color: #0047AB;
+            color: #0047AB;
+            background: #f0f7ff;
+        }
+    </style>
 </head>
 <body class="bg-white text-clinical-charcoal font-sans antialiased">
-        <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
         <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
             <div class="flex items-center">
                 <a href="/index.html" class="flex items-center space-x-3 group">
@@ -188,97 +208,159 @@
         </div>
     </header>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const btn = document.getElementById('mobile-menu-button');
-            const close = document.getElementById('close-menu');
-            const menu = document.getElementById('mobile-menu');
-            
-            if(btn && menu && close) {
-                btn.onclick = () => menu.classList.remove('translate-x-full');
-                close.onclick = () => menu.classList.add('translate-x-full');
-            }
-        });
-    </script>
-
     <main>
-        <!-- Program Hero -->
-        <section class="py-24 bg-clinical-gray relative overflow-hidden">
-            <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        <!-- Section 1: Foundational Pillar Hero -->
+        <section class="relative pt-32 pb-24 overflow-hidden bg-clinical-gray">
+            <div class="absolute inset-0 opacity-10 blueprint-dot"></div>
             <div class="container mx-auto px-6 relative z-10">
-                <div class="flex flex-col lg:flex-row items-center gap-16">
-                    <div class="lg:w-1/2">
-                        <div class="inline-flex items-center px-3 py-1 rounded-full bg-clinical-blue/10 text-clinical-blue text-xs font-bold tracking-widest uppercase mb-6">
-                            Clinical Protocol
-                        </div>
-                        <h1 class="text-5xl lg:text-7xl font-display font-bold mb-8 leading-tight">
-                            Personalized Medicine
-                        </h1>
-                        <div class="prose prose-lg text-gray-600 leading-relaxed max-w-xl">
-                            <p class="text-2xl font-light italic">
-                                Bespoke recovery blueprints engineered from clinical biomarker tracking.
-                            </p>
-                        </div>
-                        <div class="mt-12 flex flex-col sm:flex-row items-center gap-6">
-                            <a href="/contact.html" class="px-8 py-4 bg-clinical-blue text-white rounded-full font-bold text-lg hover:bg-blue-700 transition-all shadow-xl w-full sm:w-auto text-center">
-                                Request Appointment
-                            </a>
-                        </div>
+                <div class="max-w-5xl">
+                    <div class="inline-flex items-center px-4 py-2 bg-clinical-blue text-white text-[10px] font-black uppercase tracking-[0.4em] mb-8 rounded-sm">
+                        Foundational Pillar
                     </div>
-                    <div class="lg:w-1/2 relative">
-                        <div class="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white">
-                            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Personalized Medicine" class="w-full h-full object-cover">
-                        </div>
+                    <h1 class="text-6xl lg:text-8xl font-display font-bold leading-none italic tracking-tighter text-clinical-blue mb-10">
+                        Personalized Medicine & Longevity
+                    </h1>
+                    <p class="text-2xl lg:text-3xl text-gray-500 font-light max-w-3xl leading-relaxed italic border-l-4 border-clinical-green pl-8">
+                        Medicine 3.0: Precision diagnostics and proactive vitality engineering.
+                    </p>
+                    <div class="mt-12">
+                        <a href="/contact.html" class="px-12 py-6 bg-clinical-blue text-white rounded-full font-bold text-xl hover:bg-blue-700 transition-all shadow-xl inline-block">
+                            Request Appointment
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Strategy Section -->
-        <section class="py-24 bg-white relative">
+        <!-- Section 2: Our Clinical Philosophy -->
+        <section class="py-32 bg-white relative">
             <div class="container mx-auto px-6">
-                <div class="grid lg:grid-cols-12 gap-16">
-                    <div class="lg:col-span-8">
-                        <h3 class="text-4xl font-display font-bold mb-12">Clinical <span class="text-clinical-blue italic text-3xl">Strategy</span></h3>
-                        
-                        <div class="grid md:grid-cols-2 gap-8">
-                            <div class="p-8 bg-clinical-gray rounded-3xl border border-gray-100">
-                                <h4 class="text-xl font-bold mb-4">Mechanism</h4>
-                                <p class="text-gray-600 text-sm leading-relaxed">Guesswork is the enemy of performance. We establish your unique biological baseline through advanced blood panels and cardiopulmonary testing.</p>
-                            </div>
-                            <div class="p-8 bg-clinical-gray rounded-3xl border border-gray-100">
-                                <h4 class="text-xl font-bold mb-4">Evidence</h4>
-                                <p class="text-gray-600 text-sm leading-relaxed">Your roadmap is updated in real-time, adapting to your physiological response to ensure optimal metabolic efficiency and systemic recovery.</p>
-                            </div>
+                <div class="grid lg:grid-cols-2 gap-24 items-center text-left">
+                    <div class="space-y-10">
+                        <h2 class="text-4xl lg:text-5xl font-display font-bold italic text-clinical-charcoal leading-tight">A New Standard of Care</h2>
+                        <div class="text-xl lg:text-2xl text-gray-600 leading-relaxed font-light">
+                            The traditional medical system operates on "Medicine 2.0"—a reactive model that waits until chronic disease strikes. We operate strictly on Medicine 3.0. True longevity care must be radically proactive. By establishing an uncompromising, objective baseline of your biological age and cellular efficiency, we engineer a customized data-driven blueprint.
                         </div>
                     </div>
-                    
-                    <div class="lg:col-span-4">
-                        <div class="sticky top-32 p-8 bg-clinical-blue rounded-[2.5rem] text-white shadow-2xl">
-                            <h4 class="text-2xl font-display font-bold mb-8">Technology Stack</h4>
-                            <div class="space-y-4">
-                                                                <a href="/treatments/longevity-blood-panels.html" class="flex items-center justify-between p-4 bg-white/10 rounded-2xl hover:bg-white/20 transition-colors group">
-                                    <span class="font-bold">Blood Panels</span>
-                                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                                </a>
-                                <a href="/treatments/vo2-max-testing.html" class="flex items-center justify-between p-4 bg-white/10 rounded-2xl hover:bg-white/20 transition-colors group">
-                                    <span class="font-bold">VO2 Max Testing</span>
-                                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                                </a>
-                                <a href="/treatments/sleep-testing.html" class="flex items-center justify-between p-4 bg-white/10 rounded-2xl hover:bg-white/20 transition-colors group">
-                                    <span class="font-bold">Sleep Analysis</span>
-                                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                                </a>
+                    <div class="bg-clinical-gray aspect-square rounded-[4rem] border-2 border-dashed border-gray-200 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 blueprint-dot opacity-5"></div>
+                        <span class="text-[10px] font-black text-gray-300 uppercase tracking-[0.5em] italic">LONGEVITY BLOOD PANEL BIOMARKERS (ApoB, hs-CRP, HbA1c)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                            </div>
-                        </div>
+        <!-- Section 3: Core Treatment Strategies -->
+        <section class="py-32 bg-clinical-gray border-y border-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-20 text-left">
+                    <h2 class="text-4xl lg:text-6xl font-display font-bold italic text-clinical-charcoal tracking-tight">Our Core Strategies</h2>
+                </div>
+                <div class="grid lg:grid-cols-3 gap-8 text-left">
+                    
+    <div class="strategy-card bg-white p-12 rounded-[3rem] shadow-sm flex flex-col justify-between">
+        <div class="space-y-6">
+            <h4 class="text-2xl font-display font-bold text-clinical-blue italic leading-tight">Objective Biomarker Tracking</h4>
+            <p class="text-gray-500 text-base font-light leading-relaxed">Utilizing comprehensive hematology to stop guessing and start measuring your exact physiological state.</p>
+        </div>
+    </div>
+    
+    <div class="strategy-card bg-white p-12 rounded-[3rem] shadow-sm flex flex-col justify-between">
+        <div class="space-y-6">
+            <h4 class="text-2xl font-display font-bold text-clinical-blue italic leading-tight">Integrative Interventions</h4>
+            <p class="text-gray-500 text-base font-light leading-relaxed">Deploying evidence-based clinical nutraceuticals and metabolic protocols to correct biochemical deficits.</p>
+        </div>
+    </div>
+    
+    <div class="strategy-card bg-white p-12 rounded-[3rem] shadow-sm flex flex-col justify-between">
+        <div class="space-y-6">
+            <h4 class="text-2xl font-display font-bold text-clinical-blue italic leading-tight">Cardiopulmonary Optimization</h4>
+            <p class="text-gray-500 text-base font-light leading-relaxed">Using clinical-grade VO2 Max testing to measure and build the ultimate aerobic engine for flexibility.</p>
+        </div>
+    </div>
+    
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Conditions We Treat -->
+        <section class="py-32 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row justify-between items-end mb-20 gap-8 text-left">
+                    <div class="max-w-2xl">
+                        <h2 class="text-4xl lg:text-6xl font-display font-bold italic text-clinical-charcoal tracking-tight leading-none">What We Treat & Optimize</h2>
+                    </div>
+                    <p class="text-gray-400 text-lg font-light italic">Comprehensive management of complex physical pathologies.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-left">
+                    
+    <div class="condition-tag p-6 rounded-2xl font-bold text-clinical-charcoal flex items-center gap-4">
+        <div class="w-2 h-2 rounded-full bg-clinical-green"></div>
+        Metabolic Syndrome
+    </div>
+    
+    <div class="condition-tag p-6 rounded-2xl font-bold text-clinical-charcoal flex items-center gap-4">
+        <div class="w-2 h-2 rounded-full bg-clinical-green"></div>
+        Insulin Resistance
+    </div>
+    
+    <div class="condition-tag p-6 rounded-2xl font-bold text-clinical-charcoal flex items-center gap-4">
+        <div class="w-2 h-2 rounded-full bg-clinical-green"></div>
+        Elevated ApoB & Lipids
+    </div>
+    
+    <div class="condition-tag p-6 rounded-2xl font-bold text-clinical-charcoal flex items-center gap-4">
+        <div class="w-2 h-2 rounded-full bg-clinical-green"></div>
+        Systemic Inflammation (hs-CRP)
+    </div>
+    
+    <div class="condition-tag p-6 rounded-2xl font-bold text-clinical-charcoal flex items-center gap-4">
+        <div class="w-2 h-2 rounded-full bg-clinical-green"></div>
+        Sarcopenia & Osteopenia
+    </div>
+    
+    <div class="condition-tag p-6 rounded-2xl font-bold text-clinical-charcoal flex items-center gap-4">
+        <div class="w-2 h-2 rounded-full bg-clinical-green"></div>
+        Cellular Energy Deficits
+    </div>
+    
+    <div class="condition-tag p-6 rounded-2xl font-bold text-clinical-charcoal flex items-center gap-4">
+        <div class="w-2 h-2 rounded-full bg-clinical-green"></div>
+        Cognitive Healthspan
+    </div>
+    
+    <div class="condition-tag p-6 rounded-2xl font-bold text-clinical-charcoal flex items-center gap-4">
+        <div class="w-2 h-2 rounded-full bg-clinical-green"></div>
+        Hormonal Function
+    </div>
+    
+    <div class="condition-tag p-6 rounded-2xl font-bold text-clinical-charcoal flex items-center gap-4">
+        <div class="w-2 h-2 rounded-full bg-clinical-green"></div>
+        ANS Dysregulation
+    </div>
+    
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Clinical Disclaimer -->
+        <section class="py-24 bg-clinical-charcoal text-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center space-y-10">
+                    <p class="text-xl lg:text-3xl font-light italic opacity-80 leading-relaxed">
+                        "Please note: Our approach is highly personalized. Your specific optimization plan will be custom-engineered based on your diagnostics. Additionally, we accept and utilize most major insurers for services when able."
+                    </p>
+                    <div class="pt-8">
+                        <a href="/contact.html" class="px-16 py-8 bg-clinical-green text-white rounded-full font-bold text-2xl hover:bg-green-600 transition-all shadow-2xl inline-block">
+                            Start Your Recovery
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-        <footer class="bg-clinical-charcoal text-white pt-24 pb-12">
+    <footer class="bg-clinical-charcoal text-white pt-24 pb-12">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-12 mb-16 border-b border-white/10 pb-16">
                 <div class="col-span-1 lg:col-span-2 space-y-8">
