@@ -1,1 +1,8 @@
 nohup: ignoring input
+10.2.48.145 - - [05/Mar/2026 17:24:15] "GET / HTTP/1.1" 200 -
+10.2.47.136 - - [05/Mar/2026 17:24:16] "GET /images/cclogo_trimmed.png HTTP/1.1" 304 -
+10.2.47.136 - - [05/Mar/2026 17:24:16] "GET /images/treatments/bengals.svg HTTP/1.1" 304 -
+10.2.47.136 - - [05/Mar/2026 17:24:16] "GET /images/treatments/cyclones.png HTTP/1.1" 304 -
+10.2.47.136 - - [05/Mar/2026 17:25:23] "GET /programs/cincinnati-chiropractic-care.html HTTP/1.1" 200 -
+10.2.42.8 - - [05/Mar/2026 17:25:30] "GET /programs/integrative-physiotherapy.html HTTP/1.1" 200 -
+10.2.48.145 - - [05/Mar/2026 17:25:51] "GET /programs/neuropathy-care.html HTTP/1.1" 200 -
