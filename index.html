@@ -323,6 +323,71 @@
     <main>
         <!-- Elite Brand Synergy Hero -->
         <section class="relative min-h-[100vh] bg-[#020617] flex flex-col items-center justify-center overflow-hidden py-32">
+            <!-- Animated Hero Background -->
+            <div class="absolute inset-0 z-0">
+                <canvas id="hero-canvas" class="absolute inset-0 w-full h-full opacity-40"></canvas>
+                <div class="absolute inset-0 bg-gradient-to-b from-[#020617]/50 via-transparent to-[#020617]"></div>
+                <!-- Blueprint Grid Overlay -->
+                <div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(#334155 1px, transparent 1px), linear-gradient(90deg, #334155 1px, transparent 1px); background-size: 50px 50px;"></div>
+            </div>
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const canvas = document.getElementById('hero-canvas');
+                    const ctx = canvas.getContext('2d');
+                    let particles = [];
+                    
+                    const init = () => {
+                        canvas.width = window.innerWidth;
+                        canvas.height = window.innerHeight;
+                        particles = [];
+                        for (let i = 0; i < 80; i++) {
+                            particles.push({
+                                x: Math.random() * canvas.width,
+                                y: Math.random() * canvas.height,
+                                vx: (Math.random() - 0.5) * 0.5,
+                                vy: (Math.random() - 0.5) * 0.5,
+                                size: Math.random() * 2 + 1
+                            });
+                        }
+                    };
+
+                    const draw = () => {
+                        ctx.clearRect(0, 0, canvas.width, canvas.height);
+                        ctx.fillStyle = 'rgba(0, 71, 171, 0.3)';
+                        ctx.strokeStyle = 'rgba(0, 71, 171, 0.1)';
+                        
+                        particles.forEach((p, i) => {
+                            p.x += p.vx;
+                            p.y += p.vy;
+                            
+                            if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                            if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+                            
+                            ctx.beginPath();
+                            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                            ctx.fill();
+                            
+                            for (let j = i + 1; j < particles.length; j++) {
+                                const p2 = particles[j];
+                                const dist = Math.sqrt((p.x - p2.x)**2 + (p.y - p2.y)**2);
+                                if (dist < 150) {
+                                    ctx.beginPath();
+                                    ctx.moveTo(p.x, p.y);
+                                    ctx.lineTo(p2.x, p2.y);
+                                    ctx.lineWidth = 1 - dist/150;
+                                    ctx.stroke();
+                                }
+                            }
+                        });
+                        requestAnimationFrame(draw);
+                    };
+
+                    init();
+                    draw();
+                    window.addEventListener('resize', init);
+                });
+            </script>
             <!-- Cinematic Background Architecture -->
             <div class="absolute inset-0 z-0">
                 <!-- Advanced Technical Mesh -->
@@ -401,9 +466,7 @@
                                 <span class="relative z-10">Request Appointment</span>
                                 <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000"></div>
                             </a>
-                            <a href="#programs" class="px-12 py-6 bg-white/5 backdrop-blur-md border border-white/10 text-white rounded-2xl font-bold text-xl hover:bg-white/10 transition-all border-white/20">
-                                View Clinical Programs
-                            </a>
+                            <a href="#programs" class="px-12 py-6 bg-white/5 backdrop-blur-md border border-white/10 text-white rounded-2xl font-bold text-xl hover:bg-white/10 transition-all border-white/20">View Clinical Programs</a>
                         </div>
                     </div>
 
@@ -481,7 +544,7 @@
         </section>
 
         <!-- Tier 1: The Clinical Flagships -->
-        <section class="py-24 bg-white relative overflow-hidden">
+        <section id="programs" class="py-24 bg-white relative overflow-hidden">
             <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
             <div class="container mx-auto px-6 relative z-10">
                 <div class="text-center max-w-3xl mx-auto mb-20">
