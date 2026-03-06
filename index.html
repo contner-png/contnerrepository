@@ -323,110 +323,101 @@
     <main>
         <!-- Elite Brand Synergy Hero -->
         <section class="relative min-h-[100vh] bg-[#020617] flex flex-col items-center justify-center overflow-hidden py-32">
-            <!-- Animated Hero Background -->
-            <div class="absolute inset-0 z-0">
-                <canvas id="hero-canvas" class="absolute inset-0 w-full h-full opacity-40"></canvas>
-                <div class="absolute inset-0 bg-gradient-to-b from-[#020617]/50 via-transparent to-[#020617]"></div>
+            <!-- Unified Animated Technical Background -->
+            <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                <canvas id="hero-canvas" class="absolute inset-0 w-full h-full opacity-60"></canvas>
+                
                 <!-- Blueprint Grid Overlay -->
-                <div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(#334155 1px, transparent 1px), linear-gradient(90deg, #334155 1px, transparent 1px); background-size: 50px 50px;"></div>
+                <div class="absolute inset-0 opacity-[0.07]" 
+                     style="background-image: linear-gradient(#334155 1px, transparent 1px), linear-gradient(90deg, #334155 1px, transparent 1px); background-size: 60px 60px;">
+                </div>
+                
+                <!-- Cinematic Radial Glow -->
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,71,171,0.15),transparent_75%)]"></div>
+                <div class="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-[#020617] to-transparent"></div>
             </div>
             
             <script>
-                document.addEventListener('DOMContentLoaded', () => {
-                    const canvas = document.getElementById('hero-canvas');
-                    const ctx = canvas.getContext('2d');
-                    let particles = [];
-                    
-                    const init = () => {
-                        canvas.width = window.innerWidth;
-                        canvas.height = window.innerHeight;
-                        particles = [];
-                        for (let i = 0; i < 80; i++) {
-                            particles.push({
-                                x: Math.random() * canvas.width,
-                                y: Math.random() * canvas.height,
-                                vx: (Math.random() - 0.5) * 0.5,
-                                vy: (Math.random() - 0.5) * 0.5,
-                                size: Math.random() * 2 + 1
-                            });
-                        }
-                    };
+                (function() {
+                    const initCanvas = () => {
+                        const canvas = document.getElementById('hero-canvas');
+                        if (!canvas) return;
+                        const ctx = canvas.getContext('2d');
+                        let particles = [];
+                        let w, h;
 
-                    const draw = () => {
-                        ctx.clearRect(0, 0, canvas.width, canvas.height);
-                        ctx.fillStyle = 'rgba(0, 71, 171, 0.3)';
-                        ctx.strokeStyle = 'rgba(0, 71, 171, 0.1)';
-                        
-                        particles.forEach((p, i) => {
-                            p.x += p.vx;
-                            p.y += p.vy;
-                            
-                            if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-                            if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-                            
-                            ctx.beginPath();
-                            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-                            ctx.fill();
-                            
-                            for (let j = i + 1; j < particles.length; j++) {
-                                const p2 = particles[j];
-                                const dist = Math.sqrt((p.x - p2.x)**2 + (p.y - p2.y)**2);
-                                if (dist < 150) {
-                                    ctx.beginPath();
-                                    ctx.moveTo(p.x, p.y);
-                                    ctx.lineTo(p2.x, p2.y);
-                                    ctx.lineWidth = 1 - dist/150;
-                                    ctx.stroke();
-                                }
+                        const resize = () => {
+                            w = canvas.width = window.innerWidth;
+                            h = canvas.height = window.innerHeight;
+                        };
+
+                        class Particle {
+                            constructor() {
+                                this.x = Math.random() * w;
+                                this.y = Math.random() * h;
+                                this.vx = (Math.random() - 0.5) * 0.4;
+                                this.vy = (Math.random() - 0.5) * 0.4;
+                                this.size = Math.random() * 1.5 + 0.5;
+                                this.color = Math.random() > 0.5 ? 'rgba(0, 71, 171, 0.4)' : 'rgba(34, 197, 94, 0.3)';
                             }
+                            update() {
+                                this.x += this.vx;
+                                this.y += this.vy;
+                                if (this.x < 0 || this.x > w) this.vx *= -1;
+                                if (this.y < 0 || this.y > h) this.vy *= -1;
+                            }
+                            draw() {
+                                ctx.beginPath();
+                                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                                ctx.fillStyle = this.color;
+                                ctx.fill();
+                            }
+                        }
+
+                        const createParticles = () => {
+                            particles = [];
+                            const count = Math.min(Math.floor(w / 15), 100);
+                            for (let i = 0; i < count; i++) particles.push(new Particle());
+                        };
+
+                        const animate = () => {
+                            ctx.clearRect(0, 0, w, h);
+                            particles.forEach((p, i) => {
+                                p.update();
+                                p.draw();
+                                for (let j = i + 1; j < particles.length; j++) {
+                                    const p2 = particles[j];
+                                    const dx = p.x - p2.x;
+                                    const dy = p.y - p2.y;
+                                    const dist = Math.sqrt(dx * dx + dy * dy);
+                                    if (dist < 180) {
+                                        ctx.beginPath();
+                                        ctx.moveTo(p.x, p.y);
+                                        ctx.lineTo(p2.x, p2.y);
+                                        ctx.strokeStyle = `rgba(0, 71, 171, ${0.15 * (1 - dist / 180)})`;
+                                        ctx.lineWidth = 0.5;
+                                        ctx.stroke();
+                                    }
+                                }
+                            });
+                            requestAnimationFrame(animate);
+                        };
+
+                        resize();
+                        createParticles();
+                        animate();
+                        window.addEventListener('resize', () => {
+                            resize();
+                            createParticles();
                         });
-                        requestAnimationFrame(draw);
                     };
-
-                    init();
-                    draw();
-                    window.addEventListener('resize', init);
-                });
+                    if (document.readyState === 'loading') {
+                        document.addEventListener('DOMContentLoaded', initCanvas);
+                    } else {
+                        initCanvas();
+                    }
+                })();
             </script>
-            <!-- Cinematic Background Architecture -->
-            <div class="absolute inset-0 z-0">
-                <!-- Advanced Technical Mesh -->
-                <div class="absolute inset-0 opacity-[0.3]" 
-                     style="background-image: 
-                        radial-gradient(circle at 2px 2px, rgba(37,99,235,0.15) 1px, transparent 0),
-                        linear-gradient(rgba(37,99,235,0.05) 1px, transparent 1px),
-                        linear-gradient(90deg, rgba(37,99,235,0.05) 1px, transparent 1px);
-                        background-size: 40px 40px, 80px 80px, 80px 80px;">
-                </div>
-                
-                <!-- Floating Particle Field (CSS) -->
-                <div class="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div class="absolute top-1/4 left-1/3 w-1 h-1 bg-clinical-blue rounded-full animate-ping opacity-20"></div>
-                    <div class="absolute top-2/3 right-1/4 w-1 h-1 bg-clinical-green rounded-full animate-ping opacity-20" style="animation-delay: 1s;"></div>
-                    <div class="absolute bottom-1/4 left-1/2 w-1 h-1 bg-white rounded-full animate-ping opacity-10" style="animation-delay: 2s;"></div>
-                </div>
-
-                <!-- Cinematic Gradients -->
-                <div class="absolute inset-0 bg-gradient-to-tr from-[#020617] via-transparent to-[#020617] opacity-90"></div>
-                <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(37,99,235,0.2),transparent_70%)]"></div>
-                
-                <!-- Moving Technical Scanners -->
-                <div class="absolute top-0 left-0 w-full h-full opacity-10">
-                    <div class="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-clinical-blue to-transparent animate-[scan_10s_linear_infinite]"></div>
-                    <div class="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-transparent via-clinical-green to-transparent animate-[scan_12s_linear_infinite_reverse]"></div>
-                </div>
-                
-                <!-- Large Deep-Field Orbs -->
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-clinical-blue/10 rounded-full blur-[180px] animate-pulse"></div>
-                <div class="absolute top-1/3 right-0 w-[600px] h-[600px] bg-clinical-green/5 rounded-full blur-[150px] animate-pulse" style="animation-delay: 4s;"></div>
-            </div>
-
-            <style>
-                @keyframes scan {
-                    0% { transform: translateY(-100%); }
-                    100% { transform: translateY(100%); }
-                }
-            </style>
 
             <div class="container mx-auto px-6 relative z-10 text-center">
                 <div class="max-w-5xl mx-auto space-y-16">
