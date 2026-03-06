@@ -22,9 +22,6 @@
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         display: ['Lexend', 'sans-serif'],
-                    },
-                    backgroundImage: {
-                        'grid-pattern': "url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%230047AB" fill-opacity="0.03" fill-rule="evenodd"%3E%3Cpath d="M0 40L40 0H20L0 20M40 40V20L20 40"/%3E%3C/g%3E%3C/svg%3E')",
                     }
                 }
             }
@@ -42,13 +39,19 @@
             background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
             position: relative;
         }
+        .treatment-hero-bg {
+            background-color: #f8fafc;
+            background-image: 
+                radial-gradient(circle at 2px 2px, rgba(34,197,94,0.07) 1px, transparent 0);
+            background-size: 32px 32px;
+        }
         .treatment-graphic {
-            filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+            filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.1));
             transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
         }
         .treatment-graphic:hover {
-            transform: translateY(-8px) scale(1.02);
-            filter: drop-shadow(0 35px 35px rgb(0 0 0 / 0.2));
+            transform: translateY(-5px) scale(1.01);
+            filter: drop-shadow(0 35px 35px rgb(0 0 0 / 0.15));
         }
     </style>
 </head>
@@ -209,32 +212,46 @@
     </header>
 
     <main>
-        <!-- Specialized Treatment Hero: Modern Clinical Design -->
-        <section class="relative pt-32 pb-24 overflow-hidden bg-white border-b border-gray-100">
-            <div class="absolute top-0 left-0 right-0 h-2 bg-clinical-green shadow-sm"></div>
-            <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        <!-- Re-Designed Technical Treatment Hero: Integration of Clinical Green -->
+        <section class="relative pt-32 pb-24 overflow-hidden treatment-hero-bg border-b border-gray-100">
+            <!-- Green Accent Sidebar -->
+            <div class="absolute top-0 left-0 bottom-0 w-2 bg-clinical-green hidden lg:block"></div>
             
+            <!-- Decorative technical overlay -->
+            <div class="absolute top-0 right-0 w-1/3 h-full opacity-[0.03] pointer-events-none">
+                <svg viewBox="0 0 100 100" class="w-full h-full">
+                    <circle cx="100" cy="50" r="40" stroke="currentColor" fill="none" stroke-width="0.5" />
+                    <circle cx="100" cy="50" r="30" stroke="currentColor" fill="none" stroke-width="0.5" />
+                    <circle cx="100" cy="50" r="20" stroke="currentColor" fill="none" stroke-width="0.5" />
+                </svg>
+            </div>
+
             <div class="container mx-auto px-6 relative z-10">
                 <div class="flex flex-col lg:flex-row items-center gap-20">
                     <div class="lg:w-1/2 space-y-10">
-                        <div class="inline-flex items-center gap-3 text-clinical-green font-black text-[10px] uppercase tracking-[0.5em]">
-                            <span class="w-12 h-px bg-clinical-green/30"></span>
-                            Clinical Modality
+                        <div class="inline-flex items-center gap-4">
+                            <span class="px-3 py-1 bg-clinical-green text-white text-[9px] font-black uppercase tracking-[0.4em] rounded-sm">Clinical</span>
+                            <span class="text-clinical-green font-black text-[9px] uppercase tracking-[0.4em]">Integrated Modality</span>
                         </div>
-                        <h1 class="text-5xl lg:text-8xl font-display font-bold leading-[0.9] italic tracking-tighter text-clinical-charcoal">
+                        <h1 class="text-6xl lg:text-8xl font-display font-bold leading-[0.85] italic tracking-tighter text-clinical-charcoal">
                             PEMF (Pulsed Electromagnetic Field) Therapy
                         </h1>
-                        <div class="space-y-6">
-                            <p class="text-2xl text-gray-500 font-light italic border-l-4 border-clinical-blue pl-8 py-2 max-w-xl">
+                        <div class="space-y-8">
+                            <p class="text-2xl text-gray-500 font-light leading-relaxed italic border-l-4 border-clinical-green pl-8 py-2 max-w-xl">
                                 A restorative, non-invasive therapy that uses mild, pulsing magnetic fields to support cellular function and optimize recovery.
                             </p>
                             
                         </div>
                     </div>
                     <div class="lg:w-1/2">
-                        <div class="relative rounded-[3rem] overflow-hidden shadow-2xl border-[1px] border-gray-100 treatment-graphic bg-white p-2">
-                            <img src="/images/treatments/PEMF.png" alt="PEMF (Pulsed Electromagnetic Field) Therapy" class="w-full h-full object-contain">
-                            <div class="absolute inset-0 bg-clinical-blue/5 pointer-events-none"></div>
+                        <div class="relative group">
+                            <!-- Technical Glow -->
+                            <div class="absolute -inset-4 bg-clinical-green/10 rounded-[4rem] blur-2xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                            
+                            <div class="relative z-10 rounded-[3.5rem] overflow-hidden shadow-2xl border-[1px] border-clinical-green/20 treatment-graphic bg-white p-3">
+                                <img src="/images/treatments/PEMF.png" alt="PEMF (Pulsed Electromagnetic Field) Therapy" class="w-full aspect-[4/3] object-cover rounded-[2.5rem]">
+                                <div class="absolute inset-0 bg-clinical-green/5 pointer-events-none"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -273,7 +290,7 @@
         </section>
 
         <!-- Final Strategic CTA: Blueprint Aesthetic -->
-        <section class="py-24 blueprint-bg relative overflow-hidden">
+        <section class="py-24 blueprint-bg text-white relative overflow-hidden">
             <div class="absolute inset-0 opacity-10">
                 <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
                     <defs>
@@ -286,8 +303,8 @@
             </div>
             
             <div class="container mx-auto px-6 text-center relative z-10">
-                <h3 class="text-4xl lg:text-6xl font-display font-bold mb-12 italic tracking-tighter text-white text-white">Ready to accelerate your healing?</h3>
-                <a href="/contact.html" class="px-12 py-5 bg-white text-[#0047AB] rounded-full font-bold text-xl hover:bg-clinical-green hover:text-white transition-all shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-105 transform inline-block" style="color: #0047AB !important;" >Request Appointment</a>
+                <h3 class="text-4xl lg:text-6xl font-display font-bold mb-12 italic tracking-tighter text-white">Ready to accelerate your healing?</h3>
+                <a href="/contact.html" class="inline-block px-10 py-4 bg-white rounded-full font-bold text-xl shadow-lg hover:bg-clinical-green hover:text-white transition-all transform hover:scale-105" style="color: #0047AB !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important;">Request Appointment</a>
             </div>
         </section>
     </main>
