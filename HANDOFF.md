@@ -31,16 +31,31 @@ Recreation of the "Cincinnati Chiropractic & Cincinnati Longevity" website with 
   - `sync_layout.py`: A Python utility located in the root directory. Use this to automatically propagate changes from `index.html` (header/footer) to every other page in the repository.
 
 ---
+## **3.5. Local Preview / Rehost**
+- **Command**: `python3 -m http.server 12000 --directory /workspace/project/contnerrepository`
+- **Primary Preview URL**: https://work-1-kghvkbqnxxlvkauq.prod-runtime.all-hands.dev
+- **Backup Preview URL**: https://work-2-kghvkbqnxxlvkauq.prod-runtime.all-hands.dev
+- If port 12000 is already in use, switch to 12001 and use the backup URL.
+
+---
+
 
 ## **4. Site Hierarchy**
 ### **Tier 1: The Flagships (4)**
-1. Precision Chiropractic Care
-2. Integrative Physiotherapy
-3. Personalized Medicine & Longevity
-4. Cincinnati Longevity Protocol
+1. Precision Chiropractic
+2. Integrative Physical Therapy
+3. Personalized Medicine
+4. Cincinnati Longevity
 
 ### **Tier 2: Specialized Protocols (8)**
-- Neuropathy Care, Cardiometabolic Repair, Bio-Energy Recovery, Sleep Optimization, Balance & Fall Prevention, Golf Optimization, HRV Optimization, and Healthspan Optimization.
+- Neuropathy Care
+- Cardiometabolic Repair
+- Bio-Energy Recovery
+- Sleep Optimization
+- Balance, Strength, and Bone Optimization
+- Golf Optimization
+- HRV Optimization
+- Longevity & Healthspan
 
 ---
 
@@ -58,6 +73,6 @@ Recreation of the "Cincinnati Chiropractic & Cincinnati Longevity" website with 
 
 ---
 
-**Status**: Site Fully Restored & Optimized.
-**Branch**: `feature/clinical-website-recreation`
+**Status**: Active development.
+**Branch**: `main`
 **Repository**: [contner-png/contnerrepository](https://github.com/contner-png/contnerrepository)
