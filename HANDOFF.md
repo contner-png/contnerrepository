@@ -82,6 +82,7 @@ Recreation of the "Cincinnati Chiropractic & Cincinnati Longevity" website with 
 - **2026-03-11**: Rebuilt the Cincinnati Longevity flagship hero into the standard two-column flagship layout with green highlight tile styling.
 - **2026-03-11**: Added longevity-specific "Our Core Strategies" and "What We Treat & Optimize" sections to the Longevity Care flagship page.
 - **2026-03-11**: Updated flagship core strategy tiles to white cards and removed corner numbering.
+- **2026-03-11**: Added SEO metadata (descriptions, canonical URLs, OG/Twitter tags), structured data, trust strip near the hero, cleaned mobile nav duplication, and generated sitemap.xml/robots.txt.
 
 
 
