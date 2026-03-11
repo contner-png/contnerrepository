@@ -70,6 +70,7 @@ Recreation of the "Cincinnati Chiropractic & Cincinnati Longevity" website with 
 - **Adding New Pages**: When adding a new treatment or protocol, use the `vagus-nerve-stimulation.html` or `shockwave-therapy.html` as templates to maintain the hero aesthetic.
 - **Header/Footer Updates**: Always update the master versions in `index.html` or the standalone text files, then run `python3 sync_layout.py` to update the entire site.
 - **Image Management**: Ensure all treatment images are placed in `/images/treatments/` and use the `object-contain` class within the white frames to prevent clipping of clinical diagrams.
+- **Mobile Layout (Homepage)**: Mobile-only spacing and typography tweaks live in `index.html` for the hero, Cincinnati Legacy, and Flagships cards. Preserve the `sm:` breakpoints when adjusting desktop layout.
 
 ---
 
