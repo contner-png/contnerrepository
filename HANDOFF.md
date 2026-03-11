@@ -73,6 +73,12 @@ Recreation of the "Cincinnati Chiropractic & Cincinnati Longevity" website with 
 - **Mobile Layout (Homepage)**: Mobile-only spacing and typography tweaks live in `index.html` for the hero, Cincinnati Legacy, and Flagships cards. Preserve the `sm:` breakpoints when adjusting desktop layout.
 
 ---
+## **7. Recent Updates**
+- **2026-03-11**: Tuned homepage hero badge spacing and added extra margin between “Dr. Andrew Limle” and “Official Team Chiropractor” in the Cincinnati Legacy section.
+
+---
+
+
 
 **Status**: Active development.
 **Branch**: `main`
