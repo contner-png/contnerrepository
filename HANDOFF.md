@@ -76,6 +76,8 @@ Recreation of the "Cincinnati Chiropractic & Cincinnati Longevity" website with 
 ## **7. Recent Updates**
 - **2026-03-11**: Tuned homepage hero badge spacing and added extra margin between “Dr. Andrew Limle” and “Official Team Chiropractor” in the Cincinnati Legacy section.
 - **2026-03-11**: Switched the Performance Continuum section background to clinical green and adjusted heading colors for contrast.
+- **2026-03-11**: Merged hero and clinical philosophy/diagnostic sections on all flagship program pages to reduce vertical scroll.
+
 
 
 ---
