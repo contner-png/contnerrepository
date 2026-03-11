@@ -56,7 +56,7 @@ Recreation of the "Cincinnati Chiropractic & Cincinnati Longevity" website with 
 - Heart Rate Variability Optimization
 - Balance, Strength, and Bone Optimization
 - Flexibility & Functional Mobility
-- Golf Optimization
+- Golf Performance
 - Longevity & Healthspan
 
 ---
@@ -86,6 +86,8 @@ Recreation of the "Cincinnati Chiropractic & Cincinnati Longevity" website with 
 - **2026-03-11**: Renamed specialized protocols (Chronic Fatigue & Long Covid, Heart Rate Variability Optimization) and added new Fibromyalgia Care + Flexibility & Functional Mobility pages; updated homepage bento grids, navigation, and contact form options.
 - **2026-03-11**: Swapped homepage order so Specialized Protocols appear before the Performance Continuum.
 - **2026-03-11**: Renamed Flexibility & Mobility protocol to Flexibility & Functional Mobility across navigation, program metadata, and schema.
+- **2026-03-11**: Renamed Golf Optimization to Golf Performance across navigation, tiles, and program metadata.
+
 
 
 - **2026-03-11**: Refreshed Cincinnati-focused SEO meta descriptions/JSON-LD (mitochondria + diabetes in cardiometabolic, heart rate variability spelled out, cold laser naming, golf swing speed/distance) and regenerated sitemap.xml after removing deprecated pages.
