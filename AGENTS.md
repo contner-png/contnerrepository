@@ -3,7 +3,9 @@
 ## Project Identity
 - **Goal**: Premium "Technical Blueprint" clinical website for Dr. Limle.
 - **Authority**: Official chiropractor for Bengals and Cyclones.
-- **Hierarchy**: 4 Flagships, 8 Specialized Protocols.
+- **Hierarchy**: 4 Flagships, 10 Specialized Protocols.
+- **Protocol Pages**: Renamed key files to `chronic-fatigue-long-covid.html`, `heart-rate-variability-optimization.html`, and `balance-strength-bone-optimization.html`; added `fibromyalgia-care.html` and `flexibility-mobility-optimization.html`.
+
 
 ## Technical Patterns
 - **Tailwind CSS**: Core styling via CDN.

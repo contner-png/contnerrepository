@@ -47,14 +47,16 @@ Recreation of the "Cincinnati Chiropractic & Cincinnati Longevity" website with 
 3. Personalized Medicine
 4. Cincinnati Longevity
 
-### **Tier 2: Specialized Protocols (8)**
+### **Tier 2: Specialized Protocols (10)**
 - Neuropathy Care
 - Cardiometabolic Repair
-- Bio-Energy Recovery
+- Chronic Fatigue & Long Covid
+- Fibromyalgia Care
 - Sleep Optimization
+- Heart Rate Variability Optimization
 - Balance, Strength, and Bone Optimization
+- Flexibility & Mobility Optimization
 - Golf Optimization
-- HRV Optimization
 - Longevity & Healthspan
 
 ---
@@ -81,6 +83,11 @@ Recreation of the "Cincinnati Chiropractic & Cincinnati Longevity" website with 
 - **2026-03-11**: Renamed the homepage Cincinnati Longevity references to "Longevity Care" in the flagship tile and related section copy.
 - **2026-03-11**: Rebuilt the Cincinnati Longevity flagship hero into the standard two-column flagship layout with green highlight tile styling.
 - **2026-03-11**: Added longevity-specific "Our Core Strategies" and "What We Treat & Optimize" sections to the Longevity Care flagship page.
+- **2026-03-11**: Renamed specialized protocols (Chronic Fatigue & Long Covid, Heart Rate Variability Optimization) and added new Fibromyalgia Care + Flexibility & Mobility Optimization pages; updated homepage bento grids, navigation, and contact form options.
+- **2026-03-11**: Swapped homepage order so Specialized Protocols appear before the Performance Continuum.
+
+- **2026-03-11**: Refreshed Cincinnati-focused SEO meta descriptions/JSON-LD (mitochondria + diabetes in cardiometabolic, heart rate variability spelled out, cold laser naming, golf swing speed/distance) and regenerated sitemap.xml after removing deprecated pages.
+
 - **2026-03-11**: Updated flagship core strategy tiles to white cards and removed corner numbering.
 - **2026-03-11**: Added SEO metadata (descriptions, canonical URLs, OG/Twitter tags), structured data, trust strip near the hero, cleaned mobile nav duplication, and generated sitemap.xml/robots.txt.
 
