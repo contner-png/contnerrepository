@@ -15,7 +15,7 @@
                             blue: '#0047AB',
                             green: '#22C55E',
                             orange: '#FB4F14',
-                            charcoal: '#050505',
+                            charcoal: '#333333',
                             gray: '#F9FAFB'
                         }
                     },
@@ -28,6 +28,10 @@
         }
     </script>
     <style>
+        .blueprint-dot {
+            background-image: radial-gradient(#0047AB 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
         .blueprint-bg {
             background-color: #003399;
             background-image: 
@@ -222,54 +226,43 @@
     </header>
 
     <main>
-        <!-- Re-Designed Hero Section + Clinical Reality -->
-        <section class="relative pt-28 pb-24 overflow-hidden blueprint-bg">
-            <!-- Decorative technical overlay -->
-            <div class="absolute inset-0 pointer-events-none opacity-10">
-                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <pattern id="smallGrid" width="20" height="20" patternUnits="userSpaceOnUse">
-                            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="white" stroke-width="0.5"/>
-                        </pattern>
-                    </defs>
-                    <rect width="100%" height="100%" fill="url(#smallGrid)" />
-                </svg>
-            </div>
-            
+        <!-- Hero Header + Clinical Philosophy -->
+        <section class="relative pt-28 pb-24 overflow-hidden bg-clinical-gray">
+            <div class="absolute inset-0 opacity-10 blueprint-dot"></div>
             <div class="container mx-auto px-6 relative z-10">
                 <div class="grid lg:grid-cols-2 gap-16 xl:gap-20 items-center">
-                    <div class="space-y-10 text-left">
-                        <div class="inline-flex items-center px-5 py-2 bg-clinical-green/20 text-clinical-green text-[10px] font-black uppercase tracking-[0.5em] rounded-full border border-clinical-green/30 backdrop-blur-sm">
-                            Biological Age Optimization
+                    <div class="max-w-2xl">
+                        <div class="inline-flex items-center px-4 py-2 bg-clinical-blue text-white text-[10px] font-black uppercase tracking-[0.4em] mb-8 rounded-sm shadow-lg">
+                            Foundational Pillar
                         </div>
-                        <h1 class="text-6xl lg:text-8xl font-display font-bold leading-none italic tracking-tighter text-white drop-shadow-2xl">
+                        <h1 class="text-6xl lg:text-8xl font-display font-bold leading-none italic tracking-tighter text-clinical-blue mb-10">
                             Advanced Longevity Protocol
                         </h1>
-                        <div class="w-24 h-1 bg-clinical-orange rounded-full"></div>
-                        <p class="text-xl lg:text-3xl text-blue-50 font-light max-w-2xl leading-relaxed italic opacity-90">
-                            Precision engineering for healthspan.
-                        </p>
+                        <div class="max-w-3xl border-l-4 border-clinical-green pl-8">
+                            <p class="text-2xl lg:text-3xl text-gray-500 font-light leading-relaxed italic">
+                                Precision engineering for healthspan.
+                            </p>
+                        </div>
+                        <div class="mt-12">
+                            <a href="/contact.html" class="px-12 py-6 bg-clinical-blue text-white rounded-full font-bold text-xl hover:bg-blue-700 transition-all shadow-2xl inline-block">
+                                Request Appointment
+                            </a>
+                        </div>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-md p-10 sm:p-12 rounded-[3rem] border border-white/20 shadow-2xl">
+                    <div class="bg-clinical-green p-10 sm:p-12 rounded-[3rem] shadow-2xl border border-clinical-green/40">
                         <div class="space-y-8">
-                            <div>
-                                <h2 class="text-xs font-black text-clinical-green uppercase tracking-[0.6em] mb-4">Foundational Diagnostic</h2>
-                                <h3 class="text-3xl font-display font-bold italic text-white">The Clinical Reality</h3>
-                            </div>
-                            <p class="text-base sm:text-lg text-blue-100 leading-relaxed font-light border-l-4 border-clinical-orange pl-6">
+                            <h2 class="text-3xl lg:text-4xl font-display font-bold italic text-white leading-tight">A New Standard of Care</h2>
+                            <p class="text-lg text-white/90 leading-relaxed font-light">
                                 Medicine 3.0 moves beyond the disease model. We focus on the ultimate trajectory of your healthspan, utilizing advanced cardiopulmonary diagnostics.
                             </p>
-                            <div class="relative bg-[#0f172a] aspect-video rounded-[2.5rem] border border-white/10 flex items-center justify-center overflow-hidden shadow-2xl">
-                                <div class="absolute inset-0 blueprint-grid opacity-20"></div>
-                                <span class="text-[10px] font-black text-clinical-blue uppercase tracking-[0.5em] opacity-40 italic">Structural Neural Mapping</span>
+                            <div class="bg-white/10 aspect-[4/3] rounded-[2.5rem] border-2 border-dashed border-white/30 flex items-center justify-center relative overflow-hidden">
+                                <div class="absolute inset-0 blueprint-dot opacity-10"></div>
+                                <span class="text-[10px] font-black text-white/70 uppercase tracking-[0.5em] italic">STRUCTURAL NEURAL MAPPING</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Bottom Fade -->
-            <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
         </section>
 
         <!-- The Arsenal -->

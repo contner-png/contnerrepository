@@ -79,6 +79,7 @@ Recreation of the "Cincinnati Chiropractic & Cincinnati Longevity" website with 
 - **2026-03-11**: Merged hero and clinical philosophy/diagnostic sections on all flagship program pages to reduce vertical scroll.
 - **2026-03-11**: Applied clinical green background styling to the "A New Standard of Care" tiles on flagship pages.
 - **2026-03-11**: Renamed the homepage Cincinnati Longevity references to "Longevity Care" in the flagship tile and related section copy.
+- **2026-03-11**: Rebuilt the Cincinnati Longevity flagship hero into the standard two-column flagship layout with green highlight tile styling.
 
 
 
