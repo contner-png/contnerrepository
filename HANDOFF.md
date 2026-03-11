@@ -33,8 +33,8 @@ Recreation of the "Cincinnati Chiropractic & Cincinnati Longevity" website with 
 ---
 ## **3.5. Local Preview / Rehost**
 - **Command**: `python3 -m http.server 12000 --directory /workspace/project/contnerrepository`
-- **Primary Preview URL**: https://work-1-kghvkbqnxxlvkauq.prod-runtime.all-hands.dev
-- **Backup Preview URL**: https://work-2-kghvkbqnxxlvkauq.prod-runtime.all-hands.dev
+- **Primary Preview URL**: https://work-1-euiuochaancxlqpb.prod-runtime.all-hands.dev
+- **Backup Preview URL**: https://work-2-euiuochaancxlqpb.prod-runtime.all-hands.dev
 - If port 12000 is already in use, switch to 12001 and use the backup URL.
 
 ---
