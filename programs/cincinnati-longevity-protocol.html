@@ -43,6 +43,27 @@
             background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
             position: relative;
         }
+        .strategy-module {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .strategy-module:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #22C55E;
+            transform: scale(1.02);
+        }
+        .condition-tag {
+            background: white;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        .condition-tag:hover {
+            border-color: #0047AB;
+            color: #0047AB;
+            background: #f0f7ff;
+        }
         .bento-stack-item {
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid rgba(255, 255, 255, 0.08);
@@ -243,6 +264,8 @@
                                 Precision engineering for healthspan.
                             </p>
                         </div>
+
+
                         <div class="mt-12">
                             <a href="/contact.html" class="px-12 py-6 bg-clinical-blue text-white rounded-full font-bold text-xl hover:bg-blue-700 transition-all shadow-2xl inline-block">
                                 Request Appointment
@@ -264,6 +287,114 @@
                 </div>
             </div>
         </section>
+
+        <!-- Core Treatment Strategies: Re-Designed with Blueprint BG -->
+        <section class="py-32 blueprint-bg relative overflow-hidden">
+            <!-- Technical Watermark -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03] pointer-events-none">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+            </div>
+            
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-3xl mb-20 text-left">
+                    <h2 class="text-xs font-black text-clinical-green uppercase tracking-[0.6em] mb-4">The Methodology</h2>
+                    <h3 class="text-5xl lg:text-7xl font-display font-bold italic tracking-tight leading-none text-white">Our Core Strategies</h3>
+                </div>
+                <div class="grid lg:grid-cols-3 gap-6">
+                    <div class="strategy-module p-12 rounded-[3rem] flex flex-col justify-between h-full relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 p-8">
+                            <span class="text-4xl font-display font-bold text-white/5 italic">001</span>
+                        </div>
+                        <div class="space-y-8 relative z-10">
+                            <div class="w-12 h-1 bg-clinical-green group-hover:w-24 transition-all duration-500"></div>
+                            <div>
+                                <h4 class="text-3xl font-display font-bold text-white italic leading-tight mb-6">Biomarker Intelligence</h4>
+                                <p class="text-blue-50 text-base font-light leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Comprehensive panels and diagnostics to map biological age, metabolic risk, and cellular recovery capacity.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="strategy-module p-12 rounded-[3rem] flex flex-col justify-between h-full relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 p-8">
+                            <span class="text-4xl font-display font-bold text-white/5 italic">002</span>
+                        </div>
+                        <div class="space-y-8 relative z-10">
+                            <div class="w-12 h-1 bg-clinical-green group-hover:w-24 transition-all duration-500"></div>
+                            <div>
+                                <h4 class="text-3xl font-display font-bold text-white italic leading-tight mb-6">Mitochondrial Optimization</h4>
+                                <p class="text-blue-50 text-base font-light leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Targeted protocols to elevate VO2 Max, enhance ATP output, and restore cellular energy resilience.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="strategy-module p-12 rounded-[3rem] flex flex-col justify-between h-full relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 p-8">
+                            <span class="text-4xl font-display font-bold text-white/5 italic">003</span>
+                        </div>
+                        <div class="space-y-8 relative z-10">
+                            <div class="w-12 h-1 bg-clinical-green group-hover:w-24 transition-all duration-500"></div>
+                            <div>
+                                <h4 class="text-3xl font-display font-bold text-white italic leading-tight mb-6">Metabolic & Hormonal Reset</h4>
+                                <p class="text-blue-50 text-base font-light leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Precision nutrition, recovery, and hormone strategy to stabilize glucose control and protect long-term healthspan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conditions We Treat -->
+        <section class="py-32 bg-white">
+            <div class="container mx-auto px-6 text-left">
+                <div class="flex flex-col lg:flex-row justify-between items-end mb-20 gap-8">
+                    <div class="max-w-2xl">
+                        <h2 class="text-4xl lg:text-6xl font-display font-bold italic text-clinical-charcoal tracking-tight leading-none">What We Treat & Optimize</h2>
+                    </div>
+                    <p class="text-gray-400 text-lg font-light italic">Precision longevity optimization targets for whole-body resilience.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="condition-tag p-6 rounded-2xl font-bold text-clinical-charcoal flex items-center gap-4">
+                        <div class="w-2 h-2 rounded-full bg-clinical-green"></div>
+                        Cardiometabolic Risk
+                    </div>
+                    <div class="condition-tag p-6 rounded-2xl font-bold text-clinical-charcoal flex items-center gap-4">
+                        <div class="w-2 h-2 rounded-full bg-clinical-green"></div>
+                        Insulin Resistance
+                    </div>
+                    <div class="condition-tag p-6 rounded-2xl font-bold text-clinical-charcoal flex items-center gap-4">
+                        <div class="w-2 h-2 rounded-full bg-clinical-green"></div>
+                        Inflammation Load
+                    </div>
+                    <div class="condition-tag p-6 rounded-2xl font-bold text-clinical-charcoal flex items-center gap-4">
+                        <div class="w-2 h-2 rounded-full bg-clinical-green"></div>
+                        Hormone Optimization
+                    </div>
+                    <div class="condition-tag p-6 rounded-2xl font-bold text-clinical-charcoal flex items-center gap-4">
+                        <div class="w-2 h-2 rounded-full bg-clinical-green"></div>
+                        Mitochondrial Decline
+                    </div>
+                    <div class="condition-tag p-6 rounded-2xl font-bold text-clinical-charcoal flex items-center gap-4">
+                        <div class="w-2 h-2 rounded-full bg-clinical-green"></div>
+                        VO2 Max & Aerobic Capacity
+                    </div>
+                    <div class="condition-tag p-6 rounded-2xl font-bold text-clinical-charcoal flex items-center gap-4">
+                        <div class="w-2 h-2 rounded-full bg-clinical-green"></div>
+                        Cognitive Performance
+                    </div>
+                    <div class="condition-tag p-6 rounded-2xl font-bold text-clinical-charcoal flex items-center gap-4">
+                        <div class="w-2 h-2 rounded-full bg-clinical-green"></div>
+                        Sleep Architecture
+                    </div>
+                    <div class="condition-tag p-6 rounded-2xl font-bold text-clinical-charcoal flex items-center gap-4">
+                        <div class="w-2 h-2 rounded-full bg-clinical-green"></div>
+                        Bone Density & Sarcopenia
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <!-- The Arsenal -->
         <section class="py-32 bg-[#020617] text-white relative overflow-hidden">
