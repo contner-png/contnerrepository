@@ -78,6 +78,8 @@ Recreation of the "Cincinnati Chiropractic & Cincinnati Longevity" website with 
 - **2026-03-11**: Switched the Performance Continuum section background to clinical green and adjusted heading colors for contrast.
 - **2026-03-11**: Merged hero and clinical philosophy/diagnostic sections on all flagship program pages to reduce vertical scroll.
 - **2026-03-11**: Applied clinical green background styling to the "A New Standard of Care" tiles on flagship pages.
+- **2026-03-11**: Renamed the homepage Cincinnati Longevity references to "Longevity Care" in the flagship tile and related section copy.
+
 
 
 
