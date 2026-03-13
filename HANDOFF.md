@@ -94,6 +94,7 @@ Recreation of the "Cincinnati Chiropractic & Cincinnati Longevity" website with 
 - **2026-03-11**: Renamed Flexibility & Mobility protocol to Flexibility & Functional Mobility across navigation, program metadata, and schema.
 - **2026-03-11**: Renamed Golf Optimization to Golf Performance across navigation, tiles, and program metadata.
 - **2026-03-11**: Reworked the Specialized Protocols homepage section into two structured columns (Chronic Management + Performance & Structure) to replace the staggered multi-row bento layout.
+- **2026-03-11**: Added a homepage Meet the Team preview section with hover bios and six placeholder portraits.
 - **2026-03-11**: Removed temporary flagship pillar graphics and restored placeholder labels.
 
 - **2026-03-11**: Refreshed Cincinnati-focused SEO meta descriptions/JSON-LD (mitochondria + diabetes in cardiometabolic, heart rate variability spelled out, cold laser naming, golf swing speed/distance) and regenerated sitemap.xml after removing deprecated pages.
