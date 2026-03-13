@@ -1,0 +1,22 @@
+<svg width="800" height="1000" viewBox="0 0 800 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-andrew-limle" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1F3A"/>
+      <stop offset="100%" stop-color="#0B0F1D"/>
+    </linearGradient>
+    <radialGradient id="glow-andrew-limle" cx="50%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#22C55E" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#22C55E" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid-andrew-limle" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="white" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg-andrew-limle)"/>
+  <rect width="800" height="1000" fill="url(#grid-andrew-limle)"/>
+  <rect width="800" height="1000" fill="url(#glow-andrew-limle)"/>
+  <circle cx="400" cy="330" r="80" stroke="white" stroke-opacity="0.6" stroke-width="5"/>
+  <circle cx="400" cy="400" r="170" stroke="white" stroke-opacity="0.3" stroke-width="3"/>
+  <path d="M250 610c30-140 120-210 150-210s120 70 150 210" stroke="white" stroke-opacity="0.5" stroke-width="5" fill="none"/>
+  <text x="400" y="780" text-anchor="middle" font-family="'Inter', 'Arial', sans-serif" font-size="64" letter-spacing="8" fill="white" fill-opacity="0.75">AL</text>
+</svg>

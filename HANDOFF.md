@@ -33,8 +33,8 @@ Recreation of the "Cincinnati Chiropractic & Cincinnati Longevity" website with 
 ---
 ## **3.5. Local Preview / Rehost**
 - **Command**: `python3 -m http.server 12000 --directory /workspace/project/contnerrepository`
-- **Primary Preview URL**: https://work-1-euiuochaancxlqpb.prod-runtime.all-hands.dev
-- **Backup Preview URL**: https://work-2-euiuochaancxlqpb.prod-runtime.all-hands.dev
+- **Primary Preview URL**: https://work-1-dvjphahubgsyyznn.prod-runtime.all-hands.dev
+- **Backup Preview URL**: https://work-2-dvjphahubgsyyznn.prod-runtime.all-hands.dev
 - If port 12000 is already in use, switch to 12001 and use the backup URL.
 
 ---
@@ -76,6 +76,12 @@ Recreation of the "Cincinnati Chiropractic & Cincinnati Longevity" website with 
 
 ---
 ## **7. Recent Updates**
+- **2026-03-11**: Refreshed global footer layout with tightened spacing, updated clinic hours, and same-day evaluation callout across all pages.
+- **2026-03-11**: Updated footer with official Cincinnati Chiropractic logo, relocated CTA into a full-width callout band, and added a richer gradient/blueprint glow background.
+
+- **2026-03-11**: Added Patient Resources to desktop nav, added Red Light Therapy to treatments menus, and expanded the footer into a four-column navigation hub with blueprint overlay and updated social placeholders.
+
+
 - **2026-03-11**: Tuned homepage hero badge spacing and added extra margin between “Dr. Andrew Limle” and “Official Team Chiropractor” in the Cincinnati Legacy section.
 - **2026-03-11**: Switched the Performance Continuum section background to clinical green and adjusted heading colors for contrast.
 - **2026-03-11**: Merged hero and clinical philosophy/diagnostic sections on all flagship program pages to reduce vertical scroll.
@@ -88,9 +94,7 @@ Recreation of the "Cincinnati Chiropractic & Cincinnati Longevity" website with 
 - **2026-03-11**: Renamed Flexibility & Mobility protocol to Flexibility & Functional Mobility across navigation, program metadata, and schema.
 - **2026-03-11**: Renamed Golf Optimization to Golf Performance across navigation, tiles, and program metadata.
 - **2026-03-11**: Reworked the Specialized Protocols homepage section into two structured columns (Chronic Management + Performance & Structure) to replace the staggered multi-row bento layout.
-
-
-
+- **2026-03-11**: Removed temporary flagship pillar graphics and restored placeholder labels.
 
 - **2026-03-11**: Refreshed Cincinnati-focused SEO meta descriptions/JSON-LD (mitochondria + diabetes in cardiometabolic, heart rate variability spelled out, cold laser naming, golf swing speed/distance) and regenerated sitemap.xml after removing deprecated pages.
 
