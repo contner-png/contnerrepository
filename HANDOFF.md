@@ -110,6 +110,7 @@ Recreation of the "Cincinnati Chiropractic & Cincinnati Longevity" website with 
 - **2026-03-13**: Removed protocol graphics from the homepage bento tiles to maintain exclusivity for specialized landing pages.
 
 - **2026-03-16**: Updated Dr. Alex Contner's professional bio and transitioned headshot to PNG format (`alexcontnerheadshot.png`) across homepage and team page clinical rosters.
+- **2026-03-16**: Enhanced VO2 Max Testing page with PNOE metabolic cart specifications, submaximal testing protocols, and a detailed results matrix (RMR, Biological Age, Metabolic Efficiency).
 
 
 
