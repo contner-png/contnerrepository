@@ -75,6 +75,38 @@
             color: #0047AB;
             background: #f0f7ff;
         }
+        .modern-clinical-frame {
+            position: relative;
+            background: rgba(2, 6, 23, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1.5rem;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 40px -15px rgba(0,0,0,0.5);
+        }
+        .modern-clinical-frame::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 3px solid transparent;
+            border-radius: 1.5rem;
+            background: linear-gradient(135deg, #0047AB, transparent, #22C55E) border-box;
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+            opacity: 0.8;
+        }
+        .flagship-featured-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: brightness(1.1) contrast(1.1);
+        }
+        .frame-wide { aspect-ratio: 2816 / 1536; }
+        .frame-square { aspect-ratio: 1 / 1; }
     </style>
     <script type="application/ld+json">
     {
@@ -114,7 +146,7 @@
             </div>
             
             <div class="hidden lg:flex items-center space-x-8 text-sm font-medium">
-                <a href="/index.html" class="nav-link text-clinical-blue font-bold">Home</a>
+                <a href="/index.html" class="nav-link text-clinical-blue font-bold uppercase">HOME</a>
                 
                 <div class="relative group">
                     <button class="flex items-center space-x-1 nav-link py-2 uppercase tracking-widest font-bold text-xs text-clinical-charcoal">
@@ -279,9 +311,8 @@
                             <p class="text-lg text-white/90 leading-relaxed font-light">
                                 The traditional medical system operates on "Medicine 2.0"—a reactive model that waits until chronic disease strikes. We operate strictly on Medicine 3.0. True longevity care must be radically proactive. By establishing an uncompromising, objective baseline of your biological age and cellular efficiency, we engineer a customized data-driven blueprint.
                             </p>
-                            <div class="bg-white/10 aspect-[4/3] rounded-[2.5rem] border-2 border-dashed border-white/30 flex items-center justify-center relative overflow-hidden">
-                                <div class="absolute inset-0 blueprint-dot opacity-10"></div>
-                                <span class="text-[10px] font-black text-white/70 uppercase tracking-[0.5em] italic">TECHNICAL SCHEMATIC DATA</span>
+                            <div class="modern-clinical-frame frame-square">
+                                <img src="/images/personalizedmed.png" alt="Personalized Medicine Clinical Graphic" class="flagship-featured-image">
                             </div>
                         </div>
                     </div>

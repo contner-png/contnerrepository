@@ -80,7 +80,7 @@
             </div>
             
             <div class="hidden lg:flex items-center space-x-8 text-sm font-medium">
-                <a href="/index.html" class="nav-link text-clinical-blue font-bold">Home</a>
+                <a href="/index.html" class="nav-link text-clinical-blue font-bold uppercase">HOME</a>
                 
                 <div class="relative group">
                     <button class="flex items-center space-x-1 nav-link py-2 uppercase tracking-widest font-bold text-xs text-clinical-charcoal">
@@ -229,74 +229,142 @@
     </script>
 
     <main>
-        <!-- Program Hero -->
-        <section class="py-24 bg-clinical-gray relative overflow-hidden">
-            <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        <!-- Re-Designed Hero Section: Unique Blueprint Aesthetic -->
+        <section class="relative pt-32 pb-24 overflow-hidden blueprint-bg text-center">
+            <!-- Decorative technical overlay -->
+            <div class="absolute inset-0 pointer-events-none opacity-10">
+                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="smallGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+                            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="white" stroke-width="0.5"/>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#smallGrid)" />
+                </svg>
+            </div>
+            
             <div class="container mx-auto px-6 relative z-10">
-                <div class="flex flex-col lg:flex-row items-center gap-16">
-                    <div class="lg:w-1/2">
-                        <div class="inline-flex items-center px-3 py-1 rounded-full bg-clinical-blue/10 text-clinical-blue text-xs font-bold tracking-widest uppercase mb-6">
-                            Clinical Protocol
-                        </div>
-                        <h1 class="text-5xl lg:text-7xl font-display font-bold mb-8 leading-tight">
-                            Balance, Strength, and Bone Optimization
-                        </h1>
-                        <div class="prose prose-lg text-gray-600 leading-relaxed max-w-xl">
-                            <p class="text-2xl font-light italic">
-                                Optimizing Wolff's Law to build robust bone and muscle density.
-                            </p>
-                        </div>
-                        <div class="mt-12 flex flex-col sm:flex-row items-center gap-6">
-                            <a href="/contact.html" class="px-8 py-4 bg-clinical-blue text-white rounded-full font-bold text-lg hover:bg-blue-700 transition-all shadow-xl w-full sm:w-auto text-center">
-                                Request Appointment
-                            </a>
-                        </div>
+                <div class="max-w-5xl mx-auto space-y-10">
+                    <div class="inline-flex items-center px-5 py-2 bg-clinical-green/20 text-clinical-green text-[10px] font-black uppercase tracking-[0.5em] rounded-full border border-clinical-green/30 backdrop-blur-sm">
+                        Structural Optimization Protocol
                     </div>
-                    <div class="lg:w-1/2 relative">
-                        <div class="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white">
-                            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Balance, Strength, and Bone Optimization" class="w-full h-full object-cover">
+                    <h1 class="text-6xl lg:text-9xl font-display font-bold leading-none italic tracking-tighter text-white drop-shadow-2xl">
+                        Balance & Bone
+                    </h1>
+                    <div class="w-24 h-1 bg-clinical-orange mx-auto rounded-full"></div>
+                    <p class="text-xl lg:text-3xl text-blue-50 font-light max-w-3xl mx-auto leading-relaxed italic opacity-90">
+                        Optimizing Wolff's Law to build robust bone and muscle density.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Bottom Fade -->
+            <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
+        </section>
+
+        <!-- Clinical Reality -->
+        <section class="py-24 bg-white relative">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-[1fr_1.1fr] gap-20 items-center">
+                    <div class="space-y-10 text-left">
+                        <div>
+                            <h2 class="text-xs font-black text-clinical-blue uppercase tracking-[0.6em] mb-6">Osteogenic Loading</h2>
+                            <h3 class="text-4xl font-display font-bold italic text-clinical-charcoal">The Clinical Reality</h3>
+                        </div>
+                        <div class="text-xl lg:text-2xl text-gray-600 leading-relaxed font-light border-l-4 border-clinical-orange pl-8 py-2">
+                            Aging is often defined by the loss of structural tissue. We utilize targeted PEMF and heavy load protocols to stimulate osteogenesis and preserve fast-twitch fibers.
+                        </div>
+                        <p class="text-gray-500 leading-relaxed max-w-xl font-light">
+                            Our strategy builds a physical chassis capable of high performance for decades, protecting against the structural deficits of the aging process.
+                        </p>
+                    </div>
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-gradient-to-tr from-clinical-orange/20 to-clinical-blue/20 rounded-[3rem] blur-2xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="modern-clinical-frame frame-wide">
+                            <!-- Placeholder image or generic bone graphic if available -->
+                            <div class="text-white/20 font-display font-black text-4xl italic uppercase">Structural Mapping</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Strategy Section -->
-        <section class="py-24 bg-white relative">
-            <div class="container mx-auto px-6">
-                <div class="grid lg:grid-cols-12 gap-16">
-                    <div class="lg:col-span-8">
-                        <h3 class="text-4xl font-display font-bold mb-12">Clinical <span class="text-clinical-blue italic text-3xl">Strategy</span></h3>
-                        
-                        <div class="grid md:grid-cols-2 gap-8">
-                            <div class="p-8 bg-clinical-gray rounded-3xl border border-gray-100">
-                                <h4 class="text-xl font-bold mb-4">Mechanism</h4>
-                                <p class="text-gray-600 text-sm leading-relaxed">Aging is often defined by the loss of structural tissue. We utilize targeted PEMF and heavy load protocols to stimulate osteogenesis and preserve fast-twitch fibers.</p>
-                            </div>
-                            <div class="p-8 bg-clinical-gray rounded-3xl border border-gray-100">
-                                <h4 class="text-xl font-bold mb-4">Evidence</h4>
-                                <p class="text-gray-600 text-sm leading-relaxed">Our strategy builds a physical chassis capable of high performance for decades, protecting against the structural deficits of the aging process.</p>
+        <!-- The Arsenal -->
+        <section class="py-32 bg-[#020617] text-white relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 blueprint-grid"></div>
+            <div class="absolute -top-20 -left-20 text-[200px] font-black text-white/[0.02] pointer-events-none select-none italic">STACK</div>
+            
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="flex flex-col lg:flex-row justify-between items-end mb-20 gap-8 text-left">
+                    <div class="max-w-2xl">
+                        <h2 class="text-xs font-black text-clinical-orange uppercase tracking-[0.6em] mb-4">Tactical Arsenal</h2>
+                        <h3 class="text-5xl lg:text-7xl font-display font-bold italic tracking-tight text-white leading-none">The Clinical Stack</h3>
+                    </div>
+                    <p class="text-gray-400 max-w-sm text-sm font-light leading-relaxed">Integrated technical modalities synchronized for rapid physiological adaptation and structural repair.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-4">
+                    <a href="/programs/cincinnati-chiropractic-care.html" class="bento-stack-item group p-10 rounded-[3rem] flex flex-col justify-between h-full lg:col-span-4 md:col-span-6">
+                        <div class="flex justify-end items-start mb-8">
+                            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="lg:col-span-4">
-                        <div class="sticky top-32 p-8 bg-clinical-blue rounded-[2.5rem] text-white shadow-2xl">
-                            <h4 class="text-2xl font-display font-bold mb-8">Technology Stack</h4>
-                            <div class="space-y-4">
-                                                                <a href="/treatments/pemf-therapy.html" class="flex items-center justify-between p-4 bg-white/10 rounded-2xl hover:bg-white/20 transition-colors group">
-                                    <span class="font-bold">PEMF Osteogenesis</span>
-                                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                                </a>
-                                <a href="/treatments/longevity-blood-panels.html" class="flex items-center justify-between p-4 bg-white/10 rounded-2xl hover:bg-white/20 transition-colors group">
-                                    <span class="font-bold">Metabolic Panels</span>
-                                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                                </a>
-                                <a href="/treatments/shockwave-therapy.html" class="flex items-center justify-between p-4 bg-white/10 rounded-2xl hover:bg-white/20 transition-colors group">
-                                    <span class="font-bold">Tissue Regeneration</span>
-                                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                                </a>
+                        <div>
+                            <h4 class="text-2xl font-display font-bold text-white group-hover:text-clinical-orange transition-colors italic mb-4 leading-tight tracking-tight">Precision Chiropractic</h4>
+                            <p class="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-200 transition-colors">Restore joint kinematics to ensure even weight distribution and loading.</p>
+                        </div>
+                    </a>
 
+                    <a href="/programs/integrative-physical-therapy.html" class="bento-stack-item group p-10 rounded-[3rem] flex flex-col justify-between h-full lg:col-span-4 md:col-span-6">
+                        <div class="flex justify-end items-start mb-8">
+                            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-display font-bold text-white group-hover:text-clinical-orange transition-colors italic mb-4 leading-tight tracking-tight">Physical Therapy</h4>
+                            <p class="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-200 transition-colors">Progressive loading protocols and proprioceptive balance training.</p>
+                        </div>
+                    </a>
+
+                    <a href="/programs/personalized-medicine-cincinnati.html" class="bento-stack-item group p-10 rounded-[3rem] flex flex-col justify-between h-full lg:col-span-4 md:col-span-6">
+                        <div class="flex justify-end items-start mb-8">
+                            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-display font-bold text-white group-hover:text-clinical-orange transition-colors italic mb-4 leading-tight tracking-tight">Medical Services</h4>
+                            <p class="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-200 transition-colors">Hormonal optimization and bone-density biomarker monitoring.</p>
+                        </div>
+                    </a>
+
+                    <a href="/treatments/pemf-therapy.html" class="bento-stack-item group p-10 rounded-[3rem] flex flex-col justify-between h-full lg:col-span-4 md:col-span-6">
+                        <div class="flex justify-end items-start mb-8">
+                            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-display font-bold text-white group-hover:text-clinical-orange transition-colors italic mb-4 leading-tight tracking-tight">PEMF Therapy</h4>
+                            <p class="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-200 transition-colors">Electrical stimulation of osteoblasts for bone density enhancement.</p>
+                        </div>
+                    </a>
+                    <div class="bento-stack-item p-10 rounded-[3rem] lg:col-span-12 bg-white/[0.03] border border-white/10 relative overflow-hidden group">
+                        <div class="absolute -top-24 -right-24 w-64 h-64 bg-clinical-orange/5 rounded-full blur-3xl group-hover:bg-clinical-orange/10 transition-colors"></div>
+                        <div class="relative z-10 flex flex-col lg:flex-row items-center gap-10">
+                            <div class="shrink-0 w-16 h-16 rounded-2xl bg-clinical-orange/10 flex items-center justify-center">
+                                <svg class="w-8 h-8 text-clinical-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                            </div>
+                            <div class="space-y-4">
+                                <p class="text-xl lg:text-2xl leading-relaxed font-light italic text-gray-300">
+                                    "Our multimodal approach is highly personalized. The therapies listed above are powerful tools in our arsenal, but we custom-engineer each plan based on your unique diagnostics."
+                                </p>
+                                <div class="flex items-center gap-4 text-[10px] font-black text-clinical-blue uppercase tracking-[0.4em]">
+                                    <span class="w-12 h-px bg-clinical-blue/40"></span>
+                                    <span>Most Major Insurers Accepted</span>
+                                </div>
                             </div>
                         </div>
                     </div>

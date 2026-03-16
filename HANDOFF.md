@@ -32,9 +32,9 @@ Recreation of the "Cincinnati Chiropractic & Cincinnati Longevity" website with 
 
 ---
 ## **3.5. Local Preview / Rehost**
-- **Command**: `python3 -m http.server 12000 --directory /workspace/project/contnerrepository`
-- **Primary Preview URL**: https://work-1-dvjphahubgsyyznn.prod-runtime.all-hands.dev
-- **Backup Preview URL**: https://work-2-dvjphahubgsyyznn.prod-runtime.all-hands.dev
+- **Command**: `pkill -f "http.server"; nohup python3 -m http.server 12000 --directory /workspace/project/contnerrepository > /workspace/project/server.log 2>&1 &`
+- **Primary Preview URL**: https://work-1-opgiuonvtishlphi.prod-runtime.all-hands.dev/
+- **Backup Preview URL**: https://work-2-opgiuonvtishlphi.prod-runtime.all-hands.dev/
 - If port 12000 is already in use, switch to 12001 and use the backup URL.
 
 ---
@@ -101,6 +101,13 @@ Recreation of the "Cincinnati Chiropractic & Cincinnati Longevity" website with 
 
 - **2026-03-11**: Updated flagship core strategy tiles to white cards and removed corner numbering.
 - **2026-03-11**: Added SEO metadata (descriptions, canonical URLs, OG/Twitter tags), structured data, trust strip near the hero, cleaned mobile nav duplication, and generated sitemap.xml/robots.txt.
+
+- **2026-03-13**: Finalized **Fibromyalgia** and **Mobility** protocol pages with high-resolution PNG assets and blueprint-aligned layouts.
+- **2026-03-13**: Replaced all flagship program graphics with new PNG images (`chiro.png`, `longevitycare.png`, etc.) and introduced `modern-clinical-frame` CSS for a dark-themed, edge-to-edge technical aesthetic.
+- **2026-03-13**: Integrated **Chiropractic**, **Physical Therapy**, and **Medical Services** into the clinical stack grid of every specialized protocol page with context-specific details.
+- **2026-03-13**: Redesigned the clinical disclaimer as an integrated full-width "meta-card" within the Arsenal grid on all protocol pages, removing it from isolated sections.
+- **2026-03-13**: Updated global navigation header: Changed "Home" link text to all-caps "**HOME**" and synced across the entire site.
+- **2026-03-13**: Removed protocol graphics from the homepage bento tiles to maintain exclusivity for specialized landing pages.
 
 
 

@@ -12,6 +12,9 @@
 - **Sync System**: Use `sync_layout.py` to propagate header/footer changes from `index.html` to all other `.html` files.
 - **Hero Animations**: High-intensity CSS/SVG animations in the home hero (infinite grid scroll, dual-axis lasers).
 - **Button Styling**: Primary CTA buttons on dark backgrounds use `bg-white` with inline `style="color: #0047AB !important;"` to ensure visibility.
+- **Modern Clinical Frame**: Class `.modern-clinical-frame` provides a dark glass background (`rgba(2, 6, 23, 0.8)`) with gradient borders for images. Use `object-fit: cover` and `aspect-ratio` to ensure graphics fill the frame.
+- **Integrated Disclaimer**: The clinical disclaimer is now a meta-card component with class `bento-stack-item lg:col-span-12` integrated directly into the `The Arsenal` grid.
+- **Header Navigation**: Primary navigation links (e.g., HOME) should be in all-caps for technical consistency.
 
 ## Tool Lessons
 - **Image Generation**: The `gemini-image_generate_image` tool does not accept a `path` argument. Always run it with only the `prompt` argument, then move the generated file using terminal commands.

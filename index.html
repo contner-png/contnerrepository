@@ -71,16 +71,49 @@
             background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
             position: relative;
         }
-        .blueprint-watermark {
+        .modern-clinical-frame {
+            position: relative;
+            background: #ffffff;
+            border: 1px solid rgba(0, 71, 171, 0.2);
+            border-radius: 1.25rem;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.1);
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .modern-clinical-frame::before {
+            content: '';
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 120%;
-            height: 120%;
-            opacity: 0.07;
-            pointer-events: none;
-            z-index: 0;
+            inset: 0;
+            border: 2px solid transparent;
+            border-radius: 1.25rem;
+            background: linear-gradient(135deg, rgba(0, 71, 171, 0.4), transparent, rgba(34, 197, 94, 0.4)) border-box;
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+            opacity: 0.5;
+        }
+        .flagship-featured-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .bento-card:hover .modern-clinical-frame {
+            border-color: rgba(0, 71, 171, 0.5);
+            box-shadow: 0 25px 50px -12px rgba(0, 71, 171, 0.2);
+            transform: translateY(-5px);
+        }
+        .bento-card:hover .flagship-featured-image {
+            transform: scale(1.05);
+        }
+        /* Specific Frame Sizes to Maximize Graphics */
+        .frame-wide { aspect-ratio: 2816 / 1536; }
+        .frame-square { aspect-ratio: 1 / 1; }
+        .blueprint-watermark {
+            display: none;
         }
         .gradient-text {
             background: linear-gradient(to right, #0047AB, #22C55E);
@@ -191,7 +224,7 @@
             </div>
             
             <div class="hidden lg:flex items-center space-x-8 text-sm font-medium">
-                <a href="/index.html" class="nav-link text-clinical-blue font-bold">Home</a>
+                <a href="/index.html" class="nav-link text-clinical-blue font-bold uppercase">HOME</a>
                 
                 <div class="relative group">
                     <button class="flex items-center space-x-1 nav-link py-2 uppercase tracking-widest font-bold text-xs text-clinical-charcoal">
@@ -571,13 +604,7 @@
 
                 <div class="grid lg:grid-cols-4 gap-6 sm:gap-8">
                     <!-- Flagship 1: Chiropractic -->
-                    <div class="group relative blueprint-bg rounded-[2.5rem] sm:rounded-[3rem] p-8 sm:p-10 transition-all duration-700 hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.5)] overflow-hidden cursor-pointer h-auto sm:h-[520px] flex flex-col gap-5 sm:gap-6 border border-white/20 bento-card">
-                        <!-- Watermark: Spine -->
-                        <svg class="blueprint-watermark" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="0.2">
-                            <path d="M12 2v20M9 5h6M8 9h8M7 13h10M8 17h8M9 21h6" stroke-linecap="round"/>
-                            <path d="M12 2l-2 2M12 2l2 2M12 22l-2-2M12 22l2-2" stroke-width="0.1"/>
-                        </svg>
-                        
+                    <div class="group relative blueprint-bg rounded-[2.5rem] sm:rounded-[3rem] p-8 sm:p-10 transition-all duration-700 hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.5)] overflow-hidden cursor-pointer h-auto sm:min-h-[400px] flex flex-col gap-5 border border-white/20 bento-card">
                         <div class="relative z-10">
                             <h4 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold mb-4 text-white group-hover:text-clinical-green transition-colors leading-tight italic">Precision Chiropractic</h4>
                             <p class="text-white text-base sm:text-[17px] leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity">
@@ -585,20 +612,14 @@
                             </p>
                         </div>
                         <div class="relative z-10 mt-auto">
-                            <a href="/programs/cincinnati-chiropractic-care.html" class="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-white text-[#0047AB] rounded-full font-bold text-xs sm:text-sm transition-all shadow-xl hover:bg-clinical-green hover:text-white group-hover:translate-y-[-4px]">
+                            <a href="/programs/cincinnati-chiropractic-care.html" class="inline-flex items-center px-6 sm:px-8 py-3 bg-white text-[#0047AB] rounded-full font-bold text-xs sm:text-sm transition-all shadow-xl hover:bg-clinical-green hover:text-white group-hover:translate-y-[-4px]">
                                 Learn More <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                             </a>
                         </div>
                     </div>
 
                     <!-- Flagship 2: Physical Therapy -->
-                    <div class="group relative blueprint-bg rounded-[2.5rem] sm:rounded-[3rem] p-8 sm:p-10 transition-all duration-700 hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.5)] overflow-hidden cursor-pointer h-auto sm:h-[520px] flex flex-col gap-5 sm:gap-6 border border-white/20 bento-card">
-                        <!-- Watermark: Muscle Fiber -->
-                        <svg class="blueprint-watermark" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="0.2">
-                            <path d="M4 6c2 0 4 2 4 6s2 6 4 6 4-2 4-6 2-6 4-6M4 18c2 0 4-2 4-6s2-6 4-6 4 2 4 6 2 6 4 6" stroke-linecap="round"/>
-                            <path d="M4 12h16" stroke-width="0.1" stroke-dasharray="1,1"/>
-                        </svg>
-
+                    <div class="group relative blueprint-bg rounded-[2.5rem] sm:rounded-[3rem] p-8 sm:p-10 transition-all duration-700 hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.5)] overflow-hidden cursor-pointer h-auto sm:min-h-[400px] flex flex-col gap-5 border border-white/20 bento-card">
                         <div class="relative z-10">
                             <h4 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold mb-4 text-white group-hover:text-clinical-green transition-colors leading-tight italic">Integrative Physical Therapy</h4>
                             <p class="text-white text-base sm:text-[17px] leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity">
@@ -606,20 +627,14 @@
                             </p>
                         </div>
                         <div class="relative z-10 mt-auto">
-                            <a href="/programs/integrative-physical-therapy.html" class="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-white text-[#0047AB] rounded-full font-bold text-xs sm:text-sm transition-all shadow-xl hover:bg-clinical-green hover:text-white group-hover:translate-y-[-4px]">
+                            <a href="/programs/integrative-physical-therapy.html" class="inline-flex items-center px-6 sm:px-8 py-3 bg-white text-[#0047AB] rounded-full font-bold text-xs sm:text-sm transition-all shadow-xl hover:bg-clinical-green hover:text-white group-hover:translate-y-[-4px]">
                                 Learn More <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                             </a>
                         </div>
                     </div>
 
                     <!-- Flagship 3: Personalized Medicine -->
-                    <div class="group relative blueprint-bg rounded-[2.5rem] sm:rounded-[3rem] p-8 sm:p-10 transition-all duration-700 hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.5)] overflow-hidden cursor-pointer h-auto sm:h-[520px] flex flex-col gap-5 sm:gap-6 border border-white/20 bento-card">
-                        <!-- Watermark: DNA -->
-                        <svg class="blueprint-watermark" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="0.2">
-                            <path d="M9 3c0 4.418 6 4.418 6 8.836 0 4.418-6 4.418-6 8.836M15 3c0 4.418-6 4.418-6 8.836 0 4.418 6 4.418 6 8.836" />
-                            <path d="M9 6h6M9 12h6M9 18h6" stroke-width="0.1"/>
-                        </svg>
-
+                    <div class="group relative blueprint-bg rounded-[2.5rem] sm:rounded-[3rem] p-8 sm:p-10 transition-all duration-700 hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.5)] overflow-hidden cursor-pointer h-auto sm:min-h-[400px] flex flex-col gap-5 border border-white/20 bento-card">
                         <div class="relative z-10">
                             <h4 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold mb-4 text-white group-hover:text-clinical-green transition-colors leading-tight italic">Personalized Medicine</h4>
                             <p class="text-white text-base sm:text-[17px] leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity">
@@ -627,20 +642,14 @@
                             </p>
                         </div>
                         <div class="relative z-10 mt-auto">
-                            <a href="/programs/personalized-medicine-cincinnati.html" class="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-white text-[#0047AB] rounded-full font-bold text-xs sm:text-sm transition-all shadow-xl hover:bg-clinical-green hover:text-white group-hover:translate-y-[-4px]">
+                            <a href="/programs/personalized-medicine-cincinnati.html" class="inline-flex items-center px-6 sm:px-8 py-3 bg-white text-[#0047AB] rounded-full font-bold text-xs sm:text-sm transition-all shadow-xl hover:bg-clinical-green hover:text-white group-hover:translate-y-[-4px]">
                                 Learn More <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                             </a>
                         </div>
                     </div>
 
                     <!-- Flagship 4: Longevity -->
-                    <div class="group relative blueprint-bg rounded-[2.5rem] sm:rounded-[3rem] p-8 sm:p-10 transition-all duration-700 hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.5)] overflow-hidden cursor-pointer h-auto sm:h-[520px] flex flex-col gap-5 sm:gap-6 border border-white/20 bento-card">
-                        <!-- Watermark: Olive Branch -->
-                        <svg class="blueprint-watermark" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="0.2">
-                            <path d="M12 22V2M12 5l-4 3M12 5l4 3M12 10l-5 4M12 10l5 4M12 15l-4 3M12 15l4 3" />
-                            <circle cx="12" cy="2" r="0.5" fill="white" />
-                        </svg>
-
+                    <div class="group relative blueprint-bg rounded-[2.5rem] sm:rounded-[3rem] p-8 sm:p-10 transition-all duration-700 hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.5)] overflow-hidden cursor-pointer h-auto sm:min-h-[400px] flex flex-col gap-5 border border-white/20 bento-card">
                         <div class="relative z-10">
                             <h4 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold mb-4 text-white group-hover:text-clinical-green transition-colors leading-tight italic">Longevity Care</h4>
                             <p class="text-white text-base sm:text-[17px] leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity">
