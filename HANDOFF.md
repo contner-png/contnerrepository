@@ -76,7 +76,7 @@ Recreation of the "Cincinnati Chiropractic & Cincinnati Longevity" website with 
 
 ---
 ## **7. Recent Updates**
-- **2026-03-20**: Refined the homepage aesthetic with a center-anchored blueprint glow, nav dock styling, and glass panel sections; replaced the flagship and protocol bento grids with integrated lists and added soft, non-linear image masking while preserving the Bengals/Cyclones legacy section.
+- **2026-03-20**: Refined the homepage aesthetic with a center-anchored blueprint glow, removed boxed section panels for a continuous canvas, updated flagship/protocol layouts, and expanded soft-mask imagery while preserving the Bengals/Cyclones legacy section.
 
 - **2026-03-11**: Refreshed global footer layout with tightened spacing, updated clinic hours, and same-day evaluation callout across all pages.
 - **2026-03-11**: Updated footer with official Cincinnati Chiropractic logo, relocated CTA into a full-width callout band, and added a richer gradient/blueprint glow background.
