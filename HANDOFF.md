@@ -76,6 +76,8 @@ Recreation of the "Cincinnati Chiropractic & Cincinnati Longevity" website with 
 
 ---
 ## **7. Recent Updates**
+- **2026-03-20**: Expanded the Clinical Flagships section to full width with a four-column accordion; primary text is always visible while detailed subtext reveals on selection.
+- **2026-03-20**: Rebuilt Specialized Protocols into stacked sliders (Chronic Management then Performance & Structure), enlarged orb sizing, and made sliders mobile-only with a desktop grid. Hover reveals the longer protocol descriptions while CTA tags remain visible.
 - **2026-03-20**: Refined the homepage aesthetic with a center-anchored blueprint glow, removed boxed section panels for a continuous canvas, updated flagship/protocol layouts, and expanded soft-mask imagery while preserving the Bengals/Cyclones legacy section.
 
 - **2026-03-11**: Refreshed global footer layout with tightened spacing, updated clinic hours, and same-day evaluation callout across all pages.

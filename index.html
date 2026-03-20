@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script>
         tailwind.config = {
             theme: {
@@ -165,7 +166,7 @@
             background-color: #020617;
             color: #e2e8f0;
             background-image:
-                radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.28), transparent 58%),
+                radial-gradient(ellipse at 50% 50%, rgba(59, 130, 246, 0.34), transparent 72%),
                 radial-gradient(circle at 50% 15%, rgba(37, 99, 235, 0.22), transparent 55%),
                 radial-gradient(circle at 70% 75%, rgba(34, 197, 94, 0.18), transparent 60%),
                 linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
@@ -237,6 +238,173 @@
             -webkit-mask-position: center;
             mask-position: center;
         }
+        .protocols-swiper {
+            padding-bottom: 1rem;
+            overflow: visible;
+        }
+        .protocols-swiper .swiper-slide {
+            display: flex;
+            justify-content: center;
+        }
+        @media (min-width: 1024px) {
+            .protocols-swiper .swiper-wrapper {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                gap: 2rem;
+                transform: none !important;
+            }
+            .protocols-swiper .swiper-slide {
+                width: auto !important;
+            }
+        }
+        .protocol-orb {
+            width: clamp(260px, 32vw, 360px);
+            height: clamp(260px, 32vw, 360px);
+            border-radius: 9999px;
+            padding: 1.75rem;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 0.75rem;
+            background: radial-gradient(circle at top, rgba(59, 130, 246, 0.3), rgba(6, 11, 22, 0.92));
+            box-shadow: 0 24px 60px -45px rgba(59, 130, 246, 0.7);
+            transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+        }
+        .protocol-orb--green {
+            background: radial-gradient(circle at top, rgba(34, 197, 94, 0.35), rgba(6, 11, 22, 0.92));
+            box-shadow: 0 20px 50px -45px rgba(34, 197, 94, 0.6);
+        }
+        .protocol-orb--blue {
+            background: radial-gradient(circle at top, rgba(59, 130, 246, 0.35), rgba(6, 11, 22, 0.92));
+        }
+        .protocol-orb__icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 9999px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            position: relative;
+        }
+        .protocol-orb__icon::after {
+            content: "";
+            position: absolute;
+            inset: 10px;
+            border-radius: 9999px;
+            border: 1px dashed rgba(255, 255, 255, 0.35);
+        }
+        .protocol-orb__detail {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transform: translateY(8px);
+            transition: max-height 0.35s ease, opacity 0.35s ease, transform 0.35s ease;
+        }
+        .protocol-orb:hover .protocol-orb__detail,
+        .protocol-orb:focus .protocol-orb__detail,
+        .protocol-orb:focus-visible .protocol-orb__detail {
+            max-height: 120px;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .protocol-orb:hover {
+            transform: translateY(-8px) scale(1.06);
+            border-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 30px 70px -50px rgba(59, 130, 246, 0.8);
+        }
+        .protocols-button {
+            width: 44px;
+            height: 44px;
+            border-radius: 9999px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: rgba(255, 255, 255, 0.85);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: border-color 0.3s ease, color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+        }
+        .flagship-trigger__detail {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transform: translateY(6px);
+            transition: max-height 0.35s ease, opacity 0.35s ease, transform 0.35s ease;
+        }
+        .flagship-trigger.is-active .flagship-trigger__detail {
+            max-height: 80px;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .protocols-button:hover {
+            border-color: rgba(255, 255, 255, 0.6);
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-2px);
+        }
+        .flagship-trigger {
+            width: 100%;
+            text-align: left;
+            border-radius: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 1.5rem;
+            background: transparent;
+            transition: border-color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+        }
+        .flagship-trigger:hover {
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        .flagship-trigger.is-active {
+            border-color: rgba(59, 130, 246, 0.6);
+            background: rgba(15, 23, 42, 0.4);
+        }
+        .flagship-panel {
+            display: none;
+        }
+        .flagship-panel.is-active {
+            display: block;
+        }
+        .continuum-step {
+            position: relative;
+            padding-top: 1.75rem;
+        }
+        .continuum-step::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 70px;
+            height: 3px;
+            border-radius: 9999px;
+            background: linear-gradient(90deg, rgba(59, 130, 246, 0.95), rgba(34, 197, 94, 0.65));
+        }
+        .continuum-track {
+            position: relative;
+            height: 2px;
+            border-radius: 9999px;
+            background: linear-gradient(90deg, rgba(59, 130, 246, 0.45), rgba(34, 197, 94, 0.45), rgba(59, 130, 246, 0.45));
+        }
+        .continuum-node {
+            position: absolute;
+            top: 50%;
+            width: 12px;
+            height: 12px;
+            border-radius: 9999px;
+            transform: translate(-50%, -50%);
+        }
+        .continuum-node--blue {
+            background: #3b82f6;
+            box-shadow: 0 0 16px rgba(59, 130, 246, 0.6);
+        }
+        .continuum-node--green {
+            background: #22c55e;
+            box-shadow: 0 0 16px rgba(34, 197, 94, 0.6);
+        }
+        .continuum-node--light {
+            background: #60a5fa;
+            box-shadow: 0 0 16px rgba(96, 165, 250, 0.6);
+        }
         #mobile-menu .text-clinical-charcoal {
             color: rgba(255, 255, 255, 0.85);
         }
@@ -297,6 +465,7 @@
     </script>
 </head>
 <body class="blueprint-global text-slate-100 font-sans antialiased">
+
     <!-- Global Navigation -->
             <header class="fixed top-4 inset-x-0 z-50 flex justify-center px-4">
         <nav class="nav-dock w-full max-w-7xl px-6 py-4 flex items-center justify-between">
@@ -599,124 +768,208 @@
         <!-- Tier 1: The Clinical Flagships -->
         <section id="programs" class="py-24 relative overflow-hidden">
             <div class="container mx-auto px-6 relative z-10">
-                <div class="text-center max-w-3xl mx-auto mb-20">
-                    <div class="inline-flex items-center justify-center rounded-full border border-clinical-blue/20 bg-white/80 px-6 py-3 shadow-[0_25px_60px_-25px_rgba(37,99,235,0.35)] ring-1 ring-clinical-blue/20">
-                        <h3 class="text-3xl sm:text-4xl lg:text-6xl font-display font-bold text-clinical-charcoal">Clinical <span class="text-clinical-blue">Flagships</span></h3>
+                <div class="space-y-10">
+                    <div class="flex flex-col lg:flex-row items-start justify-between gap-8">
+                        <div class="space-y-4 max-w-2xl">
+                            <p class="text-[10px] uppercase tracking-[0.4em] text-white/60">Flagship Systems</p>
+                            <h3 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white">Clinical <span class="text-clinical-blue">Flagships</span></h3>
+                            <p class="text-white/70 text-base sm:text-lg leading-relaxed">Four core clinical pillars orchestrate the entire Cincinnati Chiropractic &amp; Longevity system—from structural correction to long-term cellular resilience.</p>
+                        </div>
+                        <div class="flex items-center gap-3 text-[10px] uppercase tracking-[0.35em] text-white/50">
+                            <span class="h-2 w-2 rounded-full bg-clinical-green"></span>
+                            4 Flagships
+                        </div>
                     </div>
-                    <div class="mt-5 mx-auto h-px w-28 bg-gradient-to-r from-transparent via-clinical-blue/60 to-transparent"></div>
-                </div>
 
-                <div class="divide-y divide-white/10">
-                    <div class="flex flex-col lg:flex-row lg:items-center gap-8 py-10">
-                        <div class="flex-1 space-y-4">
-                            <h4 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-white leading-tight italic">Precision Chiropractic</h4>
-                            <p class="text-white/70 text-base sm:text-lg leading-relaxed">
-                                Correcting complex spinal pathologies including herniated discs, sciatica, and chronic neck pain using advanced kinematics and biodynamic analysis.
-                            </p>
-                        </div>
-                        <div>
-                            <a href="/programs/cincinnati-chiropractic-care.html" class="inline-flex items-center px-6 py-3 rounded-full border border-clinical-blue/50 text-white font-bold text-xs uppercase tracking-[0.25em] hover:bg-clinical-blue hover:text-white transition-all">
-                                Learn More <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                            </a>
-                        </div>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <button class="flagship-trigger is-active" data-flagship-target="flagship-1" aria-expanded="true">
+                            <div class="flex flex-col h-full justify-between gap-6">
+                                <div class="space-y-3">
+                                    <span class="text-[10px] uppercase tracking-[0.35em] text-white/50">01</span>
+                                    <h4 class="text-xl sm:text-2xl font-display font-bold text-white">Precision Chiropractic</h4>
+                                    <p class="text-white/80 text-sm sm:text-base leading-relaxed">Advanced spinal correction for disc, nerve, and chronic pain cases.</p>
+                                    <p class="flagship-trigger__detail text-white/60 text-xs sm:text-sm leading-relaxed">Motion-based diagnostics, biodynamic analysis, and precision decompression.</p>
+                                </div>
+                                <span class="text-[10px] uppercase tracking-[0.3em] text-white/40">Expand</span>
+                            </div>
+                        </button>
+                        <button class="flagship-trigger" data-flagship-target="flagship-2" aria-expanded="false">
+                            <div class="flex flex-col h-full justify-between gap-6">
+                                <div class="space-y-3">
+                                    <span class="text-[10px] uppercase tracking-[0.35em] text-white/50">02</span>
+                                    <h4 class="text-xl sm:text-2xl font-display font-bold text-white">Integrative Physical Therapy</h4>
+                                    <p class="text-white/80 text-sm sm:text-base leading-relaxed">Rehab for sports injuries, post-surgical recovery, and chronic pain.</p>
+                                    <p class="flagship-trigger__detail text-white/60 text-xs sm:text-sm leading-relaxed">Neuro-modulation, corrective exercise, and graded functional exposure.</p>
+                                </div>
+                                <span class="text-[10px] uppercase tracking-[0.3em] text-white/40">Expand</span>
+                            </div>
+                        </button>
+                        <button class="flagship-trigger" data-flagship-target="flagship-3" aria-expanded="false">
+                            <div class="flex flex-col h-full justify-between gap-6">
+                                <div class="space-y-3">
+                                    <span class="text-[10px] uppercase tracking-[0.35em] text-white/50">03</span>
+                                    <h4 class="text-xl sm:text-2xl font-display font-bold text-white">Personalized Medicine</h4>
+                                    <p class="text-white/80 text-sm sm:text-base leading-relaxed">Biomarker-driven care for metabolic, hormonal, and inflammatory imbalance.</p>
+                                    <p class="flagship-trigger__detail text-white/60 text-xs sm:text-sm leading-relaxed">Targeted diagnostics, nutrition planning, and recovery engineering.</p>
+                                </div>
+                                <span class="text-[10px] uppercase tracking-[0.3em] text-white/40">Expand</span>
+                            </div>
+                        </button>
+                        <button class="flagship-trigger" data-flagship-target="flagship-4" aria-expanded="false">
+                            <div class="flex flex-col h-full justify-between gap-6">
+                                <div class="space-y-3">
+                                    <span class="text-[10px] uppercase tracking-[0.35em] text-white/50">04</span>
+                                    <h4 class="text-xl sm:text-2xl font-display font-bold text-white">Longevity Care</h4>
+                                    <p class="text-white/80 text-sm sm:text-base leading-relaxed">Healthspan protocols for mitochondrial repair and VO2 Max gains.</p>
+                                    <p class="flagship-trigger__detail text-white/60 text-xs sm:text-sm leading-relaxed">Cellular energy restoration, metabolic conditioning, and longevity planning.</p>
+                                </div>
+                                <span class="text-[10px] uppercase tracking-[0.3em] text-white/40">Expand</span>
+                            </div>
+                        </button>
                     </div>
-                    <div class="flex flex-col lg:flex-row lg:items-center gap-8 py-10">
-                        <div class="flex-1 space-y-4">
-                            <h4 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-white leading-tight italic">Integrative Physical Therapy</h4>
-                            <p class="text-white/70 text-base sm:text-lg leading-relaxed">
-                                Comprehensive rehabilitation for sports injuries, post-surgical recovery, and chronic pain through neuro-modulation and graded functional exposure.
-                            </p>
+
+                    <div class="border-t border-white/10 pt-8">
+                        <div id="flagship-1" class="flagship-panel is-active" data-flagship-panel>
+                            <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-8">
+                                <div class="space-y-4">
+                                    <h4 class="text-3xl sm:text-4xl font-display font-bold text-white">Precision Chiropractic</h4>
+                                    <p class="text-white/70 text-base sm:text-lg leading-relaxed">Correcting complex spinal pathologies including herniated discs, sciatica, and chronic neck pain using advanced kinematics, biodynamic analysis, and high-resolution diagnostic imaging.</p>
+                                    <div class="flex flex-wrap gap-3 text-[10px] uppercase tracking-[0.3em] text-white/60">
+                                        <span class="px-3 py-1 border border-white/15 rounded-full">Spinal Kinematics</span>
+                                        <span class="px-3 py-1 border border-white/15 rounded-full">Disc Recovery</span>
+                                        <span class="px-3 py-1 border border-white/15 rounded-full">Neural Decompression</span>
+                                    </div>
+                                </div>
+                                <div class="space-y-4">
+                                    <p class="text-white/60 text-sm leading-relaxed">Signature techniques include motion-based diagnostics, precision adjustments, and targeted decompression protocols designed to restore neurological integrity.</p>
+                                    <a href="/programs/cincinnati-chiropractic-care.html" class="inline-flex items-center text-xs font-bold uppercase tracking-[0.3em] text-white hover:text-clinical-green transition-colors">
+                                        Learn More <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <a href="/programs/integrative-physical-therapy.html" class="inline-flex items-center px-6 py-3 rounded-full border border-clinical-blue/50 text-white font-bold text-xs uppercase tracking-[0.25em] hover:bg-clinical-blue hover:text-white transition-all">
-                                Learn More <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                            </a>
+                        <div id="flagship-2" class="flagship-panel hidden" data-flagship-panel>
+                            <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-8">
+                                <div class="space-y-4">
+                                    <h4 class="text-3xl sm:text-4xl font-display font-bold text-white">Integrative Physical Therapy</h4>
+                                    <p class="text-white/70 text-base sm:text-lg leading-relaxed">Comprehensive rehabilitation for sports injuries, post-surgical recovery, and chronic pain through neuro-modulation and graded functional exposure.</p>
+                                    <div class="flex flex-wrap gap-3 text-[10px] uppercase tracking-[0.3em] text-white/60">
+                                        <span class="px-3 py-1 border border-white/15 rounded-full">Manual Therapy</span>
+                                        <span class="px-3 py-1 border border-white/15 rounded-full">Return-To-Play</span>
+                                        <span class="px-3 py-1 border border-white/15 rounded-full">Movement Rebuild</span>
+                                    </div>
+                                </div>
+                                <div class="space-y-4">
+                                    <p class="text-white/60 text-sm leading-relaxed">Integrated rehab plans combine soft tissue work, corrective exercise, and performance reconditioning to restore total-body function.</p>
+                                    <a href="/programs/integrative-physical-therapy.html" class="inline-flex items-center text-xs font-bold uppercase tracking-[0.3em] text-white hover:text-clinical-green transition-colors">
+                                        Learn More <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex flex-col lg:flex-row lg:items-center gap-8 py-10">
-                        <div class="flex-1 space-y-4">
-                            <h4 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-white leading-tight italic">Personalized Medicine</h4>
-                            <p class="text-white/70 text-base sm:text-lg leading-relaxed">
-                                Precision clinical management of metabolic syndrome, hormonal imbalances, and systemic inflammation using deep biomarker tracking and diagnostics.
-                            </p>
+                        <div id="flagship-3" class="flagship-panel hidden" data-flagship-panel>
+                            <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-8">
+                                <div class="space-y-4">
+                                    <h4 class="text-3xl sm:text-4xl font-display font-bold text-white">Personalized Medicine</h4>
+                                    <p class="text-white/70 text-base sm:text-lg leading-relaxed">Precision clinical management of metabolic syndrome, hormonal imbalances, and systemic inflammation using deep biomarker tracking and diagnostics.</p>
+                                    <div class="flex flex-wrap gap-3 text-[10px] uppercase tracking-[0.3em] text-white/60">
+                                        <span class="px-3 py-1 border border-white/15 rounded-full">Biomarker Mapping</span>
+                                        <span class="px-3 py-1 border border-white/15 rounded-full">Hormonal Balance</span>
+                                        <span class="px-3 py-1 border border-white/15 rounded-full">Inflammation Reset</span>
+                                    </div>
+                                </div>
+                                <div class="space-y-4">
+                                    <p class="text-white/60 text-sm leading-relaxed">Targeted protocols align nutrition, supplementation, and recovery engineering to restore systemic balance and metabolic flexibility.</p>
+                                    <a href="/programs/personalized-medicine-cincinnati.html" class="inline-flex items-center text-xs font-bold uppercase tracking-[0.3em] text-white hover:text-clinical-green transition-colors">
+                                        Learn More <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <a href="/programs/personalized-medicine-cincinnati.html" class="inline-flex items-center px-6 py-3 rounded-full border border-clinical-blue/50 text-white font-bold text-xs uppercase tracking-[0.25em] hover:bg-clinical-blue hover:text-white transition-all">
-                                Learn More <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="flex flex-col lg:flex-row lg:items-center gap-8 py-10">
-                        <div class="flex-1 space-y-4">
-                            <h4 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-white leading-tight italic">Longevity Care</h4>
-                            <p class="text-white/70 text-base sm:text-lg leading-relaxed">
-                                Engineering the future of human healthspan through mitochondrial repair, VO2 Max optimization, and cellular energy restoration protocols.
-                            </p>
-                        </div>
-                        <div>
-                            <a href="/programs/cincinnati-longevity-protocol.html" class="inline-flex items-center px-6 py-3 rounded-full border border-clinical-blue/50 text-white font-bold text-xs uppercase tracking-[0.25em] hover:bg-clinical-blue hover:text-white transition-all">
-                                Learn More <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                            </a>
+                        <div id="flagship-4" class="flagship-panel hidden" data-flagship-panel>
+                            <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-8">
+                                <div class="space-y-4">
+                                    <h4 class="text-3xl sm:text-4xl font-display font-bold text-white">Longevity Care</h4>
+                                    <p class="text-white/70 text-base sm:text-lg leading-relaxed">Engineering the future of human healthspan through mitochondrial repair, VO2 Max optimization, and cellular energy restoration protocols.</p>
+                                    <div class="flex flex-wrap gap-3 text-[10px] uppercase tracking-[0.3em] text-white/60">
+                                        <span class="px-3 py-1 border border-white/15 rounded-full">VO2 Max</span>
+                                        <span class="px-3 py-1 border border-white/15 rounded-full">Cellular Resilience</span>
+                                        <span class="px-3 py-1 border border-white/15 rounded-full">Longevity Planning</span>
+                                    </div>
+                                </div>
+                                <div class="space-y-4">
+                                    <p class="text-white/60 text-sm leading-relaxed">Longevity protocols blend mitochondrial repair, metabolic conditioning, and proactive diagnostics to safeguard performance for decades.</p>
+                                    <a href="/programs/cincinnati-longevity-protocol.html" class="inline-flex items-center text-xs font-bold uppercase tracking-[0.3em] text-white hover:text-clinical-green transition-colors">
+                                        Learn More <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
 
         <!-- The Performance Continuum: The Journey from Pain to Power -->
         <section class="py-24 relative overflow-hidden">
             <div class="container mx-auto px-6 relative z-10">
-                <div class="text-center max-w-3xl mx-auto mb-20">
-                    <p class="text-[10px] font-bold uppercase tracking-[0.35em] text-white/70">The Clinical Roadmap</p>
-                    <div class="mt-4 inline-flex items-center justify-center rounded-full border border-white/25 bg-white/10 px-6 py-3 shadow-[0_25px_60px_-25px_rgba(96,165,250,0.55)] ring-1 ring-white/30">
-                        <h3 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white">Performance <span class="text-clinical-blue">Continuum</span></h3>
+                <div class="flex flex-col lg:flex-row items-start justify-between gap-10 mb-16">
+                    <div class="max-w-2xl space-y-4">
+                        <p class="text-[10px] uppercase tracking-[0.4em] text-white/60">Performance Continuum</p>
+                        <h3 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white">From <span class="text-clinical-blue">Pain</span> to <span class="text-clinical-green">Power</span></h3>
+                        <p class="text-white/70 text-base sm:text-lg leading-relaxed">Three sequential phases that move patients from structural stabilization to metabolic horsepower and long-term healthspan defense.</p>
                     </div>
-                    <div class="mt-5 mx-auto h-px w-28 bg-gradient-to-r from-transparent via-white/70 to-transparent"></div>
+                    <div class="flex items-center gap-3 text-[10px] uppercase tracking-[0.35em] text-white/50">
+                        <span class="h-2 w-2 rounded-full bg-clinical-blue"></span>
+                        3-Phase Build
+                    </div>
                 </div>
 
-                <div class="relative grid lg:grid-cols-3 gap-12">
-                    <!-- Connector Line (Desktop) -->
-                    <div class="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-clinical-blue via-clinical-green to-clinical-blue opacity-20 -translate-y-1/2"></div>
-
-                    <!-- Phase 1: Foundation -->
-                    <div class="relative p-8 sm:p-10 transition-all duration-500 group">
-                        <div class="absolute -top-6 left-10 w-12 h-12 bg-clinical-blue text-white rounded-xl flex items-center justify-center font-display font-bold text-xl shadow-lg">01</div>
-                        <h4 class="text-2xl font-display font-bold mb-6 pt-4 italic">The Foundation</h4>
-                        <p class="text-white/70 mb-8 leading-relaxed text-sm">
-                            Resetting the chassis. We integrate precision structural diagnostics with kinematics to establish your baseline and correct joint fixations or inflammatory cycles.
-                        </p>
-                        <ul class="space-y-3 text-[10px] font-bold text-clinical-blue uppercase tracking-widest">
-                            <li class="flex items-center"><svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Structural Kinematics</li>
-                            <li class="flex items-center"><svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Joint Deconstruction</li>
+                <div class="grid lg:grid-cols-3 gap-10">
+                    <div class="continuum-step space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-3xl font-display font-bold text-clinical-blue">01</span>
+                            <span class="text-[10px] uppercase tracking-[0.3em] text-white/50">Stabilize</span>
+                        </div>
+                        <h4 class="text-2xl sm:text-3xl font-display font-bold text-white">The Foundation</h4>
+                        <p class="text-white/70 text-sm sm:text-base leading-relaxed">Resetting the chassis with precision structural diagnostics and kinematic correction to establish a stable baseline.</p>
+                        <ul class="space-y-2 text-xs sm:text-sm text-white/70">
+                            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-clinical-blue"></span>Structural Kinematics</li>
+                            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-clinical-blue"></span>Joint Deconstruction</li>
                         </ul>
                     </div>
 
-                    <!-- Phase 2: Optimize -->
-                    <div class="relative p-8 sm:p-10 transition-all duration-500 group">
-                        <div class="absolute -top-6 left-10 w-12 h-12 bg-clinical-blue text-white rounded-xl flex items-center justify-center font-display font-bold text-xl shadow-lg">02</div>
-                        <h4 class="text-2xl font-display font-bold mb-6 pt-4 italic">Optimize</h4>
-                        <p class="text-white/70 mb-8 leading-relaxed text-sm">
-                            Engineering the internal engine. We utilize the Mitoflux protocol to repair mitochondrial function, maximize VO2 Max, and reset cellular voltage.
-                        </p>
-                        <ul class="space-y-3 text-[10px] font-bold text-clinical-blue uppercase tracking-widest">
-                            <li class="flex items-center"><svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Mitochondrial Repair</li>
-                            <li class="flex items-center"><svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Metabolic Capacity</li>
+                    <div class="continuum-step space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-3xl font-display font-bold text-clinical-blue">02</span>
+                            <span class="text-[10px] uppercase tracking-[0.3em] text-white/50">Energize</span>
+                        </div>
+                        <h4 class="text-2xl sm:text-3xl font-display font-bold text-white">Metabolic Acceleration</h4>
+                        <p class="text-white/70 text-sm sm:text-base leading-relaxed">Engineering the internal engine with Mitoflux protocols to optimize cellular voltage, VO2 Max, and recovery capacity.</p>
+                        <ul class="space-y-2 text-xs sm:text-sm text-white/70">
+                            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-clinical-green"></span>Mitochondrial Repair</li>
+                            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-clinical-green"></span>Metabolic Capacity</li>
                         </ul>
                     </div>
 
-                    <!-- Phase 3: Resilience -->
-                    <div class="relative p-8 sm:p-10 transition-all duration-500 group">
-                        <div class="absolute -top-6 left-10 w-12 h-12 bg-clinical-blue text-white rounded-xl flex items-center justify-center font-display font-bold text-xl shadow-lg">03</div>
-                        <h4 class="text-2xl font-display font-bold mb-6 pt-4 italic">Healthspan & Resilience</h4>
-                        <p class="text-white/70 mb-8 leading-relaxed text-sm">
-                            Building long-term durability. Fortifying muscle density and autonomic resilience to protect your healthspan for decades of high performance.
-                        </p>
-                        <ul class="space-y-3 text-[10px] font-bold text-clinical-blue uppercase tracking-widest">
-                            <li class="flex items-center"><svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Balance, Strength, and Bone Optimization</li>
-                            <li class="flex items-center"><svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Autonomic Resilience</li>
+                    <div class="continuum-step space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-3xl font-display font-bold text-clinical-green">03</span>
+                            <span class="text-[10px] uppercase tracking-[0.3em] text-white/50">Defend</span>
+                        </div>
+                        <h4 class="text-2xl sm:text-3xl font-display font-bold text-white">Healthspan Resilience</h4>
+                        <p class="text-white/70 text-sm sm:text-base leading-relaxed">Long-term durability built through balance, bone density, and autonomic resilience so performance can scale for decades.</p>
+                        <ul class="space-y-2 text-xs sm:text-sm text-white/70">
+                            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-clinical-green"></span>Strength &amp; Bone Optimization</li>
+                            <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-clinical-green"></span>Autonomic Resilience</li>
                         </ul>
                     </div>
+                </div>
+
+                <div class="mt-12 hidden lg:block continuum-track">
+                    <span class="continuum-node continuum-node--blue" style="left: 6%;"></span>
+                    <span class="continuum-node continuum-node--light" style="left: 50%;"></span>
+                    <span class="continuum-node continuum-node--green" style="left: 94%;"></span>
                 </div>
 
             </div>
@@ -725,117 +978,182 @@
         <!-- Tier 2: Specialized Protocols Bento Grids -->
         <section class="py-24 relative overflow-hidden">
             <div class="container mx-auto px-6 relative z-10">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <div class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-3 shadow-[0_25px_60px_-25px_rgba(34,197,94,0.55)] ring-1 ring-clinical-green/30">
-                        <h3 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white">Specialized <span class="text-clinical-green">Protocols</span></h3>
-                    </div>
-                    <div class="mt-5 mx-auto h-px w-28 bg-gradient-to-r from-transparent via-clinical-green/70 to-transparent"></div>
+                <div class="text-center max-w-4xl mx-auto mb-14">
+                    <p class="text-[10px] uppercase tracking-[0.4em] text-white/60">Tier 2 Protocols</p>
+                    <h3 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white mt-4">Specialized <span class="text-clinical-green">Protocols</span></h3>
+                    <p class="text-white/70 text-base sm:text-lg leading-relaxed mt-4">Precision tracks that address chronic conditions and performance enhancement with targeted diagnostics and recovery engineering.</p>
                 </div>
 
-                <div class="grid lg:grid-cols-2 gap-12">
+                <div class="space-y-20">
                     <div class="space-y-8">
-                        <div class="space-y-4">
-                            <p class="text-[10px] uppercase tracking-[0.3em] text-white/50">Chronic Management</p>
-                            <h3 class="text-3xl sm:text-4xl font-display font-bold leading-tight text-white">Chronic <span class="text-clinical-green">Management</span></h3>
-                            <p class="text-base sm:text-lg text-white/70 leading-relaxed">Dedicated clinical management for complex chronic pathologies requiring specific physiological interventions.</p>
+                        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+                            <div class="max-w-2xl space-y-3">
+                                <p class="text-[10px] uppercase tracking-[0.35em] text-white/50">Chronic Management</p>
+                                <h3 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white">Chronic <span class="text-clinical-green">Management</span></h3>
+                                <p class="text-white/70 text-base sm:text-lg leading-relaxed">Dedicated clinical management for complex chronic pathologies requiring specific physiological interventions.</p>
+                            </div>
+                            <div class="flex items-center gap-3 text-[10px] uppercase tracking-[0.35em] text-white/50">
+                                <span class="h-2 w-2 rounded-full bg-clinical-green"></span>
+                                5 Protocols
+                            </div>
                         </div>
-                        <div class="divide-y divide-white/10">
-                            <a href="/programs/neuropathy-care.html" class="group flex flex-col sm:flex-row gap-4 py-5 transition-colors">
-                                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white text-xs font-semibold">01</div>
-                                <div class="flex-1">
-                                    <h4 class="text-lg sm:text-xl font-semibold text-white group-hover:text-clinical-green transition-colors italic">Neuropathy Care</h4>
-                                    <p class="text-white/70 text-xs sm:text-sm mt-1">Multi-modal restoration of nerve function and micro-circulation addressing roots of pain and numbness.</p>
-                                    <span class="mt-3 inline-flex items-center text-clinical-green text-[10px] font-bold uppercase tracking-widest">Axonal Repair <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
+                        <div class="relative">
+                            <div class="swiper protocols-swiper protocols-swiper--chronic">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="/programs/neuropathy-care.html" class="protocol-orb protocol-orb--green">
+                                            <span class="protocol-orb__icon"></span>
+                                            <div class="space-y-3">
+                                                <span class="text-xs uppercase tracking-[0.35em] text-white/60">01</span>
+                                                <h4 class="text-xl sm:text-2xl font-display font-semibold text-white">Neuropathy Care</h4>
+                                                <p class="protocol-orb__detail text-white/75 text-sm sm:text-base leading-relaxed">Multi-modal restoration of nerve function and micro-circulation addressing roots of pain and numbness.</p>
+                                                <span class="inline-flex items-center text-clinical-green text-[11px] font-bold uppercase tracking-widest">Axonal Repair <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="/programs/cardiometabolic-repair.html" class="protocol-orb protocol-orb--green">
+                                            <span class="protocol-orb__icon"></span>
+                                            <div class="space-y-3">
+                                                <span class="text-xs uppercase tracking-[0.35em] text-white/60">02</span>
+                                                <h4 class="text-xl sm:text-2xl font-display font-semibold text-white">Cardiometabolic Repair</h4>
+                                                <p class="protocol-orb__detail text-white/75 text-sm sm:text-base leading-relaxed">Rebuilding insulin sensitivity, cardiopulmonary efficiency, and mitochondrial output with advanced testing.</p>
+                                                <span class="inline-flex items-center text-clinical-green text-[11px] font-bold uppercase tracking-widest">Metabolic Reset <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="/programs/chronic-fatigue-long-covid.html" class="protocol-orb protocol-orb--green">
+                                            <span class="protocol-orb__icon"></span>
+                                            <div class="space-y-3">
+                                                <span class="text-xs uppercase tracking-[0.35em] text-white/60">03</span>
+                                                <h4 class="text-xl sm:text-2xl font-display font-semibold text-white">Chronic Fatigue &amp; Long Covid</h4>
+                                                <p class="protocol-orb__detail text-white/75 text-sm sm:text-base leading-relaxed">Protocols for ME/CFS, long COVID, and post-viral fatigue that rebuild energy systems safely.</p>
+                                                <span class="inline-flex items-center text-clinical-green text-[11px] font-bold uppercase tracking-widest">Post-Viral Recovery <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="/programs/fibromyalgia-care.html" class="protocol-orb protocol-orb--green">
+                                            <span class="protocol-orb__icon"></span>
+                                            <div class="space-y-3">
+                                                <span class="text-xs uppercase tracking-[0.35em] text-white/60">04</span>
+                                                <h4 class="text-xl sm:text-2xl font-display font-semibold text-white">Fibromyalgia Care</h4>
+                                                <p class="protocol-orb__detail text-white/75 text-sm sm:text-base leading-relaxed">Centralized pain relief and nervous system regulation for widespread pain and recovery.</p>
+                                                <span class="inline-flex items-center text-clinical-green text-[11px] font-bold uppercase tracking-widest">Pain Reset <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="/programs/brain-health-sleep-optimization.html" class="protocol-orb protocol-orb--green">
+                                            <span class="protocol-orb__icon"></span>
+                                            <div class="space-y-3">
+                                                <span class="text-xs uppercase tracking-[0.35em] text-white/60">05</span>
+                                                <h4 class="text-xl sm:text-2xl font-display font-semibold text-white">Sleep Optimization</h4>
+                                                <p class="protocol-orb__detail text-white/75 text-sm sm:text-base leading-relaxed">Structural and autonomic regulation to reset neural operating systems and optimize deep sleep architecture.</p>
+                                                <span class="inline-flex items-center text-clinical-green text-[11px] font-bold uppercase tracking-widest">Neural OS Reset <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
+                                            </div>
+                                        </a>
+                                    </div>
                                 </div>
-                            </a>
-                            <a href="/programs/cardiometabolic-repair.html" class="group flex flex-col sm:flex-row gap-4 py-5 transition-colors">
-                                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white text-xs font-semibold">02</div>
-                                <div class="flex-1">
-                                    <h4 class="text-lg sm:text-xl font-semibold text-white group-hover:text-clinical-green transition-colors italic">Cardiometabolic Repair</h4>
-                                    <p class="text-white/70 text-xs sm:text-sm mt-1">Rebuilding insulin sensitivity, cardiopulmonary efficiency, and mitochondrial output with advanced testing.</p>
-                                    <span class="mt-3 inline-flex items-center text-clinical-green text-[10px] font-bold uppercase tracking-widest">Metabolic Reset <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
-                                </div>
-                            </a>
-                            <a href="/programs/chronic-fatigue-long-covid.html" class="group flex flex-col sm:flex-row gap-4 py-5 transition-colors">
-                                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white text-xs font-semibold">03</div>
-                                <div class="flex-1">
-                                    <h4 class="text-lg sm:text-xl font-semibold text-white group-hover:text-clinical-green transition-colors italic">Chronic Fatigue &amp; Long Covid</h4>
-                                    <p class="text-white/70 text-xs sm:text-sm mt-1">Protocols for ME/CFS, long COVID, and post-viral fatigue that rebuild energy systems safely.</p>
-                                    <span class="mt-3 inline-flex items-center text-clinical-green text-[10px] font-bold uppercase tracking-widest">Post-Viral Recovery <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
-                                </div>
-                            </a>
-                            <a href="/programs/fibromyalgia-care.html" class="group flex flex-col sm:flex-row gap-4 py-5 transition-colors">
-                                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white text-xs font-semibold">04</div>
-                                <div class="flex-1">
-                                    <h4 class="text-lg sm:text-xl font-semibold text-white group-hover:text-clinical-green transition-colors italic">Fibromyalgia Care</h4>
-                                    <p class="text-white/70 text-xs sm:text-sm mt-1">Centralized pain relief and nervous system regulation for widespread pain and recovery.</p>
-                                    <span class="mt-3 inline-flex items-center text-clinical-green text-[10px] font-bold uppercase tracking-widest">Pain Reset <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
-                                </div>
-                            </a>
-                            <a href="/programs/brain-health-sleep-optimization.html" class="group flex flex-col sm:flex-row gap-4 py-5 transition-colors">
-                                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white text-xs font-semibold">05</div>
-                                <div class="flex-1">
-                                    <h4 class="text-lg sm:text-xl font-semibold text-white group-hover:text-clinical-green transition-colors italic">Sleep Optimization</h4>
-                                    <p class="text-white/70 text-xs sm:text-sm mt-1">Structural and autonomic regulation to reset neural operating systems and optimize deep sleep architecture.</p>
-                                    <span class="mt-3 inline-flex items-center text-clinical-green text-[10px] font-bold uppercase tracking-widest">Neural OS Reset <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
-                                </div>
-                            </a>
+                            </div>
+                            <div class="protocols-nav mt-6 flex items-center justify-center gap-4 lg:hidden">
+                                <button class="protocols-button protocols-prev protocols-prev--chronic" type="button" aria-label="Previous slide">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                                </button>
+                                <button class="protocols-button protocols-next protocols-next--chronic" type="button" aria-label="Next slide">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
+
                     <div class="space-y-8">
-                        <div class="space-y-4">
-                            <p class="text-[10px] uppercase tracking-[0.3em] text-white/50">Performance &amp; Structure</p>
-                            <h3 class="text-3xl sm:text-4xl font-display font-bold leading-tight text-white">Performance &amp; <span class="text-clinical-blue">Structure</span></h3>
-                            <p class="text-base sm:text-lg text-white/70 leading-relaxed">Engineering the physical chassis for durability, explosive power, and long-term structural integrity.</p>
+                        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+                            <div class="max-w-2xl space-y-3">
+                                <p class="text-[10px] uppercase tracking-[0.35em] text-white/50">Performance &amp; Structure</p>
+                                <h3 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white">Performance &amp; <span class="text-clinical-blue">Structure</span></h3>
+                                <p class="text-white/70 text-base sm:text-lg leading-relaxed">Engineering the physical chassis for durability, explosive power, and long-term structural integrity.</p>
+                            </div>
+                            <div class="flex items-center gap-3 text-[10px] uppercase tracking-[0.35em] text-white/50">
+                                <span class="h-2 w-2 rounded-full bg-clinical-blue"></span>
+                                5 Protocols
+                            </div>
                         </div>
-                        <div class="divide-y divide-white/10">
-                            <a href="/programs/longevity-healthspan-optimization.html" class="group flex flex-col sm:flex-row gap-4 py-5 transition-colors">
-                                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white text-xs font-semibold">01</div>
-                                <div class="flex-1">
-                                    <h4 class="text-lg sm:text-xl font-semibold text-white group-hover:text-clinical-green transition-colors italic">Longevity &amp; Healthspan</h4>
-                                    <p class="text-white/70 text-xs sm:text-sm mt-1">Mitochondrial care and proactive diagnostics to extend healthspan, preserve strength, and protect cognition.</p>
-                                    <span class="mt-3 inline-flex items-center text-clinical-green text-[10px] font-bold uppercase tracking-widest">Healthspan Engineering <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
+                        <div class="relative">
+                            <div class="swiper protocols-swiper protocols-swiper--performance">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="/programs/longevity-healthspan-optimization.html" class="protocol-orb protocol-orb--blue">
+                                            <span class="protocol-orb__icon"></span>
+                                            <div class="space-y-3">
+                                                <span class="text-xs uppercase tracking-[0.35em] text-white/60">01</span>
+                                                <h4 class="text-xl sm:text-2xl font-display font-semibold text-white">Longevity &amp; Healthspan</h4>
+                                                <p class="protocol-orb__detail text-white/75 text-sm sm:text-base leading-relaxed">Mitochondrial care and proactive diagnostics to extend healthspan, preserve strength, and protect cognition.</p>
+                                                <span class="inline-flex items-center text-clinical-green text-[11px] font-bold uppercase tracking-widest">Healthspan Engineering <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="/programs/golf-performance-cincinnati.html" class="protocol-orb protocol-orb--blue">
+                                            <span class="protocol-orb__icon"></span>
+                                            <div class="space-y-3">
+                                                <span class="text-xs uppercase tracking-[0.35em] text-white/60">02</span>
+                                                <h4 class="text-xl sm:text-2xl font-display font-semibold text-white">Golf Performance</h4>
+                                                <p class="protocol-orb__detail text-white/75 text-sm sm:text-base leading-relaxed">Biomechanical swing work to increase swing speed, distance, and durability through structural repair.</p>
+                                                <span class="inline-flex items-center text-clinical-green text-[11px] font-bold uppercase tracking-widest">Kinematic Sequence <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="/programs/heart-rate-variability-optimization.html" class="protocol-orb protocol-orb--blue">
+                                            <span class="protocol-orb__icon"></span>
+                                            <div class="space-y-3">
+                                                <span class="text-xs uppercase tracking-[0.35em] text-white/60">03</span>
+                                                <h4 class="text-xl sm:text-2xl font-display font-semibold text-white">Heart Rate Variability Optimization</h4>
+                                                <p class="protocol-orb__detail text-white/75 text-sm sm:text-base leading-relaxed">Improve heart rate variability and autonomic flexibility for recovery, stress resilience, and performance.</p>
+                                                <span class="inline-flex items-center text-clinical-green text-[11px] font-bold uppercase tracking-widest">Autonomic Resilience <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="/programs/balance-strength-bone-optimization.html" class="protocol-orb protocol-orb--blue">
+                                            <span class="protocol-orb__icon"></span>
+                                            <div class="space-y-3">
+                                                <span class="text-xs uppercase tracking-[0.35em] text-white/60">04</span>
+                                                <h4 class="text-xl sm:text-2xl font-display font-semibold text-white">Balance, Strength, and Bone Optimization</h4>
+                                                <p class="protocol-orb__detail text-white/75 text-sm sm:text-base leading-relaxed">Build muscle, protect bone density, and improve balance to prevent falls and preserve strength.</p>
+                                                <span class="inline-flex items-center text-clinical-green text-[11px] font-bold uppercase tracking-widest">Density Protocol <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="/programs/flexibility-mobility-optimization.html" class="protocol-orb protocol-orb--blue">
+                                            <span class="protocol-orb__icon"></span>
+                                            <div class="space-y-3">
+                                                <span class="text-xs uppercase tracking-[0.35em] text-white/60">05</span>
+                                                <h4 class="text-xl sm:text-2xl font-display font-semibold text-white">Flexibility &amp; Functional Mobility</h4>
+                                                <p class="protocol-orb__detail text-white/75 text-sm sm:text-base leading-relaxed">Restore range of motion, joint mobility, and resilient movement mechanics.</p>
+                                                <span class="inline-flex items-center text-clinical-green text-[11px] font-bold uppercase tracking-widest">Mobility Reset <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
+                                            </div>
+                                        </a>
+                                    </div>
                                 </div>
-                            </a>
-                            <a href="/programs/golf-performance-cincinnati.html" class="group flex flex-col sm:flex-row gap-4 py-5 transition-colors">
-                                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white text-xs font-semibold">02</div>
-                                <div class="flex-1">
-                                    <h4 class="text-lg sm:text-xl font-semibold text-white group-hover:text-clinical-green transition-colors italic">Golf Performance</h4>
-                                    <p class="text-white/70 text-xs sm:text-sm mt-1">Biomechanical swing work to increase swing speed, distance, and durability through structural repair.</p>
-                                    <span class="mt-3 inline-flex items-center text-clinical-green text-[10px] font-bold uppercase tracking-widest">Kinematic Sequence <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
-                                </div>
-                            </a>
-                            <a href="/programs/heart-rate-variability-optimization.html" class="group flex flex-col sm:flex-row gap-4 py-5 transition-colors">
-                                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white text-xs font-semibold">03</div>
-                                <div class="flex-1">
-                                    <h4 class="text-lg sm:text-xl font-semibold text-white group-hover:text-clinical-green transition-colors italic">Heart Rate Variability Optimization</h4>
-                                    <p class="text-white/70 text-xs sm:text-sm mt-1">Improve heart rate variability and autonomic flexibility for recovery, stress resilience, and performance.</p>
-                                    <span class="mt-3 inline-flex items-center text-clinical-green text-[10px] font-bold uppercase tracking-widest">Autonomic Resilience <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
-                                </div>
-                            </a>
-                            <a href="/programs/balance-strength-bone-optimization.html" class="group flex flex-col sm:flex-row gap-4 py-5 transition-colors">
-                                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white text-xs font-semibold">04</div>
-                                <div class="flex-1">
-                                    <h4 class="text-lg sm:text-xl font-semibold text-white group-hover:text-clinical-green transition-colors italic">Balance, Strength, and Bone Optimization</h4>
-                                    <p class="text-white/70 text-xs sm:text-sm mt-1">Build muscle, protect bone density, and improve balance to prevent falls and preserve strength.</p>
-                                    <span class="mt-3 inline-flex items-center text-clinical-green text-[10px] font-bold uppercase tracking-widest">Density Protocol <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
-                                </div>
-                            </a>
-                            <a href="/programs/flexibility-mobility-optimization.html" class="group flex flex-col sm:flex-row gap-4 py-5 transition-colors">
-                                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white text-xs font-semibold">05</div>
-                                <div class="flex-1">
-                                    <h4 class="text-lg sm:text-xl font-semibold text-white group-hover:text-clinical-green transition-colors italic">Flexibility &amp; Functional Mobility</h4>
-                                    <p class="text-white/70 text-xs sm:text-sm mt-1">Restore range of motion, joint mobility, and resilient movement mechanics.</p>
-                                    <span class="mt-3 inline-flex items-center text-clinical-green text-[10px] font-bold uppercase tracking-widest">Mobility Reset <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
-                                </div>
-                            </a>
+                            </div>
+                            <div class="protocols-nav mt-6 flex items-center justify-center gap-4 lg:hidden">
+                                <button class="protocols-button protocols-prev protocols-prev--performance" type="button" aria-label="Previous slide">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                                </button>
+                                <button class="protocols-button protocols-next protocols-next--performance" type="button" aria-label="Next slide">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
             </div>
         </section>
-
         <!-- Meet the Team -->
         <section class="py-24 relative overflow-hidden">
             <div class="container mx-auto px-6 relative z-10">
@@ -845,16 +1163,16 @@
                         <h3 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white mt-4">Clinical Specialists &amp; Performance Staff</h3>
                         <p class="text-blue-100/80 mt-4 text-base sm:text-lg">Six specialists spanning chiropractic, physical therapy, diagnostics, and athletic performance—built to deliver measurable outcomes.</p>
                     </div>
-                    <div class="flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-5 py-3 text-[10px] uppercase tracking-[0.35em] text-white/70">
+                    <div class="flex items-center gap-3 text-[10px] uppercase tracking-[0.35em] text-white/60">
                         <span class="w-2 h-2 rounded-full bg-clinical-green"></span>
                         6 Specialists
                     </div>
                 </div>
 
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="group rounded-[2rem] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm shadow-[0_20px_60px_-40px_rgba(15,23,42,0.8)]">
+                    <div class="group rounded-[2rem] overflow-hidden">
                         <div class="relative h-64">
-                            <img src="/images/team/andrew-limle.svg" alt="Dr. Andrew Limle" class="w-full h-full object-cover soft-mask group-hover:scale-105 transition-transform duration-700">
+                            <img src="/images/team/andrew-limle.svg" alt="Dr. Andrew Limle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#071327] via-[#071327]/30 to-transparent"></div>
                             <div class="absolute inset-x-4 bottom-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                 <div class="rounded-2xl border border-white/10 bg-[#0b1f3a]/80 px-4 py-3 text-[12px] text-white/80 leading-relaxed shadow-lg">
@@ -873,9 +1191,9 @@
                         </div>
                     </div>
 
-                    <div class="group rounded-[2rem] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm shadow-[0_20px_60px_-40px_rgba(15,23,42,0.8)]">
+                    <div class="group rounded-[2rem] overflow-hidden">
                         <div class="relative h-64">
-                            <img src="/images/team/michael-hekler.svg" alt="Dr. Michael Hekler" class="w-full h-full object-cover soft-mask group-hover:scale-105 transition-transform duration-700">
+                            <img src="/images/team/michael-hekler.svg" alt="Dr. Michael Hekler" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#071327] via-[#071327]/30 to-transparent"></div>
                             <div class="absolute inset-x-4 bottom-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                 <div class="rounded-2xl border border-white/10 bg-[#0b1f3a]/80 px-4 py-3 text-[12px] text-white/80 leading-relaxed shadow-lg">
@@ -894,9 +1212,9 @@
                         </div>
                     </div>
 
-                    <div class="group rounded-[2rem] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm shadow-[0_20px_60px_-40px_rgba(15,23,42,0.8)]">
+                    <div class="group rounded-[2rem] overflow-hidden">
                         <div class="relative h-64">
-                            <img src="/images/alexcontnerheadshot.jpg" alt="Dr. Alex Contner" class="w-full h-full object-cover soft-mask group-hover:scale-105 transition-transform duration-700">
+                            <img src="/images/alexcontnerheadshot.jpg" alt="Dr. Alex Contner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#071327] via-[#071327]/30 to-transparent opacity-80"></div>
                             <div class="absolute inset-0 bg-blue-900/10 mix-blend-multiply transition-opacity duration-700 group-hover:opacity-0"></div>
                             <div class="absolute inset-x-4 bottom-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -916,9 +1234,9 @@
                         </div>
                     </div>
 
-                    <div class="group rounded-[2rem] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm shadow-[0_20px_60px_-40px_rgba(15,23,42,0.8)]">
+                    <div class="group rounded-[2rem] overflow-hidden">
                         <div class="relative h-64">
-                            <img src="/images/team/brianna-opperman.svg" alt="Dr. Brianna Opperman" class="w-full h-full object-cover soft-mask group-hover:scale-105 transition-transform duration-700">
+                            <img src="/images/team/brianna-opperman.svg" alt="Dr. Brianna Opperman" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#071327] via-[#071327]/30 to-transparent"></div>
                             <div class="absolute inset-x-4 bottom-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                 <div class="rounded-2xl border border-white/10 bg-[#0b1f3a]/80 px-4 py-3 text-[12px] text-white/80 leading-relaxed shadow-lg">
@@ -937,9 +1255,9 @@
                         </div>
                     </div>
 
-                    <div class="group rounded-[2rem] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm shadow-[0_20px_60px_-40px_rgba(15,23,42,0.8)]">
+                    <div class="group rounded-[2rem] overflow-hidden">
                         <div class="relative h-64">
-                            <img src="/images/team/brittany-woeste.svg" alt="Brittany Woeste" class="w-full h-full object-cover soft-mask group-hover:scale-105 transition-transform duration-700">
+                            <img src="/images/team/brittany-woeste.svg" alt="Brittany Woeste" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#071327] via-[#071327]/30 to-transparent"></div>
                             <div class="absolute inset-x-4 bottom-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                 <div class="rounded-2xl border border-white/10 bg-[#0b1f3a]/80 px-4 py-3 text-[12px] text-white/80 leading-relaxed shadow-lg">
@@ -958,9 +1276,9 @@
                         </div>
                     </div>
 
-                    <div class="group rounded-[2rem] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm shadow-[0_20px_60px_-40px_rgba(15,23,42,0.8)]">
+                    <div class="group rounded-[2rem] overflow-hidden">
                         <div class="relative h-64">
-                            <img src="/images/team/nate-lienhart.svg" alt="Nate Lienhart" class="w-full h-full object-cover soft-mask group-hover:scale-105 transition-transform duration-700">
+                            <img src="/images/team/nate-lienhart.svg" alt="Nate Lienhart" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#071327] via-[#071327]/30 to-transparent"></div>
                             <div class="absolute inset-x-4 bottom-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                 <div class="rounded-2xl border border-white/10 bg-[#0b1f3a]/80 px-4 py-3 text-[12px] text-white/80 leading-relaxed shadow-lg">
@@ -994,7 +1312,7 @@
 
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                const swiper = new Swiper('.clinic-gallery', {
+                new Swiper('.clinic-gallery', {
                     loop: true,
                     pagination: {
                         el: '.swiper-pagination',
@@ -1008,7 +1326,8 @@
                         delay: 5000,
                     },
                 });
-                const reviewsSwiper = new Swiper('.reviews-swiper', {
+
+                new Swiper('.reviews-swiper', {
                     loop: true,
                     autoplay: {
                         delay: 5000,
@@ -1027,6 +1346,85 @@
                         prevEl: '.swiper-button-prev',
                     },
                 });
+
+                const protocolOptions = {
+                    slidesPerView: 1.1,
+                    loop: false,
+                    spaceBetween: 24,
+                    speed: 600,
+                    watchOverflow: true,
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1.6,
+                        },
+                        768: {
+                            slidesPerView: 2.2,
+                        },
+                        900: {
+                            slidesPerView: 2.6,
+                        }
+                    }
+                };
+
+                const setupProtocolSwiper = (selector, prevEl, nextEl) => {
+                    let instance = null;
+                    const mediaQuery = window.matchMedia('(min-width: 1024px)');
+
+                    const toggleSwiper = () => {
+                        if (mediaQuery.matches) {
+                            if (instance) {
+                                instance.destroy(true, true);
+                                instance = null;
+                            }
+                        } else if (!instance) {
+                            instance = new Swiper(selector, {
+                                ...protocolOptions,
+                                navigation: {
+                                    nextEl,
+                                    prevEl,
+                                },
+                            });
+                        }
+                    };
+
+                    toggleSwiper();
+                    if (mediaQuery.addEventListener) {
+                        mediaQuery.addEventListener('change', toggleSwiper);
+                    } else {
+                        mediaQuery.addListener(toggleSwiper);
+                    }
+                };
+
+                setupProtocolSwiper('.protocols-swiper--chronic', '.protocols-prev--chronic', '.protocols-next--chronic');
+                setupProtocolSwiper('.protocols-swiper--performance', '.protocols-prev--performance', '.protocols-next--performance');
+
+
+                const flagshipTriggers = document.querySelectorAll('[data-flagship-target]');
+                const flagshipPanels = document.querySelectorAll('[data-flagship-panel]');
+
+                if (flagshipTriggers.length && flagshipPanels.length) {
+                    const activateFlagship = (targetId) => {
+                        flagshipTriggers.forEach((trigger) => {
+                            const isActive = trigger.dataset.flagshipTarget === targetId;
+                            trigger.classList.toggle('is-active', isActive);
+                            trigger.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+                        });
+
+                        flagshipPanels.forEach((panel) => {
+                            const isActive = panel.id === targetId;
+                            panel.classList.toggle('is-active', isActive);
+                            panel.classList.toggle('hidden', !isActive);
+                        });
+                    };
+
+                    flagshipTriggers.forEach((trigger) => {
+                        trigger.addEventListener('click', () => {
+                            activateFlagship(trigger.dataset.flagshipTarget);
+                        });
+                    });
+
+                    activateFlagship(flagshipTriggers[0].dataset.flagshipTarget);
+                }
             });
         </script>
         <!-- Clinic Gallery Carousel -->
@@ -1037,33 +1435,33 @@
                     <h3 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold">A World-Class Healing Environment</h3>
                 </div>
                 
-                <div class="swiper clinic-gallery rounded-[2.5rem] shadow-2xl overflow-hidden">
+                <div class="swiper clinic-gallery rounded-[2.5rem] overflow-hidden">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide h-[400px] md:h-[600px] relative">
-                            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Cincinnati Chiropractic Clinic Environment" class="w-full h-full object-cover soft-mask">
-                            <div class="absolute bottom-6 left-6 md:bottom-12 md:left-12 z-10 bg-white/90 backdrop-blur-md px-4 py-3 md:px-6 md:py-4 rounded-2xl shadow-xl max-w-[80%] md:max-w-none">
-                                <h5 class="font-display font-bold text-clinical-blue text-lg md:text-xl">Advanced Recovery Suite</h5>
-                                <p class="text-gray-500 text-xs md:text-sm italic">Elite technology for cellular regeneration.</p>
+                            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Cincinnati Chiropractic Clinic Environment" class="w-full h-full object-cover">
+                            <div class="absolute bottom-6 left-6 md:bottom-12 md:left-12 z-10 max-w-[80%] md:max-w-none text-white drop-shadow-xl">
+                                <h5 class="font-display font-bold text-white text-lg md:text-xl">Advanced Recovery Suite</h5>
+                                <p class="text-white/70 text-xs md:text-sm">Elite technology for cellular regeneration.</p>
                             </div>
                         </div>
                         <div class="swiper-slide h-[400px] md:h-[600px] relative">
-                            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Treatment Technology Area" class="w-full h-full object-cover soft-mask">
-                            <div class="absolute bottom-6 left-6 md:bottom-12 md:left-12 z-10 bg-white/90 backdrop-blur-md px-4 py-3 md:px-6 md:py-4 rounded-2xl shadow-xl max-w-[80%] md:max-w-none">
-                                <h5 class="font-display font-bold text-clinical-blue text-lg md:text-xl">Precision Diagnostics</h5>
-                                <p class="text-gray-500 text-xs md:text-sm italic">Biomarker tracking and performance metrics.</p>
+                            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Treatment Technology Area" class="w-full h-full object-cover">
+                            <div class="absolute bottom-6 left-6 md:bottom-12 md:left-12 z-10 max-w-[80%] md:max-w-none text-white drop-shadow-xl">
+                                <h5 class="font-display font-bold text-white text-lg md:text-xl">Precision Diagnostics</h5>
+                                <p class="text-white/70 text-xs md:text-sm">Biomarker tracking and performance metrics.</p>
                             </div>
                         </div>
                         <div class="swiper-slide h-[400px] md:h-[600px] relative">
-                            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Diagnostic & VO2 Max Suite" class="w-full h-full object-cover soft-mask">
-                            <div class="absolute bottom-6 left-6 md:bottom-12 md:left-12 z-10 bg-white/90 backdrop-blur-md px-4 py-3 md:px-6 md:py-4 rounded-2xl shadow-xl max-w-[80%] md:max-w-none">
-                                <h5 class="font-display font-bold text-clinical-blue text-lg md:text-xl">The Mitoflux Wing</h5>
-                                <p class="text-gray-500 text-xs md:text-sm italic">Designed for systemic longevity and durability.</p>
+                            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Diagnostic & VO2 Max Suite" class="w-full h-full object-cover">
+                            <div class="absolute bottom-6 left-6 md:bottom-12 md:left-12 z-10 max-w-[80%] md:max-w-none text-white drop-shadow-xl">
+                                <h5 class="font-display font-bold text-white text-lg md:text-xl">The Mitoflux Wing</h5>
+                                <p class="text-white/70 text-xs md:text-sm">Designed for systemic longevity and durability.</p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
-                    <div class="swiper-button-next text-clinical-blue bg-white/80 w-12 h-12 rounded-full backdrop-blur shadow-lg"></div>
-                    <div class="swiper-button-prev text-clinical-blue bg-white/80 w-12 h-12 rounded-full backdrop-blur shadow-lg"></div>
+                    <div class="swiper-button-next text-white/80 border border-white/30 w-12 h-12 rounded-full hover:text-white hover:border-white/60 transition-colors"></div>
+                    <div class="swiper-button-prev text-white/80 border border-white/30 w-12 h-12 rounded-full hover:text-white hover:border-white/60 transition-colors"></div>
                 </div>
 
             </div>
@@ -1247,7 +1645,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="mt-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 rounded-3xl border border-white/10 bg-white/5 px-6 py-6">
+            <div class="mt-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 rounded-3xl px-6 py-6 border-t border-white/10">
                 <div class="space-y-2">
                     <p class="text-[10px] uppercase tracking-[0.35em] text-clinical-green font-semibold">Same-day evaluations</p>
                     <p class="text-lg font-display font-semibold text-white">Request your clinical evaluation and performance plan.</p>
