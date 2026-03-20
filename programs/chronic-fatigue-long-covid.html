@@ -100,14 +100,14 @@
     </script>
 </head>
 <body class="bg-white text-clinical-charcoal font-sans antialiased">
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
-        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+    <header class="fixed top-4 inset-x-0 z-50 flex justify-center px-4">
+        <nav class="nav-dock w-full max-w-7xl px-6 py-4 flex items-center justify-between">
             <div class="flex items-center">
                 <a href="/index.html" class="flex items-center space-x-3 group">
                     <img src="/images/cclogo_trimmed.png" alt="Cincinnati Chiropractic" class="h-16 w-auto drop-shadow-sm group-hover:drop-shadow-md transition-all">
                     <div class="hidden sm:flex flex-col">
                         <span class="text-lg font-display font-bold text-clinical-blue tracking-tight leading-none">CINCINNATI</span>
-                        <span class="text-xs font-light text-clinical-charcoal uppercase tracking-[0.3em] leading-none mt-1">Chiropractic</span>
+                        <span class="text-xs font-light text-white/70 uppercase tracking-[0.3em] leading-none mt-1">Chiropractic</span>
                     </div>
                 </a>
             </div>
@@ -116,65 +116,65 @@
                 <a href="/index.html" class="nav-link text-clinical-blue font-bold uppercase">HOME</a>
                 
                 <div class="relative group">
-                    <button class="flex items-center space-x-1 nav-link py-2 uppercase tracking-widest font-bold text-xs text-clinical-charcoal">
+                    <button class="flex items-center space-x-1 nav-link py-2 uppercase tracking-widest font-bold text-xs text-white/70 hover:text-white">
                         <span>The Flagships</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
-                    <div class="absolute left-0 mt-0 w-64 bg-white border border-gray-100 shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-4 z-50">
-                        <a href="/programs/cincinnati-chiropractic-care.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Precision Chiropractic</a>
-                        <a href="/programs/integrative-physical-therapy.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Integrative Physical Therapy</a>
-                        <a href="/programs/personalized-medicine-cincinnati.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Personalized Medicine</a>
-                        <a href="/programs/cincinnati-longevity-protocol.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Longevity Care</a>
+                    <div class="absolute left-0 mt-3 w-64 dropdown-panel rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-4 z-50">
+                        <a href="/programs/cincinnati-chiropractic-care.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors">Precision Chiropractic</a>
+                        <a href="/programs/integrative-physical-therapy.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors">Integrative Physical Therapy</a>
+                        <a href="/programs/personalized-medicine-cincinnati.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors">Personalized Medicine</a>
+                        <a href="/programs/cincinnati-longevity-protocol.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors">Longevity Care</a>
                     </div>
                 </div>
 
                 <div class="relative group">
-                    <button class="flex items-center space-x-1 nav-link py-2 uppercase tracking-widest font-bold text-xs text-clinical-charcoal">
+                    <button class="flex items-center space-x-1 nav-link py-2 uppercase tracking-widest font-bold text-xs text-white/70 hover:text-white">
                         <span>Specialized Protocols</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
-                    <div class="absolute left-0 mt-0 w-72 bg-white border border-gray-100 shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-4 z-50">
-                        <div class="px-4 pb-2 text-[10px] font-bold text-gray-400 uppercase tracking-widest">Chronic Management</div>
-                        <a href="/programs/neuropathy-care.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Neuropathy Care</a>
-                        <a href="/programs/cardiometabolic-repair.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Cardiometabolic Repair</a>
-                        <a href="/programs/chronic-fatigue-long-covid.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Chronic Fatigue &amp; Long Covid</a>
-                        <a href="/programs/fibromyalgia-care.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Fibromyalgia Care</a>
-                        <a href="/programs/brain-health-sleep-optimization.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Sleep Optimization</a>
-                        <hr class="my-2 border-gray-100">
-                        <div class="px-4 pb-2 text-[10px] font-bold text-gray-400 uppercase tracking-widest">Performance &amp; Structure</div>
-                        <a href="/programs/heart-rate-variability-optimization.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Heart Rate Variability Optimization</a>
-                        <a href="/programs/balance-strength-bone-optimization.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Balance, Strength, and Bone Optimization</a>
-                        <a href="/programs/flexibility-mobility-optimization.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Flexibility &amp; Functional Mobility</a>
-                        <a href="/programs/golf-performance-cincinnati.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Golf Performance</a>
-                        <a href="/programs/longevity-healthspan-optimization.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Longevity &amp; Healthspan</a>
+                    <div class="absolute left-0 mt-3 w-72 dropdown-panel rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-4 z-50">
+                        <div class="px-4 pb-2 text-[10px] font-bold text-white/40 uppercase tracking-widest">Chronic Management</div>
+                        <a href="/programs/neuropathy-care.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Neuropathy Care</a>
+                        <a href="/programs/cardiometabolic-repair.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Cardiometabolic Repair</a>
+                        <a href="/programs/chronic-fatigue-long-covid.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Chronic Fatigue &amp; Long Covid</a>
+                        <a href="/programs/fibromyalgia-care.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Fibromyalgia Care</a>
+                        <a href="/programs/balance-strength-bone-optimization.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Balance, Strength, and Bone Optimization</a>
+                        <hr class="my-2 border-white/10">
+                        <div class="px-4 pb-2 text-[10px] font-bold text-white/40 uppercase tracking-widest">Performance &amp; Structure</div>
+                        <a href="/programs/heart-rate-variability-optimization.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Heart Rate Variability Optimization</a>
+                        <a href="/programs/brain-health-sleep-optimization.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Sleep Optimization</a>
+                        <a href="/programs/flexibility-mobility-optimization.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Flexibility &amp; Functional Mobility</a>
+                        <a href="/programs/golf-performance-cincinnati.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Golf Performance</a>
+                        <a href="/programs/longevity-healthspan-optimization.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Longevity &amp; Healthspan</a>
                     </div>
                 </div>
 
                 <div class="relative group">
-                    <button class="flex items-center space-x-1 nav-link py-2 uppercase tracking-widest font-bold text-xs text-clinical-charcoal">
+                    <button class="flex items-center space-x-1 nav-link py-2 uppercase tracking-widest font-bold text-xs text-white/70 hover:text-white">
                         <span>Treatments</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
-                    <div class="absolute left-0 mt-0 w-64 bg-white border border-gray-100 shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-4 z-50">
+                    <div class="absolute left-0 mt-3 w-64 dropdown-panel rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-4 z-50">
                         
-                        <a href="/treatments/class-iv-laser.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Cold Laser (Class IV)</a>
-                        <a href="/treatments/red-light-therapy.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Red Light Therapy</a>
-                        <a href="/treatments/shockwave-therapy.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Shockwave Therapy</a>
-                        <a href="/treatments/pemf-therapy.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">PEMF Therapy</a>
-                        <a href="/treatments/hyperbaric-oxygen.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Hyperbaric Oxygen</a>
-                        <a href="/treatments/spinal-decompression.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Spinal Decompression</a>
-                        <a href="/treatments/dry-needling.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Dry Needling</a>
-                        <a href="/treatments/vagus-nerve-stimulation.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">tVNS (Vagus Nerve)</a>
-                        <a href="/treatments/sleep-testing.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Sleep Testing</a>
-                        <a href="/treatments/targeted-supplements.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Targeted Supplements</a>
-                        <a href="/treatments/longevity-blood-panels.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Longevity Blood Panels</a>
-                        <a href="/treatments/vo2-max-testing.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">VO2 Max Testing</a>
+                        <a href="/treatments/class-iv-laser.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Cold Laser (Class IV)</a>
+                        <a href="/treatments/red-light-therapy.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Red Light Therapy</a>
+                        <a href="/treatments/shockwave-therapy.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Shockwave Therapy</a>
+                        <a href="/treatments/pemf-therapy.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">PEMF Therapy</a>
+                        <a href="/treatments/hyperbaric-oxygen.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Hyperbaric Oxygen</a>
+                        <a href="/treatments/spinal-decompression.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Spinal Decompression</a>
+                        <a href="/treatments/dry-needling.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Dry Needling</a>
+                        <a href="/treatments/vagus-nerve-stimulation.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">tVNS (Vagus Nerve)</a>
+                        <a href="/treatments/sleep-testing.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Sleep Testing</a>
+                        <a href="/treatments/targeted-supplements.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Targeted Supplements</a>
+                        <a href="/treatments/longevity-blood-panels.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Longevity Blood Panels</a>
+                        <a href="/treatments/vo2-max-testing.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">VO2 Max Testing</a>
 
                     </div>
                 </div>
 
-                <a href="/team.html" class="nav-link uppercase tracking-widest font-bold text-xs text-clinical-charcoal">Our Team</a>
-                <a href="/patient-resources.html" class="nav-link uppercase tracking-widest font-bold text-xs text-clinical-charcoal">Patient Resources</a>
+                <a href="/team.html" class="nav-link uppercase tracking-widest font-bold text-xs text-white/70 hover:text-white">Our Team</a>
+                <a href="/patient-resources.html" class="nav-link uppercase tracking-widest font-bold text-xs text-white/70 hover:text-white">Patient Resources</a>
             </div>
 
             <div class="flex items-center space-x-4">
@@ -182,13 +182,13 @@
                     Request Appointment
                 </a>
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button" class="lg:hidden p-2 text-clinical-charcoal hover:text-clinical-blue transition-colors">
+                <button id="mobile-menu-button" class="lg:hidden p-2 text-white/80 hover:text-white transition-colors">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </nav>
         <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white transform translate-x-full transition-transform duration-300 lg:hidden">
+        <div id="mobile-menu" class="fixed inset-0 z-[60] bg-[#020617] transform translate-x-full transition-transform duration-300 lg:hidden">
             <div class="p-6 flex flex-col h-full">
                 <div class="flex items-center justify-between mb-12">
                     <span class="text-2xl font-display font-bold text-clinical-blue">MENU</span>
@@ -211,9 +211,9 @@
                         <a href="/programs/cardiometabolic-repair.html" class="block text-lg hover:text-clinical-blue text-clinical-charcoal">Cardiometabolic Repair</a>
                         <a href="/programs/chronic-fatigue-long-covid.html" class="block text-lg hover:text-clinical-blue text-clinical-charcoal">Chronic Fatigue &amp; Long Covid</a>
                         <a href="/programs/fibromyalgia-care.html" class="block text-lg hover:text-clinical-blue text-clinical-charcoal">Fibromyalgia Care</a>
+                        <a href="/programs/balance-strength-bone-optimization.html" class="block text-lg hover:text-clinical-blue text-clinical-charcoal">Balance, Strength, and Bone Optimization</a>
                         <a href="/programs/brain-health-sleep-optimization.html" class="block text-lg hover:text-clinical-blue text-clinical-charcoal">Sleep Optimization</a>
                         <a href="/programs/heart-rate-variability-optimization.html" class="block text-lg hover:text-clinical-blue text-clinical-charcoal">Heart Rate Variability Optimization</a>
-                        <a href="/programs/balance-strength-bone-optimization.html" class="block text-lg hover:text-clinical-blue text-clinical-charcoal">Balance, Strength, and Bone Optimization</a>
                         <a href="/programs/flexibility-mobility-optimization.html" class="block text-lg hover:text-clinical-blue text-clinical-charcoal">Flexibility &amp; Functional Mobility</a>
                         <a href="/programs/golf-performance-cincinnati.html" class="block text-lg hover:text-clinical-blue text-clinical-charcoal">Golf Performance</a>
                         <a href="/programs/longevity-healthspan-optimization.html" class="block text-lg hover:text-clinical-blue text-clinical-charcoal">Longevity &amp; Healthspan</a>
@@ -490,7 +490,7 @@
         </section>
     </main>
 
-    <footer class="bg-gradient-to-br from-[#0b1f3a] via-[#1f2937] to-[#0b0f1d] text-white pt-20 pb-10 relative overflow-hidden">
+    <footer class="relative py-16 text-white">
         <div class="absolute inset-0 pointer-events-none">
             <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.28) 1px, transparent 0); background-size: 220px 220px;"></div>
             <div class="absolute -top-32 right-[-8%] h-80 w-80 rounded-full bg-clinical-green/20 blur-3xl"></div>
@@ -498,7 +498,7 @@
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
         </div>
         <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-clinical-green/70 to-transparent"></div>
-        <div class="container mx-auto px-6 relative z-10">
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
             <div class="grid lg:grid-cols-[1.3fr_1fr_1fr_1fr] gap-10 border-b border-white/10 pb-12">
                 <div class="space-y-8">
                     <a href="/index.html" class="flex items-center group">
@@ -556,9 +556,9 @@
                         <li><a href="/programs/cardiometabolic-repair.html" class="hover:text-clinical-green transition-colors">Cardiometabolic Repair</a></li>
                         <li><a href="/programs/chronic-fatigue-long-covid.html" class="hover:text-clinical-green transition-colors">Chronic Fatigue &amp; Long Covid</a></li>
                         <li><a href="/programs/fibromyalgia-care.html" class="hover:text-clinical-green transition-colors">Fibromyalgia Care</a></li>
+                        <li><a href="/programs/balance-strength-bone-optimization.html" class="hover:text-clinical-green transition-colors">Balance, Strength, &amp; Bone</a></li>
                         <li><a href="/programs/brain-health-sleep-optimization.html" class="hover:text-clinical-green transition-colors">Sleep Optimization</a></li>
                         <li><a href="/programs/heart-rate-variability-optimization.html" class="hover:text-clinical-green transition-colors">Heart Rate Variability</a></li>
-                        <li><a href="/programs/balance-strength-bone-optimization.html" class="hover:text-clinical-green transition-colors">Balance, Strength, &amp; Bone</a></li>
                         <li><a href="/programs/flexibility-mobility-optimization.html" class="hover:text-clinical-green transition-colors">Flexibility &amp; Mobility</a></li>
                         <li><a href="/programs/golf-performance-cincinnati.html" class="hover:text-clinical-green transition-colors">Golf Performance</a></li>
                         <li><a href="/programs/longevity-healthspan-optimization.html" class="hover:text-clinical-green transition-colors">Longevity &amp; Healthspan</a></li>
@@ -582,7 +582,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="mt-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 rounded-3xl border border-white/10 bg-white/5 px-6 py-6">
+            <div class="mt-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 rounded-3xl px-6 py-6 border-t border-white/10">
                 <div class="space-y-2">
                     <p class="text-[10px] uppercase tracking-[0.35em] text-clinical-green font-semibold">Same-day evaluations</p>
                     <p class="text-lg font-display font-semibold text-white">Request your clinical evaluation and performance plan.</p>
@@ -592,7 +592,7 @@
                 </a>
             </div>
 
-            <div class="flex flex-col md:flex-row items-center justify-between text-gray-500 text-[10px] uppercase tracking-[0.2em] pt-8">
+            <div class="flex flex-col md:flex-row items-center justify-between text-white/50 text-[10px] uppercase tracking-[0.2em] pt-8">
                 <p>&copy; 2026 Cincinnati Chiropractic &amp; Cincinnati Longevity. All rights reserved.</p>
                 <div class="flex space-x-6 mt-4 md:mt-0">
                     <a href="https://instagram.com" class="hover:text-white transition-colors">Instagram</a>
@@ -600,6 +600,7 @@
                 </div>
             </div>
         </div>
+
     </footer>
 </body>
 </html>
