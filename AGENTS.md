@@ -13,6 +13,7 @@
 - **Hero Animations**: High-intensity CSS/SVG animations in the home hero (infinite grid scroll, dual-axis lasers).
 - **Button Styling**: Primary CTA buttons on dark backgrounds use `bg-white` with inline `style="color: #0047AB !important;"` to ensure visibility.
 - **Modern Clinical Frame**: Class `.modern-clinical-frame` provides a dark glass background (`rgba(2, 6, 23, 0.8)`) with gradient borders for images. Use `object-fit: cover` and `aspect-ratio` to ensure graphics fill the frame.
+- **Protocol Card Blueprint**: Class `.protocol-card-blueprint` uses a rounded rectangular design (`rounded-[2.5rem]`) with `aspect-ratio: 4/5.2` for protocol tiles. Background images are typically zoomed (e.g., `background-size: 140%`) to focus on subjects.
 - **Integrated Disclaimer**: The clinical disclaimer is now a meta-card component with class `bento-stack-item lg:col-span-12` integrated directly into the `The Arsenal` grid.
 - **Header Navigation**: Primary navigation links (e.g., HOME) should be in all-caps for technical consistency.
 
