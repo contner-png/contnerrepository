@@ -33,8 +33,8 @@ Recreation of the "Cincinnati Chiropractic & Cincinnati Longevity" website with 
 ---
 ## **3.5. Local Preview / Rehost**
 - **Command**: `pkill -f "http.server"; nohup python3 -m http.server 12000 --directory /workspace/project/contnerrepository > /workspace/project/server.log 2>&1 &`
-- **Primary Preview URL**: https://work-1-opgiuonvtishlphi.prod-runtime.all-hands.dev/
-- **Backup Preview URL**: https://work-2-opgiuonvtishlphi.prod-runtime.all-hands.dev/
+- **Primary Preview URL**: https://work-1-hsqfpjpmexstxvod.prod-runtime.all-hands.dev/
+- **Backup Preview URL**: https://work-2-hsqfpjpmexstxvod.prod-runtime.all-hands.dev/
 - If port 12000 is already in use, switch to 12001 and use the backup URL.
 
 ---
@@ -76,6 +76,8 @@ Recreation of the "Cincinnati Chiropractic & Cincinnati Longevity" website with 
 
 ---
 ## **7. Recent Updates**
+- **2026-03-20**: Refined the homepage aesthetic with a center-anchored blueprint glow, nav dock styling, and glass panel sections; replaced the flagship and protocol bento grids with integrated lists and added soft, non-linear image masking while preserving the Bengals/Cyclones legacy section.
+
 - **2026-03-11**: Refreshed global footer layout with tightened spacing, updated clinic hours, and same-day evaluation callout across all pages.
 - **2026-03-11**: Updated footer with official Cincinnati Chiropractic logo, relocated CTA into a full-width callout band, and added a richer gradient/blueprint glow background.
 

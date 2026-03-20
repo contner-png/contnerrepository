@@ -161,6 +161,93 @@
             filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.5));
             font-weight: 900;
         }
+        .blueprint-global {
+            background-color: #020617;
+            color: #e2e8f0;
+            background-image:
+                radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.28), transparent 58%),
+                radial-gradient(circle at 50% 15%, rgba(37, 99, 235, 0.22), transparent 55%),
+                radial-gradient(circle at 70% 75%, rgba(34, 197, 94, 0.18), transparent 60%),
+                linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 100% 100%, 60px 60px, 60px 60px;
+            background-attachment: fixed;
+        }
+        .nav-dock {
+            background: rgba(2, 6, 23, 0.92);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 9999px;
+            box-shadow: 0 20px 50px -20px rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+        }
+        .dropdown-panel {
+            background: rgba(15, 23, 42, 0.96);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            box-shadow: 0 24px 48px -24px rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        .section-panel {
+            background: rgba(15, 23, 42, 0.72);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            box-shadow: 0 30px 70px -45px rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .section-panel-light {
+            background: rgba(255, 255, 255, 0.88);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 30px 70px -45px rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            color: #0f172a;
+        }
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.68);
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            box-shadow: 0 20px 50px -30px rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+        }
+        .glass-panel-light {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0 20px 50px -30px rgba(15, 23, 42, 0.5);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        .blueprint-bg {
+            background-color: rgba(15, 23, 42, 0.75);
+            background-image:
+                linear-gradient(rgba(148, 163, 184, 0.14) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(148, 163, 184, 0.14) 1px, transparent 1px);
+            background-size: 120px 120px;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+        }
+        .soft-mask {
+            -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='M40.3,-63.4C51.8,-55.2,60.5,-43.2,66.9,-29.7C73.3,-16.2,77.4,-1.2,74.8,12.6C72.2,26.4,62.9,39,51.1,48.7C39.4,58.4,25.3,65.2,10.1,70.3C-5.2,75.3,-21.6,78.6,-36.3,73.4C-51,68.2,-64.1,54.5,-70.3,38.7C-76.5,22.9,-75.7,4.9,-71.5,-11.8C-67.3,-28.5,-59.7,-43.9,-47.6,-51.8C-35.5,-59.7,-17.7,-60,-1.5,-57.7C14.7,-55.5,29.4,-50.4,40.3,-63.4Z'/%3E%3C/svg%3E");
+            mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='M40.3,-63.4C51.8,-55.2,60.5,-43.2,66.9,-29.7C73.3,-16.2,77.4,-1.2,74.8,12.6C72.2,26.4,62.9,39,51.1,48.7C39.4,58.4,25.3,65.2,10.1,70.3C-5.2,75.3,-21.6,78.6,-36.3,73.4C-51,68.2,-64.1,54.5,-70.3,38.7C-76.5,22.9,-75.7,4.9,-71.5,-11.8C-67.3,-28.5,-59.7,-43.9,-47.6,-51.8C-35.5,-59.7,-17.7,-60,-1.5,-57.7C14.7,-55.5,29.4,-50.4,40.3,-63.4Z'/%3E%3C/svg%3E");
+            -webkit-mask-size: cover;
+            mask-size: cover;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            mask-position: center;
+        }
+        #mobile-menu .text-clinical-charcoal {
+            color: rgba(255, 255, 255, 0.85);
+        }
+        #mobile-menu .text-gray-400 {
+            color: rgba(255, 255, 255, 0.45);
+        }
+        #mobile-menu svg {
+            color: #ffffff;
+        }
+
+
     </style>
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -209,16 +296,16 @@
     }
     </script>
 </head>
-<body class="bg-white text-clinical-charcoal font-sans antialiased">
+<body class="blueprint-global text-slate-100 font-sans antialiased">
     <!-- Global Navigation -->
-            <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
-        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <header class="fixed top-4 inset-x-0 z-50 flex justify-center px-4">
+        <nav class="nav-dock w-full max-w-7xl px-6 py-4 flex items-center justify-between">
             <div class="flex items-center">
                 <a href="/index.html" class="flex items-center space-x-3 group">
                     <img src="/images/cclogo_trimmed.png" alt="Cincinnati Chiropractic" class="h-16 w-auto drop-shadow-sm group-hover:drop-shadow-md transition-all">
                     <div class="hidden sm:flex flex-col">
                         <span class="text-lg font-display font-bold text-clinical-blue tracking-tight leading-none">CINCINNATI</span>
-                        <span class="text-xs font-light text-clinical-charcoal uppercase tracking-[0.3em] leading-none mt-1">Chiropractic</span>
+                        <span class="text-xs font-light text-white/70 uppercase tracking-[0.3em] leading-none mt-1">Chiropractic</span>
                     </div>
                 </a>
             </div>
@@ -227,65 +314,65 @@
                 <a href="/index.html" class="nav-link text-clinical-blue font-bold uppercase">HOME</a>
                 
                 <div class="relative group">
-                    <button class="flex items-center space-x-1 nav-link py-2 uppercase tracking-widest font-bold text-xs text-clinical-charcoal">
+                    <button class="flex items-center space-x-1 nav-link py-2 uppercase tracking-widest font-bold text-xs text-white/70 hover:text-white">
                         <span>The Flagships</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
-                    <div class="absolute left-0 mt-0 w-64 bg-white border border-gray-100 shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-4 z-50">
-                        <a href="/programs/cincinnati-chiropractic-care.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Precision Chiropractic</a>
-                        <a href="/programs/integrative-physical-therapy.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Integrative Physical Therapy</a>
-                        <a href="/programs/personalized-medicine-cincinnati.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Personalized Medicine</a>
-                        <a href="/programs/cincinnati-longevity-protocol.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors">Longevity Care</a>
+                    <div class="absolute left-0 mt-3 w-64 dropdown-panel rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-4 z-50">
+                        <a href="/programs/cincinnati-chiropractic-care.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors">Precision Chiropractic</a>
+                        <a href="/programs/integrative-physical-therapy.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors">Integrative Physical Therapy</a>
+                        <a href="/programs/personalized-medicine-cincinnati.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors">Personalized Medicine</a>
+                        <a href="/programs/cincinnati-longevity-protocol.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors">Longevity Care</a>
                     </div>
                 </div>
 
                 <div class="relative group">
-                    <button class="flex items-center space-x-1 nav-link py-2 uppercase tracking-widest font-bold text-xs text-clinical-charcoal">
+                    <button class="flex items-center space-x-1 nav-link py-2 uppercase tracking-widest font-bold text-xs text-white/70 hover:text-white">
                         <span>Specialized Protocols</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
-                    <div class="absolute left-0 mt-0 w-72 bg-white border border-gray-100 shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-4 z-50">
-                        <div class="px-4 pb-2 text-[10px] font-bold text-gray-400 uppercase tracking-widest">Chronic Management</div>
-                        <a href="/programs/neuropathy-care.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Neuropathy Care</a>
-                        <a href="/programs/cardiometabolic-repair.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Cardiometabolic Repair</a>
-                        <a href="/programs/chronic-fatigue-long-covid.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Chronic Fatigue &amp; Long Covid</a>
-                        <a href="/programs/fibromyalgia-care.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Fibromyalgia Care</a>
-                        <a href="/programs/brain-health-sleep-optimization.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Sleep Optimization</a>
-                        <hr class="my-2 border-gray-100">
-                        <div class="px-4 pb-2 text-[10px] font-bold text-gray-400 uppercase tracking-widest">Performance &amp; Structure</div>
-                        <a href="/programs/heart-rate-variability-optimization.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Heart Rate Variability Optimization</a>
-                        <a href="/programs/balance-strength-bone-optimization.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Balance, Strength, and Bone Optimization</a>
-                        <a href="/programs/flexibility-mobility-optimization.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Flexibility &amp; Functional Mobility</a>
-                        <a href="/programs/golf-performance-cincinnati.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Golf Performance</a>
-                        <a href="/programs/longevity-healthspan-optimization.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Longevity &amp; Healthspan</a>
+                    <div class="absolute left-0 mt-3 w-72 dropdown-panel rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-4 z-50">
+                        <div class="px-4 pb-2 text-[10px] font-bold text-white/40 uppercase tracking-widest">Chronic Management</div>
+                        <a href="/programs/neuropathy-care.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Neuropathy Care</a>
+                        <a href="/programs/cardiometabolic-repair.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Cardiometabolic Repair</a>
+                        <a href="/programs/chronic-fatigue-long-covid.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Chronic Fatigue &amp; Long Covid</a>
+                        <a href="/programs/fibromyalgia-care.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Fibromyalgia Care</a>
+                        <a href="/programs/brain-health-sleep-optimization.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Sleep Optimization</a>
+                        <hr class="my-2 border-white/10">
+                        <div class="px-4 pb-2 text-[10px] font-bold text-white/40 uppercase tracking-widest">Performance &amp; Structure</div>
+                        <a href="/programs/heart-rate-variability-optimization.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Heart Rate Variability Optimization</a>
+                        <a href="/programs/balance-strength-bone-optimization.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Balance, Strength, and Bone Optimization</a>
+                        <a href="/programs/flexibility-mobility-optimization.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Flexibility &amp; Functional Mobility</a>
+                        <a href="/programs/golf-performance-cincinnati.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Golf Performance</a>
+                        <a href="/programs/longevity-healthspan-optimization.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Longevity &amp; Healthspan</a>
                     </div>
                 </div>
 
                 <div class="relative group">
-                    <button class="flex items-center space-x-1 nav-link py-2 uppercase tracking-widest font-bold text-xs text-clinical-charcoal">
+                    <button class="flex items-center space-x-1 nav-link py-2 uppercase tracking-widest font-bold text-xs text-white/70 hover:text-white">
                         <span>Treatments</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
-                    <div class="absolute left-0 mt-0 w-64 bg-white border border-gray-100 shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-4 z-50">
+                    <div class="absolute left-0 mt-3 w-64 dropdown-panel rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-4 z-50">
                         
-                        <a href="/treatments/class-iv-laser.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Cold Laser (Class IV)</a>
-                        <a href="/treatments/red-light-therapy.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Red Light Therapy</a>
-                        <a href="/treatments/shockwave-therapy.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Shockwave Therapy</a>
-                        <a href="/treatments/pemf-therapy.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">PEMF Therapy</a>
-                        <a href="/treatments/hyperbaric-oxygen.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Hyperbaric Oxygen</a>
-                        <a href="/treatments/spinal-decompression.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Spinal Decompression</a>
-                        <a href="/treatments/dry-needling.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Dry Needling</a>
-                        <a href="/treatments/vagus-nerve-stimulation.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">tVNS (Vagus Nerve)</a>
-                        <a href="/treatments/sleep-testing.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Sleep Testing</a>
-                        <a href="/treatments/targeted-supplements.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Targeted Supplements</a>
-                        <a href="/treatments/longevity-blood-panels.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">Longevity Blood Panels</a>
-                        <a href="/treatments/vo2-max-testing.html" class="block px-4 py-2 hover:bg-clinical-gray hover:text-clinical-blue transition-colors text-sm text-clinical-charcoal">VO2 Max Testing</a>
+                        <a href="/treatments/class-iv-laser.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Cold Laser (Class IV)</a>
+                        <a href="/treatments/red-light-therapy.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Red Light Therapy</a>
+                        <a href="/treatments/shockwave-therapy.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Shockwave Therapy</a>
+                        <a href="/treatments/pemf-therapy.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">PEMF Therapy</a>
+                        <a href="/treatments/hyperbaric-oxygen.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Hyperbaric Oxygen</a>
+                        <a href="/treatments/spinal-decompression.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Spinal Decompression</a>
+                        <a href="/treatments/dry-needling.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Dry Needling</a>
+                        <a href="/treatments/vagus-nerve-stimulation.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">tVNS (Vagus Nerve)</a>
+                        <a href="/treatments/sleep-testing.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Sleep Testing</a>
+                        <a href="/treatments/targeted-supplements.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Targeted Supplements</a>
+                        <a href="/treatments/longevity-blood-panels.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Longevity Blood Panels</a>
+                        <a href="/treatments/vo2-max-testing.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">VO2 Max Testing</a>
 
                     </div>
                 </div>
 
-                <a href="/team.html" class="nav-link uppercase tracking-widest font-bold text-xs text-clinical-charcoal">Our Team</a>
-                <a href="/patient-resources.html" class="nav-link uppercase tracking-widest font-bold text-xs text-clinical-charcoal">Patient Resources</a>
+                <a href="/team.html" class="nav-link uppercase tracking-widest font-bold text-xs text-white/70 hover:text-white">Our Team</a>
+                <a href="/patient-resources.html" class="nav-link uppercase tracking-widest font-bold text-xs text-white/70 hover:text-white">Patient Resources</a>
             </div>
 
             <div class="flex items-center space-x-4">
@@ -293,13 +380,13 @@
                     Request Appointment
                 </a>
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button" class="lg:hidden p-2 text-clinical-charcoal hover:text-clinical-blue transition-colors">
+                <button id="mobile-menu-button" class="lg:hidden p-2 text-white/80 hover:text-white transition-colors">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </nav>
         <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white transform translate-x-full transition-transform duration-300 lg:hidden">
+        <div id="mobile-menu" class="fixed inset-0 z-[60] bg-[#020617] transform translate-x-full transition-transform duration-300 lg:hidden">
             <div class="p-6 flex flex-col h-full">
                 <div class="flex items-center justify-between mb-12">
                     <span class="text-2xl font-display font-bold text-clinical-blue">MENU</span>
@@ -372,97 +459,22 @@
         });
     </script>
 
-    <main>
+    <main class="pt-28">
         <!-- Elite Brand Synergy Hero -->
-        <section class="relative min-h-[100vh] bg-[#020617] flex flex-col items-center justify-center overflow-hidden py-32">
-            <!-- Emboldened High-Performance Technical Background -->
-            <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-                <!-- Moving Blueprint Grid (Infinite Scroll) -->
-                <div class="absolute inset-0 opacity-[0.2] animate-grid-scroll" 
-                     style="background-image: linear-gradient(#334155 1.5px, transparent 1px), linear-gradient(90deg, #334155 1.5px, transparent 1px); background-size: 80px 80px;">
-                </div>
-                
-                <!-- Dynamic Dual Scanners -->
-                <div class="absolute inset-0">
-                    <div class="hero-scanner-v"></div>
-                    <div class="hero-scanner-h"></div>
-                </div>
-
-                <!-- Technical "HUD" Elements -->
-                <div class="absolute inset-0 opacity-20">
-                    <div class="absolute top-20 left-20 w-32 h-32 border-l border-t border-clinical-blue/40 animate-pulse"></div>
-                    <div class="absolute bottom-20 right-20 w-32 h-32 border-r border-b border-clinical-green/40 animate-pulse" style="animation-delay: 1s;"></div>
-                    
-                    <!-- Floating Data Crosshairs -->
-                    <div class="absolute top-1/3 left-1/4 animate-float-fast text-clinical-blue/30 text-[8px] font-mono tracking-tighter">
-                        [ 39.1512 N / 84.6152 W ]<br>
-                        <span class="w-12 h-px bg-current block mt-1"></span>
-                    </div>
-                    <div class="absolute bottom-1/3 right-1/4 animate-float-slow text-clinical-green/30 text-[8px] font-mono tracking-tighter">
-                        [ BIO-SYNCHRONIZATION ACTIVE ]<br>
-                        <span class="w-12 h-px bg-current block mt-1"></span>
-                    </div>
-                </div>
-                
-                <!-- Intense Pulsing Energy Orbs -->
-                <div class="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-clinical-blue/20 rounded-full blur-[150px] animate-energy-pulse"></div>
-                <div class="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-clinical-green/15 rounded-full blur-[120px] animate-energy-pulse" style="animation-delay: 3s;"></div>
+        <section class="relative min-h-[100vh] flex flex-col items-center justify-center overflow-hidden py-32">
+            <!-- Soft Blueprint Atmosphere -->
+            <div class="absolute inset-0 z-0 pointer-events-none">
+                <div class="absolute -top-48 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-clinical-blue/20 blur-[160px]"></div>
+                <div class="absolute -bottom-48 right-1/4 h-96 w-96 rounded-full bg-clinical-green/15 blur-[160px]"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-white/5 via-transparent to-transparent"></div>
             </div>
-
-            <style>
-                @keyframes grid-scroll {
-                    0% { background-position: 0 0; }
-                    100% { background-position: 0 80px; }
-                }
-                .animate-grid-scroll {
-                    animation: grid-scroll 4s linear infinite;
-                }
-                @keyframes scan-v {
-                    0% { top: -10%; opacity: 0; }
-                    50% { opacity: 1; }
-                    100% { top: 110%; opacity: 0; }
-                }
-                @keyframes scan-h {
-                    0% { left: -10%; opacity: 0; }
-                    50% { opacity: 1; }
-                    100% { left: 110%; opacity: 0; }
-                }
-                .hero-scanner-v {
-                    position: absolute;
-                    left: 0; width: 100%; height: 2px;
-                    background: linear-gradient(90deg, transparent, #0047AB, transparent);
-                    box-shadow: 0 0 20px rgba(0, 71, 171, 0.5);
-                    animation: scan-v 6s ease-in-out infinite;
-                }
-                .hero-scanner-h {
-                    position: absolute;
-                    top: 0; height: 100%; width: 2px;
-                    background: linear-gradient(180deg, transparent, #22C55E, transparent);
-                    box-shadow: 0 0 20px rgba(34, 197, 94, 0.5);
-                    animation: scan-h 9s ease-in-out infinite;
-                }
-                @keyframes energy-pulse {
-                    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
-                    50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
-                }
-                .animate-energy-pulse {
-                    animation: energy-pulse 10s ease-in-out infinite;
-                }
-                @keyframes float-fast {
-                    0%, 100% { transform: translate(0, 0); }
-                    50% { transform: translate(30px, -20px); }
-                }
-                .animate-float-fast {
-                    animation: float-fast 8s ease-in-out infinite;
-                }
-            </style>
 
             <div class="container mx-auto px-6 relative z-10 text-center">
                 <div class="max-w-5xl mx-auto space-y-8 sm:space-y-12">
                     <div class="inline-flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 px-4 sm:px-6 py-2 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full text-center">
                         <span class="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] text-clinical-blue italic leading-none text-center">Advanced Clinical Performance</span>
                         <span class="hidden sm:block w-px h-4 bg-white/20"></span>
-                        <span class="text-[9px] sm:text-[10px] font-medium uppercase tracking-[0.15em] sm:tracking-[0.25em] text-gray-400 leading-none text-center">Greater Cincinnati's Elite Standard</span>
+                        <span class="text-[9px] sm:text-[10px] font-medium uppercase tracking-[0.15em] sm:tracking-[0.25em] text-white/60 leading-none text-center">Greater Cincinnati's Elite Standard</span>
                     </div>
 
                     <div class="space-y-2">
@@ -481,7 +493,7 @@
                     </div>
 
                     <div class="max-w-2xl mx-auto space-y-8">
-                        <p class="text-base sm:text-xl lg:text-2xl text-gray-400 font-light leading-relaxed">
+                        <p class="text-base sm:text-xl lg:text-2xl text-white/70 font-light leading-relaxed">
                             Elite physical medicine meets the frontier of longevity science. From <span class="text-white font-medium border-b border-clinical-blue/30 pb-1">Precision Structural Care</span> to <span class="text-white font-medium border-b border-clinical-green/30 pb-1">Advanced Medical Optimization</span>.
                         </p>
 
@@ -523,11 +535,11 @@
         </section>
 
         <!-- The Cincinnati Legacy: Pro-Level Pedigree -->
-        <section class="py-24 bg-white relative overflow-hidden">
+        <section class="py-24 relative overflow-hidden">
             <div class="container mx-auto px-6 relative z-10">
 
 
-                <div class="bg-[#161616] rounded-[2rem] sm:rounded-[3rem] p-6 sm:p-8 lg:p-20 text-white overflow-hidden relative group border border-white/10 shadow-2xl">
+                <div class="glass-panel rounded-[2rem] sm:rounded-[3rem] p-6 sm:p-8 lg:p-20 text-white overflow-hidden relative group border border-white/20 shadow-2xl">
                     <div class="absolute inset-0">
                         <div class="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-br from-[#161616] via-[#3a1a0c] to-[#ff6b2b]/55"></div>
                         <div class="absolute inset-y-0 right-0 w-1/2 bg-gradient-to-br from-[#16161a] via-[#33131d] to-[#e11d48]/55"></div>
@@ -565,7 +577,7 @@
                             <div class="space-y-2">
                                 <h4 class="text-xl sm:text-2xl lg:text-3xl font-display font-bold italic text-white">Elite-Level Care for Everyone</h4>
                             </div>
-                            <div class="relative aspect-video bg-black/45 rounded-[2rem] overflow-hidden shadow-2xl border border-white/10">
+                            <div class="relative aspect-video soft-mask bg-black/45 rounded-[2rem] overflow-hidden shadow-2xl border border-white/10">
                                 <img src="https://images.unsplash.com/photo-1504450758481-7338ef7524a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Stadium Performance" class="w-full h-full object-cover opacity-70">
                                 <div class="absolute inset-0 bg-gradient-to-br from-black/45 via-transparent to-black/45"></div>
                                 <div class="absolute inset-0 flex items-center justify-center">
@@ -592,9 +604,10 @@
         </section>
 
         <!-- Tier 1: The Clinical Flagships -->
-        <section id="programs" class="py-24 bg-white relative overflow-hidden">
+        <section id="programs" class="py-24 relative overflow-hidden">
             <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
             <div class="container mx-auto px-6 relative z-10">
+                <div class="section-panel-light rounded-[3rem] p-8 sm:p-12 lg:p-14">
                 <div class="text-center max-w-3xl mx-auto mb-20">
                     <div class="inline-flex items-center justify-center rounded-full border border-clinical-blue/20 bg-white/80 px-6 py-3 shadow-[0_25px_60px_-25px_rgba(37,99,235,0.35)] ring-1 ring-clinical-blue/20">
                         <h3 class="text-3xl sm:text-4xl lg:text-6xl font-display font-bold text-clinical-charcoal">Clinical <span class="text-clinical-blue">Flagships</span></h3>
@@ -602,73 +615,69 @@
                     <div class="mt-5 mx-auto h-px w-28 bg-gradient-to-r from-transparent via-clinical-blue/60 to-transparent"></div>
                 </div>
 
-                <div class="grid lg:grid-cols-4 gap-6 sm:gap-8">
-                    <!-- Flagship 1: Chiropractic -->
-                    <div class="group relative blueprint-bg rounded-[2.5rem] sm:rounded-[3rem] p-8 sm:p-10 transition-all duration-700 hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.5)] overflow-hidden cursor-pointer h-auto sm:min-h-[400px] flex flex-col gap-5 border border-white/20 bento-card">
-                        <div class="relative z-10">
-                            <h4 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold mb-4 text-white group-hover:text-clinical-green transition-colors leading-tight italic">Precision Chiropractic</h4>
-                            <p class="text-white text-base sm:text-[17px] leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity">
+                <div class="divide-y divide-slate-200/70">
+                    <div class="flex flex-col lg:flex-row lg:items-center gap-8 py-10">
+                        <div class="flex-1 space-y-4">
+                            <h4 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-slate-900 leading-tight italic">Precision Chiropractic</h4>
+                            <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
                                 Correcting complex spinal pathologies including herniated discs, sciatica, and chronic neck pain using advanced kinematics and biodynamic analysis.
                             </p>
                         </div>
-                        <div class="relative z-10 mt-auto">
-                            <a href="/programs/cincinnati-chiropractic-care.html" class="inline-flex items-center px-6 sm:px-8 py-3 bg-white text-[#0047AB] rounded-full font-bold text-xs sm:text-sm transition-all shadow-xl hover:bg-clinical-green hover:text-white group-hover:translate-y-[-4px]">
+                        <div>
+                            <a href="/programs/cincinnati-chiropractic-care.html" class="inline-flex items-center px-6 py-3 rounded-full border border-clinical-blue/40 text-clinical-blue font-bold text-xs uppercase tracking-[0.25em] hover:bg-clinical-blue hover:text-white transition-all">
                                 Learn More <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                             </a>
                         </div>
                     </div>
-
-                    <!-- Flagship 2: Physical Therapy -->
-                    <div class="group relative blueprint-bg rounded-[2.5rem] sm:rounded-[3rem] p-8 sm:p-10 transition-all duration-700 hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.5)] overflow-hidden cursor-pointer h-auto sm:min-h-[400px] flex flex-col gap-5 border border-white/20 bento-card">
-                        <div class="relative z-10">
-                            <h4 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold mb-4 text-white group-hover:text-clinical-green transition-colors leading-tight italic">Integrative Physical Therapy</h4>
-                            <p class="text-white text-base sm:text-[17px] leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity">
+                    <div class="flex flex-col lg:flex-row lg:items-center gap-8 py-10">
+                        <div class="flex-1 space-y-4">
+                            <h4 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-slate-900 leading-tight italic">Integrative Physical Therapy</h4>
+                            <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
                                 Comprehensive rehabilitation for sports injuries, post-surgical recovery, and chronic pain through neuro-modulation and graded functional exposure.
                             </p>
                         </div>
-                        <div class="relative z-10 mt-auto">
-                            <a href="/programs/integrative-physical-therapy.html" class="inline-flex items-center px-6 sm:px-8 py-3 bg-white text-[#0047AB] rounded-full font-bold text-xs sm:text-sm transition-all shadow-xl hover:bg-clinical-green hover:text-white group-hover:translate-y-[-4px]">
+                        <div>
+                            <a href="/programs/integrative-physical-therapy.html" class="inline-flex items-center px-6 py-3 rounded-full border border-clinical-blue/40 text-clinical-blue font-bold text-xs uppercase tracking-[0.25em] hover:bg-clinical-blue hover:text-white transition-all">
                                 Learn More <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                             </a>
                         </div>
                     </div>
-
-                    <!-- Flagship 3: Personalized Medicine -->
-                    <div class="group relative blueprint-bg rounded-[2.5rem] sm:rounded-[3rem] p-8 sm:p-10 transition-all duration-700 hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.5)] overflow-hidden cursor-pointer h-auto sm:min-h-[400px] flex flex-col gap-5 border border-white/20 bento-card">
-                        <div class="relative z-10">
-                            <h4 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold mb-4 text-white group-hover:text-clinical-green transition-colors leading-tight italic">Personalized Medicine</h4>
-                            <p class="text-white text-base sm:text-[17px] leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity">
+                    <div class="flex flex-col lg:flex-row lg:items-center gap-8 py-10">
+                        <div class="flex-1 space-y-4">
+                            <h4 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-slate-900 leading-tight italic">Personalized Medicine</h4>
+                            <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
                                 Precision clinical management of metabolic syndrome, hormonal imbalances, and systemic inflammation using deep biomarker tracking and diagnostics.
                             </p>
                         </div>
-                        <div class="relative z-10 mt-auto">
-                            <a href="/programs/personalized-medicine-cincinnati.html" class="inline-flex items-center px-6 sm:px-8 py-3 bg-white text-[#0047AB] rounded-full font-bold text-xs sm:text-sm transition-all shadow-xl hover:bg-clinical-green hover:text-white group-hover:translate-y-[-4px]">
+                        <div>
+                            <a href="/programs/personalized-medicine-cincinnati.html" class="inline-flex items-center px-6 py-3 rounded-full border border-clinical-blue/40 text-clinical-blue font-bold text-xs uppercase tracking-[0.25em] hover:bg-clinical-blue hover:text-white transition-all">
                                 Learn More <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                             </a>
                         </div>
                     </div>
-
-                    <!-- Flagship 4: Longevity -->
-                    <div class="group relative blueprint-bg rounded-[2.5rem] sm:rounded-[3rem] p-8 sm:p-10 transition-all duration-700 hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.5)] overflow-hidden cursor-pointer h-auto sm:min-h-[400px] flex flex-col gap-5 border border-white/20 bento-card">
-                        <div class="relative z-10">
-                            <h4 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold mb-4 text-white group-hover:text-clinical-green transition-colors leading-tight italic">Longevity Care</h4>
-                            <p class="text-white text-base sm:text-[17px] leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity">
+                    <div class="flex flex-col lg:flex-row lg:items-center gap-8 py-10">
+                        <div class="flex-1 space-y-4">
+                            <h4 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-slate-900 leading-tight italic">Longevity Care</h4>
+                            <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
                                 Engineering the future of human healthspan through mitochondrial repair, VO2 Max optimization, and cellular energy restoration protocols.
                             </p>
                         </div>
-                        <div class="relative z-10 mt-auto">
-                            <a href="/programs/cincinnati-longevity-protocol.html" class="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-white text-[#0047AB] rounded-full font-bold text-xs sm:text-sm transition-all shadow-xl hover:bg-clinical-green hover:text-white group-hover:translate-y-[-4px]">
+                        <div>
+                            <a href="/programs/cincinnati-longevity-protocol.html" class="inline-flex items-center px-6 py-3 rounded-full border border-clinical-blue/40 text-clinical-blue font-bold text-xs uppercase tracking-[0.25em] hover:bg-clinical-blue hover:text-white transition-all">
                                 Learn More <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                             </a>
                         </div>
                     </div>
                 </div>
+                </div>
+
             </div>
         </section>
 
         <!-- The Performance Continuum: The Journey from Pain to Power -->
-        <section class="py-24 bg-clinical-green relative overflow-hidden">
+        <section class="py-24 relative overflow-hidden">
             <div class="container mx-auto px-6 relative z-10">
+                <div class="section-panel rounded-[3rem] p-8 sm:p-12 lg:p-14">
                 <div class="text-center max-w-3xl mx-auto mb-20">
                     <p class="text-[10px] font-bold uppercase tracking-[0.35em] text-white/70">The Clinical Roadmap</p>
                     <div class="mt-4 inline-flex items-center justify-center rounded-full border border-white/25 bg-white/10 px-6 py-3 shadow-[0_25px_60px_-25px_rgba(96,165,250,0.55)] ring-1 ring-white/30">
@@ -682,7 +691,7 @@
                     <div class="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-clinical-blue via-clinical-green to-clinical-blue opacity-20 -translate-y-1/2"></div>
 
                     <!-- Phase 1: Foundation -->
-                    <div class="relative bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 group">
+                    <div class="relative glass-panel-light p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-500 group">
                         <div class="absolute -top-6 left-10 w-12 h-12 bg-clinical-blue text-white rounded-xl flex items-center justify-center font-display font-bold text-xl shadow-lg">01</div>
                         <h4 class="text-2xl font-display font-bold mb-6 pt-4 italic">The Foundation</h4>
                         <p class="text-gray-600 mb-8 leading-relaxed text-sm">
@@ -695,7 +704,7 @@
                     </div>
 
                     <!-- Phase 2: Optimize -->
-                    <div class="relative bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 group">
+                    <div class="relative glass-panel-light p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-500 group">
                         <div class="absolute -top-6 left-10 w-12 h-12 bg-clinical-blue text-white rounded-xl flex items-center justify-center font-display font-bold text-xl shadow-lg">02</div>
                         <h4 class="text-2xl font-display font-bold mb-6 pt-4 italic">Optimize</h4>
                         <p class="text-gray-600 mb-8 leading-relaxed text-sm">
@@ -708,7 +717,7 @@
                     </div>
 
                     <!-- Phase 3: Resilience -->
-                    <div class="relative bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 group">
+                    <div class="relative glass-panel-light p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-500 group">
                         <div class="absolute -top-6 left-10 w-12 h-12 bg-clinical-blue text-white rounded-xl flex items-center justify-center font-display font-bold text-xl shadow-lg">03</div>
                         <h4 class="text-2xl font-display font-bold mb-6 pt-4 italic">Healthspan & Resilience</h4>
                         <p class="text-gray-600 mb-8 leading-relaxed text-sm">
@@ -720,16 +729,19 @@
                         </ul>
                     </div>
                 </div>
+                </div>
+
             </div>
         </section>
 
         <!-- Tier 2: Specialized Protocols Bento Grids -->
-        <section class="py-24 blueprint-bg relative overflow-hidden">
+        <section class="py-24 relative overflow-hidden">
             <div class="absolute inset-0 pointer-events-none">
                 <div class="absolute -top-40 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-clinical-blue/12 blur-3xl"></div>
                 <div class="absolute -bottom-40 right-10 h-72 w-72 rounded-full bg-clinical-green/12 blur-3xl"></div>
             </div>
             <div class="container mx-auto px-6 relative z-10">
+                <div class="section-panel rounded-[3rem] p-8 sm:p-12 lg:p-14">
                 <div class="text-center max-w-3xl mx-auto mb-16">
                     <div class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-3 shadow-[0_25px_60px_-25px_rgba(34,197,94,0.55)] ring-1 ring-clinical-green/30">
                         <h3 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white">Specialized <span class="text-clinical-green">Protocols</span></h3>
@@ -737,118 +749,114 @@
                     <div class="mt-5 mx-auto h-px w-28 bg-gradient-to-r from-transparent via-clinical-green/70 to-transparent"></div>
                 </div>
 
-                <div class="grid lg:grid-cols-2 gap-10 xl:gap-12">
-                    <div class="relative rounded-[2.75rem] border border-white/80 bg-white p-8 sm:p-10 shadow-[0_40px_80px_-40px_rgba(0,0,0,0.45)] overflow-hidden">
-                        <div class="absolute -right-20 -top-20 h-44 w-44 rounded-full bg-clinical-green/12 blur-3xl"></div>
-                        <div class="relative z-10">
-                            <div class="flex items-center gap-3">
-                                <span class="text-slate-500 text-xs uppercase tracking-[0.2em]">Chronic Management</span>
-                            </div>
-                            <h3 class="text-3xl sm:text-4xl font-display font-bold leading-tight text-clinical-charcoal mt-5">Chronic <span class="text-clinical-green">Management</span></h3>
-                            <p class="text-base sm:text-lg text-slate-600 leading-relaxed opacity-90 mt-4">Dedicated clinical management for complex chronic pathologies requiring specific physiological interventions.</p>
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div class="space-y-8">
+                        <div class="space-y-4">
+                            <p class="text-[10px] uppercase tracking-[0.3em] text-white/50">Chronic Management</p>
+                            <h3 class="text-3xl sm:text-4xl font-display font-bold leading-tight text-white">Chronic <span class="text-clinical-green">Management</span></h3>
+                            <p class="text-base sm:text-lg text-white/70 leading-relaxed">Dedicated clinical management for complex chronic pathologies requiring specific physiological interventions.</p>
                         </div>
-                        <div class="mt-8 space-y-4">
-                            <a href="/programs/neuropathy-care.html" class="group flex items-start gap-4 rounded-2xl border border-clinical-blue/60 bg-clinical-blue px-5 py-4 sm:px-6 sm:py-5 shadow-[0_18px_40px_-24px_rgba(0,0,0,0.6)] transition-all duration-500 hover:bg-[#0b54c7] hover:border-clinical-blue/80 hover:shadow-[0_25px_55px_-25px_rgba(0,0,0,0.7)]">
-                                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-clinical-blue text-white font-display font-bold ring-1 ring-white/40 shadow-[0_10px_20px_-12px_rgba(0,0,0,0.6)]">01</div>
+                        <div class="divide-y divide-white/10">
+                            <a href="/programs/neuropathy-care.html" class="group flex flex-col sm:flex-row gap-4 py-5 transition-colors">
+                                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white text-xs font-semibold">01</div>
                                 <div class="flex-1">
-                                    <h4 class="text-lg sm:text-xl font-bold text-white group-hover:text-clinical-green transition-colors italic">Neuropathy Care</h4>
-                                    <p class="text-blue-50/90 text-xs sm:text-sm mt-1">Multi-modal restoration of nerve function and micro-circulation addressing roots of pain and numbness.</p>
+                                    <h4 class="text-lg sm:text-xl font-semibold text-white group-hover:text-clinical-green transition-colors italic">Neuropathy Care</h4>
+                                    <p class="text-white/70 text-xs sm:text-sm mt-1">Multi-modal restoration of nerve function and micro-circulation addressing roots of pain and numbness.</p>
                                     <span class="mt-3 inline-flex items-center text-clinical-green text-[10px] font-bold uppercase tracking-widest">Axonal Repair <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
                                 </div>
                             </a>
-                            <a href="/programs/cardiometabolic-repair.html" class="group flex items-start gap-4 rounded-2xl border border-clinical-blue/60 bg-clinical-blue px-5 py-4 sm:px-6 sm:py-5 shadow-[0_18px_40px_-24px_rgba(0,0,0,0.6)] transition-all duration-500 hover:bg-[#0b54c7] hover:border-clinical-blue/80 hover:shadow-[0_25px_55px_-25px_rgba(0,0,0,0.7)]">
-                                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-clinical-blue text-white font-display font-bold ring-1 ring-white/40 shadow-[0_10px_20px_-12px_rgba(0,0,0,0.6)]">02</div>
+                            <a href="/programs/cardiometabolic-repair.html" class="group flex flex-col sm:flex-row gap-4 py-5 transition-colors">
+                                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white text-xs font-semibold">02</div>
                                 <div class="flex-1">
-                                    <h4 class="text-lg sm:text-xl font-bold text-white group-hover:text-clinical-green transition-colors italic">Cardiometabolic Repair</h4>
-                                    <p class="text-blue-50/90 text-xs sm:text-sm mt-1">Rebuilding insulin sensitivity, cardiopulmonary efficiency, and mitochondrial output with advanced testing.</p>
+                                    <h4 class="text-lg sm:text-xl font-semibold text-white group-hover:text-clinical-green transition-colors italic">Cardiometabolic Repair</h4>
+                                    <p class="text-white/70 text-xs sm:text-sm mt-1">Rebuilding insulin sensitivity, cardiopulmonary efficiency, and mitochondrial output with advanced testing.</p>
                                     <span class="mt-3 inline-flex items-center text-clinical-green text-[10px] font-bold uppercase tracking-widest">Metabolic Reset <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
                                 </div>
                             </a>
-                            <a href="/programs/chronic-fatigue-long-covid.html" class="group flex items-start gap-4 rounded-2xl border border-clinical-blue/60 bg-clinical-blue px-5 py-4 sm:px-6 sm:py-5 shadow-[0_18px_40px_-24px_rgba(0,0,0,0.6)] transition-all duration-500 hover:bg-[#0b54c7] hover:border-clinical-blue/80 hover:shadow-[0_25px_55px_-25px_rgba(0,0,0,0.7)]">
-                                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-clinical-blue text-white font-display font-bold ring-1 ring-white/40 shadow-[0_10px_20px_-12px_rgba(0,0,0,0.6)]">03</div>
+                            <a href="/programs/chronic-fatigue-long-covid.html" class="group flex flex-col sm:flex-row gap-4 py-5 transition-colors">
+                                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white text-xs font-semibold">03</div>
                                 <div class="flex-1">
-                                    <h4 class="text-lg sm:text-xl font-bold text-white group-hover:text-clinical-green transition-colors italic">Chronic Fatigue &amp; Long Covid</h4>
-                                    <p class="text-blue-50/90 text-xs sm:text-sm mt-1">Protocols for ME/CFS, long COVID, and post-viral fatigue that rebuild energy systems safely.</p>
+                                    <h4 class="text-lg sm:text-xl font-semibold text-white group-hover:text-clinical-green transition-colors italic">Chronic Fatigue &amp; Long Covid</h4>
+                                    <p class="text-white/70 text-xs sm:text-sm mt-1">Protocols for ME/CFS, long COVID, and post-viral fatigue that rebuild energy systems safely.</p>
                                     <span class="mt-3 inline-flex items-center text-clinical-green text-[10px] font-bold uppercase tracking-widest">Post-Viral Recovery <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
                                 </div>
                             </a>
-                            <a href="/programs/fibromyalgia-care.html" class="group flex items-start gap-4 rounded-2xl border border-clinical-blue/60 bg-clinical-blue px-5 py-4 sm:px-6 sm:py-5 shadow-[0_18px_40px_-24px_rgba(0,0,0,0.6)] transition-all duration-500 hover:bg-[#0b54c7] hover:border-clinical-blue/80 hover:shadow-[0_25px_55px_-25px_rgba(0,0,0,0.7)]">
-                                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-clinical-blue text-white font-display font-bold ring-1 ring-white/40 shadow-[0_10px_20px_-12px_rgba(0,0,0,0.6)]">04</div>
+                            <a href="/programs/fibromyalgia-care.html" class="group flex flex-col sm:flex-row gap-4 py-5 transition-colors">
+                                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white text-xs font-semibold">04</div>
                                 <div class="flex-1">
-                                    <h4 class="text-lg sm:text-xl font-bold text-white group-hover:text-clinical-green transition-colors italic">Fibromyalgia Care</h4>
-                                    <p class="text-blue-50/90 text-xs sm:text-sm mt-1">Centralized pain relief and nervous system regulation for widespread pain and recovery.</p>
+                                    <h4 class="text-lg sm:text-xl font-semibold text-white group-hover:text-clinical-green transition-colors italic">Fibromyalgia Care</h4>
+                                    <p class="text-white/70 text-xs sm:text-sm mt-1">Centralized pain relief and nervous system regulation for widespread pain and recovery.</p>
                                     <span class="mt-3 inline-flex items-center text-clinical-green text-[10px] font-bold uppercase tracking-widest">Pain Reset <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
                                 </div>
                             </a>
-                            <a href="/programs/brain-health-sleep-optimization.html" class="group flex items-start gap-4 rounded-2xl border border-clinical-blue/60 bg-clinical-blue px-5 py-4 sm:px-6 sm:py-5 shadow-[0_18px_40px_-24px_rgba(0,0,0,0.6)] transition-all duration-500 hover:bg-[#0b54c7] hover:border-clinical-blue/80 hover:shadow-[0_25px_55px_-25px_rgba(0,0,0,0.7)]">
-                                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-clinical-blue text-white font-display font-bold ring-1 ring-white/40 shadow-[0_10px_20px_-12px_rgba(0,0,0,0.6)]">05</div>
+                            <a href="/programs/brain-health-sleep-optimization.html" class="group flex flex-col sm:flex-row gap-4 py-5 transition-colors">
+                                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white text-xs font-semibold">05</div>
                                 <div class="flex-1">
-                                    <h4 class="text-lg sm:text-xl font-bold text-white group-hover:text-clinical-green transition-colors italic">Sleep Optimization</h4>
-                                    <p class="text-blue-50/90 text-xs sm:text-sm mt-1">Structural and autonomic regulation to reset neural operating systems and optimize deep sleep architecture.</p>
+                                    <h4 class="text-lg sm:text-xl font-semibold text-white group-hover:text-clinical-green transition-colors italic">Sleep Optimization</h4>
+                                    <p class="text-white/70 text-xs sm:text-sm mt-1">Structural and autonomic regulation to reset neural operating systems and optimize deep sleep architecture.</p>
                                     <span class="mt-3 inline-flex items-center text-clinical-green text-[10px] font-bold uppercase tracking-widest">Neural OS Reset <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
                                 </div>
                             </a>
                         </div>
                     </div>
-
-                    <div class="relative rounded-[2.75rem] border border-white/80 bg-white p-8 sm:p-10 shadow-[0_40px_80px_-40px_rgba(0,0,0,0.45)] overflow-hidden">
-                        <div class="absolute -right-20 -top-20 h-44 w-44 rounded-full bg-clinical-blue/12 blur-3xl"></div>
-                        <div class="relative z-10">
-                            <div class="flex items-center gap-3">
-                                <span class="text-slate-500 text-xs uppercase tracking-[0.2em]">Performance &amp; Structure</span>
-                            </div>
-                            <h3 class="text-3xl sm:text-4xl font-display font-bold leading-tight text-clinical-charcoal mt-5">Performance &amp; <span class="text-clinical-blue">Structure</span></h3>
-                            <p class="text-base sm:text-lg text-slate-600 leading-relaxed opacity-90 mt-4">Engineering the physical chassis for durability, explosive power, and long-term structural integrity.</p>
+                    <div class="space-y-8">
+                        <div class="space-y-4">
+                            <p class="text-[10px] uppercase tracking-[0.3em] text-white/50">Performance &amp; Structure</p>
+                            <h3 class="text-3xl sm:text-4xl font-display font-bold leading-tight text-white">Performance &amp; <span class="text-clinical-blue">Structure</span></h3>
+                            <p class="text-base sm:text-lg text-white/70 leading-relaxed">Engineering the physical chassis for durability, explosive power, and long-term structural integrity.</p>
                         </div>
-                        <div class="mt-8 space-y-4">
-                            <a href="/programs/longevity-healthspan-optimization.html" class="group flex items-start gap-4 rounded-2xl border border-clinical-blue/60 bg-clinical-blue px-5 py-4 sm:px-6 sm:py-5 shadow-[0_18px_40px_-24px_rgba(0,0,0,0.6)] transition-all duration-500 hover:bg-[#0b54c7] hover:border-clinical-blue/80 hover:shadow-[0_25px_55px_-25px_rgba(0,0,0,0.7)]">
-                                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-clinical-blue text-white font-display font-bold ring-1 ring-white/40 shadow-[0_10px_20px_-12px_rgba(0,0,0,0.6)]">01</div>
+                        <div class="divide-y divide-white/10">
+                            <a href="/programs/longevity-healthspan-optimization.html" class="group flex flex-col sm:flex-row gap-4 py-5 transition-colors">
+                                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white text-xs font-semibold">01</div>
                                 <div class="flex-1">
-                                    <h4 class="text-lg sm:text-xl font-bold text-white group-hover:text-clinical-green transition-colors italic">Longevity &amp; Healthspan</h4>
-                                    <p class="text-blue-50/90 text-xs sm:text-sm mt-1">Mitochondrial care and proactive diagnostics to extend healthspan, preserve strength, and protect cognition.</p>
+                                    <h4 class="text-lg sm:text-xl font-semibold text-white group-hover:text-clinical-green transition-colors italic">Longevity &amp; Healthspan</h4>
+                                    <p class="text-white/70 text-xs sm:text-sm mt-1">Mitochondrial care and proactive diagnostics to extend healthspan, preserve strength, and protect cognition.</p>
                                     <span class="mt-3 inline-flex items-center text-clinical-green text-[10px] font-bold uppercase tracking-widest">Healthspan Engineering <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
                                 </div>
                             </a>
-                            <a href="/programs/golf-performance-cincinnati.html" class="group flex items-start gap-4 rounded-2xl border border-clinical-blue/60 bg-clinical-blue px-5 py-4 sm:px-6 sm:py-5 shadow-[0_18px_40px_-24px_rgba(0,0,0,0.6)] transition-all duration-500 hover:bg-[#0b54c7] hover:border-clinical-blue/80 hover:shadow-[0_25px_55px_-25px_rgba(0,0,0,0.7)]">
-                                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-clinical-blue text-white font-display font-bold ring-1 ring-white/40 shadow-[0_10px_20px_-12px_rgba(0,0,0,0.6)]">02</div>
+                            <a href="/programs/golf-performance-cincinnati.html" class="group flex flex-col sm:flex-row gap-4 py-5 transition-colors">
+                                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white text-xs font-semibold">02</div>
                                 <div class="flex-1">
-                                    <h4 class="text-lg sm:text-xl font-bold text-white group-hover:text-clinical-green transition-colors italic">Golf Performance</h4>
-                                    <p class="text-blue-50/90 text-xs sm:text-sm mt-1">Biomechanical swing work to increase swing speed, distance, and durability through structural repair.</p>
+                                    <h4 class="text-lg sm:text-xl font-semibold text-white group-hover:text-clinical-green transition-colors italic">Golf Performance</h4>
+                                    <p class="text-white/70 text-xs sm:text-sm mt-1">Biomechanical swing work to increase swing speed, distance, and durability through structural repair.</p>
                                     <span class="mt-3 inline-flex items-center text-clinical-green text-[10px] font-bold uppercase tracking-widest">Kinematic Sequence <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
                                 </div>
                             </a>
-                            <a href="/programs/heart-rate-variability-optimization.html" class="group flex items-start gap-4 rounded-2xl border border-clinical-blue/60 bg-clinical-blue px-5 py-4 sm:px-6 sm:py-5 shadow-[0_18px_40px_-24px_rgba(0,0,0,0.6)] transition-all duration-500 hover:bg-[#0b54c7] hover:border-clinical-blue/80 hover:shadow-[0_25px_55px_-25px_rgba(0,0,0,0.7)]">
-                                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-clinical-blue text-white font-display font-bold ring-1 ring-white/40 shadow-[0_10px_20px_-12px_rgba(0,0,0,0.6)]">03</div>
+                            <a href="/programs/heart-rate-variability-optimization.html" class="group flex flex-col sm:flex-row gap-4 py-5 transition-colors">
+                                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white text-xs font-semibold">03</div>
                                 <div class="flex-1">
-                                    <h4 class="text-lg sm:text-xl font-bold text-white group-hover:text-clinical-green transition-colors italic">Heart Rate Variability Optimization</h4>
-                                    <p class="text-blue-50/90 text-xs sm:text-sm mt-1">Improve heart rate variability and autonomic flexibility for recovery, stress resilience, and performance.</p>
+                                    <h4 class="text-lg sm:text-xl font-semibold text-white group-hover:text-clinical-green transition-colors italic">Heart Rate Variability Optimization</h4>
+                                    <p class="text-white/70 text-xs sm:text-sm mt-1">Improve heart rate variability and autonomic flexibility for recovery, stress resilience, and performance.</p>
                                     <span class="mt-3 inline-flex items-center text-clinical-green text-[10px] font-bold uppercase tracking-widest">Autonomic Resilience <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
                                 </div>
                             </a>
-                            <a href="/programs/balance-strength-bone-optimization.html" class="group flex items-start gap-4 rounded-2xl border border-clinical-blue/60 bg-clinical-blue px-5 py-4 sm:px-6 sm:py-5 shadow-[0_18px_40px_-24px_rgba(0,0,0,0.6)] transition-all duration-500 hover:bg-[#0b54c7] hover:border-clinical-blue/80 hover:shadow-[0_25px_55px_-25px_rgba(0,0,0,0.7)]">
-                                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-clinical-blue text-white font-display font-bold ring-1 ring-white/40 shadow-[0_10px_20px_-12px_rgba(0,0,0,0.6)]">04</div>
+                            <a href="/programs/balance-strength-bone-optimization.html" class="group flex flex-col sm:flex-row gap-4 py-5 transition-colors">
+                                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white text-xs font-semibold">04</div>
                                 <div class="flex-1">
-                                    <h4 class="text-lg sm:text-xl font-bold text-white group-hover:text-clinical-green transition-colors italic">Balance, Strength, and Bone Optimization</h4>
-                                    <p class="text-blue-50/90 text-xs sm:text-sm mt-1">Build muscle, protect bone density, and improve balance to prevent falls and preserve strength.</p>
+                                    <h4 class="text-lg sm:text-xl font-semibold text-white group-hover:text-clinical-green transition-colors italic">Balance, Strength, and Bone Optimization</h4>
+                                    <p class="text-white/70 text-xs sm:text-sm mt-1">Build muscle, protect bone density, and improve balance to prevent falls and preserve strength.</p>
                                     <span class="mt-3 inline-flex items-center text-clinical-green text-[10px] font-bold uppercase tracking-widest">Density Protocol <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
                                 </div>
                             </a>
-                            <a href="/programs/flexibility-mobility-optimization.html" class="group flex items-start gap-4 rounded-2xl border border-clinical-blue/60 bg-clinical-blue px-5 py-4 sm:px-6 sm:py-5 shadow-[0_18px_40px_-24px_rgba(0,0,0,0.6)] transition-all duration-500 hover:bg-[#0b54c7] hover:border-clinical-blue/80 hover:shadow-[0_25px_55px_-25px_rgba(0,0,0,0.7)]">
-                                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-clinical-blue text-white font-display font-bold ring-1 ring-white/40 shadow-[0_10px_20px_-12px_rgba(0,0,0,0.6)]">05</div>
+                            <a href="/programs/flexibility-mobility-optimization.html" class="group flex flex-col sm:flex-row gap-4 py-5 transition-colors">
+                                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white text-xs font-semibold">05</div>
                                 <div class="flex-1">
-                                    <h4 class="text-lg sm:text-xl font-bold text-white group-hover:text-clinical-green transition-colors italic">Flexibility &amp; Functional Mobility</h4>
-                                    <p class="text-blue-50/90 text-xs sm:text-sm mt-1">Restore range of motion, joint mobility, and resilient movement mechanics.</p>
+                                    <h4 class="text-lg sm:text-xl font-semibold text-white group-hover:text-clinical-green transition-colors italic">Flexibility &amp; Functional Mobility</h4>
+                                    <p class="text-white/70 text-xs sm:text-sm mt-1">Restore range of motion, joint mobility, and resilient movement mechanics.</p>
                                     <span class="mt-3 inline-flex items-center text-clinical-green text-[10px] font-bold uppercase tracking-widest">Mobility Reset <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
                                 </div>
                             </a>
                         </div>
                     </div>
                 </div>
+                </div>
+                </div>
+
             </div>
         </section>
 
         <!-- Meet the Team -->
-        <section class="py-24 bg-[#071327] relative overflow-hidden">
+        <section class="py-24 relative overflow-hidden">
             <div class="absolute inset-0 pointer-events-none">
                 <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.28) 1px, transparent 0); background-size: 180px 180px;"></div>
                 <div class="absolute -top-28 right-[-10%] h-80 w-80 rounded-full bg-clinical-blue/30 blur-3xl"></div>
@@ -856,6 +864,7 @@
                 <div class="absolute inset-0 bg-gradient-to-b from-[#0b1f3a]/60 via-transparent to-[#020617]"></div>
             </div>
             <div class="container mx-auto px-6 relative z-10">
+                <div class="section-panel rounded-[3rem] p-8 sm:p-12 lg:p-14">
                 <div class="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-10 mb-16">
                     <div class="max-w-2xl">
                         <p class="text-[10px] uppercase tracking-[0.45em] text-white/60">Meet the Team</p>
@@ -871,7 +880,7 @@
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="group rounded-[2rem] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm shadow-[0_20px_60px_-40px_rgba(15,23,42,0.8)]">
                         <div class="relative h-64">
-                            <img src="/images/team/andrew-limle.svg" alt="Dr. Andrew Limle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <img src="/images/team/andrew-limle.svg" alt="Dr. Andrew Limle" class="w-full h-full object-cover soft-mask group-hover:scale-105 transition-transform duration-700">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#071327] via-[#071327]/30 to-transparent"></div>
                             <div class="absolute inset-x-4 bottom-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                 <div class="rounded-2xl border border-white/10 bg-[#0b1f3a]/80 px-4 py-3 text-[12px] text-white/80 leading-relaxed shadow-lg">
@@ -892,7 +901,7 @@
 
                     <div class="group rounded-[2rem] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm shadow-[0_20px_60px_-40px_rgba(15,23,42,0.8)]">
                         <div class="relative h-64">
-                            <img src="/images/team/michael-hekler.svg" alt="Dr. Michael Hekler" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <img src="/images/team/michael-hekler.svg" alt="Dr. Michael Hekler" class="w-full h-full object-cover soft-mask group-hover:scale-105 transition-transform duration-700">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#071327] via-[#071327]/30 to-transparent"></div>
                             <div class="absolute inset-x-4 bottom-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                 <div class="rounded-2xl border border-white/10 bg-[#0b1f3a]/80 px-4 py-3 text-[12px] text-white/80 leading-relaxed shadow-lg">
@@ -913,7 +922,7 @@
 
                     <div class="group rounded-[2rem] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm shadow-[0_20px_60px_-40px_rgba(15,23,42,0.8)]">
                         <div class="relative h-64">
-                            <img src="/images/alexcontnerheadshot.jpg" alt="Dr. Alex Contner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <img src="/images/alexcontnerheadshot.jpg" alt="Dr. Alex Contner" class="w-full h-full object-cover soft-mask group-hover:scale-105 transition-transform duration-700">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#071327] via-[#071327]/30 to-transparent opacity-80"></div>
                             <div class="absolute inset-0 bg-blue-900/10 mix-blend-multiply transition-opacity duration-700 group-hover:opacity-0"></div>
                             <div class="absolute inset-x-4 bottom-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -935,7 +944,7 @@
 
                     <div class="group rounded-[2rem] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm shadow-[0_20px_60px_-40px_rgba(15,23,42,0.8)]">
                         <div class="relative h-64">
-                            <img src="/images/team/brianna-opperman.svg" alt="Dr. Brianna Opperman" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <img src="/images/team/brianna-opperman.svg" alt="Dr. Brianna Opperman" class="w-full h-full object-cover soft-mask group-hover:scale-105 transition-transform duration-700">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#071327] via-[#071327]/30 to-transparent"></div>
                             <div class="absolute inset-x-4 bottom-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                 <div class="rounded-2xl border border-white/10 bg-[#0b1f3a]/80 px-4 py-3 text-[12px] text-white/80 leading-relaxed shadow-lg">
@@ -956,7 +965,7 @@
 
                     <div class="group rounded-[2rem] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm shadow-[0_20px_60px_-40px_rgba(15,23,42,0.8)]">
                         <div class="relative h-64">
-                            <img src="/images/team/brittany-woeste.svg" alt="Brittany Woeste" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <img src="/images/team/brittany-woeste.svg" alt="Brittany Woeste" class="w-full h-full object-cover soft-mask group-hover:scale-105 transition-transform duration-700">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#071327] via-[#071327]/30 to-transparent"></div>
                             <div class="absolute inset-x-4 bottom-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                 <div class="rounded-2xl border border-white/10 bg-[#0b1f3a]/80 px-4 py-3 text-[12px] text-white/80 leading-relaxed shadow-lg">
@@ -977,7 +986,7 @@
 
                     <div class="group rounded-[2rem] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm shadow-[0_20px_60px_-40px_rgba(15,23,42,0.8)]">
                         <div class="relative h-64">
-                            <img src="/images/team/nate-lienhart.svg" alt="Nate Lienhart" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <img src="/images/team/nate-lienhart.svg" alt="Nate Lienhart" class="w-full h-full object-cover soft-mask group-hover:scale-105 transition-transform duration-700">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#071327] via-[#071327]/30 to-transparent"></div>
                             <div class="absolute inset-x-4 bottom-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                 <div class="rounded-2xl border border-white/10 bg-[#0b1f3a]/80 px-4 py-3 text-[12px] text-white/80 leading-relaxed shadow-lg">
@@ -1002,6 +1011,8 @@
                         View Full Team
                     </a>
                 </div>
+                </div>
+
             </div>
         </section>
 
@@ -1046,31 +1057,32 @@
             });
         </script>
         <!-- Clinic Gallery Carousel -->
-        <section class="py-24 bg-white overflow-hidden">
+        <section class="py-24 relative overflow-hidden">
             <div class="container mx-auto px-6">
+                <div class="section-panel-light rounded-[3rem] p-8 sm:p-12 lg:p-14">
                 <div class="text-center mb-16">
                     <h2 class="text-sm font-bold text-clinical-blue uppercase tracking-widest mb-4">Inside the Clinic</h2>
                     <h3 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold">A World-Class Healing Environment</h3>
                 </div>
                 
-                <div class="swiper clinic-gallery rounded-[2.5rem] shadow-2xl">
+                <div class="swiper clinic-gallery rounded-[2.5rem] shadow-2xl glass-panel-light overflow-hidden">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide h-[400px] md:h-[600px] relative">
-                            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Cincinnati Chiropractic Clinic Environment" class="w-full h-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Cincinnati Chiropractic Clinic Environment" class="w-full h-full object-cover soft-mask">
                             <div class="absolute bottom-6 left-6 md:bottom-12 md:left-12 z-10 bg-white/90 backdrop-blur-md px-4 py-3 md:px-6 md:py-4 rounded-2xl shadow-xl max-w-[80%] md:max-w-none">
                                 <h5 class="font-display font-bold text-clinical-blue text-lg md:text-xl">Advanced Recovery Suite</h5>
                                 <p class="text-gray-500 text-xs md:text-sm italic">Elite technology for cellular regeneration.</p>
                             </div>
                         </div>
                         <div class="swiper-slide h-[400px] md:h-[600px] relative">
-                            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Treatment Technology Area" class="w-full h-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Treatment Technology Area" class="w-full h-full object-cover soft-mask">
                             <div class="absolute bottom-6 left-6 md:bottom-12 md:left-12 z-10 bg-white/90 backdrop-blur-md px-4 py-3 md:px-6 md:py-4 rounded-2xl shadow-xl max-w-[80%] md:max-w-none">
                                 <h5 class="font-display font-bold text-clinical-blue text-lg md:text-xl">Precision Diagnostics</h5>
                                 <p class="text-gray-500 text-xs md:text-sm italic">Biomarker tracking and performance metrics.</p>
                             </div>
                         </div>
                         <div class="swiper-slide h-[400px] md:h-[600px] relative">
-                            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Diagnostic & VO2 Max Suite" class="w-full h-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Diagnostic & VO2 Max Suite" class="w-full h-full object-cover soft-mask">
                             <div class="absolute bottom-6 left-6 md:bottom-12 md:left-12 z-10 bg-white/90 backdrop-blur-md px-4 py-3 md:px-6 md:py-4 rounded-2xl shadow-xl max-w-[80%] md:max-w-none">
                                 <h5 class="font-display font-bold text-clinical-blue text-lg md:text-xl">The Mitoflux Wing</h5>
                                 <p class="text-gray-500 text-xs md:text-sm italic">Designed for systemic longevity and durability.</p>
@@ -1081,19 +1093,22 @@
                     <div class="swiper-button-next text-clinical-blue bg-white/80 w-12 h-12 rounded-full backdrop-blur shadow-lg"></div>
                     <div class="swiper-button-prev text-clinical-blue bg-white/80 w-12 h-12 rounded-full backdrop-blur shadow-lg"></div>
                 </div>
+                </div>
+
             </div>
         </section>
 
         <!-- Social Proof: Google Reviews Widget -->
-        <section id="reviews" class="py-24 bg-clinical-gray relative">
+        <section id="reviews" class="py-24 relative overflow-hidden">
             <div class="absolute inset-0 bg-dot-pattern opacity-10"></div>
             <div class="container mx-auto px-6 relative z-10">
+                <div class="section-panel-light rounded-[3rem] p-8 sm:p-12 lg:p-14">
                 <div class="max-w-4xl mx-auto text-center">
                     <h2 class="text-sm font-bold text-clinical-blue uppercase tracking-widest mb-4">Patient Outcomes</h2>
                     <h3 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-12">Pro-Level Outcomes. Everyday Access.</h3>
                     
                     <!-- Google Review Carousel -->
-                    <div class="swiper reviews-swiper min-h-[400px] bg-white rounded-[2.5rem] p-8 lg:p-12 shadow-2xl border border-gray-100 relative overflow-hidden">
+                    <div class="swiper reviews-swiper min-h-[400px] glass-panel-light rounded-[2.5rem] p-8 lg:p-12 shadow-2xl relative overflow-hidden">
                         <div class="mb-10 text-center relative z-10">
                             <svg class="w-12 h-12 mx-auto mb-4" viewBox="0 0 24 24">
                                 <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c1.68-1.54 2.65-3.81 2.65-6.5z"/><path fill="#34A853" d="M12 23c3.15 0 5.79-1.05 7.72-2.85l-3.57-2.77c-.98.66-2.23 1.06-3.75 1.06-2.88 0-5.33-1.94-6.21-4.54H2.55v2.86C4.48 20.52 8.02 23 12 23z"/><path fill="#FBBC05" d="M5.79 13.9c-.23-.66-.35-1.36-.35-2.1s.12-1.44.35-2.1V6.84H2.55C1.75 8.42 1.3 10.16 1.3 12s.45 3.58 1.25 5.16l3.24-2.26z"/><path fill="#EA4335" d="M12 5.38c1.71 0 3.25.59 4.46 1.73l3.34-3.34C17.78 1.83 15.15.7 12 .7 8.02.7 4.48 3.18 2.55 6.84l3.24 2.26c.88-2.6 3.33-4.54 6.21-4.54z"/>
@@ -1166,11 +1181,15 @@
                         </p>
                     </div>
                 </div>
+                </div>
+
             </div>
         </section>
     </main>
 
-    <footer class="bg-gradient-to-br from-[#0b1f3a] via-[#1f2937] to-[#0b0f1d] text-white pt-20 pb-10 relative overflow-hidden">
+    <footer class="relative py-12 text-white">
+        <div class="section-panel rounded-[3rem] mx-auto max-w-7xl px-6 py-12 relative overflow-hidden">
+
         <div class="absolute inset-0 pointer-events-none">
             <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.28) 1px, transparent 0); background-size: 220px 220px;"></div>
             <div class="absolute -top-32 right-[-8%] h-80 w-80 rounded-full bg-clinical-green/20 blur-3xl"></div>
@@ -1272,7 +1291,7 @@
                 </a>
             </div>
 
-            <div class="flex flex-col md:flex-row items-center justify-between text-gray-500 text-[10px] uppercase tracking-[0.2em] pt-8">
+            <div class="flex flex-col md:flex-row items-center justify-between text-white/50 text-[10px] uppercase tracking-[0.2em] pt-8">
                 <p>&copy; 2026 Cincinnati Chiropractic &amp; Cincinnati Longevity. All rights reserved.</p>
                 <div class="flex space-x-6 mt-4 md:mt-0">
                     <a href="https://instagram.com" class="hover:text-white transition-colors">Instagram</a>
@@ -1280,6 +1299,8 @@
                 </div>
             </div>
         </div>
+        </div>
+
     </footer>
 
 </body>
