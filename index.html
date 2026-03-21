@@ -322,6 +322,98 @@
             margin-top: 1rem;
         }
 
+        /* Precision Architect Team Cards */
+        .precision-architect-card {
+            position: relative;
+            border-radius: 2.5rem;
+            overflow: hidden;
+            background: #0a0a0a;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            height: 100%;
+            min-height: 450px;
+        }
+        .precision-architect-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(34, 197, 94, 0.3);
+            box-shadow: 0 40px 100px -30px rgba(0, 0, 0, 0.9);
+        }
+        .precision-architect-card__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%) brightness(0.8) contrast(1.1);
+            transition: all 0.7s ease;
+        }
+        .precision-architect-card:hover .precision-architect-card__img {
+            filter: grayscale(0%) brightness(0.9);
+            transform: scale(1.05);
+        }
+        .precision-architect-card__overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
+            z-index: 2;
+        }
+        .precision-architect-card__content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2.5rem;
+            z-index: 10;
+        }
+        .precision-architect-badge {
+            display: inline-block;
+            padding: 0.35rem 0.85rem;
+            background: #22C55E;
+            color: white;
+            font-size: 10px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            border-radius: 9999px;
+            margin-bottom: 1.25rem;
+        }
+        .precision-architect-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            color: white;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        .precision-architect-role {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.95rem;
+            font-weight: 400;
+            line-height: 1.6;
+            max-width: 90%;
+        }
+        .precision-architect-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.6rem 1.5rem;
+            border: 1.5px solid rgba(255, 255, 255, 0.2);
+            border-radius: 9999px;
+            color: white;
+            font-size: 10px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(4px);
+        }
+        .precision-architect-btn:hover {
+            background: white;
+            color: black;
+            border-color: white;
+            transform: scale(1.05);
+        }
+
         .protocol-orb {
             width: clamp(260px, 32vw, 360px);
             height: clamp(260px, 32vw, 360px);
@@ -1222,156 +1314,110 @@
 
             </div>
         </section>
-        <!-- Meet the Team -->
-        <section class="py-24 relative overflow-hidden">
+        <!-- Precision Architects: Meet the Team -->
+        <section class="py-24 relative overflow-hidden bg-[#050505]">
             <div class="container mx-auto px-6 relative z-10">
-                <div class="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-10 mb-16">
-                    <div class="max-w-2xl">
-                        <p class="text-[10px] uppercase tracking-[0.45em] text-white/60">Meet the Team</p>
-                        <h3 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white mt-4">Clinical Specialists &amp; Performance Staff</h3>
-                        <p class="text-blue-100/80 mt-4 text-base sm:text-lg">Six specialists spanning chiropractic, physical therapy, diagnostics, and athletic performance—built to deliver measurable outcomes.</p>
-                    </div>
-                    <div class="flex items-center gap-3 text-[10px] uppercase tracking-[0.35em] text-white/60">
-                        <span class="w-2 h-2 rounded-full bg-clinical-green"></span>
-                        6 Specialists
-                    </div>
+                <div class="max-w-4xl mb-20">
+                    <h2 class="text-5xl lg:text-7xl font-display font-bold italic tracking-tight text-white mb-6 uppercase">
+                        PRECISION <span class="text-clinical-blue">ARCHITECTS.</span>
+                    </h2>
+                    <p class="text-xl text-gray-400 font-light leading-relaxed max-w-2xl">
+                        Our interdisciplinary team merges elite sports science with longevity medicine to redefine the limits of human physiology.
+                    </p>
                 </div>
 
-                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="group rounded-[2rem] overflow-hidden">
-                        <div class="relative h-64">
-                            <img src="/images/team/andrew-limle.svg" alt="Dr. Andrew Limle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#071327] via-[#071327]/30 to-transparent"></div>
-                            <div class="absolute inset-x-4 bottom-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                <div class="rounded-2xl border border-white/10 bg-[#0b1f3a]/80 px-4 py-3 text-[12px] text-white/80 leading-relaxed shadow-lg">
-                                    Official Bengals & Cyclones chiropractor focused on spinal kinematics and elite recovery.
-                                </div>
+                <div class="grid grid-cols-12 gap-6">
+                    <!-- Dr. Andrew Limle -->
+                    <div class="col-span-12 lg:col-span-8 group">
+                        <div class="precision-architect-card">
+                            <img src="/images/team/andrew-limle.svg" alt="Dr. Andrew Limle" class="precision-architect-card__img">
+                            <div class="precision-architect-card__overlay"></div>
+                            <div class="precision-architect-card__content">
+                                <span class="precision-architect-badge">CHIEF OF PERFORMANCE MEDICINE</span>
+                                <h4 class="precision-architect-name">DR. ANDREW LIMLE</h4>
+                                <p class="precision-architect-role">Leading the integration of regenerative protocols and metabolic science for elite athletic recovery.</p>
+                                <a href="/team.html" class="precision-architect-btn">VIEW BIO</a>
                             </div>
-                            <div class="absolute bottom-4 left-4 flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-white/70">
-                                <span class="h-2 w-2 rounded-full bg-clinical-green"></span>
-                                Founder
-                            </div>
-                        </div>
-                        <div class="p-6 space-y-3">
-                            <h4 class="text-xl font-display font-bold text-white">Dr. Andrew Limle</h4>
-                            <p class="text-white/70 text-sm">DC, CCSP, Dipl. Ac.</p>
-                            <p class="text-[10px] uppercase tracking-[0.35em] text-clinical-green font-semibold">Lead Chiropractor</p>
+                            <div class="absolute top-8 right-8 w-16 h-16 border-t-2 border-r-2 border-clinical-green/20 rounded-tr-3xl"></div>
                         </div>
                     </div>
 
-                    <div class="group rounded-[2rem] overflow-hidden">
-                        <div class="relative h-64">
-                            <img src="/images/team/michael-hekler.svg" alt="Dr. Michael Hekler" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#071327] via-[#071327]/30 to-transparent"></div>
-                            <div class="absolute inset-x-4 bottom-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                <div class="rounded-2xl border border-white/10 bg-[#0b1f3a]/80 px-4 py-3 text-[12px] text-white/80 leading-relaxed shadow-lg">
-                                    Structural diagnostics specialist delivering precise joint mechanics and alignment care.
-                                </div>
+                    <!-- Dr. Michael Hekler -->
+                    <div class="col-span-12 lg:col-span-4 group">
+                        <div class="precision-architect-card">
+                            <img src="/images/team/michael-hekler.svg" alt="Dr. Michael Hekler" class="precision-architect-card__img">
+                            <div class="precision-architect-card__overlay"></div>
+                            <div class="precision-architect-card__content">
+                                <span class="precision-architect-badge">STRUCTURAL DIAGNOSTICS</span>
+                                <h4 class="precision-architect-name">DR. MICHAEL HEKLER</h4>
+                                <p class="precision-architect-role">Precision biomechanical integrity.</p>
+                                <a href="/team.html" class="precision-architect-btn">VIEW BIO</a>
                             </div>
-                            <div class="absolute bottom-4 left-4 flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-white/70">
-                                <span class="h-2 w-2 rounded-full bg-clinical-blue"></span>
-                                Diagnostics
-                            </div>
-                        </div>
-                        <div class="p-6 space-y-3">
-                            <h4 class="text-xl font-display font-bold text-white">Dr. Michael Hekler</h4>
-                            <p class="text-white/70 text-sm">DC</p>
-                            <p class="text-[10px] uppercase tracking-[0.35em] text-clinical-blue font-semibold">Structural Specialist</p>
                         </div>
                     </div>
 
-                    <div class="group rounded-[2rem] overflow-hidden">
-                        <div class="relative h-64">
-                            <img src="/images/alexcontnerheadshot.jpg" alt="Dr. Alex Contner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#071327] via-[#071327]/30 to-transparent opacity-80"></div>
-                            <div class="absolute inset-0 bg-blue-900/10 mix-blend-multiply transition-opacity duration-700 group-hover:opacity-0"></div>
-                            <div class="absolute inset-x-4 bottom-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                <div class="rounded-2xl border border-white/10 bg-[#0b1f3a]/80 px-4 py-3 text-[12px] text-white/80 leading-relaxed shadow-lg">
-                                    Performance rehab expert guiding return-to-play and neuromuscular control.
-                                </div>
+                    <!-- Dr. Alex Contner -->
+                    <div class="col-span-12 lg:col-span-4 group">
+                        <div class="precision-architect-card">
+                            <img src="/images/alexcontnerheadshot.jpg" alt="Dr. Alex Contner" class="precision-architect-card__img">
+                            <div class="precision-architect-card__overlay"></div>
+                            <div class="precision-architect-card__content">
+                                <span class="precision-architect-badge">DIRECTOR OF REHAB</span>
+                                <h4 class="precision-architect-name">DR. ALEX CONTNER</h4>
+                                <p class="precision-architect-role">Expert in neuromuscular restoration.</p>
+                                <a href="/team.html" class="precision-architect-btn">VIEW BIO</a>
                             </div>
-                            <div class="absolute bottom-4 left-4 flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-white/70">
-                                <span class="h-2 w-2 rounded-full bg-[#fb4f14]"></span>
-                                Performance
-                            </div>
-                        </div>
-                        <div class="p-6 space-y-3">
-                            <h4 class="text-xl font-display font-bold text-white">Dr. Alex Contner</h4>
-                            <p class="text-white/70 text-sm">PT, DPT</p>
-                            <p class="text-[10px] uppercase tracking-[0.35em] text-[#fb4f14] font-semibold">Physical Therapy Director</p>
                         </div>
                     </div>
 
-                    <div class="group rounded-[2rem] overflow-hidden">
-                        <div class="relative h-64">
-                            <img src="/images/team/brianna-opperman.svg" alt="Dr. Brianna Opperman" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#071327] via-[#071327]/30 to-transparent"></div>
-                            <div class="absolute inset-x-4 bottom-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                <div class="rounded-2xl border border-white/10 bg-[#0b1f3a]/80 px-4 py-3 text-[12px] text-white/80 leading-relaxed shadow-lg">
-                                    Women’s health director integrating autonomic regulation and precision care.
-                                </div>
+                    <!-- Dr. Brianna Opperman -->
+                    <div class="col-span-12 lg:col-span-8 group">
+                        <div class="precision-architect-card">
+                            <img src="/images/team/brianna-opperman.svg" alt="Dr. Brianna Opperman" class="precision-architect-card__img">
+                            <div class="precision-architect-card__overlay"></div>
+                            <div class="precision-architect-card__content">
+                                <span class="precision-architect-badge">BIOLOGICAL SYSTEMS</span>
+                                <h4 class="precision-architect-name">DR. BRIANNA OPPERMAN</h4>
+                                <p class="precision-architect-role">Pioneering biological wellbeing and cellular rejuvenation strategies.</p>
+                                <a href="/team.html" class="precision-architect-btn">VIEW BIO</a>
                             </div>
-                            <div class="absolute bottom-4 left-4 flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-white/70">
-                                <span class="h-2 w-2 rounded-full bg-pink-500"></span>
-                                Women’s Health
-                            </div>
-                        </div>
-                        <div class="p-6 space-y-3">
-                            <h4 class="text-xl font-display font-bold text-white">Dr. Brianna Opperman</h4>
-                            <p class="text-white/70 text-sm">DC, CCSP</p>
-                            <p class="text-[10px] uppercase tracking-[0.35em] text-pink-400 font-semibold">Women’s Health Director</p>
                         </div>
                     </div>
 
-                    <div class="group rounded-[2rem] overflow-hidden">
-                        <div class="relative h-64">
-                            <img src="/images/team/brittany-woeste.svg" alt="Brittany Woeste" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#071327] via-[#071327]/30 to-transparent"></div>
-                            <div class="absolute inset-x-4 bottom-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                <div class="rounded-2xl border border-white/10 bg-[#0b1f3a]/80 px-4 py-3 text-[12px] text-white/80 leading-relaxed shadow-lg">
-                                    PA overseeing diagnostics, longevity testing, and clinical coordination.
-                                </div>
+                    <!-- Brittany Woeste -->
+                    <div class="col-span-12 lg:col-span-6 group">
+                        <div class="precision-architect-card !min-h-[400px]">
+                            <img src="/images/team/brittany-woeste.svg" alt="Brittany Woeste" class="precision-architect-card__img">
+                            <div class="precision-architect-card__overlay"></div>
+                            <div class="precision-architect-card__content">
+                                <span class="precision-architect-badge">DIAGNOSTIC ARCHITECT</span>
+                                <h4 class="precision-architect-name">BRITTANY WOESTE</h4>
+                                <p class="precision-architect-role">Overseeing clinical diagnostics and longevity testing.</p>
+                                <a href="/team.html" class="precision-architect-btn">VIEW BIO</a>
                             </div>
-                            <div class="absolute bottom-4 left-4 flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-white/70">
-                                <span class="h-2 w-2 rounded-full bg-violet-400"></span>
-                                Diagnostics
-                            </div>
-                        </div>
-                        <div class="p-6 space-y-3">
-                            <h4 class="text-xl font-display font-bold text-white">Brittany Woeste</h4>
-                            <p class="text-white/70 text-sm">PA</p>
-                            <p class="text-[10px] uppercase tracking-[0.35em] text-violet-300 font-semibold">Director of Diagnostics</p>
                         </div>
                     </div>
 
-                    <div class="group rounded-[2rem] overflow-hidden">
-                        <div class="relative h-64">
-                            <img src="/images/team/nate-lienhart.svg" alt="Nate Lienhart" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#071327] via-[#071327]/30 to-transparent"></div>
-                            <div class="absolute inset-x-4 bottom-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                <div class="rounded-2xl border border-white/10 bg-[#0b1f3a]/80 px-4 py-3 text-[12px] text-white/80 leading-relaxed shadow-lg">
-                                    Athletic trainer building strength, mobility, and injury-prevention programming.
-                                </div>
+                    <!-- Nate Lienhart -->
+                    <div class="col-span-12 lg:col-span-6 group">
+                        <div class="precision-architect-card !min-h-[400px]">
+                            <img src="/images/team/nate-lienhart.svg" alt="Nate Lienhart" class="precision-architect-card__img">
+                            <div class="precision-architect-card__overlay"></div>
+                            <div class="precision-architect-card__content">
+                                <span class="precision-architect-badge">PERFORMANCE ANALYTICS</span>
+                                <h4 class="precision-architect-name">NATE LIENHART</h4>
+                                <p class="precision-architect-role">Building clinical strength and injury-prevention programming.</p>
+                                <a href="/team.html" class="precision-architect-btn">VIEW BIO</a>
                             </div>
-                            <div class="absolute bottom-4 left-4 flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] text-white/70">
-                                <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
-                                Athletics
-                            </div>
-                        </div>
-                        <div class="p-6 space-y-3">
-                            <h4 class="text-xl font-display font-bold text-white">Nate Lienhart</h4>
-                            <p class="text-white/70 text-sm">ATC</p>
-                            <p class="text-[10px] uppercase tracking-[0.35em] text-emerald-300 font-semibold">Athletic Trainer</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="mt-12 flex justify-center">
-                    <a href="/team.html" class="inline-flex items-center justify-center rounded-full bg-white text-clinical-blue px-6 py-3 text-xs font-bold uppercase tracking-[0.3em] shadow-lg hover:bg-clinical-green hover:text-white transition-all">
+                <div class="mt-20 flex justify-center">
+                    <a href="/team.html" class="inline-flex items-center justify-center rounded-full bg-white text-clinical-blue px-10 py-4 text-xs font-bold uppercase tracking-[0.4em] shadow-2xl hover:bg-clinical-green hover:text-white transition-all transform hover:scale-105">
                         View Full Team
                     </a>
                 </div>
-
             </div>
         </section>
 
