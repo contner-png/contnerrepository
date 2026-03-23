@@ -503,20 +503,56 @@
         }
         .flagship-trigger {
             width: 100%;
-            text-align: left;
-            border-radius: 1.5rem;
+            aspect-ratio: 4 / 5.2;
+            border-radius: 2.5rem;
+            position: relative;
+            overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.12);
-            padding: 1.5rem;
-            background: transparent;
-            transition: border-color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            text-align: left;
+            padding: 2rem;
+            background: #020617;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .flagship-trigger__bg {
+            position: absolute;
+            inset: 0;
+            background-size: 210%;
+            background-position: center;
+            transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+            opacity: 0.65;
+            z-index: 0;
+            filter: contrast(1.1) brightness(0.9);
+        }
+        .flagship-trigger.is-active .flagship-trigger__bg,
+        .flagship-trigger:hover .flagship-trigger__bg {
+            transform: scale(1.1);
+            opacity: 0.85;
+        }
+        .flagship-trigger__overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, 
+                rgba(2, 6, 23, 0.1) 0%, 
+                rgba(2, 6, 23, 0.4) 50%, 
+                rgba(2, 6, 23, 0.9) 100%
+            );
+            z-index: 1;
+        }
+        .flagship-trigger__content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
         }
         .flagship-trigger:hover {
             border-color: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
+            transform: translateY(-5px);
         }
         .flagship-trigger.is-active {
-            border-color: rgba(59, 130, 246, 0.6);
-            background: rgba(15, 23, 42, 0.4);
+            border-color: rgba(59, 130, 246, 0.8);
+            box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.2);
         }
         .flagship-panel {
             display: none;
@@ -942,45 +978,61 @@
 
                     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         <button class="flagship-trigger is-active" data-flagship-target="flagship-1" aria-expanded="true">
-                            <div class="flex flex-col h-full justify-between gap-6">
-                                <div class="space-y-3">
+                            <div class="flagship-trigger__bg" style="background-image: url('/images/chiroblock.PNG');"></div>
+                            <div class="flagship-trigger__overlay"></div>
+                            <div class="flagship-trigger__content">
+                                <div class="space-y-3 mb-6">
                                     <span class="text-[10px] uppercase tracking-[0.35em] text-white/50">01</span>
-                                    <h4 class="text-xl sm:text-2xl font-display font-bold text-white">Precision Chiropractic</h4>
-                                    <p class="text-white/80 text-sm sm:text-base leading-relaxed">Advanced spinal correction for disc, nerve, and chronic pain cases.</p>
-                                    <p class="flagship-trigger__detail text-white/60 text-xs sm:text-sm leading-relaxed">Motion-based diagnostics, biodynamic analysis, and precision decompression.</p>
+                                    <h4 class="text-2xl font-display font-bold text-white">Chiropractic</h4>
+                                    <p class="text-white/80 text-sm leading-relaxed">Precision diagnostics and advanced spinal restoration.</p>
+                                    <div class="flagship-trigger__detail">
+                                        <p class="text-white/60 text-xs leading-relaxed">Motion-based diagnostics, biodynamic analysis, and precision decompression.</p>
+                                    </div>
                                 </div>
                                 <span class="text-[10px] uppercase tracking-[0.3em] text-white/40">Expand</span>
                             </div>
                         </button>
                         <button class="flagship-trigger" data-flagship-target="flagship-2" aria-expanded="false">
-                            <div class="flex flex-col h-full justify-between gap-6">
-                                <div class="space-y-3">
+                            <div class="flagship-trigger__bg" style="background-image: url('/images/ptblock.PNG');"></div>
+                            <div class="flagship-trigger__overlay"></div>
+                            <div class="flagship-trigger__content">
+                                <div class="space-y-3 mb-6">
                                     <span class="text-[10px] uppercase tracking-[0.35em] text-white/50">02</span>
-                                    <h4 class="text-xl sm:text-2xl font-display font-bold text-white">Integrative Physical Therapy</h4>
-                                    <p class="text-white/80 text-sm sm:text-base leading-relaxed">Rehab for sports injuries, post-surgical recovery, and chronic pain.</p>
-                                    <p class="flagship-trigger__detail text-white/60 text-xs sm:text-sm leading-relaxed">Neuro-modulation, corrective exercise, and graded functional exposure.</p>
+                                    <h4 class="text-2xl font-display font-bold text-white">Physical Therapy</h4>
+                                    <p class="text-white/80 text-sm leading-relaxed">Integrative rehab for performance and recovery.</p>
+                                    <div class="flagship-trigger__detail">
+                                        <p class="text-white/60 text-xs leading-relaxed">Neuro-modulation, corrective exercise, and graded functional exposure.</p>
+                                    </div>
                                 </div>
                                 <span class="text-[10px] uppercase tracking-[0.3em] text-white/40">Expand</span>
                             </div>
                         </button>
                         <button class="flagship-trigger" data-flagship-target="flagship-3" aria-expanded="false">
-                            <div class="flex flex-col h-full justify-between gap-6">
-                                <div class="space-y-3">
+                            <div class="flagship-trigger__bg" style="background-image: url('/images/personalizedmedblock.PNG');"></div>
+                            <div class="flagship-trigger__overlay"></div>
+                            <div class="flagship-trigger__content">
+                                <div class="space-y-3 mb-6">
                                     <span class="text-[10px] uppercase tracking-[0.35em] text-white/50">03</span>
-                                    <h4 class="text-xl sm:text-2xl font-display font-bold text-white">Personalized Medicine</h4>
-                                    <p class="text-white/80 text-sm sm:text-base leading-relaxed">Biomarker-driven care for metabolic, hormonal, and inflammatory imbalance.</p>
-                                    <p class="flagship-trigger__detail text-white/60 text-xs sm:text-sm leading-relaxed">Targeted diagnostics, nutrition planning, and recovery engineering.</p>
+                                    <h4 class="text-2xl font-display font-bold text-white">Personalized Medicine</h4>
+                                    <p class="text-white/80 text-sm leading-relaxed">Biomarker-driven care for metabolic and hormonal reset.</p>
+                                    <div class="flagship-trigger__detail">
+                                        <p class="text-white/60 text-xs leading-relaxed">Targeted diagnostics, nutrition planning, and recovery engineering.</p>
+                                    </div>
                                 </div>
                                 <span class="text-[10px] uppercase tracking-[0.3em] text-white/40">Expand</span>
                             </div>
                         </button>
                         <button class="flagship-trigger" data-flagship-target="flagship-4" aria-expanded="false">
-                            <div class="flex flex-col h-full justify-between gap-6">
-                                <div class="space-y-3">
+                            <div class="flagship-trigger__bg" style="background-image: url('/images/longevityblock.PNG');"></div>
+                            <div class="flagship-trigger__overlay"></div>
+                            <div class="flagship-trigger__content">
+                                <div class="space-y-3 mb-6">
                                     <span class="text-[10px] uppercase tracking-[0.35em] text-white/50">04</span>
-                                    <h4 class="text-xl sm:text-2xl font-display font-bold text-white">Longevity Care</h4>
-                                    <p class="text-white/80 text-sm sm:text-base leading-relaxed">Healthspan protocols for mitochondrial repair and VO2 Max gains.</p>
-                                    <p class="flagship-trigger__detail text-white/60 text-xs sm:text-sm leading-relaxed">Cellular energy restoration, metabolic conditioning, and longevity planning.</p>
+                                    <h4 class="text-2xl font-display font-bold text-white">Longevity Care</h4>
+                                    <p class="text-white/80 text-sm leading-relaxed">Healthspan protocols for cellular repair and VO2 Max gains.</p>
+                                    <div class="flagship-trigger__detail">
+                                        <p class="text-white/60 text-xs leading-relaxed">Cellular energy restoration, metabolic conditioning, and longevity planning.</p>
+                                    </div>
                                 </div>
                                 <span class="text-[10px] uppercase tracking-[0.3em] text-white/40">Expand</span>
                             </div>
