@@ -523,24 +523,24 @@
             background-size: 175%;
             background-position: center;
             transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-            opacity: 0.5;
+            opacity: 0.75;
             z-index: 0;
-            filter: grayscale(0.4) contrast(1.1);
+            filter: grayscale(0.2) contrast(1.1) brightness(1.1);
             transform: skewX(4deg);
         }
         .flagship-trigger.is-active .flagship-trigger__bg,
         .flagship-trigger:hover .flagship-trigger__bg {
             transform: skewX(4deg) scale(1.05);
-            opacity: 0.8;
-            filter: grayscale(0) contrast(1.1);
+            opacity: 0.95;
+            filter: grayscale(0) contrast(1.1) brightness(1.2);
         }
         .flagship-trigger__overlay {
             position: absolute;
             inset: 0;
             background: linear-gradient(to bottom, 
-                rgba(2, 6, 23, 0.2) 0%, 
-                rgba(2, 6, 23, 0.5) 40%, 
-                rgba(2, 6, 23, 0.95) 100%
+                rgba(2, 6, 23, 0.1) 0%, 
+                rgba(2, 6, 23, 0.3) 40%, 
+                rgba(2, 6, 23, 0.85) 100%
             );
             z-index: 1;
         }
