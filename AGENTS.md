@@ -16,6 +16,8 @@
 - **Protocol Card Blueprint**: Class `.protocol-card-blueprint` uses a rounded rectangular design (`rounded-[2.5rem]`) with `aspect-ratio: 4/5.2` for protocol tiles. Background images are typically zoomed (e.g., `background-size: 140%`) to focus on subjects.
 - **Integrated Disclaimer**: The clinical disclaimer is now a meta-card component with class `bento-stack-item lg:col-span-12` integrated directly into the `The Arsenal` grid.
 - **Header Navigation**: Primary navigation links (e.g., HOME) should be in all-caps for technical consistency.
+- **Flagship System Blueprint**: Uses angular, skewed tiles (`transform: skewX(-4deg)`) for the four core flagship blocks. Integrates a combination of `clinical-blue` (default) and `clinical-green` (hover/active) for interactive elements like buttons and borders. Titles use high-intensity bold layouts with technical gradient accents.
+
 
 ## Tool Lessons
 - **Image Generation**: The `gemini-image_generate_image` tool does not accept a `path` argument. Always run it with only the `prompt` argument, then move the generated file using terminal commands.
