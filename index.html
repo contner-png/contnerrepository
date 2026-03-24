@@ -506,7 +506,7 @@
             aspect-ratio: 4 / 7.5;
             position: relative;
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(0, 71, 171, 0.2);
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -522,15 +522,15 @@
             inset: -20%;
             background-size: 175%;
             background-position: center;
-            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-            opacity: 0.75;
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease, filter 0.8s ease;
+            opacity: 0.7;
             z-index: 0;
-            filter: grayscale(0.2) contrast(1.1) brightness(1.1);
+            filter: grayscale(0.5) contrast(1.1) brightness(1.1);
             transform: skewX(4deg);
         }
         .flagship-trigger.is-active .flagship-trigger__bg,
         .flagship-trigger:hover .flagship-trigger__bg {
-            transform: skewX(4deg) scale(1.05);
+            transform: skewX(4deg) scale(1.08);
             opacity: 0.95;
             filter: grayscale(0) contrast(1.1) brightness(1.2);
         }
@@ -538,11 +538,15 @@
             position: absolute;
             inset: 0;
             background: linear-gradient(to bottom, 
-                rgba(2, 6, 23, 0.1) 0%, 
-                rgba(2, 6, 23, 0.3) 40%, 
-                rgba(2, 6, 23, 0.85) 100%
+                rgba(0, 71, 171, 0.1) 0%, 
+                rgba(2, 6, 23, 0.4) 40%, 
+                rgba(2, 6, 23, 0.95) 100%
             );
             z-index: 1;
+            transition: opacity 0.6s ease;
+        }
+        .flagship-trigger:hover .flagship-trigger__overlay {
+            opacity: 0.8;
         }
         .flagship-trigger__content {
             position: relative;
@@ -551,13 +555,14 @@
             transform: skewX(4deg);
         }
         .flagship-trigger:hover {
-            border-color: rgba(34, 197, 94, 0.4);
-            transform: skewX(-4deg) translateY(-8px);
+            border-color: rgba(34, 197, 94, 0.5);
+            transform: skewX(-4deg) translateY(-12px);
+            box-shadow: 0 30px 60px -15px rgba(0, 71, 171, 0.3);
         }
         .flagship-trigger.is-active {
-            border-color: rgba(34, 197, 94, 0.6);
-            background: rgba(15, 23, 42, 0.8);
-            box-shadow: 0 40px 80px -20px rgba(34, 197, 94, 0.2), 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+            border-color: rgba(34, 197, 94, 0.8);
+            background: rgba(15, 23, 42, 0.9);
+            box-shadow: 0 40px 80px -20px rgba(34, 197, 94, 0.3), 0 20px 40px -10px rgba(0, 71, 171, 0.2);
         }
         .skew-label {
             display: inline-block;
@@ -565,14 +570,20 @@
             font-size: 10px;
             text-transform: uppercase;
             letter-spacing: 0.3em;
-            color: #22C55E;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(0, 71, 171, 0.8);
             margin-bottom: 1rem;
+            transition: color 0.4s ease;
+        }
+        .flagship-trigger:hover .skew-label,
+        .flagship-trigger.is-active .skew-label {
+            color: #22C55E;
         }
         .skew-button {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            background: #22C55E;
+            background: #0047AB;
             color: white;
             font-size: 9px;
             font-weight: 800;
@@ -580,20 +591,39 @@
             letter-spacing: 0.2em;
             padding: 8px 20px;
             transform: skewX(-15deg);
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .skew-button::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: #22C55E;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            z-index: -1;
+        }
+        .flagship-trigger:hover .skew-button::after,
+        .flagship-trigger.is-active .skew-button::after {
+            transform: scaleX(1);
         }
         .skew-button span {
             display: block;
             transform: skewX(15deg);
-        }
-        .flagship-trigger.is-active .skew-button {
-            background: #16A34A;
+            z-index: 1;
         }
         .flagship-panel {
             display: none;
         }
         .flagship-panel.is-active {
             display: block;
+            animation: panelFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        @keyframes panelFadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         .continuum-step {
             position: relative;
@@ -1004,10 +1034,13 @@
                             <p class="text-[10px] uppercase tracking-[0.4em] text-white/60">Flagship Systems</p>
                             <div class="inline-flex flex-col items-center font-display font-bold tracking-tighter text-white">
                                 <div class="flex items-baseline gap-4 leading-none">
-                                    <span class="text-xl md:text-3xl text-white/30 tracking-[0.2em] uppercase">Clinical</span>
+                                    <span class="text-xl md:text-3xl text-clinical-blue tracking-[0.2em] uppercase">Clinical</span>
                                 </div>
                                 <div class="flex items-baseline gap-4 leading-none -mt-2 md:-mt-4">
-                                    <span class="text-6xl md:text-8xl lg:text-9xl text-clinical-green uppercase leading-[0.8]">Flagships</span>
+                                    <span class="text-6xl md:text-8xl lg:text-9xl text-white uppercase leading-[0.8] relative">
+                                        Flagships
+                                        <span class="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-clinical-blue via-clinical-green to-clinical-blue opacity-50"></span>
+                                    </span>
                                 </div>
                             </div>
                             <p class="text-white/70 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">Four core clinical pillars orchestrate the entire Cincinnati Chiropractic &amp; Longevity system—from structural correction to long-term cellular resilience.</p>
