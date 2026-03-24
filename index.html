@@ -551,13 +551,13 @@
             transform: skewX(4deg);
         }
         .flagship-trigger:hover {
-            border-color: rgba(255, 255, 255, 0.2);
+            border-color: rgba(34, 197, 94, 0.4);
             transform: skewX(-4deg) translateY(-8px);
         }
         .flagship-trigger.is-active {
-            border-color: rgba(59, 130, 246, 0.5);
+            border-color: rgba(34, 197, 94, 0.6);
             background: rgba(15, 23, 42, 0.8);
-            box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 40px 80px -20px rgba(34, 197, 94, 0.2), 0 20px 40px -10px rgba(0, 0, 0, 0.5);
         }
         .skew-label {
             display: inline-block;
@@ -565,14 +565,14 @@
             font-size: 10px;
             text-transform: uppercase;
             letter-spacing: 0.3em;
-            color: #FB4F14;
+            color: #22C55E;
             margin-bottom: 1rem;
         }
         .skew-button {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            background: #3B82F6;
+            background: #22C55E;
             color: white;
             font-size: 9px;
             font-weight: 800;
@@ -587,7 +587,7 @@
             transform: skewX(15deg);
         }
         .flagship-trigger.is-active .skew-button {
-            background: #2563EB;
+            background: #16A34A;
         }
         .flagship-panel {
             display: none;
@@ -999,21 +999,21 @@
         <section id="programs" class="py-24 relative overflow-hidden">
             <div class="container mx-auto px-6 relative z-10">
                 <div class="space-y-10">
-                    <div class="flex flex-col lg:flex-row items-start justify-between gap-8">
-                        <div class="space-y-4 max-w-2xl">
+                    <div class="flex flex-col items-center text-center gap-8 mb-16">
+                        <div class="space-y-4 max-w-4xl">
                             <p class="text-[10px] uppercase tracking-[0.4em] text-white/60">Flagship Systems</p>
-                            <div class="inline-flex flex-col items-start font-display font-bold tracking-tighter text-white">
+                            <div class="inline-flex flex-col items-center font-display font-bold tracking-tighter text-white">
                                 <div class="flex items-baseline gap-4 leading-none">
                                     <span class="text-xl md:text-3xl text-white/30 tracking-[0.2em] uppercase">Clinical</span>
                                 </div>
                                 <div class="flex items-baseline gap-4 leading-none -mt-2 md:-mt-4">
-                                    <span class="text-6xl md:text-8xl lg:text-9xl text-clinical-blue uppercase leading-[0.8]">Flagships</span>
+                                    <span class="text-6xl md:text-8xl lg:text-9xl text-clinical-green uppercase leading-[0.8]">Flagships</span>
                                 </div>
                             </div>
-                            <p class="text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">Four core clinical pillars orchestrate the entire Cincinnati Chiropractic &amp; Longevity system—from structural correction to long-term cellular resilience.</p>
+                            <p class="text-white/70 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">Four core clinical pillars orchestrate the entire Cincinnati Chiropractic &amp; Longevity system—from structural correction to long-term cellular resilience.</p>
                         </div>
-                        <div class="flex items-center gap-3 text-[10px] uppercase tracking-[0.35em] text-white/50">
-                            <span class="h-2 w-2 rounded-full bg-clinical-green"></span>
+                        <div class="flex items-center gap-3 text-[10px] uppercase tracking-[0.35em] text-clinical-green font-bold">
+                            <span class="h-2 w-2 rounded-full bg-clinical-green animate-pulse"></span>
                             4 Flagships
                         </div>
                     </div>
