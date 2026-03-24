@@ -323,40 +323,54 @@
 
         /* Precision Architect Team Cards */
 
-        /* Protocol Carousel Styles */
-        .protocols-swiper--chronic {
+        /* Dimensional Protocol Carousel Styles */
+        .protocols-swiper-dimensional {
             overflow: visible !important;
             padding: 4rem 0;
             perspective: 2000px;
-            min-height: 800px;
+            min-height: 700px;
+            max-width: 1200px; /* Standard site container width */
+            margin: 0 auto;
         }
-        .protocols-swiper--chronic .swiper-slide {
-            transition: all 0.5s ease;
-            opacity: 0.5;
-            filter: brightness(0.4);
-            transform: scale(0.8) translateZ(-100px);
-            width: 320px !important;
+        .protocols-swiper-dimensional .swiper-slide {
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            opacity: 0.7;
+            filter: brightness(0.7) grayscale(0.1);
+            transform: scale(0.75) translateZ(-300px);
+            width: 200px !important; /* Smaller width for a perfect 1200px fit */
             display: flex;
             justify-content: center;
             align-items: center;
+            pointer-events: auto;
         }
-        .protocols-swiper--chronic .swiper-slide-active {
+        
+        /* Level 2: Immediate Neighbors (Level 1 descent) */
+        .protocols-swiper-dimensional .swiper-slide-prev,
+        .protocols-swiper-dimensional .swiper-slide-next {
+            opacity: 0.9;
+            filter: brightness(0.9) grayscale(0.05);
+            transform: scale(0.95) translateZ(-150px);
+            z-index: 5;
+        }
+
+        /* Level 1: Active Highlight (Center) */
+        .protocols-swiper-dimensional .swiper-slide-active {
             opacity: 1;
-            filter: brightness(1);
-            transform: scale(1.1) translateZ(0);
+            filter: brightness(1) grayscale(0);
+            transform: scale(1.25) translateZ(0);
             z-index: 10;
         }
-        .protocols-swiper--chronic .swiper-slide-active .protocol-card-blueprint {
-            border-color: rgba(34, 197, 94, 0.5);
-            box-shadow: 0 0 50px rgba(34, 197, 94, 0.3), 0 0 100px rgba(0, 71, 171, 0.2);
+        .protocols-swiper-dimensional .swiper-slide-active .protocol-card-blueprint {
+            border-color: rgba(34, 197, 94, 0.8);
+            box-shadow: 0 0 60px rgba(34, 197, 94, 0.4), 0 0 120px rgba(0, 71, 171, 0.3);
         }
 
         .protocol-card-blueprint {
             width: 100%;
-            height: 650px;
+            height: 520px; /* Reduced height for better fit */
             background: #0a0f1e;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 4px;
+            border: 1.5px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1.5rem; /* More rounded */
             display: flex;
             flex-direction: column;
             overflow: hidden;
@@ -364,7 +378,7 @@
         }
 
         .protocol-card-blueprint__image-container {
-            flex: 0 0 65%;
+            flex: 0 0 58%;
             position: relative;
             overflow: hidden;
         }
@@ -401,10 +415,17 @@
 
         .protocol-card-blueprint__image {
             position: absolute;
-            inset: 0;
-            background-size: cover;
-            background-position: center;
-            transition: transform 0.6s ease;
+            inset: -2px; /* Slight overflow to fix black line formatting errors */
+            background-size: 160%; /* Zoomed to crop emblem */
+            background-position: center 35%; /* Shifted up */
+            background-repeat: no-repeat;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Specific zoom for Neuropathy image */
+        .protocol-card-blueprint__image--neuropathy {
+            background-size: 210% !important;
+            background-position: center 38% !important;
         }
 
         .swiper-slide-active .protocol-card-blueprint__image {
@@ -433,13 +454,28 @@
             display: block;
         }
 
+        .protocol-card-blueprint__title {
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+            text-transform: uppercase;
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+        }
+
+        .protocol-card-blueprint__desc {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.5;
+        }
+
         .protocol-card-blueprint__footer {
             margin-top: auto;
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
+            align-items: center;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
-            padding-top: 1rem;
+            padding-top: 1.25rem;
         }
 
         .protocol-card-blueprint__stats {
@@ -663,7 +699,7 @@
             aspect-ratio: 4 / 7.5;
             position: relative;
             overflow: hidden;
-            border: 1px solid rgba(0, 71, 171, 0.2);
+            border: 1.5px solid rgba(0, 71, 171, 0.3);
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -672,18 +708,27 @@
             background: #020617;
             transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
             transform: skewX(-4deg);
-            margin: 0 0.5rem;
+            margin: 0 0.25rem;
+            border-radius: 2rem; /* Substantial rounding like the image */
+        }
+        .flagship-trigger.is-active {
+            border-color: #22C55E;
+            box-shadow: 0 0 30px rgba(34, 197, 94, 0.2);
+        }
+        .flagship-trigger:hover {
+            border-color: rgba(0, 71, 171, 0.8);
+            transform: skewX(-4deg) translateY(-8px);
         }
         .flagship-trigger__bg {
             position: absolute;
-            inset: -20%;
-            background-size: 175%;
+            inset: -25%;
+            background-size: cover;
             background-position: center;
             transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease, filter 0.8s ease;
-            opacity: 0.7;
+            opacity: 0.65;
             z-index: 0;
-            filter: grayscale(0.5) contrast(1.1) brightness(1.1);
-            transform: skewX(4deg);
+            filter: grayscale(0.4) contrast(1.1);
+            transform: skewX(4deg); /* Inverse skew for background to appear upright */
         }
         .flagship-trigger.is-active .flagship-trigger__bg,
         .flagship-trigger:hover .flagship-trigger__bg {
@@ -1522,30 +1567,19 @@
                             </div>
                         </div>
                         <div class="relative">
-                            <div class="swiper protocols-swiper protocols-swiper--chronic">
+                            <div class="swiper protocols-swiper-dimensional protocols-swiper--chronic">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="protocol-card-blueprint">
                                             <div class="protocol-card-blueprint__image-container">
-                                                <div class="protocol-card-blueprint__header">
-                                                    <div class="protocol-card-blueprint__header-label">
-                                                        <span class="protocol-card-blueprint__header-dot"></span>
-                                                        Live Sync: Active
-                                                    </div>
-                                                </div>
-                                                <div class="protocol-card-blueprint__image" style="background-image: url('/images/newneurobutton.png');"></div>
-                                                <div class="protocol-card-blueprint__overlay"></div>
+                                                <div class="protocol-card-blueprint__image protocol-card-blueprint__image--neuropathy" style="background-image: url('/images/newneurobutton.png');"></div>
                                             </div>
                                             <div class="protocol-card-blueprint__info">
-                                                <div class="protocol-card-blueprint__title-wrap">
-                                                    <span class="protocol-card-blueprint__title-label">Grid NM-X72 Structure</span>
-                                                    <h4 class="text-xl sm:text-2xl font-display font-bold text-white uppercase leading-tight">Neuropathy Care</h4>
-                                                </div>
-                                                <p class="text-white/60 text-xs leading-relaxed">Precision neuro-regeneration for nerve revitalization and axonal repair.</p>
+                                                <h4 class="protocol-card-blueprint__title">Neuropathy Care</h4>
+                                                <p class="protocol-card-blueprint__desc">Precision neuro-regeneration for nerve revitalization and axonal repair.</p>
                                                 <div class="protocol-card-blueprint__footer">
                                                     <div class="protocol-card-blueprint__stats">
-                                                        <span class="protocol-card-blueprint__stats-label">Output</span>
-                                                        <span class="protocol-card-blueprint__stats-value">104% BASE</span>
+                                                        <span class="protocol-card-blueprint__stats-value text-clinical-green uppercase font-bold text-[10px]">Learn More</span>
                                                     </div>
                                                     <a href="/programs/neuropathy-care.html" class="protocol-card-blueprint__action">
                                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -1557,25 +1591,14 @@
                                     <div class="swiper-slide">
                                         <div class="protocol-card-blueprint">
                                             <div class="protocol-card-blueprint__image-container">
-                                                <div class="protocol-card-blueprint__header">
-                                                    <div class="protocol-card-blueprint__header-label">
-                                                        <span class="protocol-card-blueprint__header-dot"></span>
-                                                        Live Sync: Active
-                                                    </div>
-                                                </div>
                                                 <div class="protocol-card-blueprint__image" style="background-image: url('/images/cardiobutton.png');"></div>
-                                                <div class="protocol-card-blueprint__overlay"></div>
                                             </div>
                                             <div class="protocol-card-blueprint__info">
-                                                <div class="protocol-card-blueprint__title-wrap">
-                                                    <span class="protocol-card-blueprint__title-label">Grid CM-R48 Structure</span>
-                                                    <h4 class="text-xl sm:text-2xl font-display font-bold text-white uppercase leading-tight">Cardiometabolic Repair</h4>
-                                                </div>
-                                                <p class="text-white/60 text-xs leading-relaxed">Rebuilding insulin sensitivity and cardiopulmonary efficiency.</p>
+                                                <h4 class="protocol-card-blueprint__title">Cardiometabolic Repair</h4>
+                                                <p class="protocol-card-blueprint__desc">Rebuilding insulin sensitivity and cardiopulmonary efficiency.</p>
                                                 <div class="protocol-card-blueprint__footer">
                                                     <div class="protocol-card-blueprint__stats">
-                                                        <span class="protocol-card-blueprint__stats-label">Stability</span>
-                                                        <span class="protocol-card-blueprint__stats-value">OPTIMAL</span>
+                                                        <span class="protocol-card-blueprint__stats-value text-clinical-green uppercase font-bold text-[10px]">Learn More</span>
                                                     </div>
                                                     <a href="/programs/cardiometabolic-repair.html" class="protocol-card-blueprint__action">
                                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -1587,25 +1610,14 @@
                                     <div class="swiper-slide">
                                         <div class="protocol-card-blueprint">
                                             <div class="protocol-card-blueprint__image-container">
-                                                <div class="protocol-card-blueprint__header">
-                                                    <div class="protocol-card-blueprint__header-label">
-                                                        <span class="protocol-card-blueprint__header-dot"></span>
-                                                        Live Sync: Active
-                                                    </div>
-                                                </div>
                                                 <div class="protocol-card-blueprint__image" style="background-image: url('/images/brainbutton.png');"></div>
-                                                <div class="protocol-card-blueprint__overlay"></div>
                                             </div>
                                             <div class="protocol-card-blueprint__info">
-                                                <div class="protocol-card-blueprint__title-wrap">
-                                                    <span class="protocol-card-blueprint__title-label">Grid PV-X99 Structure</span>
-                                                    <h4 class="text-xl sm:text-2xl font-display font-bold text-white uppercase leading-tight">Chronic Fatigue</h4>
-                                                </div>
-                                                <p class="text-white/60 text-xs leading-relaxed">Systemic recovery for ME/CFS and post-viral biological reset.</p>
+                                                <h4 class="protocol-card-blueprint__title">Chronic Fatigue</h4>
+                                                <p class="protocol-card-blueprint__desc">Systemic recovery for ME/CFS and post-viral biological reset.</p>
                                                 <div class="protocol-card-blueprint__footer">
                                                     <div class="protocol-card-blueprint__stats">
-                                                        <span class="protocol-card-blueprint__stats-label">Level</span>
-                                                        <span class="protocol-card-blueprint__stats-value">RESTORED</span>
+                                                        <span class="protocol-card-blueprint__stats-value text-clinical-green uppercase font-bold text-[10px]">Learn More</span>
                                                     </div>
                                                     <a href="/programs/chronic-fatigue-long-covid.html" class="protocol-card-blueprint__action">
                                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -1617,25 +1629,14 @@
                                     <div class="swiper-slide">
                                         <div class="protocol-card-blueprint">
                                             <div class="protocol-card-blueprint__image-container">
-                                                <div class="protocol-card-blueprint__header">
-                                                    <div class="protocol-card-blueprint__header-label">
-                                                        <span class="protocol-card-blueprint__header-dot"></span>
-                                                        Live Sync: Active
-                                                    </div>
-                                                </div>
                                                 <div class="protocol-card-blueprint__image" style="background-image: url('/images/fibrobutton.png');"></div>
-                                                <div class="protocol-card-blueprint__overlay"></div>
                                             </div>
                                             <div class="protocol-card-blueprint__info">
-                                                <div class="protocol-card-blueprint__title-wrap">
-                                                    <span class="protocol-card-blueprint__title-label">Grid CS-P22 Structure</span>
-                                                    <h4 class="text-xl sm:text-2xl font-display font-bold text-white uppercase leading-tight">Fibromyalgia Care</h4>
-                                                </div>
-                                                <p class="text-white/60 text-xs leading-relaxed">Centralized pain relief and high-precision neural regulation.</p>
+                                                <h4 class="protocol-card-blueprint__title">Fibromyalgia Care</h4>
+                                                <p class="protocol-card-blueprint__desc">Centralized pain relief and high-precision neural regulation.</p>
                                                 <div class="protocol-card-blueprint__footer">
                                                     <div class="protocol-card-blueprint__stats">
-                                                        <span class="protocol-card-blueprint__stats-label">Threshold</span>
-                                                        <span class="protocol-card-blueprint__stats-value">+18% TOL</span>
+                                                        <span class="protocol-card-blueprint__stats-value text-clinical-green uppercase font-bold text-[10px]">Learn More</span>
                                                     </div>
                                                     <a href="/programs/fibromyalgia-care.html" class="protocol-card-blueprint__action">
                                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -1647,25 +1648,14 @@
                                     <div class="swiper-slide">
                                         <div class="protocol-card-blueprint">
                                             <div class="protocol-card-blueprint__image-container">
-                                                <div class="protocol-card-blueprint__header">
-                                                    <div class="protocol-card-blueprint__header-label">
-                                                        <span class="protocol-card-blueprint__header-dot"></span>
-                                                        Live Sync: Active
-                                                    </div>
-                                                </div>
                                                 <div class="protocol-card-blueprint__image" style="background-image: url('/images/bonebutton.png');"></div>
-                                                <div class="protocol-card-blueprint__overlay"></div>
                                             </div>
                                             <div class="protocol-card-blueprint__info">
-                                                <div class="protocol-card-blueprint__title-wrap">
-                                                    <span class="protocol-card-blueprint__title-label">Grid BS-B10 Structure</span>
-                                                    <h4 class="text-xl sm:text-2xl font-display font-bold text-white uppercase leading-tight">Balance &amp; Strength</h4>
-                                                </div>
-                                                <p class="text-white/60 text-xs leading-relaxed">Structural reinforcement and biological density preservation.</p>
+                                                <h4 class="protocol-card-blueprint__title">Balance &amp; Strength</h4>
+                                                <p class="protocol-card-blueprint__desc">Structural reinforcement and biological density preservation.</p>
                                                 <div class="protocol-card-blueprint__footer">
                                                     <div class="protocol-card-blueprint__stats">
-                                                        <span class="protocol-card-blueprint__stats-label">Density</span>
-                                                        <span class="protocol-card-blueprint__stats-value">HIGH GRADE</span>
+                                                        <span class="protocol-card-blueprint__stats-value text-clinical-green uppercase font-bold text-[10px]">Learn More</span>
                                                     </div>
                                                     <a href="/programs/balance-strength-bone-optimization.html" class="protocol-card-blueprint__action">
                                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -1691,7 +1681,7 @@
                         <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
                             <div class="max-w-2xl space-y-3">
                                 <p class="text-[10px] uppercase tracking-[0.35em] text-white/50">Performance &amp; Structure</p>
-                                <h3 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white">Performance &amp; <span class="text-clinical-blue">Structure</span></h3>
+                                <h3 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white uppercase italic">Performance &amp; <span class="text-clinical-blue italic">Structure</span></h3>
                                 <p class="text-white/70 text-base sm:text-lg leading-relaxed">Engineering the physical chassis for durability, explosive power, and long-term structural integrity.</p>
                             </div>
                             <div class="flex items-center gap-3 text-[10px] uppercase tracking-[0.35em] text-white/50">
@@ -1700,76 +1690,106 @@
                             </div>
                         </div>
                         <div class="relative">
-                            <div class="swiper protocols-swiper protocols-swiper--performance">
+                            <div class="swiper protocols-swiper-dimensional protocols-swiper--performance">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <a href="/programs/longevity-healthspan-optimization.html" class="protocol-card-blueprint">
-                                            <div class="protocol-card-blueprint__bg" style="background-image: url('/images/longevitybutton.png');"></div>
-                                            <div class="protocol-card-blueprint__overlay"></div>
-                                            <div class="protocol-card-blueprint__content">
-                                                <h4 class="text-xl sm:text-2xl font-display font-semibold text-white">Longevity &amp; Healthspan</h4>
-                                                <div class="protocol-orb__detail">
-                                                    <p class="text-white/75 text-sm sm:text-base leading-relaxed">Mitochondrial care and proactive diagnostics to extend healthspan, preserve strength, and protect cognition.</p>
-                                                </div>
-                                                <span class="inline-flex items-center text-clinical-green text-[11px] font-bold uppercase tracking-widest mt-4">Healthspan Engineering <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
+                                        <div class="protocol-card-blueprint">
+                                            <div class="protocol-card-blueprint__image-container">
+                                                <div class="protocol-card-blueprint__image" style="background-image: url('/images/longevitybutton.png');"></div>
                                             </div>
-                                        </a>
+                                            <div class="protocol-card-blueprint__info">
+                                                <h4 class="protocol-card-blueprint__title">Longevity &amp; Healthspan</h4>
+                                                <p class="protocol-card-blueprint__desc">Mitochondrial care and proactive diagnostics to extend healthspan.</p>
+                                                <div class="protocol-card-blueprint__footer">
+                                                    <div class="protocol-card-blueprint__stats">
+                                                        <span class="protocol-card-blueprint__stats-value text-clinical-blue uppercase font-bold text-[10px]">Learn More</span>
+                                                    </div>
+                                                    <a href="/programs/longevity-healthspan-optimization.html" class="protocol-card-blueprint__action" style="background: rgba(0, 71, 171, 0.2); color: #0047AB;">
+                                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="/programs/golf-performance-cincinnati.html" class="protocol-card-blueprint">
-                                            <div class="protocol-card-blueprint__bg" style="background-image: url('/images/golfbutton.png');"></div>
-                                            <div class="protocol-card-blueprint__overlay"></div>
-                                            <div class="protocol-card-blueprint__content">
-                                                <h4 class="text-xl sm:text-2xl font-display font-semibold text-white">Golf Performance</h4>
-                                                <div class="protocol-orb__detail">
-                                                    <p class="text-white/75 text-sm sm:text-base leading-relaxed">Biomechanical swing work to increase swing speed, distance, and durability through structural repair.</p>
-                                                </div>
-                                                <span class="inline-flex items-center text-clinical-green text-[11px] font-bold uppercase tracking-widest mt-4">Kinematic Sequence <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
+                                        <div class="protocol-card-blueprint">
+                                            <div class="protocol-card-blueprint__image-container">
+                                                <div class="protocol-card-blueprint__image" style="background-image: url('/images/golfbutton.png');"></div>
                                             </div>
-                                        </a>
+                                            <div class="protocol-card-blueprint__info">
+                                                <h4 class="protocol-card-blueprint__title">Golf Performance</h4>
+                                                <p class="protocol-card-blueprint__desc">Biomechanical swing work to increase power and structural durability.</p>
+                                                <div class="protocol-card-blueprint__footer">
+                                                    <div class="protocol-card-blueprint__stats">
+                                                        <span class="protocol-card-blueprint__stats-value text-clinical-blue uppercase font-bold text-[10px]">Learn More</span>
+                                                    </div>
+                                                    <a href="/programs/golf-performance-cincinnati.html" class="protocol-card-blueprint__action" style="background: rgba(0, 71, 171, 0.2); color: #0047AB;">
+                                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="/programs/heart-rate-variability-optimization.html" class="protocol-card-blueprint">
-                                            <div class="protocol-card-blueprint__bg" style="background-image: url('/images/hrvbutton.png');"></div>
-                                            <div class="protocol-card-blueprint__overlay"></div>
-                                            <div class="protocol-card-blueprint__content">
-                                                <h4 class="text-xl sm:text-2xl font-display font-semibold text-white">Heart Rate Variability Optimization</h4>
-                                                <div class="protocol-orb__detail">
-                                                    <p class="text-white/75 text-sm sm:text-base leading-relaxed">Improve heart rate variability and autonomic flexibility for recovery, stress resilience, and performance.</p>
-                                                </div>
-                                                <span class="inline-flex items-center text-clinical-green text-[11px] font-bold uppercase tracking-widest mt-4">Autonomic Resilience <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
+                                        <div class="protocol-card-blueprint">
+                                            <div class="protocol-card-blueprint__image-container">
+                                                <div class="protocol-card-blueprint__image" style="background-image: url('/images/hrvbutton.png');"></div>
                                             </div>
-                                        </a>
+                                            <div class="protocol-card-blueprint__info">
+                                                <h4 class="protocol-card-blueprint__title">HRV Optimization</h4>
+                                                <p class="protocol-card-blueprint__desc">Improve autonomic flexibility for recovery and performance.</p>
+                                                <div class="protocol-card-blueprint__footer">
+                                                    <div class="protocol-card-blueprint__stats">
+                                                        <span class="protocol-card-blueprint__stats-value text-clinical-blue uppercase font-bold text-[10px]">Learn More</span>
+                                                    </div>
+                                                    <a href="/programs/heart-rate-variability-optimization.html" class="protocol-card-blueprint__action" style="background: rgba(0, 71, 171, 0.2); color: #0047AB;">
+                                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="/programs/brain-health-sleep-optimization.html" class="protocol-card-blueprint">
-                                            <div class="protocol-card-blueprint__bg" style="background-image: url('/images/sleepbutton.png');"></div>
-                                            <div class="protocol-card-blueprint__overlay"></div>
-                                            <div class="protocol-card-blueprint__content">
-                                                <h4 class="text-xl sm:text-2xl font-display font-semibold text-white">Sleep Optimization</h4>
-                                                <div class="protocol-orb__detail">
-                                                    <p class="text-white/75 text-sm sm:text-base leading-relaxed">Structural and autonomic regulation to reset neural operating systems and optimize deep sleep architecture.</p>
-                                                </div>
-                                                <span class="inline-flex items-center text-clinical-green text-[11px] font-bold uppercase tracking-widest mt-4">Neural OS Reset <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
+                                        <div class="protocol-card-blueprint">
+                                            <div class="protocol-card-blueprint__image-container">
+                                                <div class="protocol-card-blueprint__image" style="background-image: url('/images/sleepbutton.png');"></div>
                                             </div>
-                                        </a>
+                                            <div class="protocol-card-blueprint__info">
+                                                <h4 class="protocol-card-blueprint__title">Sleep Optimization</h4>
+                                                <p class="protocol-card-blueprint__desc">Structural and autonomic regulation to optimize deep sleep architecture.</p>
+                                                <div class="protocol-card-blueprint__footer">
+                                                    <div class="protocol-card-blueprint__stats">
+                                                        <span class="protocol-card-blueprint__stats-value text-clinical-blue uppercase font-bold text-[10px]">Learn More</span>
+                                                    </div>
+                                                    <a href="/programs/brain-health-sleep-optimization.html" class="protocol-card-blueprint__action" style="background: rgba(0, 71, 171, 0.2); color: #0047AB;">
+                                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="/programs/flexibility-mobility-optimization.html" class="protocol-card-blueprint">
-                                            <div class="protocol-card-blueprint__bg" style="background-image: url('/images/flexibilitybutton.png');"></div>
-                                            <div class="protocol-card-blueprint__overlay"></div>
-                                            <div class="protocol-card-blueprint__content">
-                                                <h4 class="text-xl sm:text-2xl font-display font-semibold text-white">Flexibility &amp; Functional Mobility</h4>
-                                                <div class="protocol-orb__detail">
-                                                    <p class="text-white/75 text-sm sm:text-base leading-relaxed">Restore range of motion, joint mobility, and resilient movement mechanics.</p>
-                                                </div>
-                                                <span class="inline-flex items-center text-clinical-green text-[11px] font-bold uppercase tracking-widest mt-4">Mobility Reset <svg class="ml-2 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>
+                                        <div class="protocol-card-blueprint">
+                                            <div class="protocol-card-blueprint__image-container">
+                                                <div class="protocol-card-blueprint__image" style="background-image: url('/images/flexibilitybutton.png');"></div>
                                             </div>
-                                        </a>
+                                            <div class="protocol-card-blueprint__info">
+                                                <h4 class="protocol-card-blueprint__title">Flexibility &amp; Mobility</h4>
+                                                <p class="protocol-card-blueprint__desc">Restore range of motion and resilient movement mechanics.</p>
+                                                <div class="protocol-card-blueprint__footer">
+                                                    <div class="protocol-card-blueprint__stats">
+                                                        <span class="protocol-card-blueprint__stats-value text-clinical-blue uppercase font-bold text-[10px]">Learn More</span>
+                                                    </div>
+                                                    <a href="/programs/flexibility-mobility-optimization.html" class="protocol-card-blueprint__action" style="background: rgba(0, 71, 171, 0.2); color: #0047AB;">
+                                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="protocols-nav mt-6 flex items-center justify-center gap-4 lg:hidden">
+                            <div class="protocols-nav mt-10 flex items-center justify-center gap-4">
                                 <button class="protocols-button protocols-prev protocols-prev--performance" type="button" aria-label="Previous slide">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                                 </button>
@@ -1980,29 +2000,31 @@
                     }
                 };
 
-                const setupChronicSwiper = (selector, prevEl, nextEl) => {
-                    const swiper = new Swiper(selector, {
+                const setupDimensionalSwiper = (selector, prevEl, nextEl) => {
+                    return new Swiper(selector, {
                         slidesPerView: 'auto',
                         centeredSlides: true,
-                        loop: true,
-                        spaceBetween: -60, // Default for mobile
+                        initialSlide: 2,
+                        loop: false,
+                        spaceBetween: 30, // Consistent spacing between all tiles
                         speed: 800,
                         grabCursor: true,
                         slideToClickedSlide: true,
+                        watchSlidesProgress: true,
                         navigation: {
                             nextEl,
                             prevEl,
                         },
                         breakpoints: {
-                            768: {
-                                spaceBetween: -100, // Pulled closer on desktop
+                            1200: {
+                                spaceBetween: 40, // More space on desktop
                             }
                         }
                     });
                 };
 
-                setupChronicSwiper('.protocols-swiper--chronic', '.protocols-prev--chronic', '.protocols-next--chronic');
-                setupProtocolSwiper('.protocols-swiper--performance', '.protocols-prev--performance', '.protocols-next--performance');
+                setupDimensionalSwiper('.protocols-swiper--chronic', '.protocols-prev--chronic', '.protocols-next--chronic');
+                setupDimensionalSwiper('.protocols-swiper--performance', '.protocols-prev--performance', '.protocols-next--performance');
 
 
                 const flagshipTriggers = document.querySelectorAll('[data-flagship-target]');
