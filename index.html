@@ -1334,15 +1334,19 @@
         <section class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-40 pb-20">
             <!-- Background Image Overlay -->
             <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-                <img src="/images/title.png" alt="" class="w-full h-full object-cover opacity-60">
-                <!-- Smooth transitions to page background -->
-                <!-- Overall darken for text readability -->
-                <div class="absolute inset-0 bg-[#020617]/20"></div>
-                <!-- Bottom fade (deep transition to rest of page) -->
-                <div class="absolute inset-x-0 bottom-0 h-[40rem] bg-gradient-to-t from-[#020617] via-[#020617]/90 to-transparent"></div>
-                <!-- Side fades (to blend edges) -->
-                <div class="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#020617] via-[#020617]/30 to-transparent"></div>
-                <div class="absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#020617] via-[#020617]/30 to-transparent"></div>
+                <!-- Using a mask for a truly smooth fade out at the bottom -->
+                <div class="absolute inset-0 w-full h-full" 
+                     style="background-image: url('/images/title.png'); background-size: cover; background-position: center 15%; opacity: 0.6; mask-image: linear-gradient(to bottom, black 60%, transparent 95%); -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 95%);">
+                </div>
+                
+                <!-- Matching the global grid/gradient to blend perfectly -->
+                <div class="absolute inset-0 opacity-40" 
+                     style="background-image: linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px); background-size: 60px 60px;">
+                </div>
+
+                <!-- Side fades -->
+                <div class="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#020617] to-transparent"></div>
+                <div class="absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#020617] to-transparent"></div>
             </div>
             <div class="container mx-auto px-6 relative z-10 text-center">
                 <div class="max-w-5xl mx-auto space-y-8 sm:space-y-12">
