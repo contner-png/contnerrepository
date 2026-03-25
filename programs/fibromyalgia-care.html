@@ -54,7 +54,7 @@
             position: relative;
             background: rgba(2, 6, 23, 0.8);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 1.5rem;
+            border-radius: 0;
             overflow: hidden;
             display: flex;
             align-items: center;
@@ -66,7 +66,7 @@
             position: absolute;
             inset: 0;
             border: 3px solid transparent;
-            border-radius: 1.5rem;
+            border-radius: 0;
             background: linear-gradient(135deg, #FB4F14, transparent, #22C55E) border-box;
             -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: destination-out;
@@ -158,7 +158,7 @@
                         <span>The Flagships</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
-                    <div class="absolute left-0 mt-3 w-64 dropdown-panel rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-4 z-50">
+                    <div class="absolute left-0 mt-3 w-64 dropdown-panel rounded-none opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-4 z-50">
                         <a href="/programs/cincinnati-chiropractic-care.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors">Precision Chiropractic</a>
                         <a href="/programs/integrative-physical-therapy.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors">Integrative Physical Therapy</a>
                         <a href="/programs/personalized-medicine-cincinnati.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors">Personalized Medicine</a>
@@ -171,7 +171,7 @@
                         <span>Specialized Protocols</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
-                    <div class="absolute left-0 mt-3 w-72 dropdown-panel rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-4 z-50">
+                    <div class="absolute left-0 mt-3 w-72 dropdown-panel rounded-none opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-4 z-50">
                         <div class="px-4 pb-2 text-[10px] font-bold text-white/40 uppercase tracking-widest">Chronic Management</div>
                         <a href="/programs/neuropathy-care.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Neuropathy Care</a>
                         <a href="/programs/cardiometabolic-repair.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Cardiometabolic Repair</a>
@@ -193,7 +193,7 @@
                         <span>Treatments</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
-                    <div class="absolute left-0 mt-3 w-64 dropdown-panel rounded-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-4 z-50">
+                    <div class="absolute left-0 mt-3 w-64 dropdown-panel rounded-none opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-4 z-50">
                         
                         <a href="/treatments/class-iv-laser.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Cold Laser (Class IV)</a>
                         <a href="/treatments/red-light-therapy.html" class="block px-4 py-2 text-white/80 hover:bg-white/5 hover:text-white transition-colors text-sm">Red Light Therapy</a>
@@ -216,7 +216,7 @@
             </div>
 
             <div class="flex items-center space-x-4">
-                <a href="/contact.html" class="hidden sm:block px-6 py-2.5 bg-clinical-blue text-white rounded-full font-semibold hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-200">
+                <a href="/contact.html" class="hidden sm:block px-6 py-2.5 bg-clinical-blue text-white rounded-none font-semibold hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-200">
                     Request Appointment
                 </a>
                 <!-- Mobile Menu Button -->
@@ -278,7 +278,7 @@
                     <a href="/patient-resources.html" class="hover:text-clinical-blue text-lg text-clinical-charcoal">Patient Resources</a>
                 </div>
                 <div class="mt-auto pb-12">
-                    <a href="/contact.html" class="block w-full py-5 bg-clinical-blue text-white text-center rounded-full font-bold text-xl shadow-xl">
+                    <a href="/contact.html" class="block w-full py-5 bg-clinical-blue text-white text-center rounded-none font-bold text-xl shadow-xl">
                         Request Appointment
                     </a>
                 </div>
@@ -303,13 +303,13 @@
             
             <div class="container mx-auto px-6 relative z-10">
                 <div class="max-w-5xl mx-auto space-y-10">
-                    <div class="inline-flex items-center px-5 py-2 bg-clinical-green/20 text-clinical-green text-[10px] font-black uppercase tracking-[0.5em] rounded-full border border-clinical-green/30 backdrop-blur-sm">
+                    <div class="inline-flex items-center px-5 py-2 bg-clinical-green/20 text-clinical-green text-[10px] font-black uppercase tracking-[0.5em] rounded-none border border-clinical-green/30 backdrop-blur-sm">
                         Systemic Restoration Protocol
                     </div>
                     <h1 class="text-6xl lg:text-9xl font-display font-bold leading-none italic tracking-tighter text-white drop-shadow-2xl">
                         Fibromyalgia Care
                     </h1>
-                    <div class="w-24 h-1 bg-clinical-orange mx-auto rounded-full"></div>
+                    <div class="w-24 h-1 bg-clinical-orange mx-auto rounded-none"></div>
                     <p class="text-xl lg:text-3xl text-blue-50 font-light max-w-3xl mx-auto leading-relaxed italic opacity-90">
                         Widespread pain relief and nervous system reset for fibromyalgia.
                     </p>
@@ -334,7 +334,7 @@
                         </div>
                     </div>
                     <div class="relative group">
-                        <div class="absolute -inset-4 bg-gradient-to-tr from-clinical-orange/20 to-clinical-blue/20 rounded-[3rem] blur-2xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="absolute -inset-4 bg-gradient-to-tr from-clinical-orange/20 to-clinical-blue/20 rounded-none blur-2xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
                         <div class="modern-clinical-frame frame-wide">
                             <img src="/images/fibromyalgia.PNG" alt="Fibromyalgia clinical graphic" class="flagship-featured-image">
                         </div>
@@ -359,9 +359,9 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-4">
                     
-    <a href="/programs/personalized-medicine-cincinnati.html" class="bento-stack-item group p-10 rounded-[3rem] flex flex-col justify-between h-full lg:col-span-4 md:col-span-6">
+    <a href="/programs/personalized-medicine-cincinnati.html" class="bento-stack-item group p-10 rounded-none flex flex-col justify-between h-full lg:col-span-4 md:col-span-6">
         <div class="flex justify-end items-start mb-8">
-            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
+            <div class="w-12 h-12 rounded-none bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </div>
         </div>
@@ -371,9 +371,9 @@
         </div>
     </a>
 
-    <a href="/programs/integrative-physical-therapy.html" class="bento-stack-item group p-10 rounded-[3rem] flex flex-col justify-between h-full lg:col-span-4 md:col-span-6">
+    <a href="/programs/integrative-physical-therapy.html" class="bento-stack-item group p-10 rounded-none flex flex-col justify-between h-full lg:col-span-4 md:col-span-6">
         <div class="flex justify-end items-start mb-8">
-            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
+            <div class="w-12 h-12 rounded-none bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </div>
         </div>
@@ -383,9 +383,9 @@
         </div>
     </a>
     
-    <a href="/programs/cincinnati-chiropractic-care.html" class="bento-stack-item group p-10 rounded-[3rem] flex flex-col justify-between h-full lg:col-span-4 md:col-span-6">
+    <a href="/programs/cincinnati-chiropractic-care.html" class="bento-stack-item group p-10 rounded-none flex flex-col justify-between h-full lg:col-span-4 md:col-span-6">
         <div class="flex justify-end items-start mb-8">
-            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
+            <div class="w-12 h-12 rounded-none bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </div>
         </div>
@@ -395,9 +395,9 @@
         </div>
     </a>
     
-    <a href="/treatments/vagus-nerve-stimulation.html" class="bento-stack-item group p-10 rounded-[3rem] flex flex-col justify-between h-full lg:col-span-4 md:col-span-6">
+    <a href="/treatments/vagus-nerve-stimulation.html" class="bento-stack-item group p-10 rounded-none flex flex-col justify-between h-full lg:col-span-4 md:col-span-6">
         <div class="flex justify-end items-start mb-8">
-            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
+            <div class="w-12 h-12 rounded-none bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </div>
         </div>
@@ -407,9 +407,9 @@
         </div>
     </a>
     
-    <a href="/treatments/hyperbaric-oxygen.html" class="bento-stack-item group p-10 rounded-[3rem] flex flex-col justify-between h-full lg:col-span-4 md:col-span-6">
+    <a href="/treatments/hyperbaric-oxygen.html" class="bento-stack-item group p-10 rounded-none flex flex-col justify-between h-full lg:col-span-4 md:col-span-6">
         <div class="flex justify-end items-start mb-8">
-            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
+            <div class="w-12 h-12 rounded-none bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </div>
         </div>
@@ -419,9 +419,9 @@
         </div>
     </a>
     
-    <a href="/treatments/pemf-therapy.html" class="bento-stack-item group p-10 rounded-[3rem] flex flex-col justify-between h-full lg:col-span-4 md:col-span-6">
+    <a href="/treatments/pemf-therapy.html" class="bento-stack-item group p-10 rounded-none flex flex-col justify-between h-full lg:col-span-4 md:col-span-6">
         <div class="flex justify-end items-start mb-8">
-            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
+            <div class="w-12 h-12 rounded-none bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </div>
         </div>
@@ -431,9 +431,9 @@
         </div>
     </a>
     
-    <a href="/treatments/red-light-therapy.html" class="bento-stack-item group p-10 rounded-[3rem] flex flex-col justify-between h-full lg:col-span-4 md:col-span-6">
+    <a href="/treatments/red-light-therapy.html" class="bento-stack-item group p-10 rounded-none flex flex-col justify-between h-full lg:col-span-4 md:col-span-6">
         <div class="flex justify-end items-start mb-8">
-            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
+            <div class="w-12 h-12 rounded-none bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </div>
         </div>
@@ -444,10 +444,10 @@
     </a>
     
                 
-    <div class="bento-stack-item p-10 rounded-[3rem] lg:col-span-12 bg-white/[0.03] border border-white/10 relative overflow-hidden group">
-        <div class="absolute -top-24 -right-24 w-64 h-64 bg-clinical-orange/5 rounded-full blur-3xl group-hover:bg-clinical-orange/10 transition-colors"></div>
+    <div class="bento-stack-item p-10 rounded-none lg:col-span-12 bg-white/[0.03] border border-white/10 relative overflow-hidden group">
+        <div class="absolute -top-24 -right-24 w-64 h-64 bg-clinical-orange/5 rounded-none blur-3xl group-hover:bg-clinical-orange/10 transition-colors"></div>
         <div class="relative z-10 flex flex-col lg:flex-row items-center gap-10">
-            <div class="shrink-0 w-16 h-16 rounded-2xl bg-clinical-orange/10 flex items-center justify-center">
+            <div class="shrink-0 w-16 h-16 rounded-none bg-clinical-orange/10 flex items-center justify-center">
                 <svg class="w-8 h-8 text-clinical-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
             </div>
             <div class="space-y-4">
@@ -475,7 +475,7 @@
                 <div class="grid md:grid-cols-3 gap-20">
                     
     <div class="text-center space-y-8 group">
-        <div class="w-24 h-24 bg-clinical-orange/5 rounded-[2.5rem] flex items-center justify-center mx-auto group-hover:bg-clinical-orange group-hover:text-white transition-all duration-700 group-hover:rotate-12">
+        <div class="w-24 h-24 bg-clinical-orange/5 rounded-none flex items-center justify-center mx-auto group-hover:bg-clinical-orange group-hover:text-white transition-all duration-700 group-hover:rotate-12">
             <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
         </div>
         <div class="space-y-4 text-center">
@@ -485,7 +485,7 @@
     </div>
     
     <div class="text-center space-y-8 group">
-        <div class="w-24 h-24 bg-clinical-orange/5 rounded-[2.5rem] flex items-center justify-center mx-auto group-hover:bg-clinical-orange group-hover:text-white transition-all duration-700 group-hover:rotate-12">
+        <div class="w-24 h-24 bg-clinical-orange/5 rounded-none flex items-center justify-center mx-auto group-hover:bg-clinical-orange group-hover:text-white transition-all duration-700 group-hover:rotate-12">
             <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
         </div>
         <div class="space-y-4 text-center">
@@ -495,7 +495,7 @@
     </div>
     
     <div class="text-center space-y-8 group">
-        <div class="w-24 h-24 bg-clinical-orange/5 rounded-[2.5rem] flex items-center justify-center mx-auto group-hover:bg-clinical-orange group-hover:text-white transition-all duration-700 group-hover:rotate-12">
+        <div class="w-24 h-24 bg-clinical-orange/5 rounded-none flex items-center justify-center mx-auto group-hover:bg-clinical-orange group-hover:text-white transition-all duration-700 group-hover:rotate-12">
             <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
         </div>
         <div class="space-y-4 text-center">
@@ -513,7 +513,7 @@
             <div class="absolute inset-0 opacity-20 blueprint-grid"></div>
             <div class="container mx-auto px-6 relative z-10 text-center">
                 <h2 class="text-5xl lg:text-8xl font-display font-bold mb-12 italic tracking-tighter text-white">Engineered for Your <br>Peak Performance</h2>
-                <a href="/contact.html" class="px-12 py-5 bg-white text-[#0047AB] rounded-full font-bold text-2xl hover:bg-clinical-orange hover:text-white transition-all shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-105 transform inline-block" style="color: #0047AB !important;" >
+                <a href="/contact.html" class="px-12 py-5 bg-white text-[#0047AB] rounded-none font-bold text-2xl hover:bg-clinical-orange hover:text-white transition-all shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-105 transform inline-block" style="color: #0047AB !important;" >
                     Request Appointment
                 </a>
             </div>
@@ -524,7 +524,7 @@
         <!-- Technical Footer Divider -->
         <div class="absolute top-0 left-0 right-0 flex items-center justify-center">
             <div class="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-            <div class="absolute px-6 py-2 bg-[#020617] border border-white/10 rounded-full text-[9px] font-bold uppercase tracking-[0.4em] text-white/50 shadow-2xl">
+            <div class="absolute px-6 py-2 bg-[#020617] border border-white/10 rounded-none text-[9px] font-bold uppercase tracking-[0.4em] text-white/50 shadow-2xl">
                 Clinical Directory
             </div>
         </div>
@@ -545,7 +545,7 @@
                     </p>
                     <div class="space-y-6">
                         <div class="flex items-start space-x-4 group">
-                            <div class="w-10 h-10 bg-clinical-blue/20 rounded-lg flex items-center justify-center shrink-0 border border-clinical-blue/30 group-hover:bg-clinical-blue group-hover:border-clinical-blue transition-all">
+                            <div class="w-10 h-10 bg-clinical-blue/20 rounded-none flex items-center justify-center shrink-0 border border-clinical-blue/30 group-hover:bg-clinical-blue group-hover:border-clinical-blue transition-all">
                                 <svg class="w-5 h-5 text-clinical-blue group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                             </div>
                             <div>
@@ -554,7 +554,7 @@
                             </div>
                         </div>
                         <div class="flex items-start space-x-4 group">
-                            <div class="w-10 h-10 bg-clinical-blue/20 rounded-lg flex items-center justify-center shrink-0 border border-clinical-blue/30 group-hover:bg-clinical-blue group-hover:border-clinical-blue transition-all">
+                            <div class="w-10 h-10 bg-clinical-blue/20 rounded-none flex items-center justify-center shrink-0 border border-clinical-blue/30 group-hover:bg-clinical-blue group-hover:border-clinical-blue transition-all">
                                 <svg class="w-5 h-5 text-clinical-blue group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                             </div>
                             <div>
@@ -563,7 +563,7 @@
                             </div>
                         </div>
                         <div class="flex items-start space-x-4 group">
-                            <div class="w-10 h-10 bg-clinical-blue/20 rounded-lg flex items-center justify-center shrink-0 border border-clinical-blue/30 group-hover:bg-clinical-blue group-hover:border-clinical-blue transition-all">
+                            <div class="w-10 h-10 bg-clinical-blue/20 rounded-none flex items-center justify-center shrink-0 border border-clinical-blue/30 group-hover:bg-clinical-blue group-hover:border-clinical-blue transition-all">
                                 <svg class="w-5 h-5 text-clinical-blue group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="9" stroke-width="2"></circle></svg>
                             </div>
                             <div>
@@ -572,7 +572,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="inline-flex items-center gap-2 rounded-full border border-clinical-green/40 bg-clinical-green/5 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.25em] text-clinical-green">
+                    <div class="inline-flex items-center gap-2 rounded-none border border-clinical-green/40 bg-clinical-green/5 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.25em] text-clinical-green">
                         Same-day evaluations welcomed
                     </div>
                 </div>
@@ -624,12 +624,12 @@
                     </ul>
                 </div>
             </div>
-            <div class="mt-16 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 rounded-[2rem] px-8 py-8 border border-white/10 bg-white/5 backdrop-blur-md">
+            <div class="mt-16 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 rounded-none px-8 py-8 border border-white/10 bg-white/5 backdrop-blur-md">
                 <div class="space-y-2">
                     <p class="text-[10px] uppercase tracking-[0.35em] text-clinical-green font-semibold">Same-day evaluations</p>
                     <p class="text-xl font-display font-semibold text-white">Request your clinical evaluation and performance plan.</p>
                 </div>
-                <a href="/contact.html" class="inline-flex items-center justify-center rounded-full bg-white text-clinical-blue px-10 py-4 text-[11px] font-bold uppercase tracking-[0.3em] shadow-lg hover:bg-clinical-green hover:text-white transition-all transform hover:scale-105">
+                <a href="/contact.html" class="inline-flex items-center justify-center rounded-none bg-white text-clinical-blue px-10 py-4 text-[11px] font-bold uppercase tracking-[0.3em] shadow-lg hover:bg-clinical-green hover:text-white transition-all transform hover:scale-105">
                     Request Appointment
                 </a>
             </div>
