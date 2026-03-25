@@ -1586,8 +1586,6 @@
             <div class="container mx-auto px-6 relative z-10">
                 <div class="space-y-10">
                     <div class="flex flex-col items-center text-center gap-8 mb-16">
-                        <div class="space-y-4 max-w-4xl">
-                            <p class="text-[10px] uppercase tracking-[0.4em] text-white/60">Flagship Systems</p>
                         <div class="inline-flex flex-col items-center font-display font-bold tracking-tighter text-white mb-16">
                             <div class="flex items-baseline gap-4 md:gap-6 leading-none">
                                 <span class="text-lg md:text-3xl text-white/30 tracking-[0.2em] uppercase italic">Elite</span>
@@ -1688,8 +1686,10 @@
                         </button>
                     </div>
 
-                    <div class="border-t border-white/10 pt-8">
-                        <div id="flagship-1" class="flagship-panel is-active" data-flagship-panel>
+                    <div class="relative mt-8">
+                        <div id="flagship-indicator" class="absolute -top-px left-0 h-1 bg-clinical-green transition-all duration-500 ease-out z-20 shadow-[0_0_15px_rgba(34,197,94,0.5)]"></div>
+                        <div class="border-t border-white/10 pt-12">
+                            <div id="flagship-1" class="flagship-panel is-active" data-flagship-panel data-panel-color="clinical-green">
                             <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-8">
                                 <div class="space-y-4">
                                     <h4 class="text-3xl sm:text-4xl font-display font-bold text-white">Precision Chiropractic</h4>
@@ -1708,7 +1708,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="flagship-2" class="flagship-panel hidden" data-flagship-panel>
+                        <div id="flagship-2" class="flagship-panel hidden" data-flagship-panel data-panel-color="clinical-blue">
                             <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-8">
                                 <div class="space-y-4">
                                     <h4 class="text-3xl sm:text-4xl font-display font-bold text-white">Integrative Physical Therapy</h4>
@@ -1727,7 +1727,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="flagship-3" class="flagship-panel hidden" data-flagship-panel>
+                        <div id="flagship-3" class="flagship-panel hidden" data-flagship-panel data-panel-color="clinical-blue">
                             <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-8">
                                 <div class="space-y-4">
                                     <h4 class="text-3xl sm:text-4xl font-display font-bold text-white">Personalized Medicine</h4>
@@ -1746,7 +1746,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="flagship-4" class="flagship-panel hidden" data-flagship-panel>
+                        <div id="flagship-4" class="flagship-panel hidden" data-flagship-panel data-panel-color="clinical-blue">
                             <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-8">
                                 <div class="space-y-4">
                                     <h4 class="text-3xl sm:text-4xl font-display font-bold text-white">Longevity Care</h4>
@@ -1910,7 +1910,6 @@
                     <div class="space-y-8">
                         <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
                             <div class="max-w-2xl space-y-3">
-                                <p class="text-[10px] uppercase tracking-[0.35em] text-white/50">Chronic Management</p>
                                 <h3 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white">Chronic <span class="text-clinical-green">Management</span></h3>
                                 <p class="text-white/70 text-base sm:text-lg leading-relaxed">Dedicated clinical management for complex chronic pathologies requiring specific physiological interventions.</p>
                             </div>
@@ -2031,7 +2030,6 @@
                     <div class="space-y-8">
                         <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
                             <div class="max-w-2xl space-y-3">
-                                <p class="text-[10px] uppercase tracking-[0.35em] text-white/50">Performance &amp; Structure</p>
                                 <h3 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white uppercase italic">Performance &amp; <span class="text-clinical-blue italic">Structure</span></h3>
                                 <p class="text-white/70 text-base sm:text-lg leading-relaxed">Engineering the physical chassis for durability, explosive power, and long-term structural integrity.</p>
                             </div>
@@ -2157,7 +2155,6 @@
         <section class="py-24 relative overflow-hidden blueprint-global">
             <div class="container mx-auto px-6 relative z-10">
                 <div class="max-w-4xl mx-auto text-center mb-16">
-                    <p class="text-[10px] uppercase tracking-[0.4em] text-clinical-green font-semibold mb-4">Advanced Clinical Technology</p>
                     <div class="inline-flex flex-col items-center font-display font-bold tracking-tighter text-white mb-16">
                         <div class="flex items-baseline gap-4 md:gap-6 leading-none">
                             <span class="text-lg md:text-3xl text-white/30 tracking-[0.2em] uppercase italic">Elite</span>
@@ -2345,32 +2342,6 @@
                                 </svg>
                             </div>
                             <span class="modality-label">VO2 Max Testing</span>
-                        </a>
-                    </div>
-
-                    <!-- Row 3: Massage Chairs (centered) -->
-                    <div class="flex justify-center mt-6">
-                        <a href="/treatments/massage-chairs.html" class="modality-card group">
-                            <div class="modality-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-8 h-8" fill="currentColor">
-                                    <!-- Chair back -->
-                                    <path d="M20 12c0-2 2-4 4-4h16c2 0 4 2 4 4v24c0 2-1 3-2 4l-6 4h-8l-6-4c-1-1-2-2-2-4V12z" fill="currentColor" opacity="0.7"/>
-                                    <!-- Seat -->
-                                    <rect x="18" y="40" width="28" height="8" rx="2" fill="currentColor"/>
-                                    <!-- Armrests -->
-                                    <rect x="10" y="20" width="6" height="24" rx="2" fill="currentColor" opacity="0.6"/>
-                                    <rect x="48" y="20" width="6" height="24" rx="2" fill="currentColor" opacity="0.6"/>
-                                    <!-- Base/legs -->
-                                    <rect x="24" y="48" width="16" height="4" rx="1" fill="currentColor" opacity="0.8"/>
-                                    <rect x="28" y="52" width="8" height="8" rx="1" fill="currentColor" opacity="0.6"/>
-                                    <!-- Massage nodes -->
-                                    <circle cx="28" cy="20" r="2" fill="white" opacity="0.5"/>
-                                    <circle cx="36" cy="20" r="2" fill="white" opacity="0.5"/>
-                                    <circle cx="28" cy="28" r="2" fill="white" opacity="0.5"/>
-                                    <circle cx="36" cy="28" r="2" fill="white" opacity="0.5"/>
-                                </svg>
-                            </div>
-                            <span class="modality-label">Massage Chairs</span>
                         </a>
                     </div>
                 </div>
@@ -2633,13 +2604,16 @@
 
                 const flagshipTriggers = document.querySelectorAll('[data-flagship-target]');
                 const flagshipPanels = document.querySelectorAll('[data-flagship-panel]');
+                const indicator = document.getElementById('flagship-indicator');
 
                 if (flagshipTriggers.length && flagshipPanels.length) {
                     const activateFlagship = (targetId) => {
+                        let activeTrigger = null;
                         flagshipTriggers.forEach((trigger) => {
                             const isActive = trigger.dataset.flagshipTarget === targetId;
                             trigger.classList.toggle('is-active', isActive);
                             trigger.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+                            if (isActive) activeTrigger = trigger;
                         });
 
                         flagshipPanels.forEach((panel) => {
@@ -2647,6 +2621,20 @@
                             panel.classList.toggle('is-active', isActive);
                             panel.classList.toggle('hidden', !isActive);
                         });
+
+                        // Move and style indicator
+                        if (activeTrigger && indicator) {
+                            const rect = activeTrigger.getBoundingClientRect();
+                            const containerRect = activeTrigger.parentElement.getBoundingClientRect();
+                            indicator.style.width = `${rect.width}px`;
+                            indicator.style.left = `${rect.left - containerRect.left}px`;
+                            
+                            // Color based on active panel
+                            const activePanel = document.getElementById(targetId);
+                            const color = activePanel.dataset.panelColor === 'clinical-green' ? '#22C55E' : '#0047AB';
+                            indicator.style.backgroundColor = color;
+                            indicator.style.boxShadow = `0 0 15px ${color}80`;
+                        }
                     };
 
                     flagshipTriggers.forEach((trigger) => {
@@ -2655,7 +2643,10 @@
                         });
                     });
 
-                    activateFlagship(flagshipTriggers[0].dataset.flagshipTarget);
+                    // Initial activation and resize handling
+                    const initFlagship = () => activateFlagship(flagshipTriggers[0].dataset.flagshipTarget);
+                    initFlagship();
+                    window.addEventListener('resize', initFlagship);
                 }
             });
         </script>
