@@ -321,7 +321,239 @@
             margin-top: 1rem;
         }
 
-        /* Precision Architect Team Cards */
+        /* Precision Architect Team Cards - Bento Box Layout */
+        .architect-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        @media (min-width: 1024px) {
+            .architect-container {
+                flex-direction: row;
+                gap: 1rem;
+            }
+        }
+        .architect-lead-col {
+            flex: 0 0 100%;
+        }
+        @media (min-width: 1024px) {
+            .architect-lead-col {
+                flex: 0 0 38%;
+            }
+        }
+        .architect-right-col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .architect-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        .architect-row--top {
+            grid-template-columns: 1fr;
+        }
+        .architect-row--bottom {
+            grid-template-columns: 1fr;
+        }
+        @media (min-width: 640px) {
+            .architect-row--top {
+                grid-template-columns: 1fr 1fr;
+            }
+            .architect-row--bottom {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+        .architect-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1.25rem;
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(148, 163, 184, 0.15);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .architect-card:hover {
+            border-color: rgba(34, 197, 94, 0.5);
+            box-shadow: 0 0 40px rgba(34, 197, 94, 0.15);
+            transform: translateY(-4px);
+        }
+        .architect-card--lead {
+            height: 100%;
+            min-height: 580px;
+        }
+        @media (max-width: 1023px) {
+            .architect-card--lead {
+                min-height: 450px;
+            }
+        }
+        .architect-card--small {
+            min-height: 280px;
+        }
+        .architect-card__image {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .architect-card:hover .architect-card__image {
+            transform: scale(1.05);
+        }
+        .architect-card__overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.6) 40%, transparent 70%);
+        }
+        .architect-card--lead .architect-card__overlay {
+            background: linear-gradient(to top, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.4) 45%, transparent 75%);
+        }
+        .architect-card__content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.25rem;
+            z-index: 2;
+        }
+        .architect-card--lead .architect-card__content {
+            padding: 2rem;
+        }
+        .architect-card__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.35rem 0.75rem;
+            background: rgba(34, 197, 94, 0.15);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: 9999px;
+            font-size: 8px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #22C55E;
+            margin-bottom: 0.5rem;
+        }
+        .architect-card--lead .architect-card__badge {
+            font-size: 10px;
+            padding: 0.4rem 1rem;
+            margin-bottom: 0.75rem;
+        }
+        .architect-card__badge-dot {
+            width: 6px;
+            height: 6px;
+            background: #22C55E;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #22C55E;
+        }
+        .architect-card__name {
+            font-family: 'Lexend', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: white;
+            margin-bottom: 0.2rem;
+            letter-spacing: 0.02em;
+        }
+        .architect-card--lead .architect-card__name {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+        .architect-card__role {
+            font-size: 0.7rem;
+            color: rgba(148, 163, 184, 0.9);
+            line-height: 1.4;
+        }
+        .architect-card--lead .architect-card__role {
+            font-size: 0.875rem;
+            max-width: 320px;
+        }
+        .architect-card__btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+            padding: 0.4rem 0.85rem;
+            background: transparent;
+            border: 1px solid rgba(148, 163, 184, 0.3);
+            border-radius: 9999px;
+            color: white;
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .architect-card__btn:hover {
+            background: rgba(34, 197, 94, 0.2);
+            border-color: rgba(34, 197, 94, 0.5);
+            color: #22C55E;
+        }
+        .architect-card--lead .architect-card__btn {
+            padding: 0.6rem 1.25rem;
+            font-size: 11px;
+            margin-top: 1rem;
+        }
+        .architect-card__corner {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 2rem;
+            height: 2rem;
+            border-top: 1px solid rgba(34, 197, 94, 0.3);
+            border-right: 1px solid rgba(34, 197, 94, 0.3);
+            border-top-right-radius: 0.75rem;
+        }
+        .architect-card--lead .architect-card__corner {
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+
+        /* Precision Modalities - Floating Icons */
+        .modality-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 1rem 0.5rem;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .modality-card:hover {
+            transform: translateY(-8px);
+        }
+        .modality-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            height: 3rem;
+            margin-bottom: 0.75rem;
+            color: #22D3EE;
+            transition: all 0.3s ease;
+            filter: drop-shadow(0 4px 12px rgba(34, 211, 238, 0.3));
+        }
+        .modality-card:hover .modality-icon {
+            color: #22C55E;
+            transform: scale(1.15);
+            filter: drop-shadow(0 6px 20px rgba(34, 197, 94, 0.4));
+        }
+        .modality-label {
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.7);
+            letter-spacing: 0.01em;
+            line-height: 1.3;
+            transition: color 0.3s ease;
+        }
+        .modality-card:hover .modality-label {
+            color: white;
+        }
 
         /* Dimensional Protocol Carousel Styles */
         .protocols-swiper-dimensional {
@@ -1860,8 +2092,225 @@
 
             </div>
         </section>
+
+        <!-- Precision Modalities Section -->
+        <section class="py-24 relative overflow-hidden blueprint-global">
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-4xl mx-auto text-center mb-16">
+                    <p class="text-[10px] uppercase tracking-[0.4em] text-clinical-green font-semibold mb-4">Advanced Clinical Technology</p>
+                    <h2 class="text-4xl lg:text-6xl font-display font-bold tracking-tight text-white mb-6">
+                        Precision <span class="text-clinical-blue">Modalities</span>
+                    </h2>
+                    <p class="text-lg text-gray-400 font-light leading-relaxed max-w-2xl mx-auto">
+                        Advanced biomechanical interventions powered by real-time neural feedback and regenerative protocols.
+                    </p>
+                </div>
+
+                <div class="max-w-5xl mx-auto">
+                    <!-- Row 1: 6 items -->
+                    <div class="grid grid-cols-3 sm:grid-cols-6 gap-4 sm:gap-8 mb-6">
+                        <!-- Cold Laser (Class IV) - Laser beam icon -->
+                        <a href="/treatments/class-iv-laser.html" class="modality-card group">
+                            <div class="modality-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-8 h-8" fill="currentColor">
+                                    <path d="M32 4v12M32 48v12M4 32h12M48 32h12" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <path d="M12 12l8 8M44 44l8 8M12 52l8-8M44 12l8 8" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <circle cx="32" cy="32" r="8" fill="currentColor"/>
+                                    <circle cx="32" cy="32" r="4" fill="currentColor" opacity="0.5"/>
+                                </svg>
+                            </div>
+                            <span class="modality-label">Cold Laser (Class IV)</span>
+                        </a>
+
+                        <!-- Red Light Therapy - Light panel with rays -->
+                        <a href="/treatments/red-light-therapy.html" class="modality-card group">
+                            <div class="modality-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-8 h-8" fill="currentColor">
+                                    <rect x="18" y="12" width="28" height="40" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                                    <rect x="22" y="16" width="20" height="32" rx="1" fill="currentColor" opacity="0.4"/>
+                                    <circle cx="26" cy="24" r="2" fill="currentColor"/>
+                                    <circle cx="32" cy="24" r="2" fill="currentColor"/>
+                                    <circle cx="38" cy="24" r="2" fill="currentColor"/>
+                                    <circle cx="26" cy="32" r="2" fill="currentColor"/>
+                                    <circle cx="32" cy="32" r="2" fill="currentColor"/>
+                                    <circle cx="38" cy="32" r="2" fill="currentColor"/>
+                                    <circle cx="26" cy="40" r="2" fill="currentColor"/>
+                                    <circle cx="32" cy="40" r="2" fill="currentColor"/>
+                                    <circle cx="38" cy="40" r="2" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <span class="modality-label">Red Light Therapy</span>
+                        </a>
+
+                        <!-- Shockwave Therapy - Wave/pulse icon -->
+                        <a href="/treatments/shockwave-therapy.html" class="modality-card group">
+                            <div class="modality-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-8 h-8" fill="currentColor">
+                                    <path d="M8 32 Q16 20 24 32 Q32 44 40 32 Q48 20 56 32" stroke="currentColor" stroke-width="3" fill="none"/>
+                                    <path d="M8 24 Q16 16 24 24 Q32 32 40 24 Q48 16 56 24" stroke="currentColor" stroke-width="2" fill="none" opacity="0.5"/>
+                                    <path d="M8 40 Q16 32 24 40 Q32 48 40 40 Q48 32 56 40" stroke="currentColor" stroke-width="2" fill="none" opacity="0.5"/>
+                                </svg>
+                            </div>
+                            <span class="modality-label">Shockwave Therapy</span>
+                        </a>
+
+                        <!-- PEMF Therapy - Magnetic field coil -->
+                        <a href="/treatments/pemf-therapy.html" class="modality-card group">
+                            <div class="modality-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-8 h-8" fill="currentColor">
+                                    <ellipse cx="32" cy="32" rx="24" ry="10" fill="none" stroke="currentColor" stroke-width="2"/>
+                                    <ellipse cx="32" cy="32" rx="16" ry="6" fill="none" stroke="currentColor" stroke-width="2"/>
+                                    <ellipse cx="32" cy="32" rx="8" ry="3" fill="currentColor"/>
+                                    <path d="M32 8v10M32 46v10" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M26 10l6-6 6 6M26 54l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none"/>
+                                </svg>
+                            </div>
+                            <span class="modality-label">PEMF Therapy</span>
+                        </a>
+
+                        <!-- Hyperbaric Oxygen - Chamber with O2 -->
+                        <a href="/treatments/hyperbaric-oxygen.html" class="modality-card group">
+                            <div class="modality-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-8 h-8" fill="currentColor">
+                                    <ellipse cx="32" cy="32" rx="22" ry="28" fill="none" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M16 20h32M16 44h32" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+                                    <circle cx="28" cy="28" r="3" fill="currentColor" opacity="0.6"/>
+                                    <circle cx="38" cy="32" r="4" fill="currentColor" opacity="0.8"/>
+                                    <circle cx="30" cy="40" r="3" fill="currentColor" opacity="0.6"/>
+                                    <text x="22" y="36" font-size="10" font-weight="bold" fill="currentColor" opacity="0.5">O₂</text>
+                                </svg>
+                            </div>
+                            <span class="modality-label">Hyperbaric Oxygen</span>
+                        </a>
+
+                        <!-- Spinal Decompression - Spine with stretch arrows -->
+                        <a href="/treatments/spinal-decompression.html" class="modality-card group">
+                            <div class="modality-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-8 h-8" fill="currentColor">
+                                    <rect x="28" y="16" width="8" height="6" rx="2" fill="currentColor"/>
+                                    <rect x="27" y="24" width="10" height="6" rx="2" fill="currentColor" opacity="0.9"/>
+                                    <rect x="27" y="32" width="10" height="6" rx="2" fill="currentColor" opacity="0.8"/>
+                                    <rect x="28" y="40" width="8" height="6" rx="2" fill="currentColor" opacity="0.9"/>
+                                    <path d="M32 4v8M32 52v8" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M28 6l4-4 4 4M28 58l4 4 4-4" stroke="currentColor" stroke-width="2" fill="none"/>
+                                </svg>
+                            </div>
+                            <span class="modality-label">Spinal Decompression</span>
+                        </a>
+                    </div>
+
+                    <!-- Row 2: 6 items -->
+                    <div class="grid grid-cols-3 sm:grid-cols-6 gap-4 sm:gap-8">
+                        <!-- Dry Needling - Single needle -->
+                        <a href="/treatments/dry-needling.html" class="modality-card group">
+                            <div class="modality-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-8 h-8" fill="currentColor">
+                                    <path d="M32 6L30 18h4L32 6z" fill="currentColor"/>
+                                    <line x1="32" y1="18" x2="32" y2="54" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="32" cy="56" r="3" fill="currentColor" opacity="0.6"/>
+                                    <path d="M26 30c0 0 3 2 6 2s6-2 6-2" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.5"/>
+                                    <path d="M24 42c0 0 4 3 8 3s8-3 8-3" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.5"/>
+                                </svg>
+                            </div>
+                            <span class="modality-label">Dry Needling</span>
+                        </a>
+
+                        <!-- tVNS (Vagus Nerve) - Ear with clip device -->
+                        <a href="/treatments/vagus-nerve-stimulation.html" class="modality-card group">
+                            <div class="modality-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-8 h-8" fill="currentColor">
+                                    <path d="M40 16c8 4 12 12 12 20s-4 16-12 20" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <path d="M36 24c4 2 6 6 6 10s-2 8-6 10" stroke="currentColor" stroke-width="2" fill="none" opacity="0.6"/>
+                                    <circle cx="24" cy="32" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="24" cy="32" r="4" fill="currentColor"/>
+                                    <path d="M16 32h-6M10 28v8" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <span class="modality-label">tVNS (Vagus Nerve)</span>
+                        </a>
+
+                        <!-- Sleep Testing - Moon with Zs -->
+                        <a href="/treatments/sleep-testing.html" class="modality-card group">
+                            <div class="modality-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-8 h-8" fill="currentColor">
+                                    <path d="M36 12c-12 0-22 10-22 22s10 22 22 22c2 0 4-.3 6-.7-4-4-6-10-6-16s2-12 6-16c-2-.4-4-.7-6-.7z" fill="currentColor"/>
+                                    <text x="44" y="22" font-size="12" font-weight="bold" fill="currentColor">Z</text>
+                                    <text x="50" y="34" font-size="10" font-weight="bold" fill="currentColor" opacity="0.7">z</text>
+                                    <text x="54" y="44" font-size="8" font-weight="bold" fill="currentColor" opacity="0.5">z</text>
+                                </svg>
+                            </div>
+                            <span class="modality-label">Sleep Testing</span>
+                        </a>
+
+                        <!-- Targeted Supplements - Pill capsule -->
+                        <a href="/treatments/targeted-supplements.html" class="modality-card group">
+                            <div class="modality-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-8 h-8" fill="currentColor">
+                                    <rect x="12" y="24" width="40" height="16" rx="8" fill="none" stroke="currentColor" stroke-width="2" transform="rotate(-45 32 32)"/>
+                                    <path d="M32 32L18 18" stroke="currentColor" stroke-width="16" stroke-linecap="round" opacity="0.4"/>
+                                    <rect x="12" y="24" width="40" height="16" rx="8" fill="none" stroke="currentColor" stroke-width="2" transform="rotate(-45 32 32)"/>
+                                </svg>
+                            </div>
+                            <span class="modality-label">Targeted Supplements</span>
+                        </a>
+
+                        <!-- Longevity Blood Panels - Blood drop with plus -->
+                        <a href="/treatments/longevity-blood-panels.html" class="modality-card group">
+                            <div class="modality-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-8 h-8" fill="currentColor">
+                                    <path d="M32 6C32 6 14 26 14 40c0 10 8 18 18 18s18-8 18-18C50 26 32 6 32 6z" fill="currentColor"/>
+                                    <line x1="32" y1="32" x2="32" y2="48" stroke="white" stroke-width="3"/>
+                                    <line x1="24" y1="40" x2="40" y2="40" stroke="white" stroke-width="3"/>
+                                </svg>
+                            </div>
+                            <span class="modality-label">Longevity Blood Panels</span>
+                        </a>
+
+                        <!-- VO2 Max Testing - Lungs with chart -->
+                        <a href="/treatments/vo2-max-testing.html" class="modality-card group">
+                            <div class="modality-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-8 h-8" fill="currentColor">
+                                    <path d="M32 12v16" stroke="currentColor" stroke-width="3"/>
+                                    <path d="M22 28c-6 2-10 8-10 16 0 6 4 10 8 10 4 0 8-3 12-10" fill="currentColor" opacity="0.8"/>
+                                    <path d="M42 28c6 2 10 8 10 16 0 6-4 10-8 10-4 0-8-3-12-10" fill="currentColor" opacity="0.8"/>
+                                    <path d="M8 20l8-4 8 8 8-12 8 6 8-2" stroke="currentColor" stroke-width="2" fill="none" opacity="0.6"/>
+                                </svg>
+                            </div>
+                            <span class="modality-label">VO2 Max Testing</span>
+                        </a>
+                    </div>
+
+                    <!-- Row 3: Massage Chairs (centered) -->
+                    <div class="flex justify-center mt-6">
+                        <a href="/treatments/massage-chairs.html" class="modality-card group">
+                            <div class="modality-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="w-8 h-8" fill="currentColor">
+                                    <!-- Chair back -->
+                                    <path d="M20 12c0-2 2-4 4-4h16c2 0 4 2 4 4v24c0 2-1 3-2 4l-6 4h-8l-6-4c-1-1-2-2-2-4V12z" fill="currentColor" opacity="0.7"/>
+                                    <!-- Seat -->
+                                    <rect x="18" y="40" width="28" height="8" rx="2" fill="currentColor"/>
+                                    <!-- Armrests -->
+                                    <rect x="10" y="20" width="6" height="24" rx="2" fill="currentColor" opacity="0.6"/>
+                                    <rect x="48" y="20" width="6" height="24" rx="2" fill="currentColor" opacity="0.6"/>
+                                    <!-- Base/legs -->
+                                    <rect x="24" y="48" width="16" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+                                    <rect x="28" y="52" width="8" height="8" rx="1" fill="currentColor" opacity="0.6"/>
+                                    <!-- Massage nodes -->
+                                    <circle cx="28" cy="20" r="2" fill="white" opacity="0.5"/>
+                                    <circle cx="36" cy="20" r="2" fill="white" opacity="0.5"/>
+                                    <circle cx="28" cy="28" r="2" fill="white" opacity="0.5"/>
+                                    <circle cx="36" cy="28" r="2" fill="white" opacity="0.5"/>
+                                </svg>
+                            </div>
+                            <span class="modality-label">Massage Chairs</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Precision Architects: Meet the Team -->
-        <section class="py-24 relative overflow-hidden bg-[#050505]">
+        <section class="py-24 relative overflow-hidden blueprint-global">
             <div class="container mx-auto px-6 relative z-10">
                 <div class="max-w-4xl mx-auto text-center mb-16">
                     <h2 class="text-4xl lg:text-6xl font-display font-bold italic tracking-tight text-white mb-6 uppercase">
@@ -1872,89 +2321,111 @@
                     </p>
                 </div>
 
-                <div class="max-w-5xl mx-auto">
-                    <div class="grid grid-cols-12 gap-5">
-                        <!-- Dr. Andrew Limle -->
-                        <div class="col-span-12 lg:col-span-7 group">
-                            <div class="precision-architect-card">
-                                <img src="/images/team/andrew-limle.svg" alt="Dr. Andrew Limle" class="precision-architect-card__img">
-                                <div class="precision-architect-card__overlay"></div>
-                                <div class="precision-architect-card__content">
-                                    <span class="precision-architect-badge">CHIEF OF PERFORMANCE MEDICINE</span>
-                                    <h4 class="precision-architect-name">DR. ANDREW LIMLE</h4>
-                                    <p class="precision-architect-role">Official Bengals & Cyclones chiropractor integrating regenerative protocols and metabolic science.</p>
-                                    <a href="/team.html" class="precision-architect-btn">VIEW BIO</a>
-                                </div>
-                                <div class="absolute top-6 right-6 w-12 h-12 border-t border-r border-clinical-green/20 rounded-tr-2xl"></div>
-                            </div>
-                        </div>
-
-                        <!-- Dr. Michael Hekler -->
-                        <div class="col-span-12 lg:col-span-5 group">
-                            <div class="precision-architect-card">
-                                <img src="/images/team/michael-hekler.svg" alt="Dr. Michael Hekler" class="precision-architect-card__img">
-                                <div class="precision-architect-card__overlay"></div>
-                                <div class="precision-architect-card__content">
-                                    <span class="precision-architect-badge">STRUCTURAL DIAGNOSTICS</span>
-                                    <h4 class="precision-architect-name">DR. MICHAEL HEKLER</h4>
-                                    <p class="precision-architect-role">Precision joint biomechanics integrity.</p>
-                                    <a href="/team.html" class="precision-architect-btn">VIEW BIO</a>
+                <div class="max-w-6xl mx-auto">
+                    <div class="architect-container">
+                        <!-- Left Column: Dr. Andrew Limle -->
+                        <div class="architect-lead-col">
+                            <div class="architect-card architect-card--lead group">
+                                <img src="/images/team/andrew-limle.svg" alt="Dr. Andrew Limle" class="architect-card__image">
+                                <div class="architect-card__overlay"></div>
+                                <div class="architect-card__corner"></div>
+                                <div class="architect-card__content">
+                                    <span class="architect-card__badge">
+                                        <span class="architect-card__badge-dot"></span>
+                                        CHIEF OF PERFORMANCE MEDICINE
+                                    </span>
+                                    <h4 class="architect-card__name">Dr. Andrew Limle</h4>
+                                    <p class="architect-card__role">Official Bengals & Cyclones chiropractor integrating regenerative protocols and metabolic science.</p>
+                                    <a href="/team.html" class="architect-card__btn">View Bio</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Dr. Brianna Opperman -->
-                        <div class="col-span-12 lg:col-span-5 group">
-                            <div class="precision-architect-card">
-                                <img src="/images/team/brianna-opperman.svg" alt="Dr. Brianna Opperman" class="precision-architect-card__img">
-                                <div class="precision-architect-card__overlay"></div>
-                                <div class="precision-architect-card__content">
-                                    <span class="precision-architect-badge">BIOLOGICAL SYSTEMS</span>
-                                    <h4 class="precision-architect-name">DR. BRIANNA OPPERMAN</h4>
-                                    <p class="precision-architect-role">Pioneering biological wellbeing strategies.</p>
-                                    <a href="/team.html" class="precision-architect-btn">VIEW BIO</a>
+                        <!-- Right Column: 2 rows -->
+                        <div class="architect-right-col">
+                            <!-- Top Row: Alex & Michael -->
+                            <div class="architect-row architect-row--top">
+                                <!-- Dr. Alex Contner -->
+                                <div class="architect-card architect-card--small group">
+                                    <img src="/images/alexcontnerheadshot.jpg" alt="Dr. Alex Contner" class="architect-card__image">
+                                    <div class="architect-card__overlay"></div>
+                                    <div class="architect-card__corner"></div>
+                                    <div class="architect-card__content">
+                                        <span class="architect-card__badge">
+                                            <span class="architect-card__badge-dot"></span>
+                                            DIRECTOR OF REHAB
+                                        </span>
+                                        <h4 class="architect-card__name">Dr. Alex Contner</h4>
+                                        <p class="architect-card__role">Expert in neuromuscular restoration.</p>
+                                        <a href="/team.html" class="architect-card__btn">View Bio</a>
+                                    </div>
+                                </div>
+
+                                <!-- Dr. Michael Hekler -->
+                                <div class="architect-card architect-card--small group">
+                                    <img src="/images/team/michael-hekler.svg" alt="Dr. Michael Hekler" class="architect-card__image">
+                                    <div class="architect-card__overlay"></div>
+                                    <div class="architect-card__corner"></div>
+                                    <div class="architect-card__content">
+                                        <span class="architect-card__badge">
+                                            <span class="architect-card__badge-dot"></span>
+                                            STRUCTURAL DIAGNOSTICS
+                                        </span>
+                                        <h4 class="architect-card__name">Dr. Michael Hekler</h4>
+                                        <p class="architect-card__role">Precision joint biomechanics integrity.</p>
+                                        <a href="/team.html" class="architect-card__btn">View Bio</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Dr. Alex Contner -->
-                        <div class="col-span-12 lg:col-span-7 group">
-                            <div class="precision-architect-card">
-                                <img src="/images/alexcontnerheadshot.jpg" alt="Dr. Alex Contner" class="precision-architect-card__img">
-                                <div class="precision-architect-card__overlay"></div>
-                                <div class="precision-architect-card__content">
-                                    <span class="precision-architect-badge">DIRECTOR OF REHAB</span>
-                                    <h4 class="precision-architect-name">DR. ALEX CONTNER</h4>
-                                    <p class="precision-architect-role">Expert in neuromuscular restoration and performance return-to-play protocols.</p>
-                                    <a href="/team.html" class="precision-architect-btn">VIEW BIO</a>
+                            <!-- Bottom Row: Brittany, Brianna, Nate -->
+                            <div class="architect-row architect-row--bottom">
+                                <!-- Brittany Woeste -->
+                                <div class="architect-card architect-card--small group">
+                                    <img src="/images/team/brittany-woeste.svg" alt="Brittany Woeste" class="architect-card__image">
+                                    <div class="architect-card__overlay"></div>
+                                    <div class="architect-card__corner"></div>
+                                    <div class="architect-card__content">
+                                        <span class="architect-card__badge">
+                                            <span class="architect-card__badge-dot"></span>
+                                            DIAGNOSTIC ARCHITECT
+                                        </span>
+                                        <h4 class="architect-card__name">Brittany Woeste</h4>
+                                        <p class="architect-card__role">Overseeing diagnostics and longevity testing.</p>
+                                        <a href="/team.html" class="architect-card__btn">View Bio</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        <!-- Brittany Woeste -->
-                        <div class="col-span-12 lg:col-span-6 group">
-                            <div class="precision-architect-card !min-h-[260px]">
-                                <img src="/images/team/brittany-woeste.svg" alt="Brittany Woeste" class="precision-architect-card__img">
-                                <div class="precision-architect-card__overlay"></div>
-                                <div class="precision-architect-card__content">
-                                    <span class="precision-architect-badge">DIAGNOSTIC ARCHITECT</span>
-                                    <h4 class="precision-architect-name">BRITTANY WOESTE</h4>
-                                    <p class="precision-architect-role">Overseeing diagnostics and longevity testing.</p>
-                                    <a href="/team.html" class="precision-architect-btn">VIEW BIO</a>
+                                <!-- Dr. Brianna Opperman -->
+                                <div class="architect-card architect-card--small group">
+                                    <img src="/images/team/brianna-opperman.svg" alt="Dr. Brianna Opperman" class="architect-card__image">
+                                    <div class="architect-card__overlay"></div>
+                                    <div class="architect-card__corner"></div>
+                                    <div class="architect-card__content">
+                                        <span class="architect-card__badge">
+                                            <span class="architect-card__badge-dot"></span>
+                                            BIOLOGICAL SYSTEMS
+                                        </span>
+                                        <h4 class="architect-card__name">Dr. Brianna Opperman</h4>
+                                        <p class="architect-card__role">Pioneering biological wellbeing strategies.</p>
+                                        <a href="/team.html" class="architect-card__btn">View Bio</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        <!-- Nate Lienhart -->
-                        <div class="col-span-12 lg:col-span-6 group">
-                            <div class="precision-architect-card !min-h-[260px]">
-                                <img src="/images/team/nate-lienhart.svg" alt="Nate Lienhart" class="precision-architect-card__img">
-                                <div class="precision-architect-card__overlay"></div>
-                                <div class="precision-architect-card__content">
-                                    <span class="precision-architect-badge">PERFORMANCE ANALYTICS</span>
-                                    <h4 class="precision-architect-name">NATE LIENHART</h4>
-                                    <p class="precision-architect-role">Building clinical strength programming.</p>
-                                    <a href="/team.html" class="precision-architect-btn">VIEW BIO</a>
+                                <!-- Nate Lienhart -->
+                                <div class="architect-card architect-card--small group">
+                                    <img src="/images/team/nate-lienhart.svg" alt="Nate Lienhart" class="architect-card__image">
+                                    <div class="architect-card__overlay"></div>
+                                    <div class="architect-card__corner"></div>
+                                    <div class="architect-card__content">
+                                        <span class="architect-card__badge">
+                                            <span class="architect-card__badge-dot"></span>
+                                            PERFORMANCE ANALYTICS
+                                        </span>
+                                        <h4 class="architect-card__name">Nate Lienhart</h4>
+                                        <p class="architect-card__role">Building clinical strength programming.</p>
+                                        <a href="/team.html" class="architect-card__btn">View Bio</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1962,7 +2433,7 @@
                 </div>
 
                 <div class="mt-16 flex justify-center">
-                    <a href="/team.html" class="inline-flex items-center justify-center rounded-full bg-white text-clinical-blue px-10 py-3.5 text-xs font-bold uppercase tracking-[0.4em] shadow-2xl hover:bg-clinical-green hover:text-white transition-all transform hover:scale-105">
+                    <a href="/team.html" class="inline-flex items-center justify-center rounded-full bg-white px-10 py-3.5 text-xs font-bold uppercase tracking-[0.4em] shadow-2xl hover:bg-clinical-green hover:text-white transition-all transform hover:scale-105" style="color: #0047AB !important;">
                         View Full Team
                     </a>
                 </div>
