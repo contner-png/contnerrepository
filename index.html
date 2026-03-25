@@ -47,6 +47,18 @@
         }
     </script>
     <style>
+        /* GLOBAL DESKTOP OPTIMIZATIONS */
+        @media (min-width: 1280px) {
+            body {
+                zoom: 0.75;
+            }
+        }
+        
+        /* FORCE SHARP CORNERS GLOBALLY */
+        * {
+            border-radius: 0 !important;
+        }
+
         @media (max-width: 768px) {
             h1, h2 {
                 word-break: break-word;
@@ -1050,10 +1062,22 @@
         }
         .flagship-panel {
             display: none;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 2rem;
         }
         .flagship-panel.is-active {
             display: block;
             animation: panelFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .flagship-panel[data-panel-color="clinical-green"].is-active {
+            background: radial-gradient(circle at top center, rgba(34, 197, 94, 0.05), transparent 70%);
+            border-top: 1px solid rgba(34, 197, 94, 0.2);
+        }
+        .flagship-panel[data-panel-color="clinical-blue"].is-active {
+            background: radial-gradient(circle at top center, rgba(0, 71, 171, 0.05), transparent 70%);
+            border-top: 1px solid rgba(0, 71, 171, 0.2);
         }
         @keyframes panelFadeIn {
             from { opacity: 0; transform: translateY(20px); }
