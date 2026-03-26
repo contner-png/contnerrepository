@@ -17,7 +17,8 @@
 - **Integrated Disclaimer**: The clinical disclaimer is now a meta-card component with class `bento-stack-item lg:col-span-12` integrated directly into the `The Arsenal` grid.
 - **Header Navigation**: Primary navigation links (e.g., HOME) should be in all-caps for technical consistency.
 - **Flagship System Blueprint**: Uses angular, skewed tiles (`transform: skewX(-4deg)`) for the four core flagship blocks. Integrates a combination of `clinical-blue` (default) and `clinical-green` (hover/active) for interactive elements like buttons and borders. Titles use high-intensity bold layouts with technical gradient accents.
-- **Dimensional Protocol Carousel**: Reworked Chronic Management into a 3D-centered carousel using Swiper.js. Side cards are scaled down (`scale(0.8)`) and dimmed (`brightness(0.4)`) with a `translateZ` offset for depth. Active cards feature a `clinical-green` border glow. Cards use a 65/35 height split between imagery and data readouts.
+- **Protocol Carousel Navigation**: Redesigned as sleek, circular glass tabs positioned at `top: 30%` of the carousel area. This ensures high visibility and interaction while preventing overlap with tile titles and descriptions, preserving full readability. Buttons use `backdrop-filter: blur(12px)` and glow `clinical-green` on hover.
+- **Dimensional Protocol Carousel**: Reworked Chronic Management into a 3D-centered carousel using Swiper.js. Side cards are scaled down (`scale(0.75)`) and dimmed with a `translateZ` offset for depth. Neighbor slides use a calibrated `translateX` (approx. 35px) to ensure perfectly equalized gaps between all visible tiles. The entire section is shifted right (currently 128px) for grid alignment.
 
 
 
