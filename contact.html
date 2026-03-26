@@ -20,6 +20,17 @@
     <script>
         tailwind.config = {
             theme: {
+                                container: {
+                    center: true,
+                    screens: {
+                        sm: '640px',
+                        md: '768px',
+                        lg: '1024px',
+                        xl: '1600px',
+                        '2xl': '2000px',
+                    },
+                },
+                },
                 extend: {
                     colors: {
                         clinical: {
@@ -272,7 +283,7 @@
     <main>
         <section class="py-24 bg-clinical-gray relative overflow-hidden">
             <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
-            <div class="container mx-auto px-6 relative z-10">
+            <div class="container mx-auto px-3 relative z-10">
                 <div class="max-w-5xl mx-auto grid lg:grid-cols-2 gap-16">
                     <div>
                         <h1 class="text-sm font-bold text-clinical-blue uppercase tracking-widest mb-4">Start Your Recovery</h1>
@@ -378,7 +389,7 @@
             <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.28) 1px, transparent 0); background-size: 220px 220px;"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
         </div>
-        <div class="container mx-auto px-6 max-w-7xl relative z-10">
+        <div class="container mx-auto px-3 relative z-10">
             <div class="grid lg:grid-cols-[1.3fr_0.8fr_1fr_1fr] gap-x-12 gap-y-12 pb-12 border-b border-white/5">
                 <!-- Column 1: Info -->
                 <div class="space-y-8">

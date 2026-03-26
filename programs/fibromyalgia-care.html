@@ -20,6 +20,17 @@
     <script>
         tailwind.config = {
             theme: {
+                                container: {
+                    center: true,
+                    screens: {
+                        sm: '640px',
+                        md: '768px',
+                        lg: '1024px',
+                        xl: '1600px',
+                        '2xl': '2000px',
+                    },
+                },
+                },
                 extend: {
                     colors: {
                         clinical: {
@@ -301,7 +312,7 @@
                 </svg>
             </div>
             
-            <div class="container mx-auto px-6 relative z-10">
+            <div class="container mx-auto px-3 relative z-10">
                 <div class="max-w-5xl mx-auto space-y-10">
                     <div class="inline-flex items-center px-5 py-2 bg-clinical-green/20 text-clinical-green text-[10px] font-black uppercase tracking-[0.5em] rounded-none border border-clinical-green/30 backdrop-blur-sm">
                         Systemic Restoration Protocol
@@ -322,7 +333,7 @@
 
         <!-- The Clinical Reality -->
         <section class="py-24 bg-white relative">
-            <div class="container mx-auto px-6">
+            <div class="container mx-auto px-3">
                 <div class="grid lg:grid-cols-[1fr_1.1fr] gap-20 items-center">
                     <div class="space-y-10 text-left">
                         <div>
@@ -349,7 +360,7 @@
             <!-- Large decorative text -->
             <div class="absolute -top-20 -left-20 text-[200px] font-black text-white/[0.02] pointer-events-none select-none italic">STACK</div>
             
-            <div class="container mx-auto px-6 relative z-10">
+            <div class="container mx-auto px-3 relative z-10">
                 <div class="flex flex-col lg:flex-row justify-between items-end mb-20 gap-8 text-left">
                     <div class="max-w-2xl">
                         <h2 class="text-xs font-black text-clinical-orange uppercase tracking-[0.6em] mb-4">Tactical Arsenal</h2>
@@ -467,7 +478,7 @@
 
         <!-- Measuring Success -->
         <section class="py-24 bg-white border-t border-gray-50">
-            <div class="container mx-auto px-6">
+            <div class="container mx-auto px-3">
                 <div class="text-center mb-24">
                     <h2 class="text-xs font-black text-clinical-blue uppercase tracking-[0.6em] mb-4 text-center">Objective Data</h2>
                     <h3 class="text-5xl lg:text-6xl font-display font-bold italic text-clinical-charcoal tracking-tight leading-none text-center">Measuring Success</h3>
@@ -511,7 +522,7 @@
         <!-- Final CTA -->
         <section class="py-32 bg-clinical-blue text-white text-center relative overflow-hidden">
             <div class="absolute inset-0 opacity-20 blueprint-grid"></div>
-            <div class="container mx-auto px-6 relative z-10 text-center">
+            <div class="container mx-auto px-3 relative z-10 text-center">
                 <h2 class="text-5xl lg:text-8xl font-display font-bold mb-12 italic tracking-tighter text-white">Engineered for Your <br>Peak Performance</h2>
                 <a href="/contact.html" class="px-12 py-5 bg-white text-[#0047AB] rounded-none font-bold text-2xl hover:bg-clinical-orange hover:text-white transition-all shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-105 transform inline-block" style="color: #0047AB !important;" >
                     Request Appointment
@@ -533,7 +544,7 @@
             <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.28) 1px, transparent 0); background-size: 220px 220px;"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
         </div>
-        <div class="container mx-auto px-6 max-w-7xl relative z-10">
+        <div class="container mx-auto px-3 relative z-10">
             <div class="grid lg:grid-cols-[1.3fr_0.8fr_1fr_1fr] gap-x-12 gap-y-12 pb-12 border-b border-white/5">
                 <!-- Column 1: Info -->
                 <div class="space-y-8">

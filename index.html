@@ -23,6 +23,17 @@
     <script>
         tailwind.config = {
             theme: {
+                                container: {
+                    center: true,
+                    screens: {
+                        sm: '640px',
+                        md: '768px',
+                        lg: '1024px',
+                        xl: '1600px',
+                        '2xl': '2000px',
+                    },
+                },
+                },
                 extend: {
                     colors: {
                         clinical: {
@@ -1413,7 +1424,7 @@
                      style="background: radial-gradient(circle at 50% 45%, rgba(59, 130, 246, 0.1), transparent 60%);">
                 </div>
             </div>
-            <div class="container mx-auto px-6 relative z-10 text-center">
+            <div class="container mx-auto px-3 relative z-10 text-center">
                 <div class="max-w-5xl mx-auto space-y-8 sm:space-y-12">
                     <div class="inline-flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 px-4 sm:px-6 py-2 bg-white/5 backdrop-blur-xl border border-white/10 rounded-none text-center">
                         <span class="text-[15px] sm:text-[13px] font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] text-clinical-blue italic leading-none text-center">Advanced Clinical Performance</span>
@@ -1437,7 +1448,7 @@
                         </h2>
                     </div>
 
-                    <div class="max-w-2xl mx-auto space-y-8">
+                    <div class="max-w-4xl mx-auto space-y-8">
                         <p class="text-base sm:text-xl lg:text-2xl text-white/70 font-light leading-relaxed">
                             Elite physical medicine meets the frontier of longevity science. From <span class="text-white font-medium border-b border-clinical-blue/30 pb-1">Precision Structural Care</span> to <span class="text-white font-medium border-b border-clinical-green/30 pb-1">Advanced Medical Optimization</span>.
                         </p>
@@ -1480,7 +1491,7 @@
 
         <!-- Center of Excellence: Pro-Level Pedigree -->
         <section id="partnership" class="py-24 relative overflow-hidden">
-            <div class="container mx-auto px-6 relative z-10">
+            <div class="container mx-auto px-3 relative z-10">
                 <!-- Main Container Box -->
                 <div class="rounded-none border border-white/10 bg-[#070c18]/90 backdrop-blur-2xl p-8 md:p-10 lg:p-12 shadow-2xl relative overflow-hidden">
                     <!-- Subtle gradient overlay -->
@@ -1643,7 +1654,7 @@
 
         <!-- Tier 1: The Clinical Flagships -->
         <section id="programs" class="py-24 relative overflow-hidden">
-            <div class="container mx-auto px-6 relative z-10">
+            <div class="container mx-auto px-3 relative z-10">
                 <div class="space-y-10">
                     <div class="flex flex-col items-center text-center gap-8 mb-16">
                         <div class="flex justify-center">
@@ -1659,7 +1670,7 @@
                                 <div class="w-full h-0.5 bg-gradient-to-r from-transparent via-clinical-green/60 to-transparent mt-10"></div>
                             </div>
                         </div>
-                            <p class="text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-2xl mx-auto">Four core clinical pillars orchestrate the entire Cincinnati Chiropractic &amp; Longevity system—from structural correction to long-term cellular resilience.</p>
+                            <p class="text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-4xl mx-auto">Four core clinical pillars orchestrate the entire Cincinnati Chiropractic &amp; Longevity system—from structural correction to long-term cellular resilience.</p>
                         </div>
                         <div class="flex items-center gap-3 text-[13px] uppercase tracking-[0.35em] text-clinical-green font-bold">
                         </div>
@@ -1918,7 +1929,7 @@
 
         <!-- The Performance Continuum: The Journey from Pain to Power -->
         <section class="py-24 relative overflow-hidden">
-            <div class="container mx-auto px-6 relative z-10">
+            <div class="container mx-auto px-3 relative z-10">
                 <!-- technical header -->
                 <div class="max-w-7xl mx-auto text-center mb-20">
                     
@@ -1934,7 +1945,7 @@
                         <div class="w-full h-0.5 bg-gradient-to-r from-transparent via-clinical-green/60 to-transparent mt-10"></div>
                     </div>
 
-                    <p class="text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-4xl mx-auto">
+                    <p class="text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-6xl mx-auto">
                         A non-linear journey of biological mastery. We deconstruct physical limitations to rebuild a resilient human engine capable of infinite performance.
                     </p>
                 </div>
@@ -2036,8 +2047,8 @@
 
         <!-- Tier 2: Specialized Protocols Bento Grids -->
         <section class="py-24 relative overflow-hidden">
-            <div class="container mx-auto px-6 relative z-10">
-                    <div class="text-center max-w-4xl mx-auto mb-14">
+            <div class="container mx-auto px-3 relative z-10">
+                    <div class="text-center max-w-6xl mx-auto mb-14">
                         <div class="flex justify-center">
                             <div class="inline-flex flex-col items-center font-display font-bold tracking-tighter text-white mb-16">
                                 <div class="flex items-baseline gap-4 md:gap-6 leading-none">
@@ -2051,7 +2062,7 @@
                                 <div class="w-full h-0.5 bg-gradient-to-r from-transparent via-clinical-green/60 to-transparent mt-10"></div>
                             </div>
                         </div>
-                        <p class="text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-2xl mx-auto">Precision tracks that address chronic conditions and performance enhancement with targeted diagnostics and recovery engineering.</p>
+                        <p class="text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-4xl mx-auto">Precision tracks that address chronic conditions and performance enhancement with targeted diagnostics and recovery engineering.</p>
                     </div>
 
                 <div class="space-y-20">
@@ -2311,8 +2322,8 @@
 
         <!-- Precision Modalities Section -->
         <section class="py-24 relative overflow-hidden blueprint-global">
-            <div class="container mx-auto px-6 relative z-10">
-                <div class="max-w-4xl mx-auto text-center mb-16">
+            <div class="container mx-auto px-3 relative z-10">
+                <div class="max-w-6xl mx-auto text-center mb-16">
                     <div class="flex justify-center">
                         <div class="inline-flex flex-col items-center font-display font-bold tracking-tighter text-white mb-16">
                             <div class="flex items-baseline gap-4 md:gap-6 leading-none">
@@ -2326,7 +2337,7 @@
                             <div class="w-full h-0.5 bg-gradient-to-r from-transparent via-clinical-green/60 to-transparent mt-10"></div>
                         </div>
                     </div>
-                    <p class="text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-2xl mx-auto">
+                    <p class="text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-4xl mx-auto">
                         Advanced biomechanical interventions powered by real-time neural feedback and regenerative protocols.
                     </p>
                 </div>
@@ -2510,8 +2521,8 @@
 
         <!-- Precision Architects: Meet the Team -->
         <section class="py-24 relative overflow-hidden blueprint-global">
-            <div class="container mx-auto px-6 relative z-10">
-                <div class="max-w-4xl mx-auto text-center mb-16">
+            <div class="container mx-auto px-3 relative z-10">
+                <div class="max-w-6xl mx-auto text-center mb-16">
                     <div class="flex justify-center">
                         <div class="inline-flex flex-col items-center font-display font-bold tracking-tighter text-white mb-16">
                             <div class="flex items-baseline gap-4 md:gap-6 leading-none">
@@ -2525,7 +2536,7 @@
                             <div class="w-full h-0.5 bg-gradient-to-r from-transparent via-clinical-green/60 to-transparent mt-10"></div>
                         </div>
                     </div>
-                    <p class="text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-2xl mx-auto">
+                    <p class="text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-4xl mx-auto">
                         Our interdisciplinary team merges elite sports science with longevity medicine to redefine the limits of human physiology.
                     </p>
                 </div>
@@ -2669,26 +2680,6 @@
                     },
                 });
 
-                new Swiper('.reviews-swiper', {
-                    loop: true,
-                    autoplay: {
-                        delay: 5000,
-                        disableOnInteraction: false,
-                    },
-                    effect: 'fade',
-                    fadeEffect: {
-                        crossFade: true
-                    },
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                    },
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-                });
-
                 const protocolOptions = {
                     slidesPerView: 1.1,
                     loop: false,
@@ -2814,7 +2805,7 @@
         </script>
         <!-- Clinic Gallery Carousel -->
         <section class="py-24 relative overflow-hidden">
-            <div class="container mx-auto px-6">
+            <div class="container mx-auto px-3">
                 <div class="text-center mb-16">
                     <div class="flex justify-center">
                         <div class="inline-flex flex-col items-center font-display font-bold tracking-tighter text-white mb-16">
@@ -2829,7 +2820,7 @@
                             <div class="w-full h-0.5 bg-gradient-to-r from-transparent via-clinical-green/60 to-transparent mt-10"></div>
                         </div>
                     </div>
-                    <p class="text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-2xl mx-auto">
+                    <p class="text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-4xl mx-auto">
                         A visual tour of Cincinnati's premier technical chiropractic and longevity facility.
                     </p>
                 </div>
@@ -2866,104 +2857,112 @@
             </div>
         </section>
 
-        <!-- Social Proof: Google Reviews Widget -->
-        <section id="reviews" class="py-24 relative overflow-hidden">
-            <div class="container mx-auto px-6 relative z-10">
-                <div class="max-w-4xl mx-auto text-center">
-                    <div class="flex justify-center">
-                        <div class="inline-flex flex-col items-center font-display font-bold tracking-tighter text-white mb-16">
-                            <div class="flex items-baseline gap-4 md:gap-6 leading-none">
-                                <span class="text-lg md:text-3xl text-white/30 tracking-[0.2em] uppercase italic">Proven</span>
-                                <span class="text-5xl md:text-8xl text-clinical-blue uppercase italic">Patient</span>
-                            </div>
-                            <div class="flex items-baseline gap-4 md:gap-6 leading-none md:-mt-4">
-                                <span class="text-lg md:text-3xl text-white/30 tracking-[0.2em] uppercase italic">Elite</span>
-                                <span class="text-7xl md:text-[9rem] text-clinical-green uppercase leading-[0.8] italic">Outcomes</span>
-                            </div>
-                            <div class="w-full h-0.5 bg-gradient-to-r from-transparent via-clinical-green/60 to-transparent mt-10"></div>
-                        </div>
-                    </div>
-                    <p class="text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-2xl mx-auto">
-                        Real-world biological restoration and performance optimization documented by our patients.
-                    </p>
-                    
-                    <!-- Google Review Carousel -->
-                    <div class="swiper reviews-swiper min-h-[400px] rounded-none p-8 lg:p-12 relative overflow-hidden">
-                        <div class="mb-10 text-center relative z-10">
-                            <svg class="w-12 h-12 mx-auto mb-4" viewBox="0 0 24 24">
-                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c1.68-1.54 2.65-3.81 2.65-6.5z"/><path fill="#34A853" d="M12 23c3.15 0 5.79-1.05 7.72-2.85l-3.57-2.77c-.98.66-2.23 1.06-3.75 1.06-2.88 0-5.33-1.94-6.21-4.54H2.55v2.86C4.48 20.52 8.02 23 12 23z"/><path fill="#FBBC05" d="M5.79 13.9c-.23-.66-.35-1.36-.35-2.1s.12-1.44.35-2.1V6.84H2.55C1.75 8.42 1.3 10.16 1.3 12s.45 3.58 1.25 5.16l3.24-2.26z"/><path fill="#EA4335" d="M12 5.38c1.71 0 3.25.59 4.46 1.73l3.34-3.34C17.78 1.83 15.15.7 12 .7 8.02.7 4.48 3.18 2.55 6.84l3.24 2.26c.88-2.6 3.33-4.54 6.21-4.54z"/>
-                            </svg>
-                            <div class="flex items-center justify-center space-x-1 mb-2">
-                                <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                            </div>
-                            <span class="text-sm font-bold text-white/50 uppercase tracking-widest">Verified 5-Star Clinical Outcomes</span>
-                        </div>
-
-                        <div class="swiper-wrapper">
-                            <!-- Review 1 -->
-                            <div class="swiper-slide text-center px-4 lg:px-20">
-                                <p class="text-xl lg:text-2xl text-white/80 font-medium leading-relaxed italic mb-8">
-                                    "Working with Dr. Andrew both in the office and when we are travelling at events is crucial in fine tuning my body mechanics, maintaining my best swing, and eliminating any aches that may arise in competition."
-                                </p>
-                                <div class="flex flex-col items-center">
-                                    <span class="font-bold text-clinical-blue text-lg uppercase tracking-wider">Scott Smith</span>
-                                    <span class="text-sm text-white/50 font-bold uppercase tracking-widest">Professional Golfer</span>
-                                </div>
-                            </div>
-                            <!-- Review 2 -->
-                            <div class="swiper-slide text-center px-4 lg:px-20">
-                                <p class="text-xl lg:text-2xl text-white/80 font-medium leading-relaxed italic mb-8">
-                                    "Dr. Andy does an amazing job at keeping me in tip top condition preparing for fights and keeping me in one piece afterward! It's great having him in my corner!"
-                                </p>
-                                <div class="flex flex-col items-center">
-                                    <span class="font-bold text-clinical-blue text-lg uppercase tracking-wider">Chad Hinton</span>
-                                    <span class="text-sm text-white/50 font-bold uppercase tracking-widest">Professional MMA Fighter</span>
-                                </div>
-                            </div>
-                            <!-- Review 3 -->
-                            <div class="swiper-slide text-center px-4 lg:px-20">
-                                <p class="text-xl lg:text-2xl text-white/80 font-medium leading-relaxed italic mb-8">
-                                    "Simply put, Dr. Opperman or “Doc Opp” is the best. I’ve been able to do exercises I haven’t been able to do in years thanks to her!"
-                                </p>
-                                <div class="flex flex-col items-center">
-                                    <span class="font-bold text-clinical-blue text-lg uppercase tracking-wider">Z.C.</span>
-                                    <span class="text-sm text-white/50 font-bold uppercase tracking-widest">Patient</span>
-                                </div>
-                            </div>
-                            <!-- Review 4 -->
-                            <div class="swiper-slide text-center px-4 lg:px-20">
-                                <p class="text-xl lg:text-2xl text-white/80 font-medium leading-relaxed italic mb-8">
-                                    "I can't believe my M.D. sent me to Dr. Limle. They worked together with me and my back got better in no time at all!"
-                                </p>
-                                <div class="flex flex-col items-center">
-                                    <span class="font-bold text-clinical-blue text-lg uppercase tracking-wider">M.K.</span>
-                                    <span class="text-sm text-white/50 font-bold uppercase tracking-widest">Patient</span>
-                                </div>
-                            </div>
+        <!-- Social Proof: Clinical Outcomes -->
+        <section id="reviews" class="py-32 relative overflow-hidden blueprint-global">
+            <div class="container mx-auto px-3 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-20 items-start mb-32">
+                    <!-- Left: Featured Quote -->
+                    <div class="space-y-10">
+                        <div class="space-y-4">
+                            <span class="text-[11px] font-bold uppercase tracking-[0.5em] text-clinical-green/80">Clinical Outcomes</span>
+                            <div class="w-16 h-0.5 bg-clinical-green/40"></div>
                         </div>
                         
-                        <!-- Navigation -->
-                        <div class="swiper-button-next text-clinical-blue after:text-2xl"></div>
-                        <div class="swiper-button-prev text-clinical-blue after:text-2xl"></div>
-                        <div class="swiper-pagination mt-8"></div>
+                        <blockquote class="text-4xl md:text-5xl lg:text-7xl font-display font-bold leading-[1.05] tracking-tighter text-white">
+                            "Working with <span class="text-clinical-green">Dr. Andrew</span> both in the office and when we are travelling at events is <span class="text-clinical-blue">crucial</span> in fine tuning my body mechanics, maintaining my best swing, and eliminating any aches that may arise in competition."
+                        </blockquote>
+                        
+                        <div class="flex items-center gap-6 pt-4">
+                            <div class="w-12 h-px bg-white/20"></div>
+                            <div>
+                                <p class="text-xl font-bold text-white uppercase tracking-wider">Scott Smith</p>
+                                <p class="text-clinical-green font-bold uppercase tracking-widest text-[12px]">Professional Golfer</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="mt-16 flex flex-col items-center space-y-6">
-                        <a href="/contact.html" class="px-12 py-5 bg-clinical-blue text-white rounded-none font-bold text-2xl hover:bg-blue-700 transition-all shadow-2xl hover:shadow-blue-200">
-                            Request Your Appointment
-                        </a>
-                        <p class="text-[13px] text-white/50 font-bold uppercase tracking-[0.2em]">
-                            We accept and utilize most major insurers for services when able.
-                        </p>
+                    <!-- Right: Google & Secondary Reviews -->
+                    <div class="lg:pl-12 space-y-16">
+                        <div class="flex items-center gap-8">
+                            <div class="shrink-0">
+                                <svg class="w-16 h-16" viewBox="0 0 24 24">
+                                    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c1.68-1.54 2.65-3.81 2.65-6.5z"/><path fill="#34A853" d="M12 23c3.15 0 5.79-1.05 7.72-2.85l-3.57-2.77c-.98.66-2.23 1.06-3.75 1.06-2.88 0-5.33-1.94-6.21-4.54H2.55v2.86C4.48 20.52 8.02 23 12 23z"/><path fill="#FBBC05" d="M5.79 13.9c-.23-.66-.35-1.36-.35-2.1s.12-1.44.35-2.1V6.84H2.55C1.75 8.42 1.3 10.16 1.3 12s.45 3.58 1.25 5.16l3.24-2.26z"/><path fill="#EA4335" d="M12 5.38c1.71 0 3.25.59 4.46 1.73l3.34-3.34C17.78 1.83 15.15.7 12 .7 8.02.7 4.48 3.18 2.55 6.84l3.24 2.26c.88-2.6 3.33-4.54 6.21-4.54z"/>
+                                </svg>
+                                <div class="flex gap-1 text-yellow-400 mt-3 justify-center">
+                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-white/40 uppercase tracking-[0.3em]">Verified 5-Star Clinical Outcomes</span>
+                                <div class="w-8 h-0.5 bg-white/10 mt-2"></div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-12 border-l border-white/5 pl-10">
+                            <!-- Review 2 -->
+                            <div class="space-y-4">
+                                <p class="text-lg text-gray-400 font-light leading-relaxed italic">"Dr. Andy does an amazing job at keeping me in tip top condition preparing for fights and keeping me in one piece afterward!"</p>
+                                <p class="text-[11px] font-bold text-white/50 uppercase tracking-[0.2em]">— Chad Hinton, MMA Fighter</p>
+                            </div>
+                            <!-- Review 3 -->
+                            <div class="space-y-4">
+                                <p class="text-lg text-gray-400 font-light leading-relaxed italic">"Simply put, Dr. Opperman or “Doc Opp” is the best. I’ve been able to do exercises I haven’t been able to do in years thanks to her!"</p>
+                                <p class="text-[11px] font-bold text-white/50 uppercase tracking-[0.2em]">— Z.C., Patient</p>
+                            </div>
+                            <!-- Review 4 -->
+                            <div class="space-y-4">
+                                <p class="text-lg text-gray-400 font-light leading-relaxed italic">"I can't believe my M.D. sent me to Dr. Limle. They worked together with me and my back got better in no time at all!"</p>
+                                <p class="text-[11px] font-bold text-white/50 uppercase tracking-[0.2em]">— M.K., Patient</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Featured CTA Section -->
+                <div class="relative mt-20">
+                    <div class="grid lg:grid-cols-[1fr_1.2fr] items-center">
+                        <!-- Left: Glass CTA Overlay -->
+                        <div class="z-20 lg:-mr-48 relative">
+                            <div class="p-12 md:p-20 backdrop-blur-3xl bg-[#020617]/70 border border-white/10 shadow-[0_80px_160px_-40px_rgba(0,0,0,1)] relative overflow-hidden">
+                                <div class="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent pointer-events-none"></div>
+                                <div class="space-y-16 relative z-10">
+                                    <div class="space-y-8">
+                                        <span class="text-[11px] font-bold uppercase tracking-[0.9em] text-clinical-green block opacity-100">The Architectural Protocol</span>
+                                        <div class="space-y-0">
+                                            <h3 class="text-7xl md:text-[7rem] font-display font-bold text-white leading-[0.8] tracking-tighter">Clinical</h3>
+                                            <h3 class="text-7xl md:text-[7rem] font-display font-bold text-clinical-green leading-[0.8] tracking-tighter">Authority.</h3>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex flex-col xl:flex-row items-start xl:items-center gap-12 pt-4">
+                                        <a href="/contact.html" class="inline-flex items-center gap-8 px-12 py-7 bg-clinical-blue text-white font-bold uppercase tracking-[0.35em] text-[12px] hover:bg-blue-700 transition-all transform hover:-translate-y-1 group/btn shadow-[0_20px_50px_rgba(0,71,171,0.3)] shrink-0">
+                                            Request Your Appointment
+                                            <svg class="w-5 h-5 group-hover/btn:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                        </a>
+                                        <p class="text-[10px] text-white/40 font-bold uppercase tracking-[0.3em] leading-[2] max-w-[280px] border-l border-white/10 pl-10">
+                                            We accept and utilize most major insurers for clinical services.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Featured Image -->
+                        <div class="relative group mt-12 lg:mt-0">
+                            <div class="aspect-[4/5] lg:aspect-[1.1/1] overflow-hidden border border-white/5 relative shadow-2xl">
+                                <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Clinical Authority" class="w-full h-full object-cover grayscale brightness-[0.4] contrast-125 group-hover:scale-105 transition-transform duration-[5s] ease-out">
+                                <div class="absolute inset-0 bg-gradient-to-l from-transparent via-[#020617]/20 to-[#020617]/60"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+
     </main>
 
     <footer class="relative py-24 text-white overflow-hidden">
@@ -2979,7 +2978,7 @@
             <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.28) 1px, transparent 0); background-size: 220px 220px;"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
         </div>
-        <div class="container mx-auto px-6 max-w-7xl relative z-10">
+        <div class="container mx-auto px-3 relative z-10">
             <div class="grid lg:grid-cols-[1.3fr_0.8fr_1fr_1fr] gap-x-12 gap-y-12 pb-12 border-b border-white/5">
                 <!-- Column 1: Info -->
                 <div class="space-y-8">
