@@ -29,8 +29,8 @@
                         sm: '640px',
                         md: '768px',
                         lg: '1024px',
-                        xl: '1440px',
-                        '2xl': '1600px',
+                        xl: '1280px',
+                        '2xl': '1440px',
                     },
                 },
                 extend: {
@@ -60,7 +60,7 @@
         /* GLOBAL DESKTOP OPTIMIZATIONS */
         @media (min-width: 1280px) {
             body {
-                zoom: 1.0;
+                zoom: 0.8;
             }
         }
         
@@ -580,12 +580,11 @@
         /* Dimensional Protocol Carousel Styles */
         .protocols-swiper-dimensional {
             overflow: visible !important;
-            padding: 4rem 0;
+            padding: 2rem 0;
             perspective: 2000px;
-            min-height: 700px;
-            max-width: 1400px; /* Balanced width */
+            min-height: 600px;
+            max-width: 1200px; /* Centered width */
             margin: 0 auto;
-            transform: translateX(128px);
         }
         .protocols-swiper-dimensional .swiper-slide {
             transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1236,13 +1235,13 @@
 
     <!-- Global Navigation -->
     <header class="fixed top-4 inset-x-0 z-50 flex justify-center px-4">
-        <nav class="nav-dock w-full max-w-7xl px-8 py-5 flex items-center justify-between">
+        <nav class="nav-dock w-full max-w-6xl px-8 py-3 flex items-center justify-between">
             <div class="flex items-center">
                 <a href="/index.html" class="flex items-center space-x-3 group">
-                    <img src="/images/cclogo_trimmed.png" alt="Cincinnati Chiropractic" class="h-16 w-auto drop-shadow-sm group-hover:drop-shadow-md transition-all">
+                    <img src="/images/cclogo_trimmed.png" alt="Cincinnati Chiropractic" class="h-12 w-auto drop-shadow-sm group-hover:drop-shadow-md transition-all">
                     <div class="hidden sm:flex flex-col">
-                        <span class="text-lg font-display font-bold text-clinical-blue tracking-tight leading-none">CINCINNATI</span>
-                        <span class="text-sm font-light text-white/70 uppercase tracking-[0.3em] leading-none mt-1">Chiropractic</span>
+                        <span class="text-base font-display font-bold text-clinical-blue tracking-tight leading-none">CINCINNATI</span>
+                        <span class="text-[10px] font-light text-white/70 uppercase tracking-[0.3em] leading-none mt-1">Chiropractic</span>
                     </div>
                 </a>
             </div>
@@ -1416,8 +1415,8 @@
                      style="background: radial-gradient(circle at 50% 45%, rgba(59, 130, 246, 0.1), transparent 60%);">
                 </div>
             </div>
-            <div class="container mx-auto px-12 relative z-10 text-center">
-                <div class="max-w-7xl mx-auto space-y-8 sm:space-y-12">
+            <div class="container mx-auto px-8 relative z-10 text-center">
+                <div class="max-w-6xl mx-auto space-y-8 sm:space-y-12">
                     <div class="inline-flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 px-4 sm:px-6 py-2 bg-white/5 backdrop-blur-xl border border-white/10 rounded-none text-center">
                         <span class="text-[15px] sm:text-[13px] font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] text-clinical-blue italic leading-none text-center">Advanced Clinical Performance</span>
                         <span class="hidden sm:block w-px h-4 bg-white/20"></span>
@@ -1446,11 +1445,11 @@
                         </p>
 
                         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
-                            <a href="/contact.html" class="group/btn relative px-8 sm:px-12 py-4 sm:py-6 bg-clinical-blue text-white rounded-none font-bold text-base sm:text-xl overflow-hidden transition-all hover:scale-105 shadow-[0_20px_40px_-10px_rgba(0,71,171,0.5)]">
+                            <a href="/contact.html" class="group/btn relative px-8 sm:px-8 py-4 sm:py-6 bg-clinical-blue text-white rounded-none font-bold text-base sm:text-xl overflow-hidden transition-all hover:scale-105 shadow-[0_20px_40px_-10px_rgba(0,71,171,0.5)]">
                                 <span class="relative z-10">Request Appointment</span>
                                 <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000"></div>
                             </a>
-                            <a href="#programs" class="px-8 sm:px-12 py-4 sm:py-6 bg-white/5 backdrop-blur-md border border-white/10 text-white rounded-none font-bold text-base sm:text-xl hover:bg-white/10 transition-all border-white/20">
+                            <a href="#programs" class="px-8 sm:px-8 py-4 sm:py-6 bg-white/5 backdrop-blur-md border border-white/10 text-white rounded-none font-bold text-base sm:text-xl hover:bg-white/10 transition-all border-white/20">
                                 View Clinical Programs
                             </a>
                         </div>
@@ -1482,8 +1481,8 @@
         </section>
 
         <!-- Center of Excellence: Pro-Level Pedigree -->
-        <section id="partnership" class="py-24 relative overflow-hidden">
-            <div class="container mx-auto px-12 relative z-10">
+        <section id="partnership" class="py-16 relative overflow-hidden">
+            <div class="container mx-auto px-8 relative z-10">
                 <!-- Main Container Box -->
                 <div class="rounded-none border border-white/10 bg-[#070c18]/90 backdrop-blur-2xl p-8 md:p-10 lg:p-12 shadow-2xl relative overflow-hidden">
                     <!-- Subtle gradient overlay -->
@@ -1560,7 +1559,7 @@
                                 <img src="/images/treatments/cyclones.png" alt="Cyclones" class="w-10 h-10 object-contain opacity-80">
                             </div>
                             
-                            <div class="absolute top-5 right-5 flex items-center gap-2 px-12 py-1.5 bg-clinical-green/20 backdrop-blur-md rounded-none border border-clinical-green/40 text-[15px] font-bold text-clinical-green uppercase tracking-widest">
+                            <div class="absolute top-5 right-5 flex items-center gap-2 px-8 py-1.5 bg-clinical-green/20 backdrop-blur-md rounded-none border border-clinical-green/40 text-[15px] font-bold text-clinical-green uppercase tracking-widest">
                                 Pro Verified
                             </div>
 
@@ -1645,12 +1644,12 @@
         </section>
 
         <!-- Tier 1: The Clinical Flagships -->
-        <section id="programs" class="py-24 relative overflow-hidden">
-            <div class="container mx-auto px-12 relative z-10">
+        <section id="programs" class="py-16 relative overflow-hidden">
+            <div class="container mx-auto px-8 relative z-10">
                 <div class="space-y-10">
-                    <div class="flex flex-col items-center text-center gap-8 mb-16">
+                    <div class="flex flex-col items-center text-center gap-8 mb-10">
                         <div class="flex justify-center">
-                            <div class="inline-flex flex-col items-center font-display font-bold tracking-tighter text-white mb-16">
+                            <div class="inline-flex flex-col items-center font-display font-bold tracking-tighter text-white mb-10">
                                 <div class="flex items-baseline gap-4 md:gap-6 leading-none">
                                     <span class="text-lg md:text-3xl text-white/30 tracking-[0.2em] uppercase italic">Elite</span>
                                     <span class="text-5xl md:text-8xl text-clinical-blue uppercase italic">Clinical</span>
@@ -1764,9 +1763,9 @@
                                             <div class="border-l-2 border-clinical-green/30 pl-6 py-1">
                                                 <h5 class="text-white font-bold uppercase tracking-widest text-[13px] mb-4">Core Methodology</h5>
                                                 <div class="flex flex-wrap gap-2">
-                                                    <span class="px-12 py-1.5 bg-white/5 border border-white/10 text-white/80 text-[13px] uppercase tracking-wider font-bold">Biomechanical Deconstruction</span>
-                                                    <span class="px-12 py-1.5 bg-white/5 border border-white/10 text-white/80 text-[13px] uppercase tracking-wider font-bold">Targeted Joint Restoration</span>
-                                                    <span class="px-12 py-1.5 bg-white/5 border border-white/10 text-white/80 text-[13px] uppercase tracking-wider font-bold">Neurological Down-Regulation</span>
+                                                    <span class="px-8 py-1.5 bg-white/5 border border-white/10 text-white/80 text-[13px] uppercase tracking-wider font-bold">Biomechanical Deconstruction</span>
+                                                    <span class="px-8 py-1.5 bg-white/5 border border-white/10 text-white/80 text-[13px] uppercase tracking-wider font-bold">Targeted Joint Restoration</span>
+                                                    <span class="px-8 py-1.5 bg-white/5 border border-white/10 text-white/80 text-[13px] uppercase tracking-wider font-bold">Neurological Down-Regulation</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -1805,9 +1804,9 @@
                                             <div class="border-l-2 border-clinical-blue/30 pl-6 py-1">
                                                 <h5 class="text-white font-bold uppercase tracking-widest text-[13px] mb-4">The Methodology</h5>
                                                 <div class="flex flex-wrap gap-2">
-                                                    <span class="px-12 py-1.5 bg-white/5 border border-white/10 text-white/80 text-[13px] uppercase tracking-wider font-bold">Progressive Load-Bearing</span>
-                                                    <span class="px-12 py-1.5 bg-white/5 border border-white/10 text-white/80 text-[13px] uppercase tracking-wider font-bold">Cardiometabolic Conditioning</span>
-                                                    <span class="px-12 py-1.5 bg-white/5 border border-white/10 text-white/80 text-[13px] uppercase tracking-wider font-bold">Graded Functional Exposure</span>
+                                                    <span class="px-8 py-1.5 bg-white/5 border border-white/10 text-white/80 text-[13px] uppercase tracking-wider font-bold">Progressive Load-Bearing</span>
+                                                    <span class="px-8 py-1.5 bg-white/5 border border-white/10 text-white/80 text-[13px] uppercase tracking-wider font-bold">Cardiometabolic Conditioning</span>
+                                                    <span class="px-8 py-1.5 bg-white/5 border border-white/10 text-white/80 text-[13px] uppercase tracking-wider font-bold">Graded Functional Exposure</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -1846,9 +1845,9 @@
                                             <div class="border-l-2 border-clinical-blue/30 pl-6 py-1">
                                                 <h5 class="text-white font-bold uppercase tracking-widest text-[13px] mb-4">Advanced Strategy</h5>
                                                 <div class="flex flex-wrap gap-2">
-                                                    <span class="px-12 py-1.5 bg-white/5 border border-white/10 text-white/80 text-[13px] uppercase tracking-wider font-bold">Objective Biomarker Tracking</span>
-                                                    <span class="px-12 py-1.5 bg-white/5 border border-white/10 text-white/80 text-[13px] uppercase tracking-wider font-bold">Integrative Clinical Nutraceuticals</span>
-                                                    <span class="px-12 py-1.5 bg-white/5 border border-white/10 text-white/80 text-[13px] uppercase tracking-wider font-bold">Cardiopulmonary Optimization</span>
+                                                    <span class="px-8 py-1.5 bg-white/5 border border-white/10 text-white/80 text-[13px] uppercase tracking-wider font-bold">Objective Biomarker Tracking</span>
+                                                    <span class="px-8 py-1.5 bg-white/5 border border-white/10 text-white/80 text-[13px] uppercase tracking-wider font-bold">Integrative Clinical Nutraceuticals</span>
+                                                    <span class="px-8 py-1.5 bg-white/5 border border-white/10 text-white/80 text-[13px] uppercase tracking-wider font-bold">Cardiopulmonary Optimization</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -1887,9 +1886,9 @@
                                             <div class="border-l-2 border-clinical-blue/30 pl-6 py-1">
                                                 <h5 class="text-white font-bold uppercase tracking-widest text-[13px] mb-4">Vitality Tactics</h5>
                                                 <div class="flex flex-wrap gap-2">
-                                                    <span class="px-12 py-1.5 bg-white/5 border border-white/10 text-white/80 text-[13px] uppercase tracking-wider font-bold">Biomarker Intelligence Mapping</span>
-                                                    <span class="px-12 py-1.5 bg-white/5 border border-white/10 text-white/80 text-[13px] uppercase tracking-wider font-bold">Mitochondrial Efficiency Protocols</span>
-                                                    <span class="px-12 py-1.5 bg-white/5 border border-white/10 text-white/80 text-[13px] uppercase tracking-wider font-bold">Metabolic & Hormonal Reset</span>
+                                                    <span class="px-8 py-1.5 bg-white/5 border border-white/10 text-white/80 text-[13px] uppercase tracking-wider font-bold">Biomarker Intelligence Mapping</span>
+                                                    <span class="px-8 py-1.5 bg-white/5 border border-white/10 text-white/80 text-[13px] uppercase tracking-wider font-bold">Mitochondrial Efficiency Protocols</span>
+                                                    <span class="px-8 py-1.5 bg-white/5 border border-white/10 text-white/80 text-[13px] uppercase tracking-wider font-bold">Metabolic & Hormonal Reset</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -1920,12 +1919,12 @@
         </section>
 
         <!-- The Performance Continuum: The Journey from Pain to Power -->
-        <section class="py-24 relative overflow-hidden">
-            <div class="container mx-auto px-12 relative z-10">
+        <section class="py-16 relative overflow-hidden">
+            <div class="container mx-auto px-8 relative z-10">
                 <!-- technical header -->
-                <div class="max-w-7xl mx-auto text-center mb-20">
+                <div class="max-w-6xl mx-auto text-center mb-12">
                     
-                    <div class="inline-flex flex-col items-start md:items-center justify-center font-display font-bold tracking-tighter text-white mb-16">
+                    <div class="inline-flex flex-col items-start md:items-center justify-center font-display font-bold tracking-tighter text-white mb-10">
                         <div class="flex items-baseline gap-4 md:gap-6 leading-none">
                             <span class="text-lg md:text-3xl text-white/30 tracking-[0.2em]">FROM</span>
                             <span class="text-5xl md:text-8xl text-clinical-blue uppercase">PAIN</span>
@@ -1942,7 +1941,7 @@
                     </p>
                 </div>
 
-                <div class="max-w-7xl mx-auto space-y-12">
+                <div class="max-w-6xl mx-auto space-y-12">
                     <!-- Step 01: Foundations -->
                     <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 relative">
                         <div class="lg:w-1/3 relative">
@@ -2038,11 +2037,11 @@
         </section>
 
         <!-- Tier 2: Specialized Protocols Bento Grids -->
-        <section class="py-24 relative overflow-hidden">
-            <div class="container mx-auto px-12 relative z-10">
+        <section class="py-16 relative overflow-hidden">
+            <div class="container mx-auto px-8 relative z-10">
                     <div class="text-center max-w-6xl mx-auto mb-14">
                         <div class="flex justify-center">
-                            <div class="inline-flex flex-col items-center font-display font-bold tracking-tighter text-white mb-16">
+                            <div class="inline-flex flex-col items-center font-display font-bold tracking-tighter text-white mb-10">
                                 <div class="flex items-baseline gap-4 md:gap-6 leading-none">
                                     <span class="text-lg md:text-3xl text-white/30 tracking-[0.2em] uppercase italic">Targeted</span>
                                     <span class="text-5xl md:text-8xl text-clinical-blue uppercase italic">Specialized</span>
@@ -2313,11 +2312,11 @@
         </section>
 
         <!-- Precision Modalities Section -->
-        <section class="py-24 relative overflow-hidden blueprint-global">
-            <div class="container mx-auto px-12 relative z-10">
-                <div class="max-w-6xl mx-auto text-center mb-16">
+        <section class="py-16 relative overflow-hidden blueprint-global">
+            <div class="container mx-auto px-8 relative z-10">
+                <div class="max-w-6xl mx-auto text-center mb-10">
                     <div class="flex justify-center">
-                        <div class="inline-flex flex-col items-center font-display font-bold tracking-tighter text-white mb-16">
+                        <div class="inline-flex flex-col items-center font-display font-bold tracking-tighter text-white mb-10">
                             <div class="flex items-baseline gap-4 md:gap-8 leading-none">
                                 <span class="text-2xl md:text-4xl text-white/30 tracking-[0.2em] uppercase italic">Elite</span>
                                 <span class="text-6xl md:text-[7rem] text-clinical-blue uppercase italic">Advanced</span>
@@ -2334,7 +2333,7 @@
                     </p>
                 </div>
 
-                <div class="max-w-5xl mx-auto">
+                <div class="max-w-6xl mx-auto">
                     <!-- Row 1: 6 items -->
                     <div class="grid grid-cols-3 sm:grid-cols-6 gap-4 sm:gap-8 mb-6">
                         <!-- Cold Laser (Class IV) - Laser beam icon -->
@@ -2512,11 +2511,11 @@
         </section>
 
         <!-- Precision Architects: Meet the Team -->
-        <section class="py-24 relative overflow-hidden blueprint-global">
-            <div class="container mx-auto px-12 relative z-10">
-                <div class="max-w-6xl mx-auto text-center mb-16">
+        <section class="py-16 relative overflow-hidden blueprint-global">
+            <div class="container mx-auto px-8 relative z-10">
+                <div class="max-w-6xl mx-auto text-center mb-10">
                     <div class="flex justify-center">
-                        <div class="inline-flex flex-col items-center font-display font-bold tracking-tighter text-white mb-16">
+                        <div class="inline-flex flex-col items-center font-display font-bold tracking-tighter text-white mb-10">
                             <div class="flex items-baseline gap-4 md:gap-6 leading-none">
                                 <span class="text-lg md:text-3xl text-white/30 tracking-[0.2em] uppercase italic">The</span>
                                 <span class="text-5xl md:text-8xl text-clinical-blue uppercase italic">Precision</span>
@@ -2796,11 +2795,11 @@
             });
         </script>
         <!-- Clinic Gallery Carousel -->
-        <section class="py-24 relative overflow-hidden">
-            <div class="container mx-auto px-12">
-                <div class="text-center mb-16">
+        <section class="py-16 relative overflow-hidden">
+            <div class="container mx-auto px-8">
+                <div class="text-center mb-10">
                     <div class="flex justify-center">
-                        <div class="inline-flex flex-col items-center font-display font-bold tracking-tighter text-white mb-16">
+                        <div class="inline-flex flex-col items-center font-display font-bold tracking-tighter text-white mb-10">
                             <div class="flex items-baseline gap-4 md:gap-6 leading-none">
                                 <span class="text-lg md:text-3xl text-white/30 tracking-[0.2em] uppercase italic">Inside</span>
                                 <span class="text-5xl md:text-8xl text-clinical-blue uppercase italic">The</span>
@@ -2851,7 +2850,7 @@
 
         <!-- Social Proof: Clinical Outcomes -->
         <section id="reviews" class="py-32 relative overflow-hidden blueprint-global">
-            <div class="container mx-auto px-12 relative z-10">
+            <div class="container mx-auto px-8 relative z-10">
                 <div class="grid lg:grid-cols-2 gap-20 items-start mb-32">
                     <!-- Left: Featured Quote -->
                     <div class="space-y-10">
@@ -2931,7 +2930,7 @@
                                     </div>
                                     
                                     <div class="flex flex-col xl:flex-row items-start xl:items-center gap-12 pt-4">
-                                        <a href="/contact.html" class="inline-flex items-center gap-8 px-12 py-7 bg-clinical-blue text-white font-bold uppercase tracking-[0.35em] text-[12px] hover:bg-blue-700 transition-all transform hover:-translate-y-1 group/btn shadow-[0_20px_50px_rgba(0,71,171,0.3)] shrink-0">
+                                        <a href="/contact.html" class="inline-flex items-center gap-8 px-8 py-7 bg-clinical-blue text-white font-bold uppercase tracking-[0.35em] text-[12px] hover:bg-blue-700 transition-all transform hover:-translate-y-1 group/btn shadow-[0_20px_50px_rgba(0,71,171,0.3)] shrink-0">
                                             Request Your Appointment
                                             <svg class="w-5 h-5 group-hover/btn:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                                         </a>
@@ -2957,7 +2956,7 @@
 
     </main>
 
-    <footer class="relative py-24 text-white overflow-hidden">
+    <footer class="relative py-16 text-white overflow-hidden">
         <!-- Technical Footer Divider -->
         <div class="absolute top-0 left-0 right-0 flex items-center justify-center">
             <div class="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
@@ -2970,7 +2969,7 @@
             <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.28) 1px, transparent 0); background-size: 220px 220px;"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
         </div>
-        <div class="container mx-auto px-12 relative z-10">
+        <div class="container mx-auto px-8 relative z-10">
             <div class="grid lg:grid-cols-[1.3fr_0.8fr_1fr_1fr] gap-x-12 gap-y-12 pb-12 border-b border-white/5">
                 <!-- Column 1: Info -->
                 <div class="space-y-8">
