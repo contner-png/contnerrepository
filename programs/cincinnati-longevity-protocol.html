@@ -39,98 +39,298 @@
         }
     </script>
     <style>
-        .blueprint-dot {
-            background-image: radial-gradient(#0047AB 1px, transparent 1px);
-            background-size: 30px 30px;
+        /* ── GLOBAL ── */
+        @media (min-width: 1280px) { body { zoom: 0.8; } }
+        * { border-radius: 0 !important; }
+
+        /* ── NAV DOCK ── */
+        .nav-dock {
+            background: rgba(2, 6, 23, 0.92);
+            border: 1px solid rgba(148, 163, 184, 0.18);
+            box-shadow: 0 20px 50px -20px rgba(0,0,0,0.8);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
         }
-        .blueprint-bg {
-            background-color: #003399;
-            background-image: 
-                linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px),
-                linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-            background-size: 80px 80px, 80px 80px, 20px 20px, 20px 20px;
-            background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
-            position: relative;
+        .dropdown-panel {
+            background: rgba(10, 15, 30, 0.97);
+            border: 1px solid rgba(148, 163, 184, 0.18);
+            box-shadow: 0 24px 48px -24px rgba(0,0,0,0.9);
+            backdrop-filter: blur(16px);
         }
-        .strategy-module {
-            background: #ffffff;
-            border: 1px solid rgba(148, 163, 184, 0.35);
-            box-shadow: 0 20px 45px -30px rgba(15, 23, 42, 0.7);
-            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        .nav-link { position:relative; transition:color 0.3s; }
+        .nav-link::after {
+            content:''; position:absolute; bottom:-2px; left:0;
+            width:0; height:2px; background:#22C55E; transition:width 0.3s;
         }
-        .strategy-module:hover {
-            border-color: #22C55E;
-            transform: translateY(-6px);
-            box-shadow: 0 30px 60px -35px rgba(15, 23, 42, 0.7);
+        .nav-link:hover::after { width:100%; }
+
+        /* ── BODY / PAGE BACKGROUND ── */
+        body {
+            background-color: #080d18;
+            color: #e2e8f0;
         }
-        .condition-tag {
-            background: white;
-            border: 1px solid #e5e7eb;
-            transition: all 0.3s ease;
+
+        /* ── HERO ── */
+        .hero-bg {
+            background-color: #080d18;
         }
-        .condition-tag:hover {
-            border-color: #0047AB;
-            color: #0047AB;
-            background: #f0f7ff;
-        }
-        .modern-clinical-frame {
-            position: relative;
-            background: rgba(2, 6, 23, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 0;
-            overflow: hidden;
-            display: flex;
+        .hero-label-badge {
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            box-shadow: 0 20px 40px -15px rgba(0,0,0,0.5);
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(34,197,94,0.08);
+            border: 1px solid rgba(34,197,94,0.28);
+            color: #22C55E;
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
         }
-        .modern-clinical-frame::before {
+        .hero-label-dot {
+            width: 7px; height: 7px;
+            background: #22C55E;
+            box-shadow: 0 0 8px rgba(34,197,94,0.8);
+            flex-shrink: 0;
+        }
+        .gradient-green {
+            background: linear-gradient(90deg, #22C55E, #4ade80);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-cta-primary {
+            display: inline-block;
+            padding: 16px 40px;
+            background: #22C55E;
+            color: #fff;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            box-shadow: 0 0 28px rgba(34,197,94,0.32);
+            transition: all 0.3s;
+        }
+        .hero-cta-primary:hover {
+            background: #16a34a;
+            box-shadow: 0 0 40px rgba(34,197,94,0.5);
+            transform: translateY(-2px);
+        }
+        .hero-cta-secondary {
+            display: inline-block;
+            padding: 16px 40px;
+            background: transparent;
+            color: rgba(226,232,240,0.85);
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            border: 1px solid rgba(255,255,255,0.18);
+            transition: all 0.3s;
+        }
+        .hero-cta-secondary:hover {
+            border-color: rgba(34,197,94,0.5);
+            color: #22C55E;
+        }
+
+        /* ── SECTION LABELS ── */
+        .section-eyebrow {
+            font-size: 10px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.55em;
+            color: #22C55E;
+        }
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(34,197,94,0.3), transparent);
+        }
+
+        /* ── DARK SECTIONS ── */
+        .dark-section {
+            background-color: #080d18;
+        }
+        .dark-section-alt {
+            background-color: #060a14;
+        }
+        .grid-overlay { display: none; }
+
+        /* ── GLASS PANEL (right-side hero card) ── */
+        .glass-card {
+            background: rgba(12, 18, 35, 0.75);
+            border: 1px solid rgba(148,163,184,0.16);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            box-shadow: 0 40px 80px -30px rgba(0,0,0,0.7);
+        }
+
+        /* ── STRATEGY CARDS ── */
+        .strategy-card {
+            background: rgba(12, 18, 35, 0.5);
+            border: 1px solid rgba(148,163,184,0.1);
+            transition: all 0.5s cubic-bezier(0.23,1,0.32,1);
+            position: relative;
+            overflow: hidden;
+        }
+        .strategy-card::after {
             content: '';
             position: absolute;
             inset: 0;
-            border: 3px solid transparent;
-            border-radius: 0;
-            background: linear-gradient(135deg, #0047AB, transparent, #FB4F14) border-box;
+            background: radial-gradient(circle at top right, rgba(34,197,94,0.08), transparent 65%);
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        .strategy-card:hover {
+            border-color: rgba(34,197,94,0.38);
+            transform: translateY(-5px);
+            box-shadow: 0 24px 48px -16px rgba(34,197,94,0.12);
+        }
+        .strategy-card:hover::after { opacity: 1; }
+        .strategy-num {
+            font-family: 'Lexend', sans-serif;
+            font-size: clamp(56px, 8vw, 96px);
+            font-weight: 900;
+            line-height: 1;
+            color: rgba(34,197,94,0.12);
+            letter-spacing: -0.04em;
+            user-select: none;
+            pointer-events: none;
+            transition: color 0.4s;
+        }
+        .strategy-card:hover .strategy-num {
+            color: rgba(34,197,94,0.22);
+        }
+
+        /* ── CLINICAL STACK (ARSENAL) CARDS ── */
+        .stack-card {
+            background: rgba(10, 15, 28, 0.6);
+            border: 1px solid rgba(148,163,184,0.09);
+            transition: all 0.45s cubic-bezier(0.23,1,0.32,1);
+            position: relative;
+            overflow: hidden;
+        }
+        .stack-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 90% 10%, rgba(34,197,94,0.09), transparent 65%);
+            opacity: 0;
+            transition: opacity 0.45s;
+        }
+        .stack-card:hover {
+            background: rgba(20, 30, 50, 0.8);
+            border-color: rgba(34,197,94,0.32);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -12px rgba(34,197,94,0.12);
+        }
+        .stack-card:hover::before { opacity: 1; }
+        .stack-icon-box {
+            width: 44px; height: 44px;
+            display: flex; align-items: center; justify-content: center;
+            background: rgba(34,197,94,0.08);
+            border: 1px solid rgba(34,197,94,0.2);
+            color: #22C55E;
+            transition: all 0.4s;
+        }
+        .stack-card:hover .stack-icon-box {
+            background: #22C55E;
+            border-color: #22C55E;
+            color: #fff;
+        }
+        .stack-arrow {
+            width: 32px; height: 32px;
+            display: flex; align-items: center; justify-content: center;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.4);
+            transition: all 0.4s;
+        }
+        .stack-card:hover .stack-arrow {
+            background: rgba(34,197,94,0.15);
+            border-color: rgba(34,197,94,0.35);
+            color: #22C55E;
+            transform: rotate(45deg);
+        }
+
+        /* ── CONDITIONS TAGS ── */
+        .cond-tag {
+            background: rgba(12,18,35,0.5);
+            border: 1px solid rgba(148,163,184,0.09);
+            transition: all 0.3s;
+            color: rgba(226,232,240,0.8);
+        }
+        .cond-tag:hover {
+            border-color: rgba(34,197,94,0.45);
+            background: rgba(34,197,94,0.05);
+            color: #22C55E;
+        }
+
+        /* ── QUOTE SECTION ── */
+        .quote-mark {
+            font-family: 'Lexend', sans-serif;
+            font-size: 120px;
+            line-height: 0.8;
+            color: rgba(34,197,94,0.18);
+            font-weight: 900;
+        }
+
+        /* ── METRIC CARDS ── */
+        .metric-card {
+            background: rgba(10,15,28,0.55);
+            border: 1px solid rgba(148,163,184,0.09);
+            transition: all 0.45s cubic-bezier(0.23,1,0.32,1);
+            position: relative;
+            overflow: hidden;
+        }
+        .metric-card:hover {
+            border-color: rgba(34,197,94,0.38);
+            transform: translateY(-5px);
+            box-shadow: 0 24px 48px -16px rgba(34,197,94,0.12);
+        }
+        .metric-stat {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 12px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(34,197,94,0.8);
+        }
+        .metric-stat::before {
+            content: '';
+            display: block;
+            width: 6px; height: 6px;
+            background: #22C55E;
+        }
+
+        /* ── IMAGE FRAME ── */
+        .clinical-frame {
+            position: relative;
+            overflow: hidden;
+            background: rgba(2,6,23,0.8);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .clinical-frame::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 2px solid transparent;
+            background: linear-gradient(135deg, rgba(34,197,94,0.65), transparent, rgba(0,71,171,0.45)) border-box;
             -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: destination-out;
             mask-composite: exclude;
-            opacity: 0.8;
+            opacity: 0.9;
+            z-index: 2;
         }
-        .flagship-featured-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            filter: brightness(1.1) contrast(1.1);
+        .clinical-frame img {
+            width:100%; height:100%; object-fit:cover; display:block;
+            filter: brightness(1.05) contrast(1.05);
         }
-        .frame-wide { aspect-ratio: 2816 / 1536; }
-        .frame-square { aspect-ratio: 1 / 1; }
-        .bento-stack-item {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-            position: relative;
-            overflow: hidden;
-        }
-        .bento-stack-item::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at top right, rgba(251,79,20,0.1), transparent 70%);
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-        .bento-stack-item:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border-color: #FB4F14;
-            transform: scale(1.02);
-            z-index: 10;
-        }
-        .bento-stack-item:hover::before {
-            opacity: 1;
-        }
+        .frame-sq { aspect-ratio: 1/1; }
+
+        /* ── FOOTER BG ── */
+        footer { background: #040810 !important; }
     </style>
     <script type="application/ld+json">
     {
@@ -156,7 +356,7 @@
     }
     </script>
 </head>
-<body class="bg-white text-clinical-charcoal font-sans antialiased">
+<body style="background-color:#080d18;color:#e2e8f0;" class="font-sans antialiased">
     <header class="fixed top-4 inset-x-0 z-50 flex justify-center ">
         <nav class="nav-dock w-[60%] mx-auto py-3 flex items-center justify-between">
             <div class="flex items-center">
@@ -306,320 +506,418 @@
     </header>
 
     <main>
-        <!-- Hero Header + Clinical Philosophy -->
-        <section class="relative pt-28 pb-24 overflow-hidden bg-clinical-gray">
-            <div class="absolute inset-0 opacity-10 blueprint-dot"></div>
-            <div class="container mx-auto px-6 relative z-10">
-                <div class="grid lg:grid-cols-2 gap-16 xl:gap-20 items-center">
-                    <div class="max-w-2xl">
-                        <div class="inline-flex items-center px-4 py-2 bg-clinical-blue text-white text-[10px] font-black uppercase tracking-[0.4em] mb-8 rounded-none shadow-lg">
-                            Foundational Pillar
+
+                <!-- ════ CHROMOSOME BACKGROUND: hero + what we treat share this ════ -->
+        <div style="position:relative; background:#080d18; overflow:hidden;">
+
+            <!-- Full-bleed chromosome image layer – single source for both sections -->
+            <div aria-hidden="true" style="position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;">
+                <img src="/images/longevityblock.PNG" alt=""
+                     style="position:absolute;top:0;left:0;width:100%;height:100%;
+                            object-fit:cover;
+                            object-position:52% 5%;
+                            transform:scale(1.38);
+                            transform-origin:52% 5%;
+                            opacity:0.72;
+                            filter:brightness(0.9) contrast(1.1) saturate(0.78);">
+                <!-- left-side dark shield (left ~38% = text column) -->
+                <div style="position:absolute;inset:0;
+                     background:linear-gradient(to right,#080d18 0%,#080d18 24%,
+                     rgba(8,13,24,0.82) 40%,rgba(8,13,24,0.40) 60%,
+                     rgba(8,13,24,0.10) 100%);"></div>
+                <!-- top + bottom vignettes -->
+                <div style="position:absolute;inset:0;
+                     background:linear-gradient(to bottom,rgba(8,13,24,0.45) 0%,transparent 10%);"></div>
+            </div>
+
+        <section class="relative flex items-center overflow-hidden pt-32 pb-28" style="min-height:108vh; background:transparent;">
+<div class="container mx-auto px-6 relative z-10">
+                <div class="grid lg:grid-cols-[1fr_420px] gap-12 xl:gap-20 items-center">
+
+                    <!-- LEFT: Title block + integrated Medicine 3.0 strip -->
+                    <div>
+                        <div class="hero-label-badge mb-8">
+                            <span class="hero-label-dot"></span>
+                            Longevity Science &amp; Precision Medicine
                         </div>
-                        <h1 class="text-6xl lg:text-8xl font-display font-bold leading-none italic tracking-tighter text-clinical-blue mb-10">
-                            Advanced Longevity Protocol
+                        <h1 class="font-display font-bold italic tracking-tighter text-white leading-none mb-8" style="font-size: clamp(52px,7vw,96px);">
+                            Advanced<br>
+                            <span class="gradient-green">Longevity</span><br>
+                            Protocol
                         </h1>
-                        <div class="max-w-3xl border-l-4 border-clinical-green pl-8">
-                            <p class="text-2xl lg:text-3xl text-gray-500 font-light leading-relaxed italic">
-                                Precision engineering for healthspan.
-                            </p>
-                        </div>
-
-
-                        <div class="mt-12">
-                            <a href="/contact.html" class="px-12 py-6 bg-clinical-blue text-white rounded-none font-bold text-xl hover:bg-blue-700 transition-all shadow-2xl inline-block">
-                                Request Appointment
-                            </a>
-                        </div>
-                    </div>
-                    <div class="bg-clinical-green p-10 sm:p-12 rounded-none shadow-2xl border border-clinical-green/40">
-                        <div class="space-y-8">
-                            <h2 class="text-3xl lg:text-4xl font-display font-bold italic text-white leading-tight">A New Standard of Care</h2>
-                            <p class="text-lg text-white/90 leading-relaxed font-light">
-                                Medicine 3.0 moves beyond the disease model. We focus on the ultimate trajectory of your healthspan, utilizing advanced cardiopulmonary diagnostics.
-                            </p>
-                            <div class="modern-clinical-frame frame-square">
-                                <img src="/images/longevitycare.png" alt="Longevity Care Clinical Graphic" class="flagship-featured-image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Core Treatment Strategies: Re-Designed with Blueprint BG -->
-        <section class="py-32 blueprint-bg relative overflow-hidden">
-            <!-- Technical Watermark -->
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03] pointer-events-none">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                </svg>
-            </div>
-            
-            <div class="container mx-auto px-6 relative z-10">
-                <div class="max-w-3xl mb-20 text-left">
-                    <h2 class="text-xs font-black text-clinical-green uppercase tracking-[0.6em] mb-4">The Methodology</h2>
-                    <h3 class="text-5xl lg:text-7xl font-display font-bold italic tracking-tight leading-none text-white">Our Core Strategies</h3>
-                </div>
-                <div class="grid lg:grid-cols-3 gap-6">
-                    <div class="strategy-module p-12 rounded-none flex flex-col justify-between h-full relative overflow-hidden group">
-                        <div class="space-y-8 relative z-10">
-                            <div class="w-12 h-1 bg-clinical-green group-hover:w-24 transition-all duration-500"></div>
-                            <div>
-                                <h4 class="text-3xl font-display font-bold text-clinical-charcoal italic leading-tight mb-6">Biomarker Intelligence</h4>
-                                <p class="text-gray-600 text-base font-light leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Comprehensive panels and diagnostics to map biological age, metabolic risk, and cellular recovery capacity.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="strategy-module p-12 rounded-none flex flex-col justify-between h-full relative overflow-hidden group">
-                        <div class="space-y-8 relative z-10">
-                            <div class="w-12 h-1 bg-clinical-green group-hover:w-24 transition-all duration-500"></div>
-                            <div>
-                                <h4 class="text-3xl font-display font-bold text-clinical-charcoal italic leading-tight mb-6">Mitochondrial Optimization</h4>
-                                <p class="text-gray-600 text-base font-light leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Targeted protocols to elevate VO2 Max, enhance ATP output, and restore cellular energy resilience.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="strategy-module p-12 rounded-none flex flex-col justify-between h-full relative overflow-hidden group">
-                        <div class="space-y-8 relative z-10">
-                            <div class="w-12 h-1 bg-clinical-green group-hover:w-24 transition-all duration-500"></div>
-                            <div>
-                                <h4 class="text-3xl font-display font-bold text-clinical-charcoal italic leading-tight mb-6">Metabolic & Hormonal Reset</h4>
-                                <p class="text-gray-600 text-base font-light leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Precision nutrition, recovery, and hormone strategy to stabilize glucose control and protect long-term healthspan.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Conditions We Treat -->
-        <section class="py-32 bg-white">
-            <div class="container mx-auto px-6 text-left">
-                <div class="flex flex-col lg:flex-row justify-between items-end mb-20 gap-8">
-                    <div class="max-w-2xl">
-                        <h2 class="text-4xl lg:text-6xl font-display font-bold italic text-clinical-charcoal tracking-tight leading-none">What We Treat & Optimize</h2>
-                    </div>
-                    <p class="text-gray-400 text-lg font-light italic">Precision longevity optimization targets for whole-body resilience.</p>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div class="condition-tag p-6 rounded-none font-bold text-clinical-charcoal flex items-center gap-4">
-                        <div class="w-2 h-2 rounded-none bg-clinical-green"></div>
-                        Biological Age & Epigenetic Clock
-                    </div>
-                    <div class="condition-tag p-6 rounded-none font-bold text-clinical-charcoal flex items-center gap-4">
-                        <div class="w-2 h-2 rounded-none bg-clinical-green"></div>
-                        Cardiovascular Plaque & ApoB
-                    </div>
-                    <div class="condition-tag p-6 rounded-none font-bold text-clinical-charcoal flex items-center gap-4">
-                        <div class="w-2 h-2 rounded-none bg-clinical-green"></div>
-                        Neuro-Efficiency & Brain Health
-                    </div>
-                    <div class="condition-tag p-6 rounded-none font-bold text-clinical-charcoal flex items-center gap-4">
-                        <div class="w-2 h-2 rounded-none bg-clinical-green"></div>
-                        Hormone & Metabolic Optimization
-                    </div>
-                    <div class="condition-tag p-6 rounded-none font-bold text-clinical-charcoal flex items-center gap-4">
-                        <div class="w-2 h-2 rounded-none bg-clinical-green"></div>
-                        Stem Cell & Regeneration Support
-                    </div>
-                    <div class="condition-tag p-6 rounded-none font-bold text-clinical-charcoal flex items-center gap-4">
-                        <div class="w-2 h-2 rounded-none bg-clinical-green"></div>
-                        VO2 Max & Aerobic Capacity
-                    </div>
-                    <div class="condition-tag p-6 rounded-none font-bold text-clinical-charcoal flex items-center gap-4">
-                        <div class="w-2 h-2 rounded-none bg-clinical-green"></div>
-                        Telomere & Cellular Longevity
-                    </div>
-                    <div class="condition-tag p-6 rounded-none font-bold text-clinical-charcoal flex items-center gap-4">
-                        <div class="w-2 h-2 rounded-none bg-clinical-green"></div>
-                        Sleep Architecture & Recovery
-                    </div>
-                    <div class="condition-tag p-6 rounded-none font-bold text-clinical-charcoal flex items-center gap-4">
-                        <div class="w-2 h-2 rounded-none bg-clinical-green"></div>
-                        Bone Density & Sarcopenia
-                    </div>
-                    <div class="condition-tag p-6 rounded-none font-bold text-clinical-charcoal flex items-center gap-4">
-                        <div class="w-2 h-2 rounded-none bg-clinical-green"></div>
-                        Autonomic Balance (HRV)
-                    </div>
-                    <div class="condition-tag p-6 rounded-none font-bold text-clinical-charcoal flex items-center gap-4">
-                        <div class="w-2 h-2 rounded-none bg-clinical-green"></div>
-                        Strength-to-Weight Performance
-                    </div>
-                    <div class="condition-tag p-6 rounded-none font-bold text-clinical-charcoal flex items-center gap-4">
-                        <div class="w-2 h-2 rounded-none bg-clinical-green"></div>
-                        Inflammatory Load & Cytokines
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- The Arsenal -->
-        <section class="py-32 bg-[#020617] text-white relative overflow-hidden">
-            <div class="absolute inset-0 opacity-10 blueprint-grid"></div>
-            <!-- Large decorative text -->
-            <div class="absolute -top-20 -left-20 text-[200px] font-black text-white/[0.02] pointer-events-none select-none italic">STACK</div>
-            
-            <div class="container mx-auto px-6 relative z-10">
-                <div class="flex flex-col lg:flex-row justify-between items-end mb-20 gap-8 text-left">
-                    <div class="max-w-2xl">
-                        <h2 class="text-xs font-black text-clinical-orange uppercase tracking-[0.6em] mb-4">Tactical Arsenal</h2>
-                        <h3 class="text-5xl lg:text-7xl font-display font-bold italic tracking-tight text-white leading-none">The Clinical Stack</h3>
-                    </div>
-                    <p class="text-gray-400 max-w-sm text-sm font-light leading-relaxed">Integrated technical modalities synchronized for rapid physiological adaptation and structural repair.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-4">
-                    
-    <a href="/treatments/longevity-blood-panels.html" class="bento-stack-item group p-10 rounded-none flex flex-col justify-between h-full lg:col-span-4 md:col-span-6">
-        <div class="flex justify-end items-start mb-8">
-            <div class="w-12 h-12 rounded-none bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-            </div>
-        </div>
-        <div>
-            <h4 class="text-2xl font-display font-bold text-white group-hover:text-clinical-orange transition-colors italic mb-4 leading-tight tracking-tight">Longevity Blood Panels</h4>
-            <p class="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-200 transition-colors">Objective baseline of metabolic risk factors.</p>
-        </div>
-    </a>
-    
-    <a href="/treatments/vo2-max-testing.html" class="bento-stack-item group p-10 rounded-none flex flex-col justify-between h-full lg:col-span-4 md:col-span-6">
-        <div class="flex justify-end items-start mb-8">
-            <div class="w-12 h-12 rounded-none bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-            </div>
-        </div>
-        <div>
-            <h4 class="text-2xl font-display font-bold text-white group-hover:text-clinical-orange transition-colors italic mb-4 leading-tight tracking-tight">VO2 Max Testing</h4>
-            <p class="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-200 transition-colors">Measure cardsiorespiratory fitness and efficiency.</p>
-        </div>
-    </a>
-    
-    <a href="/programs/integrative-physical-therapy.html" class="bento-stack-item group p-10 rounded-none flex flex-col justify-between h-full lg:col-span-4 md:col-span-6">
-        <div class="flex justify-end items-start mb-8">
-            <div class="w-12 h-12 rounded-none bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-            </div>
-        </div>
-        <div>
-            <h4 class="text-2xl font-display font-bold text-white group-hover:text-clinical-orange transition-colors italic mb-4 leading-tight tracking-tight">Strength & Zone 2</h4>
-            <p class="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-200 transition-colors">Build bone density and metabolic flexibility.</p>
-        </div>
-    </a>
-    
-    <a href="/treatments/hyperbaric-oxygen.html" class="bento-stack-item group p-10 rounded-none flex flex-col justify-between h-full lg:col-span-4 md:col-span-6">
-        <div class="flex justify-end items-start mb-8">
-            <div class="w-12 h-12 rounded-none bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-            </div>
-        </div>
-        <div>
-            <h4 class="text-2xl font-display font-bold text-white group-hover:text-clinical-orange transition-colors italic mb-4 leading-tight tracking-tight">Hyperbaric Oxygen</h4>
-            <p class="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-200 transition-colors">Mobilize stem cells and reduce inflammation.</p>
-        </div>
-    </a>
-    
-    <a href="/treatments/pemf-therapy.html" class="bento-stack-item group p-10 rounded-none flex flex-col justify-between h-full lg:col-span-4 md:col-span-6">
-        <div class="flex justify-end items-start mb-8">
-            <div class="w-12 h-12 rounded-none bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-            </div>
-        </div>
-        <div>
-            <h4 class="text-2xl font-display font-bold text-white group-hover:text-clinical-orange transition-colors italic mb-4 leading-tight tracking-tight">PEMF Therapy</h4>
-            <p class="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-200 transition-colors">Reset cellular voltage.</p>
-        </div>
-    </a>
-    
-    <a href="/treatments/red-light-therapy.html" class="bento-stack-item group p-10 rounded-none flex flex-col justify-between h-full lg:col-span-4 md:col-span-6">
-        <div class="flex justify-end items-start mb-8">
-            <div class="w-12 h-12 rounded-none bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-clinical-orange group-hover:border-clinical-orange transition-all duration-700 group-hover:rotate-45">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-            </div>
-        </div>
-        <div>
-            <h4 class="text-2xl font-display font-bold text-white group-hover:text-clinical-orange transition-colors italic mb-4 leading-tight tracking-tight">Red Light Therapy</h4>
-            <p class="text-gray-400 text-sm font-light leading-relaxed group-hover:text-gray-200 transition-colors">Trigger mitochondrial biogenesis.</p>
-        </div>
-    </a>
-    
-                </div>
-            </div>
-        </section>
-
-        <!-- Disclaimer -->
-        <section class="py-24 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="max-w-5xl mx-auto bg-clinical-gray p-12 lg:p-20 rounded-none text-clinical-charcoal relative overflow-hidden border border-gray-100 shadow-2xl">
-                    <div class="relative z-10 text-left space-y-8">
-                        <svg class="w-12 h-12 text-clinical-orange opacity-20" fill="currentColor" viewBox="0 0 24 24"><path d="M13 14h-2v-4h2m0 8h-2v-2h2M1 21h22L12 2 1 21z"/></svg>
-                        <p class="text-xl lg:text-3xl leading-relaxed font-light italic text-gray-600">
-                            "Our multimodal approach is highly personalized. The therapies listed above are powerful tools in our arsenal, but we custom-engineer each plan based on your unique diagnostics."
+                        <p class="text-lg leading-relaxed font-light mb-10" style="color:rgba(148,163,184,0.85); max-width:560px;">
+                            Precision engineering for healthspan. A multi-model clinical framework designed to optimize human performance and cellular biological age.
                         </p>
-                        <div class="flex items-center gap-4 text-xs font-black text-clinical-blue uppercase tracking-widest">
-                            <span class="w-12 h-px bg-clinical-blue/30"></span>
-                            <span>Most Major Insurers Accepted</span>
+                        <div class="flex flex-wrap gap-4 mb-14">
+                            <a href="/contact.html" class="hero-cta-primary">Request Appointment</a>
+                            <a href="#protocol-stack" class="hero-cta-secondary">Explore Methodology</a>
                         </div>
+
+                        <!-- Medicine 3.0 integrated philosophy strip -->
+                        <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:28px;display:flex;gap:24px;align-items:flex-start;max-width:580px;">
+                            <div style="flex-shrink:0;width:3px;height:100%;min-height:64px;background:linear-gradient(to bottom,#22C55E,rgba(34,197,94,0.2));"></div>
+                            <div>
+                                <p style="font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:0.5em;color:#22C55E;margin-bottom:8px;">A New Standard of Care &nbsp;·&nbsp; Medicine 3.0</p>
+                                <p style="font-size:14px;font-weight:300;line-height:1.7;color:rgba(148,163,184,0.80);">Medicine 3.0 moves beyond the disease model. We focus on the ultimate trajectory of your healthspan — optimizing biological age through advanced cardiopulmonary diagnostics, biomarker mapping, and cellular-level intervention.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT: Decorative floating data cards -->
+                    <div class="hidden lg:flex flex-col gap-4 items-stretch">
+                        <div style="background:rgba(12,18,35,0.65);border:1px solid rgba(148,163,184,0.14);backdrop-filter:blur(16px);padding:24px 28px;">
+                            <p style="font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:0.45em;color:rgba(34,197,94,0.8);margin-bottom:10px;">Primary Target</p>
+                            <p class="font-display font-bold italic text-white" style="font-size:22px;line-height:1.2;">Biological Age<br>Reversal</p>
+                            <div style="margin-top:14px;height:2px;background:linear-gradient(90deg,#22C55E,transparent);"></div>
+                        </div>
+                        <div style="background:rgba(12,18,35,0.65);border:1px solid rgba(148,163,184,0.14);backdrop-filter:blur(16px);padding:24px 28px;">
+                            <p style="font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:0.45em;color:rgba(34,197,94,0.8);margin-bottom:10px;">Modalities Deployed</p>
+                            <p class="font-display font-bold italic text-white" style="font-size:22px;line-height:1.2;">6 Integrated<br>Interventions</p>
+                            <div style="margin-top:14px;height:2px;background:linear-gradient(90deg,#22C55E,transparent);"></div>
+                        </div>
+                        <div style="background:rgba(12,18,35,0.65);border:1px solid rgba(148,163,184,0.14);backdrop-filter:blur(16px);padding:24px 28px;">
+                            <p style="font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:0.45em;color:rgba(34,197,94,0.8);margin-bottom:10px;">Outcome Benchmark</p>
+                            <p class="font-display font-bold italic text-white" style="font-size:22px;line-height:1.2;">Top 5th Percentile<br>VO2 Max</p>
+                            <div style="margin-top:14px;height:2px;background:linear-gradient(90deg,#22C55E,transparent);"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+            <div class="section-divider"></div>
+
+<!-- ════════════════════ CONDITIONS WE TREAT ════════════════════ -->
+        <section class="relative overflow-hidden py-28" style="background:transparent;">
+            <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 85% 50%, rgba(34,197,94,0.06),transparent 60%);"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
+                    <div>
+                        <p class="section-eyebrow mb-3">Clinical Targets</p>
+                        <h3 class="font-display font-bold italic tracking-tight text-white" style="font-size:clamp(36px,4.5vw,64px);">What We Treat &amp; Optimize</h3>
+                    </div>
+                    <p class="text-base font-light italic max-w-xs" style="color:rgba(148,163,184,0.65);">Precision longevity optimization targets for whole-body resilience.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+                    <div class="cond-tag p-5 flex items-center gap-4 font-semibold text-sm">
+                        <span style="width:7px;height:7px;flex-shrink:0;background:#22C55E;box-shadow:0 0 7px rgba(34,197,94,0.6);"></span>Biological Age &amp; Epigenetic Clock
+                    </div>
+                    <div class="cond-tag p-5 flex items-center gap-4 font-semibold text-sm">
+                        <span style="width:7px;height:7px;flex-shrink:0;background:#22C55E;box-shadow:0 0 7px rgba(34,197,94,0.6);"></span>Cardiovascular Plaque &amp; ApoB
+                    </div>
+                    <div class="cond-tag p-5 flex items-center gap-4 font-semibold text-sm">
+                        <span style="width:7px;height:7px;flex-shrink:0;background:#22C55E;box-shadow:0 0 7px rgba(34,197,94,0.6);"></span>Neuro-Efficiency &amp; Brain Health
+                    </div>
+                    <div class="cond-tag p-5 flex items-center gap-4 font-semibold text-sm">
+                        <span style="width:7px;height:7px;flex-shrink:0;background:#22C55E;box-shadow:0 0 7px rgba(34,197,94,0.6);"></span>Hormone &amp; Metabolic Optimization
+                    </div>
+                    <div class="cond-tag p-5 flex items-center gap-4 font-semibold text-sm">
+                        <span style="width:7px;height:7px;flex-shrink:0;background:#22C55E;box-shadow:0 0 7px rgba(34,197,94,0.6);"></span>Stem Cell &amp; Regeneration Support
+                    </div>
+                    <div class="cond-tag p-5 flex items-center gap-4 font-semibold text-sm">
+                        <span style="width:7px;height:7px;flex-shrink:0;background:#22C55E;box-shadow:0 0 7px rgba(34,197,94,0.6);"></span>VO2 Max &amp; Aerobic Capacity
+                    </div>
+                    <div class="cond-tag p-5 flex items-center gap-4 font-semibold text-sm">
+                        <span style="width:7px;height:7px;flex-shrink:0;background:#22C55E;box-shadow:0 0 7px rgba(34,197,94,0.6);"></span>Telomere &amp; Cellular Longevity
+                    </div>
+                    <div class="cond-tag p-5 flex items-center gap-4 font-semibold text-sm">
+                        <span style="width:7px;height:7px;flex-shrink:0;background:#22C55E;box-shadow:0 0 7px rgba(34,197,94,0.6);"></span>Sleep Architecture &amp; Recovery
+                    </div>
+                    <div class="cond-tag p-5 flex items-center gap-4 font-semibold text-sm">
+                        <span style="width:7px;height:7px;flex-shrink:0;background:#22C55E;box-shadow:0 0 7px rgba(34,197,94,0.6);"></span>Bone Density &amp; Sarcopenia
+                    </div>
+                    <div class="cond-tag p-5 flex items-center gap-4 font-semibold text-sm">
+                        <span style="width:7px;height:7px;flex-shrink:0;background:#22C55E;box-shadow:0 0 7px rgba(34,197,94,0.6);"></span>Autonomic Balance (HRV)
+                    </div>
+                    <div class="cond-tag p-5 flex items-center gap-4 font-semibold text-sm">
+                        <span style="width:7px;height:7px;flex-shrink:0;background:#22C55E;box-shadow:0 0 7px rgba(34,197,94,0.6);"></span>Strength-to-Weight Performance
+                    </div>
+                    <div class="cond-tag p-5 flex items-center gap-4 font-semibold text-sm">
+                        <span style="width:7px;height:7px;flex-shrink:0;background:#22C55E;box-shadow:0 0 7px rgba(34,197,94,0.6);"></span>Inflammatory Load &amp; Cytokines
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Measuring Success -->
-        <section class="py-24 bg-white border-t border-gray-50">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-24">
-                    <h2 class="text-xs font-black text-clinical-blue uppercase tracking-[0.6em] mb-4 text-center">Objective Data</h2>
-                    <h3 class="text-5xl lg:text-6xl font-display font-bold italic text-clinical-charcoal tracking-tight leading-none text-center">Measuring Success</h3>
+        </div>
+        <!-- end chromosome wrapper -->
+
+        <div class="section-divider"></div>
+
+        <!-- ════════════════════ CORE STRATEGIES ════════════════════ -->
+        <section class="dark-section relative overflow-hidden py-32">
+            <div class="absolute top-0 left-0 font-display font-black italic pointer-events-none select-none" style="font-size:clamp(80px,14vw,200px);color:rgba(255,255,255,0.012);line-height:1;top:-16px;">PROTOCOL</div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <!-- Section header -->
+                <div class="mb-16">
+                    <p class="section-eyebrow mb-3">Our Frameworks</p>
+                    <h3 class="font-display font-bold italic tracking-tight text-white" style="font-size:clamp(40px,5vw,72px);">Our Core Strategies</h3>
                 </div>
-                <div class="grid md:grid-cols-3 gap-20">
-                    
-    <div class="text-center space-y-8 group">
-        <div class="w-24 h-24 bg-clinical-orange/5 rounded-none flex items-center justify-center mx-auto group-hover:bg-clinical-orange group-hover:text-white transition-all duration-700 group-hover:rotate-12">
-            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-        </div>
-        <div class="space-y-4 text-center">
-            <h4 class="text-3xl font-display font-bold text-clinical-charcoal italic tracking-tight leading-none">Elite VO2 Max</h4>
-            <p class="text-gray-500 text-lg font-light leading-relaxed px-4">VO2 Max score reaching top 10th percentile.</p>
-        </div>
-    </div>
-    
-    <div class="text-center space-y-8 group">
-        <div class="w-24 h-24 bg-clinical-orange/5 rounded-none flex items-center justify-center mx-auto group-hover:bg-clinical-orange group-hover:text-white transition-all duration-700 group-hover:rotate-12">
-            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-        </div>
-        <div class="space-y-4 text-center">
-            <h4 class="text-3xl font-display font-bold text-clinical-charcoal italic tracking-tight leading-none">Optimized Lipids</h4>
-            <p class="text-gray-500 text-lg font-light leading-relaxed px-4">Superior advanced lipid markers (ApoB).</p>
-        </div>
-    </div>
-    
-    <div class="text-center space-y-8 group">
-        <div class="w-24 h-24 bg-clinical-orange/5 rounded-none flex items-center justify-center mx-auto group-hover:bg-clinical-orange group-hover:text-white transition-all duration-700 group-hover:rotate-12">
-            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-        </div>
-        <div class="space-y-4 text-center">
-            <h4 class="text-3xl font-display font-bold text-clinical-charcoal italic tracking-tight leading-none">Structural Density</h4>
-            <p class="text-gray-500 text-lg font-light leading-relaxed px-4">Increased lean muscle and bone density.</p>
-        </div>
-    </div>
-    
+
+                <!-- 2×2 strategy bento -->
+                <div class="grid lg:grid-cols-2 gap-5">
+
+                    <!-- 01 Biomarker Intelligence -->
+                    <div class="strategy-card p-10 relative">
+                        <div class="absolute top-6 right-6 strategy-num">01</div>
+                        <div class="space-y-6 relative z-10">
+                            <div style="width:44px;height:3px;background:#22C55E;"></div>
+                            <div class="w-11 h-11 flex items-center justify-center" style="background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.22);">
+                                <svg class="w-5 h-5" style="color:#22C55E;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                            </div>
+                            <h4 class="text-2xl font-display font-bold italic text-white leading-tight">Biomarker Intelligence</h4>
+                            <p class="text-sm font-light leading-relaxed" style="color:rgba(148,163,184,0.78);">Comprehensive panels and diagnostics to map biological age, metabolic risk, and cellular recovery capacity. We utilize deep phenotyping and longitudinal blood analysis to establish a definitive baseline for every physiological system.</p>
+                        </div>
+                    </div>
+
+                    <!-- 02 Mitochondrial Optimization -->
+                    <div class="strategy-card p-10 relative">
+                        <div class="absolute top-6 right-6 strategy-num">02</div>
+                        <div class="space-y-6 relative z-10">
+                            <div style="width:44px;height:3px;background:#22C55E;"></div>
+                            <div class="w-11 h-11 flex items-center justify-center" style="background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.22);">
+                                <svg class="w-5 h-5" style="color:#22C55E;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            </div>
+                            <h4 class="text-2xl font-display font-bold italic text-white leading-tight">Mitochondrial Optimization</h4>
+                            <p class="text-sm font-light leading-relaxed" style="color:rgba(148,163,184,0.78);">Targeted protocols to elevate VO2 Max, enhance ATP output, and restore cellular energy resilience. Enhancing energy production at the cellular level through metabolic switching and precision supplementation.</p>
+                        </div>
+                    </div>
+
+                    <!-- 03 Metabolic & Hormonal Reset -->
+                    <div class="strategy-card p-10 relative">
+                        <div class="absolute top-6 right-6 strategy-num">03</div>
+                        <div class="space-y-6 relative z-10">
+                            <div style="width:44px;height:3px;background:#22C55E;"></div>
+                            <div class="w-11 h-11 flex items-center justify-center" style="background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.22);">
+                                <svg class="w-5 h-5" style="color:#22C55E;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                            </div>
+                            <h4 class="text-2xl font-display font-bold italic text-white leading-tight">Metabolic &amp; Hormonal Reset</h4>
+                            <p class="text-sm font-light leading-relaxed" style="color:rgba(148,163,184,0.78);">Precision nutrition, recovery, and hormone strategy to stabilize glucose control and protect long-term healthspan. Fine-tuning endocrine signaling and balancing metabolic flexibility and protein synthesis.</p>
+                        </div>
+                    </div>
+
+                    <!-- Philosophy quote card (no image) -->
+                    <div class="strategy-card p-10 relative flex flex-col justify-between" style="min-height:280px;">
+                        <!-- Corner accent -->
+                        <div class="absolute top-0 right-0 w-12 h-12 pointer-events-none" style="border-top:1px solid rgba(34,197,94,0.3);border-right:1px solid rgba(34,197,94,0.3);"></div>
+                        <div class="absolute bottom-0 left-0 w-12 h-12 pointer-events-none" style="border-bottom:1px solid rgba(34,197,94,0.15);border-left:1px solid rgba(34,197,94,0.15);"></div>
+
+                        <!-- Large decorative quote mark -->
+                        <div style="font-family:'Lexend',sans-serif;font-size:80px;font-weight:900;line-height:0.8;color:rgba(34,197,94,0.14);user-select:none;margin-bottom:8px;">&ldquo;</div>
+
+                        <p class="font-display font-bold italic text-white leading-snug relative z-10" style="font-size:clamp(20px,2.2vw,30px);margin-bottom:auto;">
+                            Precision is the only luxury that matters in longevity.
+                        </p>
+
+                        <div style="margin-top:32px;display:flex;align-items:center;gap:14px;">
+                            <div style="width:32px;height:1px;background:#22C55E;opacity:0.6;"></div>
+                            <p style="font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:0.45em;color:rgba(34,197,94,0.75);">Clinical Philosophy &nbsp;·&nbsp; Dr. Limle</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- Final CTA -->
-        <section class="py-32 bg-clinical-blue text-white text-center relative overflow-hidden">
-            <div class="absolute inset-0 opacity-20 blueprint-grid"></div>
+        <div class="section-divider"></div>
+
+        
+
+        <!-- ════════════════════ THE CLINICAL STACK ════════════════════ -->
+        <section id="protocol-stack" class="dark-section relative overflow-hidden py-32">
+            <div class="absolute pointer-events-none select-none font-display font-black italic" style="font-size:200px;color:rgba(255,255,255,0.015);top:-30px;left:-20px;line-height:1;">STACK</div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
+                    <div>
+                        <p class="section-eyebrow mb-3">The Modalities</p>
+                        <h3 class="font-display font-bold italic tracking-tight text-white" style="font-size:clamp(40px,5vw,72px);">The Clinical Stack</h3>
+                    </div>
+                    <p class="text-sm font-light leading-relaxed max-w-sm" style="color:rgba(148,163,184,0.65);">A synergistic suite of evidence-based interventions curated to accelerate biological restoration.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                    <a href="/treatments/longevity-blood-panels.html" class="stack-card group p-8 flex flex-col gap-6">
+                        <div class="flex items-start justify-between">
+                            <div class="stack-icon-box">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                            </div>
+                            <div class="stack-arrow">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-display font-bold italic text-white mb-2 group-hover:text-[#22C55E] transition-colors">Longevity Blood Panels</h4>
+                            <p class="text-sm font-light leading-relaxed" style="color:rgba(148,163,184,0.7);">Comprehensive analysis of 120+ biomarkers across metabolic, inflammatory, and cardiovascular health.</p>
+                        </div>
+                    </a>
+
+                    <a href="/treatments/vo2-max-testing.html" class="stack-card group p-8 flex flex-col gap-6">
+                        <div class="flex items-start justify-between">
+                            <div class="stack-icon-box">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                            </div>
+                            <div class="stack-arrow">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-display font-bold italic text-white mb-2 group-hover:text-[#22C55E] transition-colors">VO2 Max Testing</h4>
+                            <p class="text-sm font-light leading-relaxed" style="color:rgba(148,163,184,0.7);">Gold-standard metabolic testing to determine cardiovascular capacity and anaerobic threshold.</p>
+                        </div>
+                    </a>
+
+                    <a href="/programs/integrative-physical-therapy.html" class="stack-card group p-8 flex flex-col gap-6">
+                        <div class="flex items-start justify-between">
+                            <div class="stack-icon-box">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            </div>
+                            <div class="stack-arrow">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-display font-bold italic text-white mb-2 group-hover:text-[#22C55E] transition-colors">Strength &amp; Zone 2</h4>
+                            <p class="text-sm font-light leading-relaxed" style="color:rgba(148,163,184,0.7);">Precision-engineered physical protocols optimized for mitochondrial biogenesis and lean mass retention.</p>
+                        </div>
+                    </a>
+
+                    <a href="/treatments/hyperbaric-oxygen.html" class="stack-card group p-8 flex flex-col gap-6">
+                        <div class="flex items-start justify-between">
+                            <div class="stack-icon-box">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="1.5"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4m0 4h.01"/></svg>
+                            </div>
+                            <div class="stack-arrow">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-display font-bold italic text-white mb-2 group-hover:text-[#22C55E] transition-colors">Hyperbaric Oxygen</h4>
+                            <p class="text-sm font-light leading-relaxed" style="color:rgba(148,163,184,0.7);">Elevated atmospheric pressure to reduce oxygen debt, mobilize stem cells and reduce oxidation.</p>
+                        </div>
+                    </a>
+
+                    <a href="/treatments/pemf-therapy.html" class="stack-card group p-8 flex flex-col gap-6">
+                        <div class="flex items-start justify-between">
+                            <div class="stack-icon-box">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            </div>
+                            <div class="stack-arrow">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-display font-bold italic text-white mb-2 group-hover:text-[#22C55E] transition-colors">PEMF Therapy</h4>
+                            <p class="text-sm font-light leading-relaxed" style="color:rgba(148,163,184,0.7);">Pulsed Electromagnetic Field therapy to reinforce transmembrane potential and cellular communication.</p>
+                        </div>
+                    </a>
+
+                    <a href="/treatments/red-light-therapy.html" class="stack-card group p-8 flex flex-col gap-6">
+                        <div class="flex items-start justify-between">
+                            <div class="stack-icon-box">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" stroke-width="1.5"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                            </div>
+                            <div class="stack-arrow">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-display font-bold italic text-white mb-2 group-hover:text-[#22C55E] transition-colors">Red Light Therapy</h4>
+                            <p class="text-sm font-light leading-relaxed" style="color:rgba(148,163,184,0.7);">Photobiomodulation of specific wavelengths to optimize cytochrome oxidase in mitochondria.</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- ════════════════════ PULL QUOTE / DISCLAIMER ════════════════════ -->
+        <section class="dark-section-alt relative overflow-hidden py-28">
+            <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 50% 50%, rgba(34,197,94,0.07),transparent 65%);"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-4xl mx-auto text-center space-y-8">
+                    <div class="quote-mark leading-none select-none">&ldquo;&rdquo;</div>
+                    <p class="font-display font-bold italic text-white leading-snug" style="font-size:clamp(22px,3.2vw,42px); margin-top:-40px;">
+                        "Our multimodal approach is <em style="color:#22C55E;">highly personalized</em>, moving beyond conventional medicine to engineer a future of peak cognitive and physical longevity."
+                    </p>
+                    <div class="flex items-center justify-center gap-4 pt-4">
+                        <span style="width:40px;height:1px;background:rgba(34,197,94,0.4);"></span>
+                        <p class="text-xs font-black uppercase tracking-[0.4em]" style="color:rgba(148,163,184,0.6);">Scientific Advisory Board &middot; Dr. Limle</p>
+                        <span style="width:40px;height:1px;background:rgba(34,197,94,0.4);"></span>
+                    </div>
+                    <div class="flex items-center justify-center gap-4 pt-2">
+                        <span class="text-xs font-black uppercase tracking-widest" style="color:rgba(34,197,94,0.8);">Most Major Insurers Accepted</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- ════════════════════ MEASURING SUCCESS ════════════════════ -->
+        <section class="dark-section relative overflow-hidden py-32">
+            <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 15% 50%, rgba(0,71,171,0.08),transparent 55%);"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center mb-20">
+                    <p class="section-eyebrow mb-3">Outcomes</p>
+                    <h3 class="font-display font-bold italic tracking-tight text-white" style="font-size:clamp(40px,5vw,68px);">Measuring Success</h3>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6">
+
+                    <div class="metric-card p-10 group">
+                        <h4 class="font-display font-bold italic text-white mb-3" style="font-size:clamp(28px,3.5vw,44px);">Elite VO2 Max</h4>
+                        <p class="text-sm font-light leading-relaxed mb-5" style="color:rgba(148,163,184,0.75);">Achieving aerobic capacity in the top 5th percentile for your biological age group.</p>
+                        <div class="metric-stat">Target: Top 5% percentile</div>
+                    </div>
+
+                    <div class="metric-card p-10 group">
+                        <h4 class="font-display font-bold italic text-white mb-3" style="font-size:clamp(28px,3.5vw,44px);">Optimized Lipids</h4>
+                        <p class="text-sm font-light leading-relaxed mb-5" style="color:rgba(148,163,184,0.75);">Aggressive management of ApoB and Lp(a) to achieve optimal cardiovascular resilience.</p>
+                        <div class="metric-stat">ApoB Target: &lt;60 mg/dL</div>
+                    </div>
+
+                    <div class="metric-card p-10 group">
+                        <h4 class="font-display font-bold italic text-white mb-3" style="font-size:clamp(28px,3.5vw,44px);">Structural Density</h4>
+                        <p class="text-sm font-light leading-relaxed mb-5" style="color:rgba(148,163,184,0.75);">Maintaining superior lean muscle density and appendicular skeletal muscle mass below DEXA norms.</p>
+                        <div class="metric-stat">DEXA-verified &amp; tracked</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ════════════════════ FINAL CTA ════════════════════ -->
+        <section class="relative overflow-hidden py-36" style="background:linear-gradient(145deg,#060b16 0%,#0b1628 50%,#060b16 100%);">
+            <!-- green glow center -->
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div style="width:700px;height:700px;background:radial-gradient(circle,rgba(34,197,94,0.10) 0%,transparent 68%);"></div>
+            </div>
+            <!-- faint grid -->
+
+            <!-- corner accents -->
+            <div class="absolute top-10 left-10 w-20 h-20 pointer-events-none" style="border-top:2px solid rgba(34,197,94,0.28);border-left:2px solid rgba(34,197,94,0.28);"></div>
+            <div class="absolute bottom-10 right-10 w-20 h-20 pointer-events-none" style="border-bottom:2px solid rgba(34,197,94,0.28);border-right:2px solid rgba(34,197,94,0.28);"></div>
+
             <div class="container mx-auto px-6 relative z-10 text-center">
-                <h2 class="text-5xl lg:text-8xl font-display font-bold mb-12 italic tracking-tighter text-white">Engineered for Your <br>Peak Performance</h2>
-                <a href="/contact.html" class="px-12 py-5 bg-white text-[#0047AB] rounded-none font-bold text-2xl hover:bg-clinical-orange hover:text-white transition-all shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-105 transform inline-block" style="color: #0047AB !important;" >
+                <p class="section-eyebrow mb-6">Begin Your Protocol</p>
+                <h2 class="font-display font-bold italic tracking-tighter text-white mb-6" style="font-size:clamp(40px,7vw,96px);line-height:1.0;">
+                    Engineered for Your<br>
+                    <span class="gradient-green">Peak Performance</span>
+                </h2>
+                <p class="text-base font-light mb-12 mx-auto" style="color:rgba(148,163,184,0.7);max-width:460px;">
+                    Join a selective cohort of members dedicated to the radical extension of healthspan and cognitive vitality.
+                </p>
+                <a href="/contact.html" class="hero-cta-primary" style="font-size:15px;padding:18px 52px;">
                     Request Appointment
                 </a>
             </div>
         </section>
+
     </main>
 
     <footer class="relative py-16 text-white overflow-hidden">
