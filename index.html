@@ -30,7 +30,7 @@
                         md: '768px',
                         lg: '1024px',
                         xl: '1280px',
-                        '2xl': '1440px',
+                        '2xl': '1280px',
                     },
                 },
                 extend: {
@@ -581,17 +581,17 @@
         .protocols-swiper-dimensional {
             overflow: visible !important;
             padding: 2rem 0;
+            width: 100%;
             perspective: 2000px;
             min-height: 600px;
-            max-width: 1200px; /* Centered width */
             margin: 0 auto;
+            transform: translateX(10px);
         }
         .protocols-swiper-dimensional .swiper-slide {
             transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
             opacity: 0.7;
             filter: brightness(0.7) grayscale(0.1);
             transform: scale(0.75) translateZ(-300px);
-            width: 220px !important; 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -728,7 +728,6 @@
             margin-bottom: 0.5rem;
         }
 
-        .protocol-card-blueprint__desc {
             font-size: 12px;
             color: rgba(255, 255, 255, 0.6);
             line-height: 1.5;
@@ -950,10 +949,10 @@
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
         }
         .protocols-prev {
-            left: -100px;
+            left: -40px;
         }
         .protocols-next {
-            right: -100px;
+            right: -40px;
         }
         .protocols-button:hover {
             background: rgba(34, 197, 94, 0.2);
@@ -1234,8 +1233,8 @@
 <body class="blueprint-global text-slate-100 font-sans antialiased">
 
     <!-- Global Navigation -->
-    <header class="fixed top-4 inset-x-0 z-50 flex justify-center px-4">
-        <nav class="nav-dock w-full max-w-6xl px-8 py-3 flex items-center justify-between">
+    <header class="fixed top-4 inset-x-0 z-50 flex justify-center ">
+        <nav class="nav-dock w-[60%] mx-auto py-3 flex items-center justify-between">
             <div class="flex items-center">
                 <a href="/index.html" class="flex items-center space-x-3 group">
                     <img src="/images/cclogo_trimmed.png" alt="Cincinnati Chiropractic" class="h-12 w-auto drop-shadow-sm group-hover:drop-shadow-md transition-all">
@@ -1415,8 +1414,8 @@
                      style="background: radial-gradient(circle at 50% 45%, rgba(59, 130, 246, 0.1), transparent 60%);">
                 </div>
             </div>
-            <div class="container mx-auto px-8 relative z-10 text-center">
-                <div class="max-w-6xl mx-auto space-y-8 sm:space-y-12">
+            <div class="w-[60%] mx-auto relative z-10 text-center">
+                <div class="w-full space-y-8 sm:space-y-12">
                     <div class="inline-flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 px-4 sm:px-6 py-2 bg-white/5 backdrop-blur-xl border border-white/10 rounded-none text-center">
                         <span class="text-[15px] sm:text-[13px] font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] text-clinical-blue italic leading-none text-center">Advanced Clinical Performance</span>
                         <span class="hidden sm:block w-px h-4 bg-white/20"></span>
@@ -1424,17 +1423,17 @@
                     </div>
 
                     <div class="space-y-2 relative z-10">
-                        <h1 class="text-4xl sm:text-6xl lg:text-[9.5rem] font-display font-bold leading-[0.9] sm:leading-[0.8] tracking-tighter text-white italic drop-shadow-2xl">
+                        <h1 class="text-3xl sm:text-2xl lg:text-[4.5rem] font-display font-bold leading-[0.9] sm:leading-[0.8] tracking-tighter text-white italic drop-shadow-2xl">
                             CINCINNATI
                         </h1>
-                        <h2 class="text-4xl sm:text-6xl lg:text-[9.5rem] font-display font-bold leading-[0.9] sm:leading-[0.8] tracking-tighter italic drop-shadow-2xl" 
+                        <h2 class="text-3xl sm:text-2xl lg:text-[4.5rem] font-display font-bold leading-[0.9] sm:leading-[0.8] tracking-tighter italic drop-shadow-2xl" 
                             style="color: #003B8E;">
                             CHIROPRACTIC
                         </h2>
                         <div class="py-2 sm:py-4">
-                            <span class="text-3xl sm:text-5xl lg:text-7xl font-light text-white/30 font-display italic">&</span>
+                            <span class="text-3xl sm:text-3xl lg:text-3xl font-light text-white/30 font-display italic">&</span>
                         </div>
-                        <h2 class="text-4xl sm:text-6xl lg:text-[9.5rem] font-display font-bold leading-[0.9] sm:leading-[0.8] tracking-tighter text-clinical-green italic drop-shadow-2xl">
+                        <h2 class="text-3xl sm:text-2xl lg:text-[4.5rem] font-display font-bold leading-[0.9] sm:leading-[0.8] tracking-tighter text-clinical-green italic drop-shadow-2xl">
                             LONGEVITY
                         </h2>
                     </div>
@@ -1482,9 +1481,9 @@
 
         <!-- Center of Excellence: Pro-Level Pedigree -->
         <section id="partnership" class="py-16 relative overflow-hidden">
-            <div class="container mx-auto px-8 relative z-10">
+            <div class="w-[75%] mx-auto relative z-10">
                 <!-- Main Container Box -->
-                <div class="rounded-none border border-white/10 bg-[#070c18]/90 backdrop-blur-2xl p-8 md:p-10 lg:p-12 shadow-2xl relative overflow-hidden">
+                <div class="rounded-none border border-white/10 bg-[#070c18]/90 backdrop-blur-2xl p-6 md:p-8 shadow-2xl relative overflow-hidden">
                     <!-- Subtle gradient overlay -->
                     <div class="absolute inset-0 bg-gradient-to-br from-clinical-blue/5 via-transparent to-transparent pointer-events-none"></div>
                     
@@ -1510,10 +1509,10 @@
                     
                     <!-- LEFT COLUMN: Dr. Profile (3 cols) -->
                     <div class="lg:col-span-3 flex flex-col gap-4">
-                        <div class="p-6 rounded-none border border-clinical-blue/30 bg-gradient-to-br from-clinical-blue/10 to-[#0a0f1e]/80 flex-grow flex flex-col">
+                        <div class="p-5 rounded-none border border-clinical-blue/30 bg-gradient-to-br from-clinical-blue/10 to-[#0a0f1e]/80 flex-grow flex flex-col">
                             <!-- Profile Photo -->
                             <div class="relative mb-6">
-                                <div class="w-48 h-48 mx-auto rounded-none overflow-hidden border-2 border-clinical-blue shadow-2xl shadow-clinical-blue/30 bg-gradient-to-b from-clinical-blue/20 to-transparent p-1">
+                                <div class="w-40 h-40 mx-auto rounded-none overflow-hidden border-2 border-clinical-blue shadow-2xl shadow-clinical-blue/30 bg-gradient-to-b from-clinical-blue/20 to-transparent p-1">
                                     <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Dr. Andrew Limle" class="w-full h-full object-cover rounded-none grayscale brightness-110">
                                 </div>
                                 <!-- Glow effect -->
@@ -1522,8 +1521,8 @@
 
                             <!-- Name & Title -->
                             <div class="text-center space-y-3 mt-auto">
-                                <h4 class="text-3xl font-display font-black text-white uppercase tracking-tight leading-tight">Dr. Andrew<br>Limle</h4>
-                                <span class="text-[14px] text-clinical-green uppercase tracking-[0.3em] font-black block">Official Team Chiropractor</span>
+                                <h4 class="text-2xl font-display font-black text-white uppercase tracking-tight leading-tight">Dr. Andrew<br>Limle</h4>
+                                <span class="text-[12px] text-clinical-green uppercase tracking-[0.3em] font-black block">Official Team Chiropractor</span>
                             </div>
                         </div>
 
@@ -1531,11 +1530,11 @@
                         <div class="flex gap-4">
                             <div class="flex-1 p-3 rounded-none border border-clinical-blue/20 bg-[#0a0f1e]/40 text-center">
                                 <span class="block text-xl font-display font-black text-clinical-blue">15+</span>
-                                <span class="text-[14px] uppercase tracking-[0.3em] text-white/50 font-bold">Years</span>
+                                <span class="text-[12px] uppercase tracking-[0.3em] text-white/50 font-bold">Years</span>
                             </div>
                             <div class="flex-1 p-3 rounded-none border border-clinical-green/20 bg-[#0a0f1e]/40 text-center">
                                 <span class="block text-xl font-display font-black text-clinical-green uppercase">Pro</span>
-                                <span class="text-[14px] uppercase tracking-[0.3em] text-white/50 font-bold">Level</span>
+                                <span class="text-[12px] uppercase tracking-[0.3em] text-white/50 font-bold">Level</span>
                             </div>
                         </div>
                     </div>
@@ -1543,9 +1542,9 @@
                     <!-- CENTER COLUMN: Main Content (6 cols) -->
                     <div class="lg:col-span-6 flex flex-col gap-4">
                         <!-- New Normal Title Row -->
-                        <div class="text-center border-b border-white/10 mb-2 pb-4">
-                            <h3 class="text-xl md:text-2xl font-display font-black text-white uppercase tracking-widest">
-                                Official <span class="text-clinical-blue">Bengals & Cyclones</span> Care
+                        <div class="text-center mb-8">
+                            <h3 class="text-3xl md:text-5xl font-display font-black text-white uppercase tracking-tighter leading-[0.9] text-center">
+                                OFFICIAL <span class="text-clinical-blue italic">BENGALS &</span> <br> <span class="text-clinical-blue italic">CYCLONES</span> CARE
                             </h3>
                         </div>
 
@@ -1583,7 +1582,7 @@
                         </div>
 
                         <!-- Credentials Card -->
-                        <div class="p-5 rounded-none border border-clinical-blue/30 bg-gradient-to-br from-clinical-blue/10 to-[#0a0f1e]/80 flex flex-col md:flex-row md:items-center gap-6 shadow-xl relative overflow-hidden mt-auto">
+                        <div class="p-4 rounded-none border border-clinical-blue/30 bg-gradient-to-br from-clinical-blue/10 to-[#0a0f1e]/80 flex flex-col md:flex-row md:items-center gap-6 shadow-xl relative overflow-hidden mt-auto">
                             <div class="absolute top-0 right-0 w-32 h-32 bg-clinical-blue/5 rounded-none blur-3xl"></div>
                             <div class="shrink-0 relative z-10">
                                 <span class="text-[13px] uppercase tracking-[0.4em] text-clinical-blue font-black block mb-2">Trusted By</span>
@@ -1606,34 +1605,34 @@
                     <!-- RIGHT COLUMN: Pro Alliances (3 cols) -->
                     <div class="lg:col-span-3 flex flex-col gap-4">
                         <!-- Pro Alliances Header -->
-                        <div class="p-5 rounded-none border border-clinical-green/30 bg-gradient-to-br from-clinical-green/10 to-[#0a0f1e]/60 backdrop-blur-xl">
-                            <h4 class="text-xl font-display font-black text-white uppercase italic tracking-tight leading-tight">Official<br><span class="text-clinical-green">Partnerships</span></h4>
+                        <div class="p-4 rounded-none border border-clinical-green/30 bg-gradient-to-br from-clinical-green/10 to-[#0a0f1e]/60 backdrop-blur-xl">
+                            <h4 class="text-lg font-display font-black text-white uppercase italic tracking-tight leading-tight">Official<br><span class="text-clinical-green">Partnerships</span></h4>
                         </div>
 
                         <!-- BENGALS CARD -->
-                        <div class="p-5 rounded-none border border-[#fb4f14]/50 bg-gradient-to-br from-[#fb4f14]/15 to-[#0a0f1e]/80 backdrop-blur-xl flex-grow flex flex-col justify-center relative overflow-hidden group hover:border-[#fb4f14]/70 transition-all duration-500">
-                            <div class="absolute top-0 right-0 w-32 h-32 bg-[#fb4f14]/10 rounded-none blur-3xl"></div>
-                            <div class="flex items-center gap-5 relative z-10">
-                                <div class="w-16 h-16 rounded-none overflow-hidden border-2 border-[#fb4f14]/50 bg-black/40 p-2 flex-shrink-0 group-hover:scale-105 transition-transform duration-500 shadow-xl">
+                        <div class="p-4 rounded-none border border-[#fb4f14]/50 bg-gradient-to-br from-[#fb4f14]/15 to-[#0a0f1e]/80 backdrop-blur-xl flex-grow flex flex-col justify-center relative overflow-hidden group hover:border-[#fb4f14]/70 transition-all duration-500">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-[#fb4f14]/10 rounded-none blur-3xl"></div>
+                            <div class="flex items-center gap-4 relative z-10">
+                                <div class="w-12 h-12 rounded-none overflow-hidden border-2 border-[#fb4f14]/50 bg-black/40 p-1.5 flex-shrink-0 group-hover:scale-105 transition-transform duration-500 shadow-xl">
                                     <img src="/images/treatments/bengals-head.png" alt="Cincinnati Bengals" class="w-full h-full object-contain">
                                 </div>
-                                <div class="space-y-1">
-                                    <h5 class="text-xl font-display font-black text-white uppercase tracking-tight leading-none">Bengals</h5>
-                                    <span class="text-[13px] text-[#fb4f14] uppercase tracking-[0.2em] font-black">NFL</span>
+                                <div class="space-y-0.5 min-w-0">
+                                    <h5 class="text-lg font-display font-black text-white uppercase tracking-tight leading-none truncate">Bengals</h5>
+                                    <span class="text-[11px] text-[#fb4f14] uppercase tracking-[0.2em] font-black">NFL</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- CYCLONES CARD -->
-                        <div class="p-5 rounded-none border border-[#c8102e]/40 bg-gradient-to-br from-[#041E42]/40 to-[#0a0f1e]/80 backdrop-blur-xl flex-grow flex flex-col justify-center relative overflow-hidden group hover:border-[#c8102e]/60 transition-all duration-500 mt-auto">
-                            <div class="absolute top-0 right-0 w-32 h-32 bg-[#041E42]/30 rounded-none blur-3xl"></div>
-                            <div class="flex items-center gap-5 relative z-10">
-                                <div class="w-16 h-16 rounded-none overflow-hidden border-2 border-[#c8102e]/40 bg-black/40 p-2 flex-shrink-0 group-hover:scale-105 transition-transform duration-500 shadow-xl">
+                        <div class="p-4 rounded-none border border-[#c8102e]/40 bg-gradient-to-br from-[#041E42]/40 to-[#0a0f1e]/80 backdrop-blur-xl flex-grow flex flex-col justify-center relative overflow-hidden group hover:border-[#c8102e]/60 transition-all duration-500 mt-auto">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-[#041E42]/30 rounded-none blur-3xl"></div>
+                            <div class="flex items-center gap-4 relative z-10">
+                                <div class="w-12 h-12 rounded-none overflow-hidden border-2 border-[#c8102e]/40 bg-black/40 p-1.5 flex-shrink-0 group-hover:scale-105 transition-transform duration-500 shadow-xl">
                                     <img src="/images/treatments/cyclones.png" alt="Cincinnati Cyclones" class="w-full h-full object-contain">
                                 </div>
-                                <div class="space-y-1">
-                                    <h5 class="text-xl font-display font-black text-white uppercase tracking-tight leading-none">Cyclones</h5>
-                                    <span class="text-[14px] text-[#c8102e] uppercase tracking-[0.2em] font-black">ECHL</span>
+                                <div class="space-y-0.5 min-w-0">
+                                    <h5 class="text-lg font-display font-black text-white uppercase tracking-tight leading-none truncate">Cyclones</h5>
+                                    <span class="text-[12px] text-[#c8102e] uppercase tracking-[0.2em] font-black">ECHL</span>
                                 </div>
                             </div>
                         </div>
@@ -1645,21 +1644,20 @@
 
         <!-- Tier 1: The Clinical Flagships -->
         <section id="programs" class="py-16 relative overflow-hidden">
-            <div class="container mx-auto px-8 relative z-10">
+            <div class="w-[60%] mx-auto relative z-10">
                 <div class="space-y-10">
                     <div class="flex flex-col items-center text-center gap-8 mb-10">
                         <div class="flex justify-center">
-                            <div class="inline-flex flex-col items-center font-display font-bold tracking-tighter text-white mb-10">
-                                <div class="flex items-baseline gap-4 md:gap-6 leading-none">
-                                    <span class="text-lg md:text-3xl text-white/30 tracking-[0.2em] uppercase italic">Elite</span>
-                                    <span class="text-5xl md:text-8xl text-clinical-blue uppercase italic">Clinical</span>
-                                </div>
-                                <div class="flex items-baseline gap-4 md:gap-6 leading-none md:-mt-4">
-                                    <span class="text-lg md:text-3xl text-white/30 tracking-[0.2em] uppercase italic">Core</span>
-                                    <span class="text-7xl md:text-[9rem] text-clinical-green uppercase leading-[0.8] italic">Flagships</span>
-                                </div>
-                                <div class="w-full h-0.5 bg-gradient-to-r from-transparent via-clinical-green/60 to-transparent mt-10"></div>
+                        <div class="inline-flex flex-col items-center font-display font-black italic tracking-tighter text-center">
+                            <div class="flex items-baseline gap-x-3 md:gap-x-5 mb-1 md:mb-2">
+                                <span class="text-sm md:text-xl text-white/20 uppercase">ELITE</span>
+                                <span class="text-3xl md:text-5xl text-clinical-blue uppercase leading-none">CLINICAL</span>
                             </div>
+                            <div class="flex items-baseline gap-x-3 md:gap-x-5">
+                                <span class="text-sm md:text-xl text-white/20 uppercase">CORE</span>
+                                <span class="text-5xl md:text-7xl lg:text-[7.5rem] text-clinical-green uppercase leading-[0.8]">FLAGSHIPS</span>
+                            </div>
+                        </div>
                         </div>
                             <p class="text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-4xl mx-auto">Four core clinical pillars orchestrate the entire Cincinnati Chiropractic &amp; Longevity system—from structural correction to long-term cellular resilience.</p>
                         </div>
@@ -1673,9 +1671,8 @@
                             <div class="flagship-trigger__content">
                                 <div class="space-y-4">
                                     <div>
-                                        <h4 class="text-3xl font-display font-bold text-white leading-tight uppercase">Chiropractic</h4>
+                                        <h4 class="text-xl md:text-2xl font-display font-bold text-white leading-tight uppercase break-words">Chiropractic</h4>
                                     </div>
-                                    <p class="text-white/70 text-base leading-relaxed max-w-[200px]">Precision diagnostics and advanced spinal restoration.</p>
                                     <div class="pt-2">
                                         <div class="skew-button">
                                             <span>Expand</span>
@@ -1690,11 +1687,7 @@
                             <div class="flagship-trigger__content">
                                 <div class="space-y-4">
                                     <div>
-                                        <h4 class="text-3xl font-display font-bold text-white leading-tight uppercase">Physical Therapy</h4>
-                                    </div>
-                                    <p class="text-white/70 text-base leading-relaxed max-w-[200px]">Integrative rehab for performance and recovery.</p>
-                                    <div class="flagship-trigger__detail">
-                                        <p class="text-white/50 text-[14px] leading-relaxed">Neuro-modulation, corrective exercise, and graded functional exposure.</p>
+                                        <h4 class="text-xl md:text-2xl font-display font-bold text-white leading-tight uppercase break-words">Physical Therapy</h4>
                                     </div>
                                     <div class="pt-2">
                                         <div class="skew-button">
@@ -1710,11 +1703,7 @@
                             <div class="flagship-trigger__content">
                                 <div class="space-y-4">
                                     <div>
-                                        <h4 class="text-3xl font-display font-bold text-white leading-tight uppercase">Personalized Medicine</h4>
-                                    </div>
-                                    <p class="text-white/70 text-base leading-relaxed max-w-[200px]">Biomarker-driven care for metabolic and hormonal reset.</p>
-                                    <div class="flagship-trigger__detail">
-                                        <p class="text-white/50 text-[14px] leading-relaxed">Targeted diagnostics, nutrition planning, and recovery engineering.</p>
+                                        <h4 class="text-xl md:text-2xl font-display font-bold text-white leading-tight uppercase break-words">Personalized Medicine</h4>
                                     </div>
                                     <div class="pt-2">
                                         <div class="skew-button">
@@ -1730,11 +1719,7 @@
                             <div class="flagship-trigger__content">
                                 <div class="space-y-4">
                                     <div>
-                                        <h4 class="text-3xl font-display font-bold text-white leading-tight uppercase">Longevity Care</h4>
-                                    </div>
-                                    <p class="text-white/70 text-base leading-relaxed max-w-[200px]">Healthspan protocols for cellular repair and VO2 Max gains.</p>
-                                    <div class="flagship-trigger__detail">
-                                        <p class="text-white/50 text-[14px] leading-relaxed">Cellular energy restoration, metabolic conditioning, and longevity planning.</p>
+                                        <h4 class="text-xl md:text-2xl font-display font-bold text-white leading-tight uppercase break-words">Longevity Care</h4>
                                     </div>
                                     <div class="pt-2">
                                         <div class="skew-button">
@@ -1753,7 +1738,7 @@
                                 <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-12">
                                     <div class="space-y-8">
                                         <div class="space-y-4">
-                                            <h4 class="text-4xl sm:text-5xl font-display font-bold text-white italic tracking-tight uppercase">Precision <span class="text-clinical-green">Chiropractic</span></h4>
+                                            <h4 class="text-3xl sm:text-2xl font-display font-bold text-white italic tracking-tight uppercase">Precision <span class="text-clinical-green">Chiropractic</span></h4>
                                             <p class="text-white/80 text-lg sm:text-xl leading-relaxed font-light">
                                                 Elite structural restoration for the high-performance body. We utilize advanced biomechanical analysis to locate your exact structural failure, moving beyond generic adjustments to address the root cause of joint kinematics and nervous system dysfunction.
                                             </p>
@@ -1794,7 +1779,7 @@
                                 <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-12">
                                     <div class="space-y-8">
                                         <div class="space-y-4">
-                                            <h4 class="text-4xl sm:text-5xl font-display font-bold text-white italic tracking-tight uppercase">Integrative <span class="text-clinical-blue">Physical Therapy</span></h4>
+                                            <h4 class="text-3xl sm:text-2xl font-display font-bold text-white italic tracking-tight uppercase">Integrative <span class="text-clinical-blue">Physical Therapy</span></h4>
                                             <p class="text-white/80 text-lg sm:text-xl leading-relaxed font-light">
                                                 Moving beyond the traditional "PT mill" model. Operating strictly on the Biopsychosocial (BPS) Model of Pain, our clinical team evaluates the interplay between tissue capacity, movement mechanics, and central nervous system sensitivity.
                                             </p>
@@ -1835,7 +1820,7 @@
                                 <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-12">
                                     <div class="space-y-8">
                                         <div class="space-y-4">
-                                            <h4 class="text-4xl sm:text-5xl font-display font-bold text-white italic tracking-tight uppercase">Personalized <span class="text-clinical-blue">Medicine</span></h4>
+                                            <h4 class="text-3xl sm:text-2xl font-display font-bold text-white italic tracking-tight uppercase">Personalized <span class="text-clinical-blue">Medicine</span></h4>
                                             <p class="text-white/80 text-lg sm:text-xl leading-relaxed font-light">
                                                 Medicine 3.0: Precision diagnostics and proactive vitality engineering. Establishing an uncompromising, objective baseline of your biological age and cellular efficiency to engineer a customized data-driven blueprint.
                                             </p>
@@ -1876,7 +1861,7 @@
                                 <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-12">
                                     <div class="space-y-8">
                                         <div class="space-y-4">
-                                            <h4 class="text-4xl sm:text-5xl font-display font-bold text-white italic tracking-tight uppercase">Longevity <span class="text-clinical-blue">Care Protocol</span></h4>
+                                            <h4 class="text-3xl sm:text-2xl font-display font-bold text-white italic tracking-tight uppercase">Longevity <span class="text-clinical-blue">Care Protocol</span></h4>
                                             <p class="text-white/80 text-lg sm:text-xl leading-relaxed font-light">
                                                 Engineering the future of human healthspan through mitochondrial repair, VO2 Max optimization, and cellular energy restoration protocols. We focus on the ultimate trajectory of your biological vitality.
                                             </p>
@@ -1920,34 +1905,33 @@
 
         <!-- The Performance Continuum: The Journey from Pain to Power -->
         <section class="py-16 relative overflow-hidden">
-            <div class="container mx-auto px-8 relative z-10">
+            <div class="w-[60%] mx-auto relative z-10">
                 <!-- technical header -->
-                <div class="max-w-6xl mx-auto text-center mb-12">
+                <div class="w-full text-center mb-12">
                     
-                    <div class="inline-flex flex-col items-start md:items-center justify-center font-display font-bold tracking-tighter text-white mb-10">
-                        <div class="flex items-baseline gap-4 md:gap-6 leading-none">
-                            <span class="text-lg md:text-3xl text-white/30 tracking-[0.2em]">FROM</span>
-                            <span class="text-5xl md:text-8xl text-clinical-blue uppercase">PAIN</span>
+                        <div class="inline-flex flex-col items-center font-display font-black italic tracking-tighter text-center">
+                            <div class="flex items-baseline gap-x-3 md:gap-x-5 mb-1 md:mb-2">
+                                <span class="text-sm md:text-xl text-white/20 uppercase">FROM</span>
+                                <span class="text-3xl md:text-5xl text-clinical-blue uppercase leading-none">PAIN</span>
+                            </div>
+                            <div class="flex items-baseline gap-x-3 md:gap-x-5">
+                                <span class="text-sm md:text-xl text-white/20 uppercase">TO</span>
+                                <span class="text-5xl md:text-7xl lg:text-[7.5rem] text-clinical-green uppercase leading-[0.8]">POWER</span>
+                            </div>
                         </div>
-                        <div class="flex items-baseline gap-4 md:gap-6 leading-none md:-mt-4">
-                            <span class="text-lg md:text-3xl text-white/30 tracking-[0.2em]">TO</span>
-                            <span class="text-7xl md:text-[11rem] text-clinical-green uppercase leading-[0.8]">POWER</span>
-                        </div>
-                        <div class="w-full h-0.5 bg-gradient-to-r from-transparent via-clinical-green/60 to-transparent mt-10"></div>
-                    </div>
 
-                    <p class="text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-6xl mx-auto">
+                    <p class="text-lg md:text-2xl text-gray-300 font-light leading-relaxed w-full">
                         A non-linear journey of biological mastery. We deconstruct physical limitations to rebuild a resilient human engine capable of infinite performance.
                     </p>
                 </div>
 
-                <div class="max-w-6xl mx-auto space-y-12">
+                <div class="w-full space-y-12">
                     <!-- Step 01: Foundations -->
                     <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 relative">
                         <div class="lg:w-1/3 relative">
-                            <div class="absolute -top-20 -left-10 text-[14rem] font-display font-black text-white/[0.03] leading-none select-none pointer-events-none">01</div>
+                            <div class="absolute -top-20 -left-10 text-[11rem] font-display font-black text-white/[0.03] leading-none select-none pointer-events-none">01</div>
                             <div class="relative z-10">
-                                <h3 class="text-5xl md:text-6xl font-display font-bold text-white mb-3 uppercase tracking-tighter">Foundations</h3>
+                                <h3 class="text-3xl md:text-2xl font-display font-bold text-white mb-3 uppercase tracking-tighter">Foundations</h3>
                                 <p class="text-clinical-blue text-[13px] font-black uppercase tracking-[0.5em]">Structural Reset</p>
                             </div>
                         </div>
@@ -1982,9 +1966,9 @@
                             </p>
                         </div>
                         <div class="lg:w-1/3 order-1 lg:order-2 relative text-left lg:text-center">
-                            <div class="absolute -top-20 left-0 lg:left-1/2 lg:-translate-x-1/2 text-[14rem] font-display font-black text-white/[0.03] leading-none select-none pointer-events-none">02</div>
+                            <div class="absolute -top-20 left-0 lg:left-1/2 lg:-translate-x-1/2 text-[11rem] font-display font-black text-white/[0.03] leading-none select-none pointer-events-none">02</div>
                             <div class="relative z-10">
-                                <h3 class="text-5xl md:text-6xl font-display font-bold text-white mb-3 uppercase tracking-tighter">Metabolics</h3>
+                                <h3 class="text-3xl md:text-2xl font-display font-bold text-white mb-3 uppercase tracking-tighter">Metabolics</h3>
                                 <p class="text-clinical-green text-[13px] font-black uppercase tracking-[0.5em]">Cellular Velocity</p>
                             </div>
                         </div>
@@ -2009,9 +1993,9 @@
                     <!-- Step 03: Resilience -->
                     <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 relative">
                         <div class="lg:w-1/3 relative">
-                            <div class="absolute -top-20 -left-10 text-[14rem] font-display font-black text-white/[0.03] leading-none select-none pointer-events-none">03</div>
+                            <div class="absolute -top-20 -left-10 text-[11rem] font-display font-black text-white/[0.03] leading-none select-none pointer-events-none">03</div>
                             <div class="relative z-10">
-                                <h3 class="text-5xl md:text-6xl font-display font-bold text-white mb-3 uppercase tracking-tighter">Resilience</h3>
+                                <h3 class="text-3xl md:text-2xl font-display font-bold text-white mb-3 uppercase tracking-tighter">Resilience</h3>
                                 <p class="text-clinical-blue text-[13px] font-black uppercase tracking-[0.5em]">Strategic Longevity</p>
                             </div>
                         </div>
@@ -2038,40 +2022,27 @@
 
         <!-- Tier 2: Specialized Protocols Bento Grids -->
         <section class="py-16 relative overflow-hidden">
-            <div class="container mx-auto px-8 relative z-10">
-                    <div class="text-center max-w-6xl mx-auto mb-14">
+            <div class="w-[60%] mx-auto relative z-10">
+                    <div class="text-center w-full mb-14">
                         <div class="flex justify-center">
-                            <div class="inline-flex flex-col items-center font-display font-bold tracking-tighter text-white mb-10">
-                                <div class="flex items-baseline gap-4 md:gap-6 leading-none">
-                                    <span class="text-lg md:text-3xl text-white/30 tracking-[0.2em] uppercase italic">Targeted</span>
-                                    <span class="text-5xl md:text-8xl text-clinical-blue uppercase italic">Specialized</span>
-                                </div>
-                                <div class="flex items-baseline gap-4 md:gap-6 leading-none md:-mt-4">
-                                    <span class="text-lg md:text-3xl text-white/30 tracking-[0.2em] uppercase italic">Clinical</span>
-                                    <span class="text-7xl md:text-[9rem] text-clinical-green uppercase leading-[0.8] italic">Protocols</span>
-                                </div>
-                                <div class="w-full h-0.5 bg-gradient-to-r from-transparent via-clinical-green/60 to-transparent mt-10"></div>
+                        <div class="inline-flex flex-col items-center font-display font-black italic tracking-tighter text-center">
+                            <div class="flex items-baseline gap-x-3 md:gap-x-5 mb-1 md:mb-2">
+                                <span class="text-sm md:text-xl text-white/20 uppercase">TARGETED</span>
+                                <span class="text-3xl md:text-5xl text-clinical-blue uppercase leading-none">SPECIALIZED</span>
                             </div>
+                            <div class="flex items-baseline gap-x-3 md:gap-x-5">
+                                <span class="text-sm md:text-xl text-white/20 uppercase">CLINICAL</span>
+                                <span class="text-5xl md:text-7xl lg:text-[7.5rem] text-clinical-green uppercase leading-[0.8]">PROTOCOLS</span>
+                            </div>
+                        </div>
                         </div>
                         <p class="text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-4xl mx-auto">Precision tracks that address chronic conditions and performance enhancement with targeted diagnostics and recovery engineering.</p>
                     </div>
 
                 <div class="space-y-20">
                     <div class="space-y-8">
-                        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
-                            <div class="max-w-2xl space-y-3">
-                                <div class="inline-flex flex-col items-start font-display font-bold tracking-tighter text-white mb-4">
-                                    <div class="leading-none">
-                                        <span class="text-3xl md:text-5xl text-clinical-green uppercase italic">Chronic</span>
-                                    </div>
-                                    <div class="leading-none md:-mt-2">
-                                        <span class="text-4xl md:text-6xl text-white uppercase leading-[0.8] italic">Management</span>
-                                    </div>
-                                </div>
-                                <p class="text-white/70 text-base sm:text-lg leading-relaxed">Dedicated clinical management for complex chronic pathologies requiring specific physiological interventions.</p>
-                            </div>
-                            <div class="flex items-center gap-3 text-[13px] uppercase tracking-[0.35em] text-white/50">
-                            </div>
+                        <div class="text-center mb-14">
+                            <h3 class="text-xl md:text-2xl font-display font-black italic text-clinical-green uppercase tracking-[0.3em]">Recovery Engineering</h3>
                         </div>
                         <div class="relative">
                             <div class="swiper protocols-swiper-dimensional protocols-swiper--chronic">
@@ -2083,10 +2054,9 @@
                                             </div>
                                             <div class="protocol-card-blueprint__info">
                                                 <h4 class="protocol-card-blueprint__title">Neuropathy Care</h4>
-                                                <p class="protocol-card-blueprint__desc">Precision neuro-regeneration for nerve revitalization and axonal repair.</p>
                                                 <div class="protocol-card-blueprint__footer">
                                                     <div class="protocol-card-blueprint__stats">
-                                                        <span class="protocol-card-blueprint__stats-value text-clinical-green uppercase font-bold text-[13px]">Learn More</span>
+                                                        <span class="protocol-card-blueprint__stats-value text-clinical-green uppercase font-bold text-[13px]">Expand</span>
                                                     </div>
                                                     <a href="/programs/neuropathy-care.html" class="protocol-card-blueprint__action">
                                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -2102,10 +2072,9 @@
                                             </div>
                                             <div class="protocol-card-blueprint__info">
                                                 <h4 class="protocol-card-blueprint__title">Cardiometabolic Repair</h4>
-                                                <p class="protocol-card-blueprint__desc">Rebuilding insulin sensitivity and cardiopulmonary efficiency.</p>
                                                 <div class="protocol-card-blueprint__footer">
                                                     <div class="protocol-card-blueprint__stats">
-                                                        <span class="protocol-card-blueprint__stats-value text-clinical-green uppercase font-bold text-[13px]">Learn More</span>
+                                                        <span class="protocol-card-blueprint__stats-value text-clinical-green uppercase font-bold text-[13px]">Expand</span>
                                                     </div>
                                                     <a href="/programs/cardiometabolic-repair.html" class="protocol-card-blueprint__action">
                                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -2121,10 +2090,9 @@
                                             </div>
                                             <div class="protocol-card-blueprint__info">
                                                 <h4 class="protocol-card-blueprint__title">Chronic Fatigue</h4>
-                                                <p class="protocol-card-blueprint__desc">Systemic recovery for ME/CFS and post-viral biological reset.</p>
                                                 <div class="protocol-card-blueprint__footer">
                                                     <div class="protocol-card-blueprint__stats">
-                                                        <span class="protocol-card-blueprint__stats-value text-clinical-green uppercase font-bold text-[13px]">Learn More</span>
+                                                        <span class="protocol-card-blueprint__stats-value text-clinical-green uppercase font-bold text-[13px]">Expand</span>
                                                     </div>
                                                     <a href="/programs/chronic-fatigue-long-covid.html" class="protocol-card-blueprint__action">
                                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -2140,10 +2108,9 @@
                                             </div>
                                             <div class="protocol-card-blueprint__info">
                                                 <h4 class="protocol-card-blueprint__title">Fibromyalgia Care</h4>
-                                                <p class="protocol-card-blueprint__desc">Centralized pain relief and high-precision neural regulation.</p>
                                                 <div class="protocol-card-blueprint__footer">
                                                     <div class="protocol-card-blueprint__stats">
-                                                        <span class="protocol-card-blueprint__stats-value text-clinical-green uppercase font-bold text-[13px]">Learn More</span>
+                                                        <span class="protocol-card-blueprint__stats-value text-clinical-green uppercase font-bold text-[13px]">Expand</span>
                                                     </div>
                                                     <a href="/programs/fibromyalgia-care.html" class="protocol-card-blueprint__action">
                                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -2159,10 +2126,9 @@
                                             </div>
                                             <div class="protocol-card-blueprint__info">
                                                 <h4 class="protocol-card-blueprint__title">Balance &amp; Strength</h4>
-                                                <p class="protocol-card-blueprint__desc">Structural reinforcement and biological density preservation.</p>
                                                 <div class="protocol-card-blueprint__footer">
                                                     <div class="protocol-card-blueprint__stats">
-                                                        <span class="protocol-card-blueprint__stats-value text-clinical-green uppercase font-bold text-[13px]">Learn More</span>
+                                                        <span class="protocol-card-blueprint__stats-value text-clinical-green uppercase font-bold text-[13px]">Expand</span>
                                                     </div>
                                                     <a href="/programs/balance-strength-bone-optimization.html" class="protocol-card-blueprint__action">
                                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -2183,20 +2149,8 @@
                     </div>
 
                     <div class="space-y-8">
-                        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
-                            <div class="max-w-2xl space-y-3">
-                                <div class="inline-flex flex-col items-start font-display font-bold tracking-tighter text-white mb-4">
-                                    <div class="leading-none">
-                                        <span class="text-3xl md:text-5xl text-clinical-blue uppercase italic">Performance</span>
-                                    </div>
-                                    <div class="leading-none md:-mt-2">
-                                        <span class="text-4xl md:text-6xl text-white uppercase leading-[0.8] italic">Structure</span>
-                                    </div>
-                                </div>
-                                <p class="text-white/70 text-base sm:text-lg leading-relaxed">Engineering the physical chassis for durability, explosive power, and long-term structural integrity.</p>
-                            </div>
-                            <div class="flex items-center gap-3 text-[13px] uppercase tracking-[0.35em] text-white/50">
-                            </div>
+                        <div class="text-center mb-14">
+                            <h3 class="text-xl md:text-2xl font-display font-black italic text-clinical-blue uppercase tracking-[0.3em]">Performance & Structure</h3>
                         </div>
                         <div class="relative">
                             <div class="swiper protocols-swiper-dimensional protocols-swiper--performance">
@@ -2208,10 +2162,9 @@
                                             </div>
                                             <div class="protocol-card-blueprint__info">
                                                 <h4 class="protocol-card-blueprint__title">Longevity &amp; Healthspan</h4>
-                                                <p class="protocol-card-blueprint__desc">Mitochondrial care and proactive diagnostics to extend healthspan.</p>
                                                 <div class="protocol-card-blueprint__footer">
                                                     <div class="protocol-card-blueprint__stats">
-                                                        <span class="protocol-card-blueprint__stats-value text-clinical-blue uppercase font-bold text-[13px]">Learn More</span>
+                                                        <span class="protocol-card-blueprint__stats-value text-clinical-blue uppercase font-bold text-[13px]">Expand</span>
                                                     </div>
                                                     <a href="/programs/longevity-healthspan-optimization.html" class="protocol-card-blueprint__action" style="background: rgba(0, 71, 171, 0.2); color: #0047AB;">
                                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -2227,10 +2180,9 @@
                                             </div>
                                             <div class="protocol-card-blueprint__info">
                                                 <h4 class="protocol-card-blueprint__title">Golf Performance</h4>
-                                                <p class="protocol-card-blueprint__desc">Biomechanical swing work to increase power and structural durability.</p>
                                                 <div class="protocol-card-blueprint__footer">
                                                     <div class="protocol-card-blueprint__stats">
-                                                        <span class="protocol-card-blueprint__stats-value text-clinical-blue uppercase font-bold text-[13px]">Learn More</span>
+                                                        <span class="protocol-card-blueprint__stats-value text-clinical-blue uppercase font-bold text-[13px]">Expand</span>
                                                     </div>
                                                     <a href="/programs/golf-performance-cincinnati.html" class="protocol-card-blueprint__action" style="background: rgba(0, 71, 171, 0.2); color: #0047AB;">
                                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -2246,10 +2198,9 @@
                                             </div>
                                             <div class="protocol-card-blueprint__info">
                                                 <h4 class="protocol-card-blueprint__title">HRV Optimization</h4>
-                                                <p class="protocol-card-blueprint__desc">Improve autonomic flexibility for recovery and performance.</p>
                                                 <div class="protocol-card-blueprint__footer">
                                                     <div class="protocol-card-blueprint__stats">
-                                                        <span class="protocol-card-blueprint__stats-value text-clinical-blue uppercase font-bold text-[13px]">Learn More</span>
+                                                        <span class="protocol-card-blueprint__stats-value text-clinical-blue uppercase font-bold text-[13px]">Expand</span>
                                                     </div>
                                                     <a href="/programs/heart-rate-variability-optimization.html" class="protocol-card-blueprint__action" style="background: rgba(0, 71, 171, 0.2); color: #0047AB;">
                                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -2265,10 +2216,9 @@
                                             </div>
                                             <div class="protocol-card-blueprint__info">
                                                 <h4 class="protocol-card-blueprint__title">Sleep Optimization</h4>
-                                                <p class="protocol-card-blueprint__desc">Structural and autonomic regulation to optimize deep sleep architecture.</p>
                                                 <div class="protocol-card-blueprint__footer">
                                                     <div class="protocol-card-blueprint__stats">
-                                                        <span class="protocol-card-blueprint__stats-value text-clinical-blue uppercase font-bold text-[13px]">Learn More</span>
+                                                        <span class="protocol-card-blueprint__stats-value text-clinical-blue uppercase font-bold text-[13px]">Expand</span>
                                                     </div>
                                                     <a href="/programs/brain-health-sleep-optimization.html" class="protocol-card-blueprint__action" style="background: rgba(0, 71, 171, 0.2); color: #0047AB;">
                                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -2284,10 +2234,9 @@
                                             </div>
                                             <div class="protocol-card-blueprint__info">
                                                 <h4 class="protocol-card-blueprint__title">Flexibility &amp; Mobility</h4>
-                                                <p class="protocol-card-blueprint__desc">Restore range of motion and resilient movement mechanics.</p>
                                                 <div class="protocol-card-blueprint__footer">
                                                     <div class="protocol-card-blueprint__stats">
-                                                        <span class="protocol-card-blueprint__stats-value text-clinical-blue uppercase font-bold text-[13px]">Learn More</span>
+                                                        <span class="protocol-card-blueprint__stats-value text-clinical-blue uppercase font-bold text-[13px]">Expand</span>
                                                     </div>
                                                     <a href="/programs/flexibility-mobility-optimization.html" class="protocol-card-blueprint__action" style="background: rgba(0, 71, 171, 0.2); color: #0047AB;">
                                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -2313,19 +2262,18 @@
 
         <!-- Precision Modalities Section -->
         <section class="py-16 relative overflow-hidden blueprint-global">
-            <div class="container mx-auto px-8 relative z-10">
-                <div class="max-w-6xl mx-auto text-center mb-10">
+            <div class="w-[60%] mx-auto relative z-10">
+                <div class="w-full text-center mb-10">
                     <div class="flex justify-center">
-                        <div class="inline-flex flex-col items-center font-display font-bold tracking-tighter text-white mb-10">
-                            <div class="flex items-baseline gap-4 md:gap-8 leading-none">
-                                <span class="text-2xl md:text-4xl text-white/30 tracking-[0.2em] uppercase italic">Elite</span>
-                                <span class="text-6xl md:text-[7rem] text-clinical-blue uppercase italic">Advanced</span>
+                        <div class="inline-flex flex-col items-center font-display font-black italic tracking-tighter text-center">
+                            <div class="flex items-baseline gap-x-3 md:gap-x-5 mb-1 md:mb-2">
+                                <span class="text-sm md:text-xl text-white/20 uppercase">ELITE</span>
+                                <span class="text-3xl md:text-5xl text-clinical-blue uppercase leading-none">ADVANCED</span>
                             </div>
-                            <div class="flex items-baseline gap-4 md:gap-8 leading-none md:-mt-6">
-                                <span class="text-2xl md:text-4xl text-white/30 tracking-[0.2em] uppercase italic">Clinical</span>
-                                <span class="text-8xl md:text-[11rem] text-clinical-green uppercase leading-[0.8] italic">Modalities</span>
+                            <div class="flex items-baseline gap-x-3 md:gap-x-5">
+                                <span class="text-sm md:text-xl text-white/20 uppercase">CLINICAL</span>
+                                <span class="text-5xl md:text-7xl lg:text-[7.5rem] text-clinical-green uppercase leading-[0.8]">MODALITIES</span>
                             </div>
-                            <div class="w-full h-1 bg-gradient-to-r from-transparent via-clinical-green/60 to-transparent mt-12"></div>
                         </div>
                     </div>
                     <p class="text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-4xl mx-auto">
@@ -2333,7 +2281,7 @@
                     </p>
                 </div>
 
-                <div class="max-w-6xl mx-auto">
+                <div class="w-full">
                     <!-- Row 1: 6 items -->
                     <div class="grid grid-cols-3 sm:grid-cols-6 gap-4 sm:gap-8 mb-6">
                         <!-- Cold Laser (Class IV) - Laser beam icon -->
@@ -2512,19 +2460,18 @@
 
         <!-- Precision Architects: Meet the Team -->
         <section class="py-16 relative overflow-hidden blueprint-global">
-            <div class="container mx-auto px-8 relative z-10">
-                <div class="max-w-6xl mx-auto text-center mb-10">
+            <div class="w-[60%] mx-auto relative z-10">
+                <div class="w-full text-center mb-10">
                     <div class="flex justify-center">
-                        <div class="inline-flex flex-col items-center font-display font-bold tracking-tighter text-white mb-10">
-                            <div class="flex items-baseline gap-4 md:gap-6 leading-none">
-                                <span class="text-lg md:text-3xl text-white/30 tracking-[0.2em] uppercase italic">The</span>
-                                <span class="text-5xl md:text-8xl text-clinical-blue uppercase italic">Precision</span>
+                        <div class="inline-flex flex-col items-center font-display font-black italic tracking-tighter text-center">
+                            <div class="flex items-baseline gap-x-3 md:gap-x-5 mb-1 md:mb-2">
+                                <span class="text-sm md:text-xl text-white/20 uppercase">THE</span>
+                                <span class="text-3xl md:text-5xl text-clinical-blue uppercase leading-none">PRECISION</span>
                             </div>
-                            <div class="flex items-baseline gap-4 md:gap-6 leading-none md:-mt-4">
-                                <span class="text-lg md:text-3xl text-white/30 tracking-[0.2em] uppercase italic">Clinical</span>
-                                <span class="text-7xl md:text-[9rem] text-clinical-green uppercase leading-[0.8] italic">Architects</span>
+                            <div class="flex items-baseline gap-x-3 md:gap-x-5">
+                                <span class="text-sm md:text-xl text-white/20 uppercase">CLINICAL</span>
+                                <span class="text-5xl md:text-7xl lg:text-[7.5rem] text-clinical-green uppercase leading-[0.8]">ARCHITECTS</span>
                             </div>
-                            <div class="w-full h-0.5 bg-gradient-to-r from-transparent via-clinical-green/60 to-transparent mt-10"></div>
                         </div>
                     </div>
                     <p class="text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-4xl mx-auto">
@@ -2532,7 +2479,7 @@
                     </p>
                 </div>
 
-                <div class="max-w-6xl mx-auto">
+                <div class="w-full">
                     <div class="architect-container">
                         <!-- Left Column: Dr. Andrew Limle -->
                         <div class="architect-lead-col">
@@ -2658,6 +2605,7 @@
             document.addEventListener('DOMContentLoaded', function() {
                 new Swiper('.clinic-gallery', {
                     loop: true,
+                    centeredSlides: true,
                     pagination: {
                         el: '.swiper-pagination',
                         clickable: true,
@@ -2721,11 +2669,11 @@
 
                 const setupDimensionalSwiper = (selector, prevEl, nextEl) => {
                     return new Swiper(selector, {
-                        slidesPerView: 'auto',
+                        slidesPerView: 5,
                         centeredSlides: true,
                         initialSlide: 2,
                         loop: false,
-                        spaceBetween: 50, // Increased base spacing to help equalize gaps
+                        spaceBetween: 0, 
                         speed: 800,
                         grabCursor: true,
                         slideToClickedSlide: true,
@@ -2736,7 +2684,8 @@
                         },
                         breakpoints: {
                             1200: {
-                                spaceBetween: 50, 
+                                slidesPerView: 5,
+                                spaceBetween: 0, 
                             }
                         }
                     });
@@ -2796,19 +2745,18 @@
         </script>
         <!-- Clinic Gallery Carousel -->
         <section class="py-16 relative overflow-hidden">
-            <div class="container mx-auto px-8">
+            <div class="w-[60%] mx-auto">
                 <div class="text-center mb-10">
                     <div class="flex justify-center">
-                        <div class="inline-flex flex-col items-center font-display font-bold tracking-tighter text-white mb-10">
-                            <div class="flex items-baseline gap-4 md:gap-6 leading-none">
-                                <span class="text-lg md:text-3xl text-white/30 tracking-[0.2em] uppercase italic">Inside</span>
-                                <span class="text-5xl md:text-8xl text-clinical-blue uppercase italic">The</span>
+                        <div class="inline-flex flex-col items-center font-display font-black italic tracking-tighter text-center">
+                            <div class="flex items-baseline gap-x-3 md:gap-x-5 mb-1 md:mb-2">
+                                <span class="text-sm md:text-xl text-white/20 uppercase">INSIDE</span>
+                                <span class="text-3xl md:text-5xl text-clinical-blue uppercase leading-none">THE</span>
                             </div>
-                            <div class="flex items-baseline gap-4 md:gap-6 leading-none md:-mt-4">
-                                <span class="text-lg md:text-3xl text-white/30 tracking-[0.2em] uppercase italic">Modern</span>
-                                <span class="text-7xl md:text-[9rem] text-clinical-green uppercase leading-[0.8] italic">Clinic</span>
+                            <div class="flex items-baseline gap-x-3 md:gap-x-5">
+                                <span class="text-sm md:text-xl text-white/20 uppercase">MODERN</span>
+                                <span class="text-5xl md:text-7xl lg:text-[7.5rem] text-clinical-green uppercase leading-[0.8]">CLINIC</span>
                             </div>
-                            <div class="w-full h-0.5 bg-gradient-to-r from-transparent via-clinical-green/60 to-transparent mt-10"></div>
                         </div>
                     </div>
                     <p class="text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-4xl mx-auto">
@@ -2820,21 +2768,21 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide h-[400px] md:h-[600px] relative">
                             <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Cincinnati Chiropractic Clinic Environment" class="w-full h-full object-cover">
-                            <div class="absolute bottom-6 left-6 md:bottom-12 md:left-12 z-10 max-w-[80%] md:max-w-none text-white drop-shadow-xl">
+                            <div class="absolute bottom-6 left-6 md:bottom-12 md:left-12 z-10 max-w-[60%] md:max-w-none text-white drop-shadow-xl">
                                 <h5 class="font-display font-bold text-white text-lg md:text-xl">Advanced Recovery Suite</h5>
                                 <p class="text-white/70 text-sm md:text-base">Elite technology for cellular regeneration.</p>
                             </div>
                         </div>
                         <div class="swiper-slide h-[400px] md:h-[600px] relative">
                             <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Treatment Technology Area" class="w-full h-full object-cover">
-                            <div class="absolute bottom-6 left-6 md:bottom-12 md:left-12 z-10 max-w-[80%] md:max-w-none text-white drop-shadow-xl">
+                            <div class="absolute bottom-6 left-6 md:bottom-12 md:left-12 z-10 max-w-[60%] md:max-w-none text-white drop-shadow-xl">
                                 <h5 class="font-display font-bold text-white text-lg md:text-xl">Precision Diagnostics</h5>
                                 <p class="text-white/70 text-sm md:text-base">Biomarker tracking and performance metrics.</p>
                             </div>
                         </div>
                         <div class="swiper-slide h-[400px] md:h-[600px] relative">
                             <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Diagnostic & VO2 Max Suite" class="w-full h-full object-cover">
-                            <div class="absolute bottom-6 left-6 md:bottom-12 md:left-12 z-10 max-w-[80%] md:max-w-none text-white drop-shadow-xl">
+                            <div class="absolute bottom-6 left-6 md:bottom-12 md:left-12 z-10 max-w-[60%] md:max-w-none text-white drop-shadow-xl">
                                 <h5 class="font-display font-bold text-white text-lg md:text-xl">The Mitoflux Wing</h5>
                                 <p class="text-white/70 text-sm md:text-base">Designed for systemic longevity and durability.</p>
                             </div>
@@ -2850,7 +2798,7 @@
 
         <!-- Social Proof: Clinical Outcomes -->
         <section id="reviews" class="py-32 relative overflow-hidden blueprint-global">
-            <div class="container mx-auto px-8 relative z-10">
+            <div class="w-[60%] mx-auto relative z-10">
                 <div class="grid lg:grid-cols-2 gap-20 items-start mb-32">
                     <!-- Left: Featured Quote -->
                     <div class="space-y-10">
@@ -2859,7 +2807,7 @@
                             <div class="w-16 h-0.5 bg-clinical-green/40"></div>
                         </div>
                         
-                        <blockquote class="text-4xl md:text-5xl lg:text-7xl font-display font-bold leading-[1.05] tracking-tighter text-white">
+                        <blockquote class="text-2xl md:text-3xl lg:text-3xl font-display font-bold leading-[1.05] tracking-tighter text-white">
                             "Working with Dr. Andrew both in the office and when we are travelling at events is crucial in fine tuning my body mechanics, maintaining my best swing, and eliminating any aches that may arise in competition."
                         </blockquote>
                         
@@ -2872,27 +2820,8 @@
                         </div>
                     </div>
 
-                    <!-- Right: Google & Secondary Reviews -->
-                    <div class="lg:pl-12 space-y-16">
-                        <div class="flex items-center gap-8">
-                            <div class="shrink-0">
-                                <svg class="w-16 h-16" viewBox="0 0 24 24">
-                                    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c1.68-1.54 2.65-3.81 2.65-6.5z"/><path fill="#34A853" d="M12 23c3.15 0 5.79-1.05 7.72-2.85l-3.57-2.77c-.98.66-2.23 1.06-3.75 1.06-2.88 0-5.33-1.94-6.21-4.54H2.55v2.86C4.48 20.52 8.02 23 12 23z"/><path fill="#FBBC05" d="M5.79 13.9c-.23-.66-.35-1.36-.35-2.1s.12-1.44.35-2.1V6.84H2.55C1.75 8.42 1.3 10.16 1.3 12s.45 3.58 1.25 5.16l3.24-2.26z"/><path fill="#EA4335" d="M12 5.38c1.71 0 3.25.59 4.46 1.73l3.34-3.34C17.78 1.83 15.15.7 12 .7 8.02.7 4.48 3.18 2.55 6.84l3.24 2.26c.88-2.6 3.33-4.54 6.21-4.54z"/>
-                                </svg>
-                                <div class="flex gap-1 text-yellow-400 mt-3 justify-center">
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                </div>
-                            </div>
-                            <div>
-                                <span class="text-xs font-bold text-white/40 uppercase tracking-[0.3em]">Verified 5-Star Clinical Outcomes</span>
-                                <div class="w-8 h-0.5 bg-white/10 mt-2"></div>
-                            </div>
-                        </div>
-
+                    <!-- Right: Secondary Reviews -->
+                    <div class="lg:pl-12">
                         <div class="space-y-12 border-l border-white/5 pl-10">
                             <!-- Review 2 -->
                             <div class="space-y-4">
@@ -2913,6 +2842,27 @@
                     </div>
                 </div>
 
+                <!-- Centered Google Review Badge -->
+                <div class="flex justify-center items-center gap-8 mt-12 mb-20">
+                    <div class="flex flex-col items-center">
+                        <svg class="w-16 h-16 mb-2" viewBox="0 0 24 24">
+                            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c1.68-1.54 2.65-3.81 2.65-6.5z"/><path fill="#34A853" d="M12 23c3.15 0 5.79-1.05 7.72-2.85l-3.57-2.77c-.98.66-2.23 1.06-3.75 1.06-2.88 0-5.33-1.94-6.21-4.54H2.55v2.86C4.48 20.52 8.02 23 12 23z"/><path fill="#FBBC05" d="M5.79 13.9c-.23-.66-.35-1.36-.35-2.1s.12-1.44.35-2.1V6.84H2.55C1.75 8.42 1.3 10.16 1.3 12s.45 3.58 1.25 5.16l3.24-2.26z"/><path fill="#EA4335" d="M12 5.38c1.71 0 3.25.59 4.46 1.73l3.34-3.34C17.78 1.83 15.15.7 12 .7 8.02.7 4.48 3.18 2.55 6.84l3.24 2.26c.88-2.6 3.33-4.54 6.21-4.54z"/>
+                        </svg>
+                        <div class="flex gap-1 text-yellow-400">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <p class="text-lg font-bold text-white/50 uppercase tracking-[0.2em]">Verified 5-Star Clinical</p>
+                        <p class="text-lg font-bold text-white/50 uppercase tracking-[0.2em]">Outcomes</p>
+                        <div class="w-12 h-0.5 bg-white/10 mt-2"></div>
+                    </div>
+                </div>
+
                 <!-- Featured CTA Section -->
                 <div class="relative mt-20">
                     <div class="grid lg:grid-cols-[1fr_1.2fr] items-center">
@@ -2924,8 +2874,8 @@
                                     <div class="space-y-8">
                                         <span class="text-[11px] font-bold uppercase tracking-[0.9em] text-clinical-green block opacity-100">The Architectural Protocol</span>
                                         <div class="space-y-0">
-                                            <h3 class="text-7xl md:text-[7rem] font-display font-bold text-white leading-[0.8] tracking-tighter">Clinical</h3>
-                                            <h3 class="text-7xl md:text-[7rem] font-display font-bold text-clinical-green leading-[0.8] tracking-tighter">Authority.</h3>
+                                            <h3 class="text-3xl md:text-[4.5rem] font-display font-bold text-white leading-[0.8] tracking-tighter">Clinical</h3>
+                                            <h3 class="text-3xl md:text-[4.5rem] font-display font-bold text-clinical-green leading-[0.8] tracking-tighter">Authority.</h3>
                                         </div>
                                     </div>
                                     
@@ -2969,7 +2919,7 @@
             <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.28) 1px, transparent 0); background-size: 220px 220px;"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
         </div>
-        <div class="container mx-auto px-8 relative z-10">
+        <div class="w-[60%] mx-auto relative z-10">
             <div class="grid lg:grid-cols-[1.3fr_0.8fr_1fr_1fr] gap-x-12 gap-y-12 pb-12 border-b border-white/5">
                 <!-- Column 1: Info -->
                 <div class="space-y-8">
