@@ -511,20 +511,20 @@
         <div style="position:relative; background:#080d18; overflow:hidden;">
 
             <!-- Full-bleed chromosome image layer – single source for both sections -->
-            <div aria-hidden="true" style="position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;">
+            <div aria-hidden="true" style="position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;min-height:100%;">
                 <img src="/images/longevityblock.PNG" alt=""
                      style="position:absolute;top:0;left:0;width:100%;height:100%;
                             object-fit:cover;
-                            object-position:52% 5%;
-                            transform:scale(1.38);
-                            transform-origin:52% 5%;
-                            opacity:0.72;
+                            object-position:center 38%;
+                            transform:scale(1.32);
+                            transform-origin:center 38%;
+                            opacity:0.75;
                             filter:brightness(0.9) contrast(1.1) saturate(0.78);">
                 <!-- left-side dark shield (left ~38% = text column) -->
                 <div style="position:absolute;inset:0;
-                     background:linear-gradient(to right,#080d18 0%,#080d18 24%,
-                     rgba(8,13,24,0.82) 40%,rgba(8,13,24,0.40) 60%,
-                     rgba(8,13,24,0.10) 100%);"></div>
+                     background:linear-gradient(to right,#080d18 0%,#080d18 20%,
+                     rgba(8,13,24,0.78) 36%,rgba(8,13,24,0.32) 58%,
+                     rgba(8,13,24,0.06) 100%);"></div>
                 <!-- top + bottom vignettes -->
                 <div style="position:absolute;inset:0;
                      background:linear-gradient(to bottom,rgba(8,13,24,0.45) 0%,transparent 10%);"></div>
